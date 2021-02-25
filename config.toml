@@ -1,0 +1,4 @@
+baseURL = "https://ppmathis.github.io/fhnw-crowpi/"
+languageCode = "en-us"
+title = "FHNW CrowPi"
+theme = "learn"
