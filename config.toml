@@ -6,11 +6,14 @@ showVisitedLinks = true
 defaultContentLanguage = "de"
 defaultContentLanguageInSubdir = true
 
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
 [languages.de]
   weight = 1
   contentDir = "content/german"
   languageName = "German"
-  landingPageName = "<i class='fas fa-home'></i> Startseite"
+  landingPageName = "<i class='fas fa-fw fa-home'></i> Startseite"
   landingPageURL = "/fhnw-crowpi/de"
 
 [languages.en]
