@@ -1,4 +1,4 @@
 <a id="logo" href='{{ (cond (and (ne .Site.Params.landingPageURL nil) (.Site.IsMultiLingual)) .Site.Params.landingPageURL "/") }}'>
-  <img src="{{ .Site.BaseURL }}/images/fhnw-logo.svg" style="width: 40%; height: 40%">
-  <h3 style="margin: 0; color: white;">CrowPi goes Java</h3>
+    <img src="{{ "/images/fhnw-logo.svg" | relURL }}" style="width: 40%; height: 40%">
+    <h3 style="margin: 0; color: white;">CrowPi goes Java</h3>
 </a>

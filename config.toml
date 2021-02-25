@@ -43,3 +43,8 @@ home = [ "HTML", "RSS", "JSON" ]
   description = "FHNW IP5: CrowPi goes Java"
   themeVariant = "crowpi"
   showVisitedLinks = true
+
+# Keep whitespaces to avoid incorrect margins between icons and text
+# See issue https://github.com/tdewolff/minify/issues/240
+[minify.tdewolff.html]
+  keepWhitespace = true
