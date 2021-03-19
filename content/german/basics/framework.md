@@ -1,7 +1,6 @@
 ---
 title: Application Framework
 weight: 10
-disableToc: true
 ---
 
 ## Grundlagen
@@ -72,3 +71,9 @@ public class ExampleApp implements Application {
 
 Der Name entspricht hierbei auch dem Parameter, welcher an den Launcher übergeben werden muss, um die Applikation direkt zu starten. Im 
 Normalfall ist es aber aufgrund potenzieller Namenskonflikte nicht empfohlen, diesen zu überschreiben.
+
+## Das Interface
+Zur Vollständigkeit ist hier noch das komplette `Application` Interface eingebunden. Dieses besteht aus exakt drei Methoden, wobei 
+hiervon nur `execute()` implementiert werden muss da die anderen Methoden bereits über eine Standardimplementation verfügen.
+
+{{< code file="/src/main/java/ch/fhnw/crowpi/Application.java" language="java" >}}
