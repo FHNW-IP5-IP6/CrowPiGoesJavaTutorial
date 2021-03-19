@@ -38,8 +38,8 @@ Datei ist unter `src/main/java/ch/fhnw/crowpi/Launcher.java` aufzufinden und mus
 public final class Launcher implements Runnable {
     // ...
     private static final List<Application> APPLICATIONS = new ArrayList<>(Arrays.asList(
-        new BuzzerApp(),
         new ExampleApp(),   // hier wird die neue Applikation eingefügt
+        new BuzzerApp()
     ));
     // ...
 }
