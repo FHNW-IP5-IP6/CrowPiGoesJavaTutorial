@@ -24,7 +24,7 @@ mvn install -Dcrowpi.launcher.args=BuzzerApp
 
 ## Neue Applikation anlegen
 Um eine neue Applikation anzulegen, welche anschliessend über den integrierten Launcher gestartet werden kann, sind nur wenige einfache 
-Schritte erforderlich. Die nachfolgende Anleitung führt Sie Schritt für Schritt zu Ihrer ersten eigenen Applikation.
+Schritte erforderlich. Die nachfolgende Anleitung führt Schritt für Schritt zur ersten eigenen Applikation.
 
 Zuerst muss eine Java-Klasse unterhalb von `src/main/java/ch/fhnw/crowpi/applications` erstellt werden mit einem beliebigen Namen, 
 welche das Interface `Application` implementiert. Zum Beispiel könnte diese Klasse `ExampleApp` heissen und folgenden Code enthalten:
