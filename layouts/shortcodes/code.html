@@ -1,3 +1,20 @@
-{{ $code := (printf "%s/%s" "/code/" (.Get "file")) | readFile }}
-{{ $lang := .Get "language" }}
-{{ (print "```" $lang "\n" $code "\n```") | markdownify }}
+{{ $codePath := replace (printf "%s%s" "code/" (.Get "file")) "//" "/" }}
+{{ $codeURL := replace (printf "%s%s" .Site.Params.codeURL $codePath) "//" "/" }}
+{{ $codeContents := readFile $codePath }}{{ $lang := .Get "language" }}
+
+<!-- Code Block Header -->
+<div class="cpi-code-header">
+  <!-- Path to file -->
+  <div>
+    <strong>{{ i18n "pathToCode" }}: </strong>
+    {{ (print "`" $codePath "`") | markdownify }}
+  </div>
+
+  <!-- View on GitHub -->
+  <a href="{{ $codeURL }}" target="_blank" class="btn btn-default">
+    <i class="fab fa-github"></i>
+    {{ i18n "viewOnGitHub" }}
+  </a>
+</div>
+
+<!-- Code Block -->{{ (print "```" $lang "\n" $codeContents "\n```") | markdownify }}
