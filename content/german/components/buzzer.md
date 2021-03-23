@@ -39,6 +39,24 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 Die nachfolgende Beispielapplikation steuert den Buzzer via PWM an, um eine bekannte Melodie abzuspielen. Hierfür wird ein Enum namens
 `Note` verwendet, welches die entsprechenden Musiknoten auf eine Frequenz in Hertz (Hz) abbildet. Die Applikation spielt nacheinander alle
-Noten ab, indem die Funktionen `playTone` sowie `playFrequency` der Buzzer-Komponente verwendet werden.
+Noten ab, indem die Funktionen `playTone` sowie `playSilence` der Buzzer-Komponente verwendet werden.
+
+Die Noten welche gespielt werden sollen sind alle in der statischen Variable `NOTES` zu finden, welche durch die zusätzliche statische 
+Variable mit dem Namen `TEMPO` um die Angabe der Notenlänge ergänzt wird. Die Applikation iteriert schliesslich mit einer `for`-Schleife 
+über alle Noten und spielt diese mit der jeweiligen Länge ab.
+
+Die effektive Länge in Millisekunden wird mit der Formel `1 / <tempo>` berechnet, so dass ein Tempo-Wert von 4 einer Viertelnote mit 0.25
+Sekunden Länge entspricht. Damit sich die Noten besser voneinander unterscheiden lassen, wird zudem jeweils noch eine kleine Pause 
+mit dem Faktor `1.3` eingefügt.
 
 {{< code file="src/main/java/ch/fhnw/crowpi/applications/BuzzerApp.java" language="java" >}}
+
+## Weitere Möglichkeiten
+
+- Das Beispiel kann einfach auf eine eigene Melodie angepasst werden, wofür jeweils lediglich die beiden Arrays `NOTES` und `TEMPO` 
+angepasst werden müssen. Hier ist darauf zu achten, dass diese Arrays jeweils die gleiche Länge besitzen müssen, da jede Note auch eine 
+dazugehörige Länge benötigt.
+
+- Statt dem Abspielen einer Melodie könnte auch eine Sirene mit einer `for`-Schleife implementiert werden. Hierfür muss die Frequenz 
+  manuell als Zahl angegeben werden statt der Verwendung der `Note` Klasse, welche sich beispielsweise mit dem Einsatz von 
+  `for`-Schleifen hoch- und runterzählen lässt.
