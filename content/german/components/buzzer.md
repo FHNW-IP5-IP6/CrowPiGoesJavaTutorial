@@ -30,10 +30,10 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 ### Methoden
 | Methode | Bemerkung |
 | --- | --- |
-| `playTone(int frequency)` | Spielt dauerhaft einen Ton mit der gewünschten Frequenz. |
-| `playTone(int frequency, int duration)` | Spielt einen Ton mit der gewünschten Frequenz für die angegebene Zeit in Millisekunden. |
-| `playSilence()` | Schaltet den Buzzer dauerhaft aus. |
-| `playSilence(int duration)` | Schaltet den Buzzer dauerhaft aus und wartet für die angegebene Zeit in Millisekunden. |
+| `void playTone(int frequency)` | Spielt dauerhaft einen Ton mit der gewünschten Frequenz. |
+| `void playTone(int frequency, int duration)` | Spielt einen Ton mit der gewünschten Frequenz für die angegebene Zeit in Millisekunden. |
+| `void playSilence()` | Schaltet den Buzzer dauerhaft aus. |
+| `void playSilence(int duration)` | Schaltet den Buzzer dauerhaft aus und wartet für die angegebene Zeit in Millisekunden. |
 
 ## Beispielapplikation
 
