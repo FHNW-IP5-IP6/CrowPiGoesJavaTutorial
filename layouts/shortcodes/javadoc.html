@@ -1,0 +1,10 @@
+{{ $module := default "ch.fhnw.crowpi" (.Get "module") }}
+{{ $class := .Get "class" }}
+{{ $classURL := print (replace $class "." "/") ".html" }}
+{{ $docsURL := relURL (print "/apidocs/" $module "/" $classURL) }}
+
+{{ (print "```" $class "```") | markdownify }}
+<a href="{{ $docsURL }}" target="_blank" class="btn btn-default btn-small">
+  <i class="fas fa-external-link-alt"></i>
+  Javadoc
+</a>

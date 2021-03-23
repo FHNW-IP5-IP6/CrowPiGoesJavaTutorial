@@ -1,3 +1,7 @@
+.btn-small {
+    padding: 0 5px !important;
+}
+
 .cpi-code-header {
     display: flex;
     flex-direction: row;
