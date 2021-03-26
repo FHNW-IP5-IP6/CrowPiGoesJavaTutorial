@@ -4,7 +4,7 @@ title: Pulse Width Modulation (PWM)
 
 ## Das Wichtigste in Kürze
 Die Abkürzung PWM steht für Pulse Width Modulation und wird im Deutschen auch oft als Pulsbreitenmodulation oder Pulsweitenmodulation 
-bezeichnet. Diese Technik wird oft für die Steuerung von Servomotoren eingesetzt und findet beispielsweise auch Verwendung bei den 
+bezeichnet. Diese Technik wird unter anderem für die Steuerung von Servomotoren eingesetzt und findet beispielsweise auch Verwendung bei den 
 Lüftern von einem regulären Computer.
 
 Mit PWM ist es möglich, eine Komponente wie einen Motor nicht nur mehr rein binär zu steuern, sprich Aus (0% Leistung) oder An (100% 
@@ -14,7 +14,7 @@ bestimmten Zeitraum immer wieder aus- und angeschaltet wird.
 Ein gutes Beispiel hierfür ist beim CrowPi die [Buzzer-Komponente]({{< ref "components/buzzer" >}}), welche über einen digitalen 
 Anschluss verfügt und eigentlich nur einen einzigen Ton abspielen kann. Um damit nun trotzdem Melodien wie im verlinkten Beispiel zu 
 erzeugen, wird der Buzzer mit PWM für die gewünschte Tonfrequenz konfiguriert und schaltet sich so beispielsweise bei der Note `C7` 
-insgesamt 2093x aus und wieder an, was somit von uns als `C7 (2093 Hz)` wahrgenommen wird.
+insgesamt 2093x pro Sekunde aus und wieder an, was somit von uns als C7 wahrgenommen wird.
 
 ## Software vs. Hardware
 Auf dem Raspberry Pi und somit auch dem CrowPi stehen zwei verschiedene Arten von PWM zur Verfügung, konkret eine Software- sowie eine 

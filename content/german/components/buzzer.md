@@ -38,7 +38,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 ## Beispielapplikation
 
 Die nachfolgende Beispielapplikation steuert den Buzzer via PWM an, um eine bekannte Melodie abzuspielen. Hierfür wird ein Enum namens
-`Note` verwendet, welches die entsprechenden Musiknoten auf eine Frequenz in Hertz (Hz) abbildet. Die Applikation spielt nacheinander alle
+`Note` verwendet, welches die entsprechenden Musiknoten auf eine Frequenz [Hz] für PWM abbildet, dies klingt dann wie der gesuchte Ton. Die Applikation spielt nacheinander alle
 Noten ab, indem die Funktionen `playTone` sowie `playSilence` der Buzzer-Komponente verwendet werden.
 
 Die Noten welche gespielt werden sollen sind alle in der statischen Variable `NOTES` zu finden, welche durch die zusätzliche statische 
