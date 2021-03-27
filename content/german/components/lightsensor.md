@@ -3,6 +3,15 @@ title: Lichtsensor
 ---
 
 ## Funktionsweise
+Der Lichtsensor nutzt photoelektronische Effekte, um Lichteinstrahlung in ein elektrisches Signal zu wandeln. Dieses Signal kann mittels Elektronik so skaliert werden, dass ein Messwert 
+in der Einheit Lux entsteht. Beim CrowPi wird dazu der Umgebungslichtsensor BH1750 verwendet. Dieser arbeitet mit einer Photodiode. Zusätzlich erlaubt der verwendete Sensor eine Konfiguration 
+der Messgenauigkeit. Er kann mit 3 verschiedenen Auflösungen betrieben werden. Diese sind: 0.5 Lux, 1 Lux oder 4 Lux. Die Zeit, welche für eine Messung benötigt wird, schwankt dabei massiv. Bei einer Auflösung von 4 Lux werden 
+typischerweise 16 Millisekunden benötigt. Bei einer Auflösung 0.5 Lux hingegen bereits 120 Millisekunden. Diese Zeit ist natürlich auch bei der Programmierung des Sensors zu beachten. Zu schnelle
+Lesevorgänge können zu ungültigen Messwerten führen.
+
+Angesteuert wird der Lichtsensor BH1750 mittels des Bus I2C. Näheres zu diesem Bus kann unter [Hardware I2C]({{< ref "hardware/i2c" >}}) nachgeschlagen werden. Obwohl der Sensor nur wenige 
+Einstellmöglichkeiten bietet sind die Kombinationsmöglichkeiten eines Lichtsensors beinahe unendlich. Es gibt viele Mögliche Szenarien wie der Sensor eingesetzt werden könnte.
+
 
 ## Verwendung
 
