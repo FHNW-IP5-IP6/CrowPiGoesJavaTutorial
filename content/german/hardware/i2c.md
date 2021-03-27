@@ -1,45 +1,37 @@
 ---
-title: I2C
+title: I²C
 ---
 
 ## Das Wichtigste in Kürze
-Die Abkürzung PWM steht für Pulse Width Modulation und wird im Deutschen auch oft als Pulsbreitenmodulation oder Pulsweitenmodulation 
-bezeichnet. Diese Technik wird unter anderem für die Steuerung von Servomotoren eingesetzt und findet beispielsweise auch Verwendung bei den 
-Lüftern von einem regulären Computer.
+I²C (gesprochen Englisch als I-Squared-C) ist ein ursprünglich von Philips erfundener Bus. Er ist als klassischer Master-Slave-Bus konzipiert. Wobei 
+eine Datenübertragung immer durch einen Master iinitiert wird. Auch ein Aufbau in einem Multi-Master System ist möglich. 
+Angeschlossen wird I²C über zwei Signalleitungen (Datenleitung und Taktleitung).
+Die Übertragungsrate des Buses kann je nach Taktrate zwischen 0.1 Mbit/s bis zu 3.4 Mbit/s liegen. Sofern nur eine unidirektionale Verbindung nötig ist,
+wäre sogar 5.0 Mbit/s möglich. Zu beachten ist dabei: Je höher die Taktrate desto störanfälliger wird das Gesamtsystem. Die niedrige Betriebsspannung
+von nur 3.3V trägt ebenfalls nicht zur Störresistenz bei. 
 
-Mit PWM ist es möglich, eine Komponente wie einen Motor nicht nur mehr rein binär zu steuern, sprich Aus (0% Leistung) oder An (100% 
-Leistung), sondern diese fast beliebig zu steuern. Die Funktionsweise von PWM funktioniert hierbei so, dass die Komponente in einem 
-bestimmten Zeitraum immer wieder aus- und angeschaltet wird.
+## Verwendungen
+I²C wird vor allem zur Kommunikation zwischen Microkontrollern eingesetzt. Der Vorteil das dabei über nur 2 Leitungen eine ganze Reihe von Mikrokontrollern
+gesteuert werden kann, ist natürlich sehr interessant für das Platinenlayout. Die Vorteile von I²C liegen vor allem in der einfachheit. Es gibt sehr wohl 
+neuere Bussysteme mit besseren Übertragungsraten. Kaum ein Bussystem ist jedoch so einfach zu benutzen wie I²C. Sogar ein "Hot-Plugging" also ein ein- und
+ausstecken der Geräte während dem Betrieb ist mit I²C möglich.
 
-Ein gutes Beispiel hierfür ist beim CrowPi die [Buzzer-Komponente]({{< ref "components/buzzer" >}}), welche über einen digitalen 
-Anschluss verfügt und eigentlich nur einen einzigen Ton abspielen kann. Um damit nun trotzdem Melodien wie im verlinkten Beispiel zu 
-erzeugen, wird der Buzzer mit PWM für die gewünschte Tonfrequenz konfiguriert und schaltet sich so beispielsweise bei der Note `C7` 
-insgesamt 2093x pro Sekunde aus und wieder an, was somit von uns als C7 wahrgenommen wird.
+## Adressierung
+I²C nutzt einen Adressraum von 7 Bit. Das erlaubt bis zu 112 Knoten auf einem Bus. Die restlichen 16 Adressen sind für spezielle Anwendungen reserviert.
+Normalerweise wird die Adresse eines Geräts direkt vom Hersteller definiert. Sie kann also in den entsprechenden Datenblättern gefunden werden.Zusätzlich 
+gibt es aufgrund des Adressknappheit eine Variante mit 10 Bit Adressraum. So sind bis zu 1136 Knoten möglich und das Protokoll ist kompatibel mit dem kleineren
+7 Bit Adressraum. 
 
-## Software vs. Hardware
-Auf dem Raspberry Pi und somit auch dem CrowPi stehen zwei verschiedene Arten von PWM zur Verfügung, konkret eine Software- sowie eine 
-Hardware-Implementation. Beide bieten grundsätzlich die gleichen Möglichkeiten, jedoch können mit der Software-Version keine präzisen 
-oder besonders schnellen Frequenzen erreicht werden.
+## Übertragungsraten
 
-Der Grund dafür ist dass bei der Software-Implementation für jeden einzelnen Zyklus (an/aus) wieder ein erneuter Steuerbefehl von der 
-JVM (Java Virtual Machine) bis zur entsprechenden Komponente übertragen werden muss, während bei der Hardware-Implementation der 
-Raspberry Pi sich die gewünschte Frequenz merkt und diese selbstständig direkt auf der Platine regelt.
-
-## Technische Implementation
-Zur technischen Ansteuerung einer Komponente mit PWM müssen zweit Werte definiert werden:
-
-- **Puls-Pause-Verhältnis (englisch: Duty Cycle):** Dieser Wert definiert das Verhältnis zwischen dem ein- und ausgeschalteten Zustand 
-  und wird durch eine Zahl zwischen 0% und 100% repräsentiert. Ein Wert von 50% bedeutet, dass innerhalb von einem Zyklus exakt die 
-  Hälfte der Zeit die Komponente ein- und anschliessend ausgeschaltet ist. Ein Wert von 25% hingegen würde bedeuten, dass nur ein 
-  Viertel der Zeit die Komponente eingeschaltet ist und die restlichen drei Viertel vom Zyklus die Komponente im ausgeschalteten Zustand 
-  verweilt.
-  
-- **Frequenz (englisch: Frequency):** Dieser Wert definiert wie oft pro Sekunde ein Zyklus (an/aus) fur diese Komponente stattfindet und 
-  wird üblicherweise in der Einheit Hertz (Hz) angegeben. Bei einem Wert von 10Hz würde die Komponente somit 10x zwischen dem ein- und 
-  ausgeschalteten Zustand in einer Sekunde alternieren.
-
-Diese beiden Werte lassen sich über die Pi4J-Bibliothek steuern und werden auch von diesem Projekt intern verwendet.
+| Modus | Max. Übertragungsrate | Richtung |
+| --- | --- | --- |
+| Standard Mode | 0.1 Mbit/s | bidirektional |
+| Fast Mode | 0.4 Mbit/s | bidirektional |
+| Fast Mode Plus | 1.0 Mbit/s | bidirektional |
+| High Speed Mode | 3.4 Mbit/s | bidirektional |
+| Ultra Fast-mode | 5.0 Mbit/s | unidirektional |
 
 ## Weitere Informationen
-- [Wikipedia zu PWM](https://de.wikipedia.org/wiki/Pulsdauermodulation)
-- [Wikipedia mit Tonfrequenzen](https://de.wikipedia.org/wiki/Frequenzen_der_gleichstufigen_Stimmung)
+- [Wikipedia I²C](https://de.wikipedia.org/wiki/I%C2%B2C)
+- [I²C Bus](https://i2c-bus.org)
