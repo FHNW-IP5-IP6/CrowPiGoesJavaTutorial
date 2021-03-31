@@ -5,7 +5,7 @@ title: 7-Segment Anzeige
 ## Funktionsweise
 
 Die 7-Segment Anzeige auf dem CrowPi besteht aus 4 verschiedenen Ziffern, welche jeweils die Werte `0-9` sowie `A-F` darstellen können. 
-Der Name ist somit auch Programm, da jede Ziffer grundsätzlich aus 7 verschiedenen Segmenten besteht, welche je nach Zustand (an/aus) 
+Der Name ist dabei auch Programm, da jede Ziffer grundsätzlich aus 7 verschiedenen Segmenten besteht, welche je nach Zustand (an/aus) 
 dann die verschiedenen Werte darstellen können. Dies bedeutet jedoch auch dass bei der Anzeige auf dem CrowPi insgesamt 33 verschiedene 
 Segmente existieren (4x 7-Segment, 4x Dezimalpunkt, 1x Doppelpunkt), welche alle einzeln angeschlossen und gesteuert werden müssten.
 
@@ -43,8 +43,8 @@ Einstellungen zu tätigen und dann mit einem einzigen Aufruf die Änderungen auf
 | `void clear()` | Löscht den internen Buffer ohne die Anzeige zu aktualisieren. |
 | `void refresh()` | Aktualisiert die Anzeige mit dem aktuellen Inhalt des Buffers. |
 | `void setEnabled(boolean enabled)` | Schaltet die Anzeige ein oder aus gemäss Boolean-Wert. |
-| `void setBlinkRate(int rate)` | Setzt die gewünschte Blink-Geschwindigkeit zwischen 0 (aus) und 3 (am schnellsten). |
-| `void setBrightness(int brightness)` | Setzt die gewünschte Helligkeit zwischen 0 (am dunkelsten) und 15 (am hellsten). |
+| `void setBlinkRate(int rate)` | Setzt die gewünschte Blink-Geschwindigkeit der ganzen Anzeige zwischen 0 (aus) und 3 (am schnellsten). |
+| `void setBrightness(int brightness)` | Setzt die gewünschte Helligkeit der ganzen Anzeige zwischen 0 (am dunkelsten) und 15 (am hellsten). |
 | `void setColon(boolean enabled)` | *Buffer:* Aktiviert/deaktiviert den Doppelpunkt auf der Anzeige. |
 | `void setDecimalPoint(int position, boolean enabled)` | *Buffer:* Aktiviert/deaktiviert den entsprechenden Dezimalpunkt auf der Anzeige. Diese Einstellung wird durch Setzen einer Ziffer automatisch wieder deaktiviert. |
 | `void setDigit(int position, int i)` | *Buffer:* Setzt die entsprechende Ziffer auf die übergebene Zahl zwischen 0 und 9. |
