@@ -16,7 +16,7 @@ Steuerungsbefehle an die 7-Segment Anzeige gesendet werden können.
 Da es sehr ineffizient wäre jede einzelne Änderung von einem Segment einzeln zu übertragen, wird üblicherweise ein in Software 
 implementierter Buffer verwendet, welcher jeweils nach dem Setzen aller gewünschten Segmente am Stück in Richtung Anzeige zur 
 Darstellung gesendet werden. Die Komponenten-Klasse `SevenSegmentComponent` verwendet dieses Prinzip ebenfalls und implementiert alle 
-Funktionalitäten dieses Chips inklusive praktischen Hilfsmethoden.
+Funktionalitäten dieser Komponente inklusive praktischen Hilfsmethoden.
 
 ## Verwendung
 
@@ -36,8 +36,8 @@ Einstellungen zu tätigen und dann mit einem einzigen Aufruf die Änderungen auf
 
 | Methode | Bemerkung |
 | --- | --- |
-| `void print(int i)` | Gibt eine Ganzzahl mit bis zu 4 Ziffern auf der Anzeige aus. |
-| `void print(double d)` | Gibt eine Kommazahl mit bis zu 4 Ziffern auf der Anzeige aus. |
+| `void print(int i)` | Gibt eine Ganzzahl mit bis zu 4 Ziffern auf der Anzeige aus. Zu lange Zahlen werden nach hinten abgeschnitten. |
+| `void print(double d)` | Gibt eine Kommazahl mit bis zu 4 Ziffern auf der Anzeige aus. Zu lange Zahlen werden nach hinten abgeschnitten. |
 | `void print(java.time.LocalTime time)` | Gibt die übergebene Uhrzeit in Stunden und Minuten auf der Anzeige aus. Der Doppelpunkt auf der Anzeige wird bei ungerader Sekundenzahl aktiviert und ansonsten deaktiviert. |
 | `void print(String s)` | Gibt die ersten 4 übergebenen Zeichen auf der Anzeige aus. Hierbei ist zu beachten dass die Anzeige nur wenige Zeichen unterstützt und ansonsten eine `IllegalArgumentException` wirft. |
 | `void clear()` | Löscht den internen Buffer ohne die Anzeige zu aktualisieren. |
