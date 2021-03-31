@@ -1,5 +1,5 @@
-{{ $codePath := replace (printf "%s%s" "code/" (.Get "file")) "//" "/" }}
-{{ $codeURL := replace (printf "%s%s" .Site.Params.codeURL $codePath) "//" "/" }}
+{{ $codePath := printf "%s%s" "code/" (strings.TrimPrefix "/" (.Get "file")) }}
+{{ $codeURL := printf "%s/%s" (strings.TrimSuffix "/" .Site.Params.codeURL) $codePath }}
 {{ $codeContents := readFile $codePath }}{{ $lang := .Get "language" }}
 
 <!-- Code Block Header -->
