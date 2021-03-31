@@ -13,10 +13,9 @@ Um dies zu vermeiden, verwendet die 7-Segment Anzeige den `HT16K33`, einen elekt
 über eine einzelne Schnittstelle. Hierfür wird der Bus [I2C]({{< ref "hardware/i2c" >}}) eingesetzt, über welchen verschiedene 
 Steuerungsbefehle an die 7-Segment Anzeige gesendet werden können.
 
-Da es sehr ineffizient wäre jede einzelne Änderung von einem Segment einzeln zu übertragen, wird üblicherweise ein in Software 
-implementierter Buffer verwendet, welcher jeweils nach dem Setzen aller gewünschten Segmente am Stück in Richtung Anzeige zur 
-Darstellung gesendet werden. Die Komponenten-Klasse `SevenSegmentComponent` verwendet dieses Prinzip ebenfalls und implementiert alle 
-Funktionalitäten dieser Komponente inklusive praktischen Hilfsmethoden.
+Da das Übertragen jeder einzelnen Änderung an die Komponente sehr ineffizient ist, wird üblicherweise ein Buffer in der Software 
+implementiert. Alle gewünschten Anpassungen verändern somit nur den Buffer, welcher anschliessend mit nur einem einzigen Befehl übertragen 
+werden kann. Dieses Prinzip wird auch von der Komponenten-Klasse `SevenSegmentComponent` verwendet.
 
 ## Verwendung
 
