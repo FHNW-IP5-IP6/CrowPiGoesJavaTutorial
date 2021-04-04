@@ -6,11 +6,12 @@ disableToc: true
 
 ## Installieren von IntelliJ IDEA
 
-In diesem Tuturial wird die Entwicklung mit Hilfe der Entwicklungsumgebung IntelliJ IDEA umgesetzt. Entsprechend sind auch die Artikel,
+In diesem Tutorial wird die Entwicklung mit Hilfe der Entwicklungsumgebung IntelliJ IDEA umgesetzt. Entsprechend sind auch die Artikel,
 Anweisungen und Bilder jeweils damit erstellt. IntelliJ IDEA kann bei [Jetbrains](https://jetbrains.com) in verschiedenen Versionen bezogen
 werden. Für die Entwicklung mit dem CrowPi verfügt die Community Version bereits über genügen Funktionalität. Für Studenten der
 Fachhochschule Nordwestschweiz ist jedoch auch die Ultimate Version kostenfrei erhältlich. Die Entwicklungsumgebung ist sowohl für Windows,
-macOS und auch Linux verfügbar. Der Download findet sich hier: [Download IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
+macOS und auch Linux verfügbar. Der Download findet sich hier: [Download IntelliJ IDEA](https://www.jetbrains.com/idea/download/). Das 
+anschliessende Einrichten von IntelliJ IDEA verhält sich ebenfalls auf allen Plattformen identisch.
 
 ## 1. Klonen des Repositories
 
