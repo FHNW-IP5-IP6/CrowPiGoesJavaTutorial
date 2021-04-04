@@ -13,7 +13,9 @@ Fachhochschule Nordwestschweiz ist jedoch auch die Ultimate Version kostenfrei e
 macOS und auch Linux verfügbar. Der Download findet sich hier: [Download IntelliJ IDEA](https://www.jetbrains.com/idea/download/). Das 
 anschliessende Einrichten von IntelliJ IDEA verhält sich ebenfalls auf allen Plattformen identisch.
 
-## 1. Klonen des Repositories
+---
+
+### 1. Klonen des Repositories
 
 Sobald wir nun die Entwicklungsumgebung installiert haben geht es an das Klonen des Einstiegsprojekts für den CrowPi. Dabei findet sich der
 Sourcecode auf GitHub unter: [Zum GitHub Projekt](https://github.com/ppmathis/fhnw-crowpi). Um nun das Repository zu klonen muss auf GitHub
@@ -24,7 +26,9 @@ Besuche [CrowPi](https://github.com/ppmathis/fhnw-crowpi) auf GitHub. Und kopier
 kann.
 ![GitHub Clone Project](/fhnw-crowpi/images/setup/github-clone-project.JPG?height=500px)
 
-## 2. Importieren des Projekts
+---
+
+### 2. Importieren des Projekts
 
 Im Startfenster von IntelliJ ist die Option `Get from VCS` verfügbar. Diese muss angewählt werden damit direkt aus GitHub der Code geklont
 werden kann. Danach kann einfach der Link welche zuvor bei GitHub kopiert wurde eingefügt werden. Durch die Bestätigung auf
@@ -51,7 +55,9 @@ dann anschliessend `Download Sources and Documentation` wählen. So sind alle ve
 fehlt nur noch die Startkonfiguration des Projekts welche unter 3. zu finden ist.
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellij-download-deps-maven.JPG?height=500px)
 
-## 3. Einstellung der Run Konfiguration
+---
+
+### 3. Einstellung der Run Konfiguration
 Das Projekt CrowPi der FHNW benutzt 3 Run Konfigurationen. In diesen ist definiert welche Teile des Codes auf welche Art und Weise 
 ausgeführt werden. Keine Sorge der grösste Teil davon ist bereits vordefiniert und es fehlt nur noch die IP-Adresse des Raspberry Pi. 
 Verwendet werden die Konfigurationen: 
@@ -87,7 +93,9 @@ zu bedienen als die vorherigen. Kurz im Feld `Host` die IP-Adresse des Raspberry
 beendet.
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellij-remotedebug-config.JPG?height=500px)
 
-## 4. Erster Testlauf
+---
+
+### 4. Erster Testlauf
 Schon ist es geschafft. Alles ist eingerichtet, um ein erstes Mal das CrowPi Projekt direkt aus der Entwicklungsumgebung zu starten. 
 Dazu die Run Konfiguration `crowpi-examples [install]` auswählen. Danach durch Drücken von dem grünen Play Button die Applikation starten.
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellij-start-firstapplication.JPG?height=500px)
