@@ -1,11 +1,11 @@
 ---
 title: Komponenten
-weight: 20
-pre: "<b>2. </b>"
+weight: 40
+pre: "<b>4. </b>"
 chapter: true
 ---
 
-### Kapitel 2
+### Kapitel 3
 
 # Komponenten
 

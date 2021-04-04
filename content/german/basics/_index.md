@@ -1,11 +1,11 @@
 ---
 title: Grundlagen
-weight: 10
-pre: "<b>1. </b>"
+weight: 20
+pre: "<b>2. </b>"
 chapter: true
 ---
 
-### Kapitel 1
+### Kapitel 2
 
 # Grundlagen
 

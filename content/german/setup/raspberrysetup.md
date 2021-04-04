@@ -1,0 +1,61 @@
+---
+title: Raspberry PI Setup
+weight: 20
+disableToc: true
+---
+
+## Installieren des Betriebssystems
+### 1. Installieren des Raspberry Pi Imager
+Der offizielle Raspberry Pi Imager kann direkt bei [raspberry.org](https://www.raspberrypi.org/software/) in der
+aktuellsten Version heruntergeladen werden. Das einfache Tool funktioniert auf allen gängigen Betriebssystemen und kann
+mit wenigen Tastendrücken sehr simpel installiert werden. Genauere Anleitungen zur Installation sind ebenfalls auf der
+genannten Homepage verfügbar.
+
+---
+
+### 2. Herunterladen des FHNW CrowPi Image
+Das Image für den CrowPi welches das Betriebssystem für den Raspberry PI beinhaltet kann direkt aus dem Github
+Repository des CrowPi Projekts bezogen werden. Das neustste Release des Betriebssystems findet unter diesem Link:
+[Download CrowPi Image](https://github.com/ppmathis/fhnw-crowpi/releases/latest)
+
+Bei GitHub kann das Image dann hier heruntergeladen werden:
+![GitHub Download CrowPi Image](/fhnw-crowpi/images/setup/download-crowpi-image.JPG)
+
+Nach dem Download das .zip Archiv entpacken. Schon ist alles bereit für den nächsten Schritt.
+
+---
+
+### 3. Schreiben des Images auf eine SD Karte
+ <span style="color:red !important">**Warnung: Beim Schreiben des Images auf die SD-Karte werden sämtliche Daten
+ welche sich
+noch
+darauf befinden überschrieben!**</span>
+
+Als erstes muss die SD-Karte auf dem Computer als Laufwerk verfügbar sein. Dazu gibt es verschiedene Möglichkeiten. Es
+eignen sich Kartenlesegeräte genauso wie auch USB Adapter.
+Nun wird das Tool Raspberry Pi Imager gestartet. Als erstes muss das Betriebsystem gewählt werden. Dazu den Knopf `OS
+WÄHLEN` drücken.
+![Bild des Hauptmenüs vom Raspberry Pi Imager](/fhnw-crowpi/images/setup/mainmenu-raspberrypi-imager.JPG)
+Nun findet sich ganz unten in der Auswahl `Eigenes Image`. Im Auswahldialog das vorher heruntergeladene und entpackte
+ `crowpi.img` auswählen.
+![Betriebssystemauswahl vom Raspberry Pi Imager](/fhnw-crowpi/images/setup/selectos-raspberrypi-imager.JPG)
+
+Als zweiter Schritt wird nun die SD-Karte ausgewählt. Dazu im Menu den Knopf `SD-KARTE WÄHLEN` drücken. Es zeigt einem
+automatisch nur verfügbare Wechselmedien wie USB-Sticks oder SD-Karten. **Dabei ist es jetzt sehr wichtig den
+korrekten Eintrag auszuwählen um ungewollten Datenverlust zu vermeiden**. Als kleiner Tipp dazu. Es wird jeweils
+angezeigt welche Laufwerksbuchstaben betroffen sind. Die können hervorragend im Dateisystem des Computers überprüft
+werden.
+
+![Auswahl SD-Karte](/fhnw-crowpi/images/setup/selectsdcard-raspberrypi-imager.JPG)
+
+Schon ist alles bereit um das Image auf die SD-Karte zu schreiben. Der Vorgang kann durch betätigen der `SCHREIBEN`
+Taste ausgelöst werden. Es folgt nochmals ein Bestätigungsdialog bevor dann entgültig sämtlicher Inhalt der SD-Karte
+überschrieben wird. Das Schreiben des Image auf die SD-Karte kann einige Minuten dauern. Das ist völlig normal.
+
+---
+
+### 4. Einsetzten der SD Karte in den Raspberry PI
+
+---
+
+### 5. Herstellen der Netzwerkverbindung
