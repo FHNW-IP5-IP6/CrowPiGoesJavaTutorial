@@ -5,7 +5,9 @@ disableToc: true
 ---
 
 ## Installieren des Betriebssystems
+
 ### 1. Installieren des Raspberry Pi Imager
+
 Der offizielle Raspberry Pi Imager kann direkt bei [raspberry.org](https://www.raspberrypi.org/software/) in der
 aktuellsten Version heruntergeladen werden. Das einfache Tool funktioniert auf allen gängigen Betriebssystemen und kann
 mit wenigen Tastendrücken sehr simpel installiert werden. Genauere Anleitungen zur Installation sind ebenfalls auf der
@@ -14,6 +16,7 @@ genannten Homepage verfügbar.
 ---
 
 ### 2. Herunterladen des FHNW CrowPi Image
+
 Das Image für den CrowPi welches das Betriebssystem für den Raspberry PI beinhaltet kann direkt aus dem Github
 Repository des CrowPi Projekts bezogen werden. Das neustste Release des Betriebssystems findet unter diesem Link:
 [Download CrowPi Image](https://github.com/ppmathis/fhnw-crowpi/releases/latest)
@@ -26,6 +29,7 @@ Nach dem Download das .zip Archiv entpacken. Schon ist alles bereit für den nä
 ---
 
 ### 3. Schreiben des Images auf eine SD Karte
+
  <span style="color:red !important">**Warnung: Beim Schreiben des Images auf die SD-Karte werden sämtliche Daten
  welche sich
 noch
@@ -49,12 +53,24 @@ werden.
 ![Auswahl SD-Karte](/fhnw-crowpi/images/setup/selectsdcard-raspberrypi-imager.JPG)
 
 Schon ist alles bereit um das Image auf die SD-Karte zu schreiben. Der Vorgang kann durch betätigen der `SCHREIBEN`
-Taste ausgelöst werden. Es folgt nochmals ein Bestätigungsdialog bevor dann entgültig sämtlicher Inhalt der SD-Karte
-überschrieben wird. Das Schreiben des Image auf die SD-Karte kann einige Minuten dauern. Das ist völlig normal.
+Taste ausgelöst werden. Es folgt nochmals ein Bestätigungsdialog bevor dann endgültig sämtlicher Inhalt der SD-Karte
+überschrieben wird. Das Schreiben des Image auf die SD-Karte kann einige Minuten dauern. Das ist völlig normal. Sobald
+der Vorgang abgeschlossen ist kommt die entsprechende Fertigmeldung. Die SD-Karte kann nun aus dem Computer entfernt
+werden.
 
 ---
 
-### 4. Einsetzten der SD Karte in den Raspberry PI
+### 4. Einsetzten der SD Karte in den Raspberry Pi
+
+Zum Einsetzen der vorbereiteten SD-Karte in den CrowPi müssen allenfalls die 4 Halteschrauben gelöst werden. Diese
+finden sich hier:
+![Raspberry im CrowPi mit markierten Schrauben](/fhnw-crowpi/images/setup/crowpi-raspberrypi-screws.JPG?height=600px)
+Danach kann der Raspberry Pi leicht abgehoben werden um am oberen Ende auf der Rückseite befindet sich der SD-Karten
+einschub. Hier kann die Karte mit den Kontaktflächen gegen den Raspberry Pi eingesetzt werden. Auf dem Bild unten ist
+nochmals der Einschub markiert. Sobald die SD-Karte eingesetzt ist kann der Raspberry Pi wieder korrekt in den CrowPi
+eingebaut werden und die allenfalls gelösten Kabel wieder eingesteckt werden. Sobald alles weder an seinem Platz ist
+kann der CrowPi mit dem Strom verbunden werden.
+ ![Raspberry Pi SD-Karten Einschub](/fhnw-crowpi/images/setup/crowpi-raspberrypi-sdslot.JPG?height=600px)
 
 ---
 
