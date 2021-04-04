@@ -1,11 +1,11 @@
 ---
 title: Hardware
-weight: 30
-pre: "<b>3. </b>"
+weight: 40
+pre: "<b>4. </b>"
 chapter: true
 ---
 
-### Kapitel 3
+### Kapitel 4
 
 # Hardware
 
