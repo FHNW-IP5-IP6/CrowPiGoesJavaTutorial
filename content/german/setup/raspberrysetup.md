@@ -75,3 +75,22 @@ kann der CrowPi mit dem Strom verbunden werden.
 ---
 
 ### 5. Herstellen der Netzwerkverbindung
+Einzig die Netzwerkverbindung des frisch gestarteten Raspberry Pi muss noch manuell getätigt werden. Ansonsten sind alle
+ Einstellungen bereits optimal im FHNW CrowPi Image enthalten. Nun gibt es für die Netzwerkverbindung einige
+ Möglichkeiten:
+
+ - **Verbindung per WLAN (empfohlen für FHNW)**
+ - Verbindung per Ethernetkabel (DHCP)
+ - Verbindung per Ethernetkabel direkt zu Computer
+
+Am einfachsten lassen sich die Einstellungen mittels am Raspberry Pi angeschlossener Maus und Tastatur vollziehen.
+
+#### 5.1 Herstellen einer WLAN Verbindung
+Um mit einem WLAN Netzwerk zu Verbinden auf Desktop des CrowPi oben recht die beiden Pfeile drücken und das gewünschte
+WLAN aussuchen. Anschliessend im Dialog das entsprechende WLAN Passwort bei gesicherten Verbindungen eintippen. Ein Tipp
+ es kann auch ein mobiler Hotspot eines Telefons verwendet werden um mit dem CrowPi zu arbeiten. Einige Sekunden nach
+ der Verbindung wird sich das Hintergrundbild des CrowPi automatisch aktualisieren und die zugewiesene IP Adresse
+ anzeigen.
+ ![CrowPi WLAN wählen](/fhnw-crowpi/images/setup/crowpi-selectwlan.JPG?&width=865px&height=500px)
+ ![CrowPi WLAN Passwort eingeben](/fhnw-crowpi/images/setup/crowpi-wlanpassword.JPG?height=500px&width=865px)
+ ![CrowPi IP Adresse erhalten](/fhnw-crowpi/images/setup/crowpi-background-ipaddresses.JPG?height=500px&width=865px)
