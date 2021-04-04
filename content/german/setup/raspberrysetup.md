@@ -90,7 +90,10 @@ Um mit einem WLAN Netzwerk zu Verbinden auf Desktop des CrowPi oben recht die be
 WLAN aussuchen. Anschliessend im Dialog das entsprechende WLAN Passwort bei gesicherten Verbindungen eintippen. Ein Tipp
  es kann auch ein mobiler Hotspot eines Telefons verwendet werden um mit dem CrowPi zu arbeiten. Einige Sekunden nach
  der Verbindung wird sich das Hintergrundbild des CrowPi automatisch aktualisieren und die zugewiesene IP Adresse
- anzeigen.
+ anzeigen. Auf den Bildern ist zusätzlich auch eine Ethernet Adresse sichtbar. Das heisst es war im Moment der Aufnahme
+ zusätzlich noch ein Ethernetkabel verbunden mit dem Raspberry Pi. Nach dem wir nun eine Netzwerkverbindung zum CrowPi
+ haben sind wir bereit für den nächsten Schritt. Das einrichten der Entwicklungsumgebung.
+
  ![CrowPi WLAN wählen](/fhnw-crowpi/images/setup/crowpi-selectwlan.JPG?&width=865px&height=500px)
  ![CrowPi WLAN Passwort eingeben](/fhnw-crowpi/images/setup/crowpi-wlanpassword.JPG?height=500px&width=865px)
  ![CrowPi IP Adresse erhalten](/fhnw-crowpi/images/setup/crowpi-background-ipaddresses.JPG?height=500px&width=865px)
