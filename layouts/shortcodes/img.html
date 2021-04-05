@@ -1,0 +1,8 @@
+{{ $query := slice }}
+{{ with .Get "width" }}{{ $query = $query | append (querify "width" .) }}{{ end }}
+{{ with .Get "height" }}{{ $query = $query | append (querify "height" .) }}{{ end }}
+
+{{ $alt := .Get "alt" }}
+{{ $src := printf "images/%s?%s" (.Get "src") (delimit $query "&") | relURL }}
+
+<img src="{{ $src }}" alt="{{ $alt }}">
