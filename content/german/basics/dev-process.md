@@ -1,6 +1,6 @@
 ---
 title: Entwicklungsprozess
-weight: 40
+weight: 50
 ---
 Dieses Ablaufdiagramm zeigt wie eine Entwicklung einer neuen Applikation mit dem CrowPi Goes Java Framework ablaufen könnte.
 

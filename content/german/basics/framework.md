@@ -1,6 +1,6 @@
 ---
 title: Application Framework
-weight: 30
+weight: 40
 ---
 
 ## Grundlagen

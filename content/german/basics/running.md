@@ -1,6 +1,6 @@
 ---
 title: Starten der Applikation
-weight: 10
+weight: 20
 ---
 In diesem Kapitel wird genauer beschrieben, was alles beim Starten einer Applikation passiert und wie das Framework benutzt werden kann. 
 Der genaue Aufbau des [Application Frameworks]({{< ref "basics/framework" >}}) welches dies alles auf diese Art und Weise ermöglicht ist 

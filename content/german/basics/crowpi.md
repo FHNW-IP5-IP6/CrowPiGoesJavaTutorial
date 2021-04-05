@@ -1,5 +1,6 @@
 ---
-title: CrowPi
+title: Die CrowPi Plattform
+weight: 10
 ---
 
 ## Das Wichtigste in Kürze

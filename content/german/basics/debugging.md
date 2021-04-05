@@ -1,6 +1,6 @@
 ---
 title: Debugging der Applikation
-weight: 20
+weight: 30
 ---
 
 Auf dieser Seite werden die Grundlagen der Fehlersuche mit dem Setup aus [dem ersten Kapitel]({{< ref setup >}}) beschrieben. Es wird
