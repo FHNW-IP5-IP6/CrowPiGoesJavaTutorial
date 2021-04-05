@@ -14,8 +14,8 @@ Grundsätzlich wurde ein erster Start bereits zum Test am Ende des Setups ausgef
 2. Starten mit Run Button
 3. Wählen der Applikation auf der Kommandozeile (falls keine Argumente verwendet werden)
 
-![Start der Applikation](/fhnw-crowpi/images/setup/intellij-start-firstapplication.JPG?height=500px)
-![Run Output von IntelliJ](/fhnw-crowpi/images/setup/intellij-run-example.JPG?height=500px)
+{{< img alt="Start der Applikation" src="setup/intellij-start-firstapplication.JPG" height="500px" >}}
+{{< img alt="Run Output von IntelliJ" src="setup/intellij-run-example.JPG" height="500px" >}}
 ---
 
 ## Was passiert beim Start
@@ -42,6 +42,6 @@ zu müssen. Dazu muss die `Run Konfiguration` angepasst werden. Dies funktionier
 - Nun bei der gewünschten Konfiguration den Tab `Runner` öffnen und mit dem `+` ein neues Argument hinzufügen. Gewählt werden muss das `crowpi.
 laucher.args` und als Wert wird der exakte Name einer Applikation wie zum Beispiel `BuzzerApp` eingetragen.
 - Normales Starten der Applikation mit dem Play Button
-![Start mit Argument](/fhnw-crowpi/images/basics/intellij-runconfig-args.JPG?height=500px)
+{{< img alt="Start mit Argument" src="basics/intellij-runconfig-args.JPG" height="500px" >}}
 
 Jetzt startet der übliche Ablauf. Anstelle der Auswahl einer ExampleApp wird jedoch direkt die angegebene Applikation gestartet, also in diesem Fall die BuzzerApp.

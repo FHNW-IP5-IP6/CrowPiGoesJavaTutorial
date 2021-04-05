@@ -22,7 +22,7 @@ Repository des CrowPi Projekts bezogen werden. Das neustste Release des Betriebs
 [Download CrowPi Image]({{% siteparam "repoURL" %}}/releases/latest)
 
 Bei GitHub kann das Image dann hier heruntergeladen werden:
-![GitHub Download CrowPi Image](/fhnw-crowpi/images/setup/download-crowpi-image.JPG)
+{{< img alt="GitHub Download CrowPi Image" src="setup/download-crowpi-image.JPG" >}}
 
 Nach dem Download das .zip Archiv entpacken. Schon ist alles bereit für den nächsten Schritt.
 
@@ -37,10 +37,10 @@ befinden überschrieben!
 Als erstes muss die SD-Karte auf dem Computer als Laufwerk verfügbar sein. Dazu gibt es verschiedene Möglichkeiten. Es
 eignen sich Kartenlesegeräte genauso wie auch USB Adapter. Nun wird das Tool Raspberry Pi Imager gestartet. Als erstes
 muss das Betriebsystem gewählt werden. Dazu den Knopf `OS WÄHLEN` drücken.
-![Bild des Hauptmenüs vom Raspberry Pi Imager](/fhnw-crowpi/images/setup/mainmenu-raspberrypi-imager.JPG)
+{{< img alt="Bild des Hauptmenüs vom Raspberry Pi Imager" src="setup/mainmenu-raspberrypi-imager.JPG" >}}
 Nun findet sich ganz unten in der Auswahl `Eigenes Image`. Im Auswahldialog das vorher heruntergeladene und entpackte
 `crowpi.img` auswählen.
-![Betriebssystemauswahl vom Raspberry Pi Imager](/fhnw-crowpi/images/setup/selectos-raspberrypi-imager.JPG)
+{{< img alt="Betriebssystemauswahl vom Raspberry Pi Imager" src="setup/selectos-raspberrypi-imager.JPG" >}}
 
 Als zweiter Schritt wird nun die SD-Karte ausgewählt. Dazu im Menu den Knopf `SD-KARTE WÄHLEN` drücken. Es zeigt einem
 automatisch nur verfügbare Wechselmedien wie USB-Sticks oder SD-Karten. **Dabei ist es jetzt sehr wichtig den korrekten
@@ -48,7 +48,7 @@ Eintrag auszuwählen um ungewollten Datenverlust zu vermeiden**. Auf Windows wir
 angezeigt, welcher Laufwerksbuchstabe effektiv betroffen ist, so dass dieser einfach im Explorer überprüft werden kann.
 Im Zweifelsfall aber einfach Datenträger mit wichtigen Medien vorher ausstecken, so dass sicher nichts passieren kann.
 
-![Auswahl SD-Karte](/fhnw-crowpi/images/setup/selectsdcard-raspberrypi-imager.JPG)
+{{< img alt="Auswahl SD-Karte" src="setup/selectsdcard-raspberrypi-imager.JPG" >}}
 
 Schon ist alles bereit um das Image auf die SD-Karte zu schreiben. Der Vorgang kann durch Betätigen vom `SCHREIBEN`
 Knopf ausgelöst werden. Es folgt nochmals ein Bestätigungsdialog bevor dann endgültig sämtlicher Inhalt der SD-Karte
@@ -62,13 +62,13 @@ werden.
 
 Zum Einsetzen der vorbereiteten SD-Karte in den CrowPi müssen allenfalls die 4 Halteschrauben gelöst werden. Diese
 finden sich hier:
-![Raspberry im CrowPi mit markierten Schrauben](/fhnw-crowpi/images/setup/crowpi-raspberrypi-screws.JPG?height=600px)
+{{< img alt="Raspberry im CrowPi mit markierten Schrauben" src="setup/crowpi-raspberrypi-screws.JPG" height="600px" >}}
 Nach dem Lösen der Schrauben kann der Raspberry Pi angehoben werden. Allenfalls müssen noch einige Kabel ausgesteckt
 werden. Auf der Unterseite findet sich nun der SD-Karten Einschub. Hier kann die SD-Karte mit den Kontaktflächen gegen
 den Raspberry Pi eingesetzt werden. Auf dem Bild unten ist nochmals der Einschub markiert. Sobald die SD-Karte
 eingesetzt ist, kann der Raspberry Pi wieder korrekt in den CrowPi eingebaut und die allenfalls gelösten Kabel wieder
 eingesteckt werden. Sobald alles wieder an seinem Platz ist, kann der CrowPi mit dem Strom verbunden werden.
-![Raspberry Pi SD-Karten Einschub](/fhnw-crowpi/images/setup/crowpi-raspberrypi-sdslot.JPG?height=600px)
+{{< img alt="Raspberry Pi SD-Karten Einschub" src="setup/crowpi-raspberrypi-sdslot.JPG" height="600px" >}}
 
 ---
 
@@ -100,6 +100,6 @@ Ethernet Adresse sichtbar. Das heisst es war im Moment der Aufnahme zusätzlich 
 Raspberry Pi. Nach dem wir nun eine Netzwerkverbindung zum CrowPi haben sind wir bereit für das Einrichten der
 Entwicklungsumgebung als nächsten Schritt.
 
-![CrowPi WLAN wählen](/fhnw-crowpi/images/setup/crowpi-selectwlan.JPG?&width=865px&height=500px)
-![CrowPi WLAN Passwort eingeben](/fhnw-crowpi/images/setup/crowpi-wlanpassword.JPG?height=500px&width=865px)
-![CrowPi IP Adresse erhalten](/fhnw-crowpi/images/setup/crowpi-background-ipaddresses.JPG?height=500px&width=865px)
+{{< img alt="CrowPi WLAN wählen" src="setup/crowpi-selectwlan.JPG?&width=865px&height=500px" >}}
+{{< img alt="CrowPi WLAN Passwort eingeben" src="setup/crowpi-wlanpassword.JPG?height=500px&width=865px" >}}
+{{< img alt="CrowPi IP Adresse erhalten" src="setup/crowpi-background-ipaddresses.JPG?height=500px&width=865px" >}}
