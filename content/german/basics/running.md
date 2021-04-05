@@ -38,11 +38,10 @@ Bei jedem Start werden also sogar die Unittests ausgeführt. So kann eine optima
 Der Start mit einem Argument soll es ermöglichen direkt eine der Applikationen auszuwählen, ohne die Nummer in der Kommandozeile eintippen 
 zu müssen. Dazu muss die `Run Konfiguration` angepasst werden. Dies funktioniert sowohl für `crowpi-examples [install]` als auch für 
 `crowpi-examples [debug]` genau gleich. 
-- Das Kontextmenü bei der Run Konfigruation `Edit Configurations ...` öffnen.
-- Nun bei der gewünschten Konfiugration den Tab `Runner` öffnen und mit dem `+` ein neues Argument hinzufügen. Gewählt werden muss das `crowpi.
-lauchner.args` und als Wert wird der exakte Name einer Applikation eingetragen.
+- Das Kontextmenü bei der Run Konfiguration `Edit Configurations ...` öffnen.
+- Nun bei der gewünschten Konfiguration den Tab `Runner` öffnen und mit dem `+` ein neues Argument hinzufügen. Gewählt werden muss das `crowpi.
+laucher.args` und als Wert wird der exakte Name einer Applikation wie zum Beispiel `BuzzerApp` eingetragen.
 - Normales Starten der Applikation mit dem Play Button
 ![Start mit Argument](/fhnw-crowpi/images/basics/intellij-runconfig-args.JPG?height=500px)
 
-Jetzt startet der übliche Ablauf. Anstelle der Auswahl einer ExampleApp wird jedoch direkt die Applikation gestartet welche im Argument 
-mit dem Namen erfasst ist. In diesem Beispiel wäre es die BuzzerApp.
+Jetzt startet der übliche Ablauf. Anstelle der Auswahl einer ExampleApp wird jedoch direkt die angegebene Applikation gestartet, also in diesem Fall die BuzzerApp.

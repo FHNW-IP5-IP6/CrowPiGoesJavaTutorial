@@ -29,10 +29,10 @@ Jedoch sollten gerade Anfänger beachten, dass erste Anwendungen nicht zu kompli
 und nicht in einem Chaos enden.
 
 #### Benötigte Hardware
-Um sich einen Überlick zu verschaffen, sollte die Hardware welche zur Umsetzung der eignen Idee nötig ist kurz zusammengefasst werden.
+Um sich einen Überblick zu verschaffen, sollte die Hardware welche zur Umsetzung der eigenen Idee nötig ist, kurz zusammengefasst werden.
 
 #### Neue Entwicklung oder mit Beispiel
-Wenn sich die Idee stark an einem der vorgegeben Beispiele orientiert ist es vielleicht einfacher und schneller das Beispiel auszubauen 
+Wenn sich die Idee stark an einem der vorgegebenen Beispiele orientiert, ist es vielleicht einfacher und schneller das Beispiel auszubauen 
 und anzupassen. Vielleicht möchte man aber auch gerne auf der grünen Wiese mit dem Bauen starten. Dann nimmt man eher die Variante einer 
 komplett neuen Applikation im Rahmen von CrowPi Goes Java.
 
@@ -44,8 +44,8 @@ Schritte welche bei einer neuen Applikation nötig wären.
 Gemäss Anleitung im [Application Framework]({{< ref "basics/framework" >}}) wir eine neue Applikation erstellt.
 
 #### Lesen der Dokumentation zur Hardware
-Um genauer zu Erfahren, wie benötigte Hardware funktioniert lohnt es sich die entsprechenden Kapitel hier im Tutorial genauer anzuschauen.
-So erfährt man welche Funktionen bereits zur Verfügung stehen und wo allenfalls noch lücken vorhanden sind. Auch versteht man die 
+Um genauer zu erfahren, wie benötigte Hardware funktioniert, lohnt es sich die entsprechenden Kapitel hier im Tutorial zu betrachten.
+So erfährt man welche Funktionen bereits zur Verfügung stehen und wo allenfalls noch Lücken vorhanden sind. Auch versteht man die 
 physikalischen Vorgänge im Hintergrund etwas besser.
 
 #### Ablauf aufzeichnen
@@ -56,7 +56,7 @@ Entspricht der Abbildung der benötigten Funktion in Form von Code.
 
 #### Unit Tests ergänzen
 Eine gute Applikation wird immer automatisch getestet. Unit Tests stellen dabei eine einfache aber effektive Variante zur Verfügung. Es 
-besteht sogar das Konzept des Test-Code-Refactor. Wo vor dem eigentlichen Code erst die Tests programmiert werden. So kann auch bei 
+besteht sogar das Konzept des Test-Code-Refactor, wo vor dem eigentlichen Code erst die Tests programmiert werden. So kann auch bei 
 nachträglichen Änderungen sichergestellt werden, dass die ursprünglichen Funktionen erhalten bleiben.
 
 #### Testen der App
