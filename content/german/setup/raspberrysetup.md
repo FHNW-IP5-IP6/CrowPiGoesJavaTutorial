@@ -1,5 +1,7 @@
 ---
-title: Raspberry PI Setup weight: 20 disableToc: true
+title: Raspberry PI Setup 
+weight: 20 
+disableToc: true
 ---
 
 ## Installieren des Betriebssystems
