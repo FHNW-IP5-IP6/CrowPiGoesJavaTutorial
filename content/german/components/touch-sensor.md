@@ -1,5 +1,6 @@
 ---
 title: Touch Sensor
+tags: ["gpio"]
 ---
 
 ## Funktionsweise
@@ -18,6 +19,14 @@ werden. Das wäre natürlich unerwünschtes Verhalten der Software.
 
 Die boolesche Verhaltensweise des Sensors macht die Benutzung während des Programmierens natürlich sehr einfach. Die Herausforderung liegt
 dabei meist mehr beim Gerüst rund um den Sensor herum. Zum Beispiel im Eventhandling, wenn der Knopf jederzeit funktionieren soll.
+
+## Voraussetzungen
+
+### DIP Switches
+
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+
+{{< dip-switches >}}
 
 ## Verwendung
 

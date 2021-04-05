@@ -1,5 +1,6 @@
 ---
 title: 7-Segment Anzeige
+tags: ["i2c"]
 ---
 
 ## Funktionsweise
@@ -16,6 +17,14 @@ Steuerungsbefehle an die 7-Segment Anzeige gesendet werden können.
 Da das Übertragen jeder einzelnen Änderung an die Komponente sehr ineffizient ist, wird üblicherweise ein Buffer in der Software 
 implementiert. Alle gewünschten Anpassungen verändern somit nur den Buffer, welcher anschliessend mit nur einem einzigen Befehl übertragen 
 werden kann. Dieses Prinzip wird auch von der Komponenten-Klasse `SevenSegmentComponent` verwendet.
+
+## Voraussetzungen
+
+### DIP Switches
+
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+
+{{< dip-switches >}}
 
 ## Verwendung
 

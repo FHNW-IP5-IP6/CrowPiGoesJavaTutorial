@@ -1,5 +1,6 @@
 ---
 title: I²C
+tags: ["i2c"]
 ---
 
 ## Das Wichtigste in Kürze

@@ -1,5 +1,6 @@
 ---
 title: Pulse Width Modulation (PWM)
+tags: ["pwm"]
 ---
 
 ## Das Wichtigste in Kürze

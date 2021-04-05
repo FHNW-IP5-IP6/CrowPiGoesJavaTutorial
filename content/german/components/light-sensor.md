@@ -1,5 +1,6 @@
 ---
 title: Lichtsensor
+tags: ["i2c"]
 ---
 
 ## Funktionsweise
@@ -12,6 +13,13 @@ Lesevorgänge können zu ungültigen Messwerten führen.
 Angesteuert wird der Lichtsensor BH1750 mittels des Bus I2C. Näheres zu diesem Bus kann unter [Hardware I2C]({{< ref "hardware/i2c" >}}) nachgeschlagen werden. Obwohl der Sensor nur wenige 
 Einstellmöglichkeiten bietet, sind die Kombinationsmöglichkeiten eines Lichtsensors beinahe unendlich. Es gibt viele mögliche Szenarien wie der Sensor eingesetzt werden könnte.
 
+## Voraussetzungen
+
+### DIP Switches
+
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+
+{{< dip-switches >}}
 
 ## Verwendung
 

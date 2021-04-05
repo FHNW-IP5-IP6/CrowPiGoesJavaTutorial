@@ -1,5 +1,6 @@
 ---
 title: Buzzer
+tags: ["pwm"]
 ---
 
 ## Funktionsweise
@@ -15,6 +16,14 @@ abgespielt werden können. Um eine zuverlässige Wiedergabe der gewünschten Fre
 Um das mühsame Abtippen der einzelnen Frequenzen zu erleichtern, wird zudem eine Hilfsklasse `Note` bereitgestellt. Dieser Aufzählungstyp
 enthält alle bekannten Musiknoten von `B0` zu `DS8` und bildet diese auf die entsprechenden Tonfrequenzen ab, so dass diese direkt an
 die `playTone()` Methode übergeben werden können.
+
+## Voraussetzungen
+
+### DIP Switches
+
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+
+{{< dip-switches >}}
 
 ## Verwendung
 
