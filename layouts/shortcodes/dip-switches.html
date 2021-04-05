@@ -1,0 +1,158 @@
+{{ $offPos := "6.35" }}
+{{ $onPos := "10.5833" }}
+
+<!-- Left DIP switch positions -->
+{{ $sl1Pos := cond (in .Params 1) $onPos $offPos }}
+{{ $sl2Pos := cond (in .Params 2) $onPos $offPos }}
+{{ $sl3Pos := cond (in .Params 3) $onPos $offPos }}
+{{ $sl4Pos := cond (in .Params 4) $onPos $offPos }}
+{{ $sl5Pos := cond (in .Params 5) $onPos $offPos }}
+{{ $sl6Pos := cond (in .Params 6) $onPos $offPos }}
+{{ $sl7Pos := cond (in .Params 7) $onPos $offPos }}
+{{ $sl8Pos := cond (in .Params 8) $onPos $offPos }}
+
+<!-- Right DIP switch positions -->
+{{ $sr1Pos := cond (in .Params 9) $onPos $offPos }}
+{{ $sr2Pos := cond (in .Params 10) $onPos $offPos }}
+{{ $sr3Pos := cond (in .Params 11) $onPos $offPos }}
+{{ $sr4Pos := cond (in .Params 12) $onPos $offPos }}
+{{ $sr5Pos := cond (in .Params 13) $onPos $offPos }}
+{{ $sr6Pos := cond (in .Params 14) $onPos $offPos }}
+{{ $sr7Pos := cond (in .Params 15) $onPos $offPos }}
+{{ $sr8Pos := cond (in .Params 16) $onPos $offPos }}
+
+<!-- Left DIP switch -->
+<svg width="164px" height="64px" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px">
+  <g>
+    <!-- Background -->
+    <rect width="51.329" height="20.034" fill="#333333" stroke-width=".6835"/>
+
+    <!-- ON Label -->
+    <text x="1.0455865"
+          y="4.9884982"
+          fill="#ffffff"
+          font-family="sans-serif"
+          font-size="4.9389px"
+          font-weight="bold"
+          stroke-width=".26458"
+          style="line-height:1.25"
+          xml:space="preserve"
+    ><tspan>ON</tspan></text>
+
+    <text x="50.2834135"
+          y="4.9884982"
+          fill="#ffffff"
+          text-anchor="end"
+          font-family="sans-serif"
+          font-size="4.9389px"
+          font-weight="bold"
+          stroke-width=".26458"
+          style="line-height:1.25"
+          xml:space="preserve"
+    ><tspan>(links)</tspan></text>
+
+    <!-- Single Switch Background (white) -->
+    <g fill="#fff" stroke="#646464" stroke-width=".52084">
+      <rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="14.023" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="20.373" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="26.723" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="33.073" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="39.423" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="45.773" y="6.35" width="4.2333" height="8.4667"/>
+    </g>
+
+    <!-- Single Switch Indicator (grey) -->
+    <g fill="#646464" stroke-width=".36829">
+      <rect x="1.3229" y="{{ $sl1Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="7.6729" y="{{ $sl2Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="14.023" y="{{ $sl3Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="20.373" y="{{ $sl4Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="26.723" y="{{ $sl5Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="33.073" y="{{ $sl6Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="39.423" y="{{ $sl7Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="45.773" y="{{ $sl8Pos }}" width="4.2333" height="4.2333"/>
+    </g>
+
+    <!-- Numbers -->
+    <g fill="#ffffff" font-family="sans-serif" font-size="3.5278px" font-weight="bold" stroke-width=".26458" style="line-height: 1.25">
+      <text x="2.2863367" y="18.711349"><tspan>1</tspan></text>
+      <text x="8.6363363" y="18.711349"><tspan>2</tspan></text>
+      <text x="14.986337" y="18.711349"><tspan>3</tspan></text>
+      <text x="21.336336" y="18.711349"><tspan>4</tspan></text>
+      <text x="27.686337" y="18.711349"><tspan>5</tspan></text>
+      <text x="34.036335" y="18.711349"><tspan>6</tspan></text>
+      <text x="40.386333" y="18.711349"><tspan>7</tspan></text>
+      <text x="46.736332" y="18.711349"><tspan>8</tspan></text>
+    </g>
+  </g>
+</svg>
+
+<!-- Right DIP switch -->
+<svg width="164px" height="64px" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Background -->
+    <rect width="51.329" height="20.034" fill="#333333" stroke-width=".6835"/>
+
+    <!-- ON Label -->
+    <text x="1.0455865"
+          y="4.9884982"
+          fill="#ffffff"
+          font-family="sans-serif"
+          font-size="4.9389px"
+          font-weight="bold"
+          stroke-width=".26458"
+          style="line-height:1.25"
+          xml:space="preserve"
+    ><tspan>ON</tspan></text>
+
+    <text x="50.2834135"
+          y="4.9884982"
+          fill="#ffffff"
+          text-anchor="end"
+          font-family="sans-serif"
+          font-size="4.9389px"
+          font-weight="bold"
+          stroke-width=".26458"
+          style="line-height:1.25"
+          xml:space="preserve"
+    ><tspan>(rechts)</tspan></text>
+
+    <!-- Single Switch Background (white) -->
+    <g fill="#fff" stroke="#646464" stroke-width=".52084">
+      <rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="14.023" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="20.373" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="26.723" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="33.073" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="39.423" y="6.35" width="4.2333" height="8.4667"/>
+      <rect x="45.773" y="6.35" width="4.2333" height="8.4667"/>
+    </g>
+
+    <!-- Single Switch Indicator (grey) -->
+    <g fill="#646464" stroke-width=".36829">
+      <rect x="1.3229" y="{{ $sr1Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="7.6729" y="{{ $sr2Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="14.023" y="{{ $sr3Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="20.373" y="{{ $sr4Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="26.723" y="{{ $sr5Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="33.073" y="{{ $sr6Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="39.423" y="{{ $sr7Pos }}" width="4.2333" height="4.2333"/>
+      <rect x="45.773" y="{{ $sr8Pos }}" width="4.2333" height="4.2333"/>
+    </g>
+
+    <!-- Numbers -->
+    <g fill="#ffffff" font-family="sans-serif" font-size="3.5278px" font-weight="bold" stroke-width=".26458" style="line-height: 1.25">
+      <text x="2.2863367" y="18.711349"><tspan>1</tspan></text>
+      <text x="8.6363363" y="18.711349"><tspan>2</tspan></text>
+      <text x="14.986337" y="18.711349"><tspan>3</tspan></text>
+      <text x="21.336336" y="18.711349"><tspan>4</tspan></text>
+      <text x="27.686337" y="18.711349"><tspan>5</tspan></text>
+      <text x="34.036335" y="18.711349"><tspan>6</tspan></text>
+      <text x="40.386333" y="18.711349"><tspan>7</tspan></text>
+      <text x="46.736332" y="18.711349"><tspan>8</tspan></text>
+    </g>
+  </g>
+</svg>
