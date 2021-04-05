@@ -1,9 +1,7 @@
 ---
-title: Debugging 
+title: Debugging der Applikation
 weight: 20
 ---
-
-## Debugging
 
 Auf dieser Seite werden die Grundlagen der Fehlersuche mit dem Setup aus [dem ersten Kapitel]({{< ref setup >}}) beschrieben. Es wird
 Schritt für Schritt erklärt wie man den Debugger starten und verwenden kann.
