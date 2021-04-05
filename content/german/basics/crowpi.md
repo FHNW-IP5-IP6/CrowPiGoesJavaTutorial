@@ -5,11 +5,11 @@ weight: 10
 
 ## Das Wichtigste in Kürze
 
-Beim CrowPi handelt es sich um einen vielfältigen Baukasten der Firma Elecrow, welcher in Verbindung mit einem Raspberry Pi den Benutzer
+Beim CrowPi handelt es sich um einen vielfältigen Baukasten der Firma [Elecrow](https://www.elecrow.com/crowpi-compact-raspberry-pi-educational-kit.html), welcher in Verbindung mit einem Raspberry Pi den Benutzer
 zahlreiche Komponenten zu Lern- und Weiterbildungszwecken nutzen lässt. Das Gerät entstand im Rahmen einer Kickstarter-Kampagne und konnte
 schnell eine grosse Anzahl von Unterstützern finden.
 
-Im Gegensatz zu anderen Elektronikbausätzen sind beim CrowPi alle Komponenten direkt intern über die Platine mit den jeweiligen Komponenten
+Im Gegensatz zu anderen Elektronikbausätzen sind beim CrowPi alle Komponenten direkt über die Platine mit den jeweiligen Komponenten
 verbunden, so dass kein manuelles und aufwändiges Verkabeln der einzelnen Bauteile mehr erforderlich ist. Stattdessen kann einfach ein
 Raspberry Pi eingesetzt werden, welcher sofort über seine GPIO Pins (General-Purpose Input/Output) die jeweiligen Aktoren und Sensoren
 ansprechen kann.
