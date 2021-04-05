@@ -8,7 +8,7 @@ disableToc: true
 
 In diesem Tutorial wird die Entwicklung mit Hilfe der Entwicklungsumgebung IntelliJ IDEA umgesetzt. Entsprechend sind auch die Artikel,
 Anweisungen und Bilder jeweils damit erstellt. IntelliJ IDEA kann bei [Jetbrains](https://jetbrains.com) in verschiedenen Versionen bezogen
-werden. Für die Entwicklung mit dem CrowPi verfügt die Community Version bereits über genügen Funktionalität. Für Studenten der
+werden. Für die Entwicklung mit dem CrowPi verfügt die Community Version bereits über genügend Funktionalität. Für Studenten der
 Fachhochschule Nordwestschweiz ist jedoch auch die Ultimate Version kostenfrei erhältlich. Die Entwicklungsumgebung ist sowohl für Windows,
 macOS und auch Linux verfügbar. Der Download findet sich hier: [Download IntelliJ IDEA](https://www.jetbrains.com/idea/download/). Das 
 anschliessende Einrichten von IntelliJ IDEA verhält sich ebenfalls auf allen Plattformen identisch.
@@ -19,10 +19,10 @@ anschliessende Einrichten von IntelliJ IDEA verhält sich ebenfalls auf allen Pl
 
 Sobald wir nun die Entwicklungsumgebung installiert haben geht es an das Klonen des Einstiegsprojekts für den CrowPi. Dabei findet sich der
 Sourcecode auf GitHub unter: [Zum GitHub Projekt](https://github.com/ppmathis/fhnw-crowpi). Um nun das Repository zu klonen muss auf GitHub
-der entsprechende Link kopiert werden und dann in IntelliJ IDEA importiert werden. Dazu nun Schrittweise in Bildern eine etwas genauere
+der entsprechende Link kopiert werden und dann in IntelliJ IDEA importiert werden. Dazu nun schrittweise in Bildern eine etwas genauere
 Anleitung.
 
-Besuche [CrowPi](https://github.com/ppmathis/fhnw-crowpi) auf GitHub. Und kopiere Link zum Klonen welche wie auf dem Bild gefunden werden
+Besuche [CrowPi](https://github.com/ppmathis/fhnw-crowpi) auf GitHub und kopiere den Link zum Klonen wie auf dem Bild beschrieben.
 kann.
 ![GitHub Clone Project](/fhnw-crowpi/images/setup/github-clone-project.JPG?height=500px)
 
@@ -31,8 +31,8 @@ kann.
 ### 2. Importieren des Projekts
 
 Im Startfenster von IntelliJ ist die Option `Get from VCS` verfügbar. Diese muss angewählt werden damit direkt aus GitHub der Code geklont
-werden kann. Danach kann einfach der Link welche zuvor bei GitHub kopiert wurde eingefügt werden. Durch die Bestätigung auf
-`Clone` wird der Vorgang gestartet und allenfalls nötige Authentifizierung des Benutzers wird ausgeführt. Dabei einfach den Anweisungen des
+werden kann. Danach kann einfach der Link welcher zuvor bei GitHub kopiert wurde eingefügt werden. Durch die Bestätigung mit
+`Clone` wird der Vorgang gestartet und eine allenfalls nötige Authentifizierung des Benutzers wird ausgeführt. Dabei einfach den Anweisungen des
 Tools folgen.
 ![Importieren von VCS](/fhnw-crowpi/images/setup/intellij-getfromvcs.JPG?height=500px)
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellj-insert-githublink.JPG?height=500px)
@@ -45,30 +45,30 @@ kann einfach benutzt werden.
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellij-import-maven.JPG?height=500px)
 
 Das Importieren des Maven Projekts löst jeweils eine Sicherheitswarnung bei IntelliJ aus. Diese kann einfach mit `Trust project ...` 
-bestätigt werden. Jedenfalls, wenn der Code aus dem offiziellen FHNW CrowPi Repository stammt.
+bestätigt werden, solange der Code aus dem offiziellen FHNW CrowPi Repository stammt.
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellij-trust-project.JPG?height=500px)
 
 Nun noch der letzte Import Schritt. Damit später besser Fehler gesucht werden können und auch die Funktionen der Komponenten ganz tief 
 analysiert werden können, lohnt es sich bei Maven `Documentations and Sources` herunterzuladen. Das geht leicht mit einigen Klicks. Ganz 
 rechts wird das Maven Projekt Menu geöffnet. Anschliessend durch einen Klick auf `Download Sources and/or Documentation`. Im Kontextmenü 
 dann anschliessend `Download Sources and Documentation` wählen. So sind alle verwendeten Libraries lokal verfügbar und einsehbar. Nun 
-fehlt nur noch die Startkonfiguration des Projekts welche unter 3. zu finden ist.
+fehlt nur noch die Startkonfiguration des Projekts welche in der nächsten Sektion beschrieben ist.
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellij-download-deps-maven.JPG?height=500px)
 
 ---
 
 ### 3. Einstellung der Run Konfiguration
 Das Projekt CrowPi der FHNW benutzt 3 Run Konfigurationen. In diesen ist definiert welche Teile des Codes auf welche Art und Weise 
-ausgeführt werden. Keine Sorge der grösste Teil davon ist bereits vordefiniert und es fehlt nur noch die IP-Adresse des Raspberry Pi. 
+ausgeführt werden. Es besteht jedoch kein Grund zur Sorge, denn der grösste Teil davon ist bereits vordefiniert und es ist nur noch die IP-Adresse des Raspberry Pi einzutragen. 
 Verwendet werden die Konfigurationen: 
 - crowpi-examples [install]
 - crowpi-examples [debug]
 - Remote Debug 
 
-Dabei kopiert `crowpi-examples [install]` den akutellen Code auf den Raspberry Pi. Dies funktioniert über eine Kombination aus `SSH/SCP`.
+Dabei kopiert `crowpi-examples [install]` den aktuellen Code auf den Raspberry Pi. Dies funktioniert über eine Kombination aus `SSH/SCP`.
 Anschliessend wird der kopierte Code auf dem Raspberry Pi gestartet. `crowpi-examples [debug]` macht im Prinzip nichts anderes. Jedoch 
-werden andere Optionen bei der Verbindung ausgewählt und bevor die Ausführung startet kann ein Debugger verbunden werden. `Remote Debug` 
-stellt genau diesen Debugger zur Verfügung. Dieser Verbindet sich mit dem Raspberry Pi und die Fehlersuche kann beginnen. Näheres wie 
+werden andere Optionen bei der Verbindung ausgewählt und vor der eigentlichen Ausführung der Applikation wird auf eine Verbindung von einem Debugger gewartet. `Remote Debug` 
+stellt genau diesen Debugger zur Verfügung. Dieser verbindet sich mit dem Raspberry Pi und die Fehlersuche kann beginnen. Näheres wie 
 dies findet man hier: [Starten und Debuggen auf dem CrowPi](TODO)
 
 Damit dies alles reibungslos funktioniert muss nun aber zunächst wie erwähnt die IP-Adresse des Raspberry Pi eingestellt werden. Dazu 
@@ -81,7 +81,7 @@ steht bereits als Platzhalter `Add CrowPi IP here`.
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellj-three-configs.JPG?height=500px)
 
 Als erstes wird `crowpi-examples [debug]` konfiuriert. Dazu wie auf dem Bild den Tab `Runner` öffnen und dann auf `Add CrowPi IP here` 
-doppelklicken. Danach öffnet sich das Dialogfenster für das eintippen der IP-Adresse. Kurz mit `OK` bestätigen und mit `Apply` speichern. 
+doppelklicken. Danach öffnet sich das Dialogfenster für das Eintippen der IP-Adresse. Kurz mit `OK` bestätigen und mit `Apply` speichern. 
 ![Importieren von VCS Link einfügen](/fhnw-crowpi/images/setup/intellij-setup-debugconfig.JPG?height=500px)
 
 Als zweites folgt die `crowpi-examples [install]` Konfiguration. Diese funktioniert genau gleich wie eben die `crowpi-examples [debug]` 
@@ -106,5 +106,5 @@ Nach einigen Sekunden stoppt die Ausgabe und es sieht wie folgt aus:
 
 Hier kann nun eine Zahl entsprechend der Anweisung eingetippt werden und mit `Enter` bestätigt werden. Die entsprechende 
 Beispielapplikation wird dann ausgeführt. Sollten dabei jetzt noch Fehlermeldungen in der Kommandozeile auftreten lohnt es sich nochmals 
-die Netzwerkverbindung des Computers und des Raspberry Pi zu überprüfen. Auch in der Troubleshoot Sektion dieses Tutorials könnten noch 
-einige Tipps und Tricks zu finden sein.
+die Netzwerkverbindung des Computers und des Raspberry Pi zu überprüfen. Auch in der Troubleshooting Sektion dieses Tutorials sind noch 
+einige Tipps und Tricks zur Fehlerbehebung zu finden.
