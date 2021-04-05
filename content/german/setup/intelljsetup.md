@@ -18,11 +18,11 @@ anschliessende Einrichten von IntelliJ IDEA verhält sich ebenfalls auf allen Pl
 ### 1. Klonen des Repositories
 
 Sobald wir nun die Entwicklungsumgebung installiert haben geht es an das Klonen des Einstiegsprojekts für den CrowPi. Dabei findet sich der
-Sourcecode auf GitHub unter: [Zum GitHub Projekt](https://github.com/ppmathis/fhnw-crowpi). Um nun das Repository zu klonen muss auf GitHub
+Sourcecode auf [GitHub]({{% siteparam "repoURL" %}}). Um nun das Repository zu klonen muss auf GitHub
 der entsprechende Link kopiert werden und dann in IntelliJ IDEA importiert werden. Dazu nun schrittweise in Bildern eine etwas genauere
 Anleitung.
 
-Besuche [CrowPi]({{< repoURL >}}) auf GitHub und kopiere den Link zum Klonen wie auf dem Bild beschrieben.
+Besuche [CrowPi]({{% siteparam "repoURL" %}}) auf GitHub und kopiere den Link zum Klonen wie auf dem Bild beschrieben.
 kann.
 ![GitHub Clone Project](/fhnw-crowpi/images/setup/github-clone-project.JPG?height=500px)
 

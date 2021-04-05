@@ -19,7 +19,7 @@ genannten Homepage verfügbar.
 
 Das Image für den CrowPi welches das Betriebssystem für den Raspberry PI beinhaltet kann direkt aus dem Github
 Repository des CrowPi Projekts bezogen werden. Das neustste Release des Betriebssystems findet unter diesem Link:
-[Download CrowPi Image]({{< repoURL >}}/releases/latest)
+[Download CrowPi Image]({{% siteparam "repoURL" %}}/releases/latest)
 
 Bei GitHub kann das Image dann hier heruntergeladen werden:
 ![GitHub Download CrowPi Image](/fhnw-crowpi/images/setup/download-crowpi-image.JPG)
