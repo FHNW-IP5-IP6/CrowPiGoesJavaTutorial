@@ -1,6 +1,7 @@
 {{ $module := default "ch.fhnw.crowpi" (.Get "module") }}
 {{ $class := .Get "class" }}
-{{ $classURL := print (replace $class "." "/") ".html" }}
+{{ $subclass := .Get "subclass" | default "" }}
+{{ $classURL := print (replace $class "." "/") (cond (not (eq $subclass "")) (print "." $subclass) "") ".html" }}
 {{ $docsURL := relURL (print "/apidocs/" $module "/" $classURL) }}
 
 {{ (print "```" $class "```") | markdownify }}
