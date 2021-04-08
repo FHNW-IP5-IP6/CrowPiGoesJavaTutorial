@@ -48,6 +48,7 @@ Komponenten aufgeführt:
 | --- | --- | --- | --- |
 | [7-Segment Anzeige]({{< ref "components/seven-segment" >}}) | Anzeigen von bis zu 4 Ziffern | I²C | {{< dip-switches >}} |
 | [Buzzer]({{< ref "components/buzzer" >}}) | Abspielen von verschiedenen Tönen | PWM | {{< dip-switches >}} |
+| [LED Matrix]({{< ref "components/led-matrix" >}}) | Darstellen von beliebigen Symbolen | SPI | {{< dip-switches >}} |
 | [Lichtsensor]({{< ref "components/light-sensor" >}}) | Erkennen von aktueller Lichtstärke | I²C | {{< dip-switches >}} |
 | [Touch Sensor]({{< ref "components/touch-sensor" >}}) | Erkennen von Berührungen | GPIO | {{< dip-switches >}} |
 
