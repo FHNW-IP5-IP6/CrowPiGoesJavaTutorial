@@ -50,6 +50,7 @@ Komponenten aufgeführt:
 | [Buzzer]({{< ref "components/buzzer" >}}) | Abspielen von verschiedenen Tönen | PWM | {{< dip-switches >}} |
 | [LED Matrix]({{< ref "components/led-matrix" >}}) | Darstellen von beliebigen Symbolen | SPI | {{< dip-switches >}} |
 | [Lichtsensor]({{< ref "components/light-sensor" >}}) | Erkennen von aktueller Lichtstärke | I²C | {{< dip-switches >}} |
+| [Tilt Sensor]({{< ref "components/tilt-sensor" >}}) | Erkennt aktuelle Neigung (links/rechts) von CrowPi | GPIO | {{< dip-switches 10 >}} |
 | [Touch Sensor]({{< ref "components/touch-sensor" >}}) | Erkennen von Berührungen | GPIO | {{< dip-switches >}} |
 
 ## Weitere Ressourcen
