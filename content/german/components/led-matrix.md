@@ -48,11 +48,9 @@ werden jeweils sofort ausgeführt, da diese immer die ganze Anzeige betreffen.
 | Methode | Bemerkung |
 | --- | --- |
 | `void setEnabled(boolean enabled)` | Schaltet die Anzeige ein oder aus gemäss Boolean-Wert. |
-| `void setTestMode(boolean enabled)` | Schaltet den Testmodus der Anzeige ein oder aus. Ist dieser eingeschaltet, leuchten alle LEDs bedingungslos auf und alle anderen Operationen werden **
-nicht** ausgeführt. |
+| `void setTestMode(boolean enabled)` | Schaltet den Testmodus der Anzeige ein oder aus. Ist dieser eingeschaltet, leuchten alle LEDs bedingungslos auf und alle anderen Operationen werden **nicht** ausgeführt. |
 | `void setBrightness(int brightness)` | Setzt die gewünschte Helligkeit der ganzen Anzeige zwischen 0 (am dunkelsten) und 15 (am hellsten). |
-| `void setPixel(int x, int y, boolean enabled)` | *
-Buffer:* Schaltet einen einzelnen Pixel an der gewünschten Stelle ein (`true`) oder aus (`false`). |
+| `void setPixel(int x, int y, boolean enabled)` | *Buffer:* Schaltet einen einzelnen Pixel an der gewünschten Stelle ein (`true`) oder aus (`false`). |
 | `boolean getPixel(int x, int y)` | *Buffer:* Gibt den aktuellen Zustand eines einzelnen Pixels an der gewünschten Stelle an. |
 | `void clear()` | Löscht den internen Buffer ohne die Anzeige zu aktualisieren. |
 | `void refresh()` | Aktualisiert die Anzeige mit dem aktuellen Inhalt des Buffers. |
@@ -86,9 +84,10 @@ Funktion `setEnabled` aktiviert und eine mittlere Helligkeit mit `setBrightness`
 
 Das erste Beispiel zeigt nun die Verwendung von `draw(Consumer<Graphics2D>)` mit einer anonymen Lambda-Funktion. Dies klingt zuerst
 kompliziert, jedoch ist dies nichts anderes als die Möglichkeit eine eigene Funktion zu übergeben, um darin beliebige Zeichenoperationen
-durchzuführen. Der Parameter `graphics` entspricht dabei der Standard-Klasse `java.awt.Graphics2D`, wofür sich im Internet weitere
-Dokumentation finden lässt. Hier wird nun ein Kreuz gezeichnet (zuerst eine Linie von oben-links nach unten-rechts, dann von oben-rechts
-nach unten-links) und anschliessend ein Kreis darüber. Das Resultat wird dann auf der LED Matrix dargestellt.
+durchzuführen. Der Parameter `graphics` entspricht dabei der Standard-Klasse `java.awt.Graphics2D`, wofür sich
+[im Internet](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/Graphics2D.html) weitere Dokumentation finden lässt.
+Hier wird nun ein Kreuz gezeichnet (zuerst eine Linie von oben-links nach unten-rechts, dann von oben-rechts nach unten-links) und
+anschliessend ein Kreis darüber. Das Resultat wird dann auf der LED Matrix dargestellt.
 
 Das zweite Beispiel zeigt nach einer kurzen Pause eine Schleife über eine Liste von vordefinierten Symbolen, in diesem Fall vier
 verschiedenen Smileys. Diese werden jeweils mit einer kurzen Pause nacheinander dargestellt und demonstrieren somit einige der
