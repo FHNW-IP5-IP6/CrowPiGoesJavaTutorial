@@ -44,9 +44,14 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 | Methode | Bemerkung |
 | --- | --- |
 | `boolean isTouched()` | Gibt `true` zurück falls der Berührungssensor gerade betätigt wird ansonsten `false`. |
-| `DigitalState getState()` | Gibt den Status des Berührungssensor in Form des Enum `DigitalState {Invalid, High, Low}` zurück. |
-| `Object addListener(Consumer<DigitalState> onTouched)` | Methode zum registrieren eines Listeners auf dem Berührungssensor. Dazu wird ein Consumer übergeben welcher bei Eintreten eines Events ausgelöst wird. Gibt die Listener Instanz als Objekt zurück. |
-| `void removeListener(Object stateChangeListenerObject)` | Methode zum Entfernen eines zuvor erstellen Listeners. Dazu muss das Listener Objekt übergeben werden. |
+| `TouchState getState()` | Gibt den aktuellen Zustand des Berührungssensor zurück. |
+| `EventListener addListener(EventHandler<TouchState> handler)` | Registriert einen Event Listener, welcher bei jeder Veränderung aufgerufen wird. |
+| `void removeListener(EventListener listener)` | Entfernt einen zuvor registrierten Event Listener. |
+
+### Enumerationen
+
+- {{< javadoc class="ch.fhnw.crowpi.components.TouchSensorComponent" subclass="TouchState" >}} enthält alle möglichen Zustände welche vom
+  Touch Sensor zurückgegeben werden können.
 
 ## Beispielapplikation
 
