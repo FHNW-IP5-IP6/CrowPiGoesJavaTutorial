@@ -5,11 +5,11 @@ tags: ["gpio"]
 
 ## Funktionsweise
 
-Der Ultraschall Distanzsensor misst mithilfe eines akustischen Signales die Distanz zu Objekten. Der Ton liegt dabei im ultraschallbereich
+Der Ultraschall Distanzsensor misst mithilfe eines akustischen Signals die Distanz zu Objekten. Der Ton liegt dabei im Ultraschallbereich
 und ist für den Menschen nicht hörbar. Um das Signal von Umgebungsgeräuschen unterscheiden zu können, wird nicht ein langer Ton, sondern
-kurze pulsierendes Töne ausgeben. Beim im Crow Pi verbauten Modell `HC-SR04` handelt es sich dabei 8 einzelne Impulse auf einer Frequenz von
-40kHz. Wenn diese Töne nun auf ein Objekt treffen werden sie reflektiert und zurück Richtung Sensor geworfen. Sobald der Sensor seinen
-eignen Ton wieder hört, schaltet er entsprechen seinen digitalen Ausgang. Zum Starten des Messvorgangs bietet der Sensor zusätzlich einen
+kurze pulsierendes Töne ausgeben. Beim im CrowPi verbauten Modell `HC-SR04` handelt es sich dabei 8 einzelne Impulse auf einer Frequenz von
+40kHz. Wenn diese Töne nun auf ein Objekt treffen, werden sie reflektiert und zurück Richtung Sensor geworfen. Sobald der Sensor seinen
+eigenen Ton wieder hört, schaltet er entsprechend seinen digitalen Ausgang. Zum Starten des Messvorgangs bietet der Sensor zusätzlich einen
 digitalen Eingang.
 
 Wenn nun mit einem Programm die Zeit zwischen Aussenden des Tons (Trigger) und dem Wiedereintreffen des Tons gemessen wird kann daraus
@@ -17,8 +17,8 @@ mithilfe der Schallgeschwindigkeit die Distanz zum Objekt berechnet werden. Dies
 `UltrasonicDistanceSensorComponent` übernommen. Sie liefert direkt einen Messwert in Zentimetern.
 
 Mit dem `HC-SR04` können Distanzen zwischen von 2 bis 3000 Zentimetern gemessen werden. Dabei ist mit einer Toleranz von etwa 3 Millimetern
-zu rechnen. Je nach Messdistanz variiert dieser Wert etwas. Genauers dazu findet sich im [Datenblatt](https://cdn.sparkfun.
-com/datasheets/Sensors/Proximity/HCSR04.pdf) des Sensors. Wichtig ist auch zu wissen das sich mehrere Ultraschallsensoren sich gegenseitig
+zu rechnen. Je nach Messdistanz variiert dieser Wert etwas. Genaueres dazu findet sich im [Datenblatt](https://cdn.sparkfun.
+com/datasheets/Sensors/Proximity/HCSR04.pdf) des Sensors. Wichtig ist auch zu wissen, dass mehrere Ultraschallsensoren sich gegenseitig
 stören können. Weiter ist die Schallgeschwindkeit von der Umgebungstemperatur abhängig. Die Messwerte können einige Prozent schwanken, wenn
 es kälter oder wärmer ist.
 
