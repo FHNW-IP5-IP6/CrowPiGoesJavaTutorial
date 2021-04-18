@@ -1,11 +1,11 @@
 ---
-title: LCD-Display
+title: LCD Display
 tags: ["gpio", "i2c"]
 ---
 
 ## Funktionsweise
-Beim LCD-Display handelt es sich um eine der komplexesten Komponenten des CrowPi. Die betrifft sowohl die Ansteuerung in der Software als 
-auch die Funktionalität des Displays an sich. Das LCD-Display verfügt auf 2 Zeilen jeweils über 16 kleine Pixelfelder. Diese bestehen
+Beim LCD Display handelt es sich um eine der komplexesten Komponenten des CrowPi. Die betrifft sowohl die Ansteuerung in der Software als 
+auch die Funktionalität des Displays an sich. Das LCD Display verfügt auf 2 Zeilen jeweils über 16 kleine Pixelfelder. Diese bestehen
 aus je 5x8 Pixeln. Jedes dieser Pixel wird von den Mikrocontrollern des Displays einzeln angesteuert um so Buchstaben, Zahlen und 
 Sonderzeichen zu zeigen. Auf diese Weise können also bis zu 32 Zeichen gleichzeitig angezeigt werden. Damit nun der Benutzer nicht jedes 
 Pixel einzeln ansteuern muss, sind schon die wichtigsten Zeichen vorprogrammiert. Es können ´a-Z, 0–9 und einige Sonderzeichen´ einfach 
@@ -27,7 +27,7 @@ neben dem Display. Es ist relativ klein und kann gut übersehen werden. Auf dem 
 
 ### DIP Switches
 
-Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:
 
 {{< dip-switches >}}
 
@@ -39,11 +39,12 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 | Konstruktor | Bemerkung |
 | --- | --- |
-| `TouchSensorComponent(com.pi4j.context.Context pi4j)` | Initialisiert einen Touch Sensor mit dem Standard-Pin für den CrowPi. |
-| `TouchSensorComponent(com.pi4j.context.Context pi4j, int address, long debounce)` | Initialisiert einen Touch Sensor mit einem benutzerdefinierten Pin. Zusätzlich kann mit `debounce` noch eine Entprellzeit in Mikrosekunden angegeben werden  |
+| `LcdDisplayComponent(com.pi4j.context.Context pi4j)` | Initialisiert ein LCD Display mit der Standard Bus- und Geräteadresse. |
+| `LcdDisplayComponent(com.pi4j.context.Context pi4j, int address)` | Initialisiert ein LCD Display mit einer benutzerdefinierten Bus- und Geräteadresse. |
 
 ### Methoden
 
+????
 | Methode | Bemerkung |
 | --- | --- |
 | `boolean isTouched()` | Gibt `true` zurück falls der Berührungssensor gerade betätigt wird ansonsten `false`. |
@@ -53,23 +54,18 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Enumerationen
 
+????
 - {{< javadoc class="ch.fhnw.crowpi.components.TouchSensorComponent" subclass="TouchState" >}} enthält alle möglichen Zustände welche vom
   Touch Sensor zurückgegeben werden können.
 
 ## Beispielapplikation
 
-Die nachfolgende Beispielapplikation registriert einen Listener auf dem Touch Sensor. Dieser Listener löst dann für 20 Sekunden ein
-minimales Event aus. Es wird jedes Mal in dieser Zeit, wenn der Sensor berührt oder losgelassen wird ein kleiner Text mit dem Status
-ausgegeben. Nach Ablauf der Zeit wird der Listener wieder vom Berührungssensor entfernt und mittels der `isTouched()` Methode gewartet bis
-der Benutzer die Beispielapplikation beendet. Durch Verwendung des Konstruktors mit nur einem Argument wird in dieser Applikation die
-Standardeinstellung für die Entprellung benutzt. Diese liegt bei 10'000 Mikrosekunden und passt ganz gut für die meisten menschlichen
-Eingaben. 
-
+????
 {{< code file="src/main/java/ch/fhnw/crowpi/applications/LcdDisplayApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 
-- Das Beispiel um beliebige Abfolgen von Berührungen erweitern. So wäre zum Beispiel eine Kombination aus langen und kurzen Berührungen
-  möglich um ein kleines Spiel zu entwickeln.
-
-- Umsetzung des Morsealphabets mittels Touch Sensor und Events
+- Das Display mit anderen Komponenten kombinieren. Dabei bieten sich unzählige Möglichkeiten. Es könnten die aktuelle Temperatur oder 
+  Helligkeit angezeigt werden.
+- Eine Karaoke Maschine. Mittels des Buzzers einen Song abspielen und auf dem Display jeweils den aktuellen Text anzeigen. Viel Spass 
+  beim Singen und Programmieren!
