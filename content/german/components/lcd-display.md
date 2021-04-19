@@ -44,19 +44,19 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Methoden
 
-????
 | Methode | Bemerkung |
 | --- | --- |
-| `boolean isTouched()` | Gibt `true` zurück falls der Berührungssensor gerade betätigt wird ansonsten `false`. |
-| `TouchState getState()` | Gibt den aktuellen Zustand des Berührungssensor zurück. |
-| `EventListener addListener(EventHandler<TouchState> handler)` | Registriert einen Event Listener, welcher bei jeder Veränderung aufgerufen wird. |
-| `void removeListener(EventListener listener)` | Entfernt einen zuvor registrierten Event Listener. |
+| `void initialize()` | initialisiert das Display und bereitet alles für die Benutzung vor. |
+| `void writeLine(String text, int line)` | Schreibt den maximal 16 Zeichen langen Text auf die in gewählte Zeile des Displays  |
+| `void writeText(String text` | Schreibt einen 32 Zeichen langen Test auf beide Zeilen des Displays. Der Zeilenumbruch funktioniert automatisch oder kann mit ´\n´ eingefügt werden. |
+| `void setCursorToLine(int number)` | Schiebt den aktuellen Zeiger auf die gewünschte Zeile des Displays. |
+| `void setDisplayBacklight(boolean state)` | Schaltet die Hintergrundbeleuchtung des Displays ein oder aus. |d
 
 ### Enumerationen
 
 ????
-- {{< javadoc class="ch.fhnw.crowpi.components.TouchSensorComponent" subclass="TouchState" >}} enthält alle möglichen Zustände welche vom
-  Touch Sensor zurückgegeben werden können.
+- {{< javadoc class="ch.fhnw.crowpi.components.LcdDisplayComponent" subclass="Symbol" >}} beinhaltet die wichtigsten ASCII Zeichen 
+  welche mit dem Display verwendet werden können. 
 
 ## Beispielapplikation
 
