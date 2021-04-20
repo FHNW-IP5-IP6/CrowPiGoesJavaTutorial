@@ -8,10 +8,10 @@ disableToc: true
 
 ### 1. Installieren des Raspberry Pi Imager
 
-Der offizielle Raspberry Pi Imager kann direkt bei [raspberry.org](https://www.raspberrypi.org/software/) in der
-aktuellsten Version heruntergeladen werden. Das einfache Tool funktioniert auf allen gängigen Betriebssystemen und kann
-mit wenigen Tastendrücken sehr simpel installiert werden. Genauere Anleitungen zur Installation sind ebenfalls auf der
-genannten Homepage verfügbar.
+Der offizielle Raspberry Pi Imager kann direkt auf
+[der offiziellen raspberry.org Website](https://www.raspberrypi.org/software/) in der aktuellsten Version heruntergeladen werden. Das
+einfache Tool funktioniert auf allen gängigen Betriebssystemen und kann mit wenigen Tastendrücken sehr simpel installiert werden. Genauere
+Anleitungen zur Installation sind ebenfalls auf der genannten Homepage verfügbar.
 
 ---
 
@@ -30,13 +30,13 @@ Nach dem Download das .zip Archiv entpacken. Schon ist alles bereit für den nä
 
 ### 3. Schreiben des Images auf eine SD Karte
 
-{{% notice warning %}} Beim Schreiben des Images auf die SD-Karte werden sämtliche Daten welche sich noch darauf
-befinden überschrieben!
+{{% notice warning %}} Bei dem Schreiben des Images auf die SD-Karte werden sämtliche Daten, welche sich noch darauf
+befinden, überschrieben!
 {{% /notice %}}
 
-Als erstes muss die SD-Karte auf dem Computer als Laufwerk verfügbar sein. Dazu gibt es verschiedene Möglichkeiten. Es
+Als Erstes muss die SD-Karte auf dem Computer als Laufwerk verfügbar sein. Dazu gibt es verschiedene Möglichkeiten. Es
 eignen sich Kartenlesegeräte genauso wie auch USB Adapter. Nun wird das Tool Raspberry Pi Imager gestartet. Als erstes
-muss das Betriebsystem gewählt werden. Dazu den Knopf `OS WÄHLEN` drücken.
+muss das Betriebssystem gewählt werden. Dazu den Knopf `OS WÄHLEN` drücken.
 {{< img alt="Bild des Hauptmenüs vom Raspberry Pi Imager" src="setup/mainmenu-raspberrypi-imager.JPG" >}}
 Nun findet sich ganz unten in der Auswahl `Eigenes Image`. Im Auswahldialog das vorher heruntergeladene und entpackte
 `crowpi.img` auswählen.
@@ -44,9 +44,9 @@ Nun findet sich ganz unten in der Auswahl `Eigenes Image`. Im Auswahldialog das 
 
 Als zweiter Schritt wird nun die SD-Karte ausgewählt. Dazu im Menu den Knopf `SD-KARTE WÄHLEN` drücken. Es zeigt einem
 automatisch nur verfügbare Wechselmedien wie USB-Sticks oder SD-Karten. **Dabei ist es jetzt sehr wichtig den korrekten
-Eintrag auszuwählen um ungewollten Datenverlust zu vermeiden**. Auf Windows wird unter dem Datenträger jeweils noch
-angezeigt, welcher Laufwerksbuchstabe effektiv betroffen ist, so dass dieser einfach im Explorer überprüft werden kann.
-Im Zweifelsfall aber einfach Datenträger mit wichtigen Medien vorher ausstecken, so dass sicher nichts passieren kann.
+Eintrag auszuwählen, um ungewollten Datenverlust zu vermeiden**. Auf Windows wird unter dem Datenträger jeweils noch
+angezeigt, welcher Laufwerksbuchstabe effektiv betroffen ist, sodass dieser einfach im Explorer überprüft werden kann.
+Im Zweifelsfall aber einfach Datenträger mit wichtigen Medien vorher ausstecken, sodass sicher nichts passieren kann.
 
 {{< img alt="Auswahl SD-Karte" src="setup/selectsdcard-raspberrypi-imager.JPG" >}}
 
@@ -68,7 +68,19 @@ werden. Auf der Unterseite findet sich nun der SD-Karten Einschub. Hier kann die
 den Raspberry Pi eingesetzt werden. Auf dem Bild unten ist nochmals der Einschub markiert. Sobald die SD-Karte
 eingesetzt ist, kann der Raspberry Pi wieder korrekt in den CrowPi eingebaut und die allenfalls gelösten Kabel wieder
 eingesteckt werden. Sobald alles wieder an seinem Platz ist, kann der CrowPi mit dem Strom verbunden werden.
+
 {{< img alt="Raspberry Pi SD-Karten Einschub" src="setup/crowpi-raspberrypi-sdslot.JPG" height="600px" >}}
+
+Bevor der CrowPi nun in Betrieb genommen wird, sollte noch einmal überprüft werden ob alle 3 Kabel mit dem Raspberry Pi verbunden sind. Es
+sollte sowohl der HDMI-Adapter auf der linken Seite, das USB-Kabel auf der unteren Seite sowie das GPIO Flachbandkabel auf der rechten Seite
+verbunden sein. Diese zwingend erforderlichen Kabel sind in der nächsten Grafik mit roten Kreisen umrahmt. Optional kann noch eine Tastatur
+und Maus per USB verbunden werden, was nachfolgend mit einem pinken Kreis markiert wurde:
+
+{{< img alt="Raspberry Pi SD-Karten Einschub" src="setup/crowpi-cables.jpg" height="600px" >}}
+
+Nun kann der CrowPi eingeschaltet werden, worauf dieser nach einer kurzen Initialisierungszeit zur Verfügung steht. Die Zugangsdaten für den
+CrowPi sind `pi` als Benutzername und `crowpi` als Passwort, welche **nicht** geändert werden dürfen da ansonsten die mitgelieferten
+IntelliJ-Konfigurationen nicht mehr direkt lauffähig sind.
 
 ---
 
