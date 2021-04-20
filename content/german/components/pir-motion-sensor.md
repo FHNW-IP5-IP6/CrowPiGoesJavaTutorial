@@ -31,20 +31,20 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Konstruktoren
 
-| Konstruktor | Bemerkung |
-| --- | --- |
-| `PirMotionSensorComponent(com.pi4j.context.Context pi4j)` | Initialisiert einen PIR Motion Sensor mit dem Standard-Pin für den CrowPi. |
-| `PirMotionSensorComponent(com.pi4j.context.Context pi4j, int address)` | Initialisiert einen PIR Motion Sensor mit einem benutzerdefinierten Pin. |
+| Konstruktor                                                            | Bemerkung                                                                  |
+|:-----------------------------------------------------------------------|:---------------------------------------------------------------------------|
+| `PirMotionSensorComponent(com.pi4j.context.Context pi4j)`              | Initialisiert einen PIR Motion Sensor mit dem Standard-Pin für den CrowPi. |
+| `PirMotionSensorComponent(com.pi4j.context.Context pi4j, int address)` | Initialisiert einen PIR Motion Sensor mit einem benutzerdefinierten Pin.   |
 
 ### Methoden
 
-| Methode | Bemerkung |
-| --- | --- |
-| `MotionState getState()` | Gibt den aktuellen Zustand vom PIR Motion Sensor zurück. |
-| `boolean hasMovement()` | Überprüft ob der PIR Motion Sensor zurzeit Bewegung erkennt. |
-| `boolean hasStillstand()` | Überprüft ob der PIR Motion Sensor zurzeit Stillstand erkennt. |
-| `EventListener addListener(EventHandler<MotionState> handler)` | Registriert einen Event Listener, welcher bei jeder Veränderung aufgerufen wird. |
-| `void removeListener(EventListener listener)` | Entfernt einen zuvor registrierten Event Listener. |
+| Methode                                         | Bemerkung                                                                                                                  |
+|:------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| `MotionState getState()`                        | Gibt den aktuellen Zustand vom PIR Motion Sensor zurück.                                                                   |
+| `boolean hasMovement()`                         | Überprüft ob der PIR Motion Sensor zurzeit Bewegung erkennt.                                                               |
+| `boolean hasStillstand()`                       | Überprüft ob der PIR Motion Sensor zurzeit Stillstand erkennt.                                                             |
+| `void onMovement(SimpleEventHandler handler)`   | Setzt den Event Handler welcher bei erkannter Bewegung aufgerufen werden soll. `null` deaktiviert diesen Event Listener.   |
+| `void onStillstand(SimpleEventHandler handler)` | Setzt den Event Handler welcher bei erkanntem Stillstand aufgerufen werden soll. `null` deaktiviert diesen Event Listener. |
 
 ### Enumerationen
 
@@ -58,8 +58,8 @@ mehr erkennt. Hierfür wird eine endlose `while`-Schleife verwendet, welche zwis
 unnötige Rechenlast zu erzeugen.
 
 Anschliessend wird die Alarmanlage aktiviert und überwacht für 30 Sekunden sämtliche auftretenden Zustandsänderungen vom Bewegungssensor.
-Hierfür wird die Funktion `addListener` benötigt, welche einen Event Handler registriert der Änderungen jeweils protokolliert. Nach 30
-Sekunden wird die Anwendung automatisch beendet.
+Hierfür werden die Funktionen `onMovement()` und `onStillstand()` benötigt, welche Event Handler zur Protokollierung von Änderungen
+registrieren. Nach 30 Sekunden wird die Anwendung automatisch beendet.
 
 {{< code file="src/main/java/ch/fhnw/crowpi/applications/PirMotionSensorApp.java" language="java" >}}
 
@@ -69,3 +69,4 @@ Sekunden wird die Anwendung automatisch beendet.
 
 - Implementation von einfachem Spiel wo die Hand über den PIR Motion Sensor gehalten werden und nicht bewegt werden darf für eine möglichst
   lange Zeit. Hier könnte sogar ein einfaches Highscore-System eingebaut werden.
+

@@ -34,19 +34,19 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Konstruktoren
 
-| Konstruktor | Bemerkung |
-| --- | --- |
-| `TouchSensorComponent(com.pi4j.context.Context pi4j)` | Initialisiert einen Touch Sensor mit dem Standard-Pin für den CrowPi. |
-| `TouchSensorComponent(com.pi4j.context.Context pi4j, int address, long debounce)` | Initialisiert einen Touch Sensor mit einem benutzerdefinierten Pin. Zusätzlich kann mit `debounce` noch eine Entprellzeit in Mikrosekunden angegeben werden  |
+| Konstruktor                                                                       | Bemerkung                                                                                                                                                   |
+|:----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `TouchSensorComponent(com.pi4j.context.Context pi4j)`                             | Initialisiert einen Touch Sensor mit dem Standard-Pin für den CrowPi.                                                                                       |
+| `TouchSensorComponent(com.pi4j.context.Context pi4j, int address, long debounce)` | Initialisiert einen Touch Sensor mit einem benutzerdefinierten Pin. Zusätzlich kann mit `debounce` noch eine Entprellzeit in Mikrosekunden angegeben werden |
 
 ### Methoden
 
-| Methode | Bemerkung |
-| --- | --- |
-| `boolean isTouched()` | Gibt `true` zurück falls der Berührungssensor gerade betätigt wird ansonsten `false`. |
-| `TouchState getState()` | Gibt den aktuellen Zustand des Berührungssensor zurück. |
-| `EventListener addListener(EventHandler<TouchState> handler)` | Registriert einen Event Listener, welcher bei jeder Veränderung aufgerufen wird. |
-| `void removeListener(EventListener listener)` | Entfernt einen zuvor registrierten Event Listener. |
+| Methode                 | Bemerkung                                                                                                                    |
+|:------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| `boolean isTouched()`   | Gibt `true` zurück falls der Berührungssensor gerade betätigt wird ansonsten `false`.                                        |
+| `TouchState getState()` | Gibt den aktuellen Zustand des Berührungssensor zurück.                                                                      |
+| `void onTouch()`        | Setzt den Event Handler welcher beim Berühren des Sensors aufgerufen werden soll. `null` deaktiviert diesen Event Listener.  |
+| `void onRelease()`      | Setzt den Event Handler welcher beim Loslassen des Sensors aufgerufen werden soll. `null` deaktiviert diesen Event Listener. |
 
 ### Enumerationen
 
@@ -55,9 +55,9 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ## Beispielapplikation
 
-Die nachfolgende Beispielapplikation registriert einen Listener auf dem Touch Sensor. Dieser Listener löst dann für 20 Sekunden ein
-minimales Event aus. Es wird jedes Mal in dieser Zeit, wenn der Sensor berührt oder losgelassen wird ein kleiner Text mit dem Status
-ausgegeben. Nach Ablauf der Zeit wird der Listener wieder vom Berührungssensor entfernt und mittels der `isTouched()` Methode gewartet bis
+Die nachfolgende Beispielapplikation registriert zwei Event Listener auf dem Touch Sensor. Diese Listener lösen dann für 20 Sekunden jeweils
+ein minimales Event aus. Es wird jedes Mal in dieser Zeit, wenn der Sensor berührt oder losgelassen wird ein kleiner Text mit dem Status
+ausgegeben. Nach Ablauf der Zeit werden die Listener wieder vom Berührungssensor entfernt und mittels der `isTouched()` Methode gewartet bis
 der Benutzer die Beispielapplikation beendet. Durch Verwendung des Konstruktors mit nur einem Argument wird in dieser Applikation die
 Standardeinstellung für die Entprellung benutzt. Diese liegt bei 10'000 Mikrosekunden und passt ganz gut für die meisten menschlichen
 Eingaben. {{< code file="src/main/java/ch/fhnw/crowpi/applications/TouchSensorApp.java" language="java" >}}
@@ -68,3 +68,4 @@ Eingaben. {{< code file="src/main/java/ch/fhnw/crowpi/applications/TouchSensorAp
   möglich um ein kleines Spiel zu entwickeln.
 
 - Umsetzung des Morsealphabets mittels Touch Sensor und Events
+
