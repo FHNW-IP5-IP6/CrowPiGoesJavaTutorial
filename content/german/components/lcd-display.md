@@ -12,8 +12,7 @@ zeigen. Auf diese Weise können also bis zu 32 Zeichen gleichzeitig angezeigt we
 ansteuern muss, sind schon die wichtigsten Zeichen vorprogrammiert. Es können `a-Z, 0–9 und einige Sonderzeichen` einfach genutzt werden. Um
 dem Benutzer noch mehr Möglichkeiten zu offerieren, können zudem noch 8 benutzerdefinierte Zeichen erfasst werden. Durch diese
 vielfältigkeit und doch schon eine grosse Menge an Platz für die Anzeige von Text und Zahlen bieten sich unzählige 
-Anwendungsmöglichkeiten für
-ein solches LCD-Display.
+Anwendungsmöglichkeiten für ein solches LCD-Display.
 
 Die Ansteuerung des Displays erfolgt über einfache digitale Signale. Da jedoch 8 Stück benutzt werden und der Raspberry Pi nur wenige zur
 Verfügung hat gibt es eine kleine Zwischenschaltung. Es wird ein Baustein verwendet welcher mittels [I²C]({{< ref "hardware/i2c" >}})
@@ -59,7 +58,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 | `void setCursorToPosition(int digit, int line)` | Bewegt den Cursor auf angegebene Position. |
 | `void setCursorToLine(int line)` | Schiebt den aktuellen Zeiger auf die gewünschte Zeile des Displays. |
 | `void setCursorVisibility(boolean show)` | Hiermit kann der Cursor angezeigt (`true`) oder versteckt (`false`) werden. |
-| `void setCursorBlinking(boolean blink)` | Das Feld auf dem der Cursor sich aktuell befindet blinkt (`true`) oder nicht (`false`)|
+| `void setCursorBlinking(boolean blink)` | Das Feld, auf dem der Cursor sich aktuell befindet, blinkt (`true`) oder nicht (`false`)|
 | `void moveDisplayRight()` | Bewegt alles auf dem Display um eine Stelle nach rechts. |
 | `void moveDisplayLeft()` | Bewegt alles auf dem Display um eine Stelle nach links. |
 | `void createCharacter(int location, byte[] character)` | Erstellt einen benutzerdefinierten Charakter auf der gewünschten Speicherstelle. Das Array muss genau der Länge acht entsprechen |
