@@ -10,3 +10,7 @@
     justify-content: space-between;
     margin-bottom: -1.5rem !important;
 }
+
+code {
+    white-space: break-spaces;
+}
