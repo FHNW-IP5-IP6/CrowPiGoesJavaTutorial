@@ -83,8 +83,8 @@ eigene Zeichen zu definieren. Bis zu 7 verschiedene Zeichen sind gleichzeitig sp
 verschiedensten Symbole erstellen. Nun folgen nochmals einige Textausgaben. Während diesen Ausgaben wird kurz der `Cursor` angezeigt. Dieser
 stellt jeweils die aktuelle Schreibposition des Displays dar. Er kann durch auch sehr einfach verschoben werden. Auch das wird kurz
 demonstriert. Zum Abschluss folgen nochmals einige Textausgaben auch in kombination mit manuellen Zeilenumbrüchen. Dazu wird ein `\n` in den
-String eingefügt. Dies erzeugt dann sofort einen Zeilenumbruch. {{< code
-file="src/main/java/ch/fhnw/crowpi/applications/LcdDisplayApp.java"language="java" >}}
+String eingefügt. Dies erzeugt dann sofort einen Zeilenumbruch.
+{{< codefile="src/main/java/ch/fhnw/crowpi/applications/LcdDisplayApp.java"language="java" >}}
 
 ## Weitere Möglichkeiten
 
