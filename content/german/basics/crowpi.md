@@ -48,9 +48,11 @@ Komponenten aufgeführt:
 | --- | --- | --- | --- |
 | [7-Segment Anzeige]({{< ref "components/seven-segment" >}}) | Anzeigen von bis zu 4 Ziffern | I²C | {{< dip-switches >}} |
 | [Buzzer]({{< ref "components/buzzer" >}}) | Abspielen von verschiedenen Tönen | PWM | {{< dip-switches >}} |
+| [LCD Display] ({{< ref "components/lcd-display" >}}) | Anzeige von Text und Zahlen | I²C, GPIO | {{< dip-switches >}} |
 | [LED Matrix]({{< ref "components/led-matrix" >}}) | Darstellen von beliebigen Symbolen | SPI | {{< dip-switches >}} |
 | [Lichtsensor]({{< ref "components/light-sensor" >}}) | Erkennen von aktueller Lichtstärke | I²C | {{< dip-switches >}} |
 | [PIR Motion Sensor]({{< ref "components/pir-motion-sensor" >}}) | Erkennen von Bewegung mit passivem Infrarot | GPIO | {{< dip-switches >}} |
+| [Relay]({{< ref "components/relay" >}}) | Schaltung eines elektrischen Kontakts | GPIO | {{< dip-switches >}} |
 | [Tilt Sensor]({{< ref "components/tilt-sensor" >}}) | Erkennt aktuelle Neigung (links/rechts) von CrowPi | GPIO | {{< dip-switches 10 >}} |
 | [Touch Sensor]({{< ref "components/touch-sensor" >}}) | Erkennen von Berührungen | GPIO | {{< dip-switches >}} |
 | [Ultraschall Distanz Sensor]({{< ref "components/ultrasonic-sensor" >}}) | Messung von Distanzen mit Ultraschall | GPIO | {{< dip-switches >}} |
