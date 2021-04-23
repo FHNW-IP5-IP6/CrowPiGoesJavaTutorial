@@ -5,10 +5,10 @@ tags: ["gpio"]
 
 ## Funktionsweise
 
-Das Relais ist eine Komponente, welche es ermöglichen soll mit geringen Schaltströmen grosse Lasten zu schalten. So kann Beispielsweise mit
+Das Relais ist eine Komponente, welche es ermöglichen soll mit geringen Schaltströmen grosse Lasten zu schalten. So kann beispielsweise mit
 dem Raspberry Pi eine grosse Lampe geschaltet werden, ohne den Raspberry Pi zu beschädigen. Um eine Last zu verkabeln, stellt das Relais
 drei Anschlüsse zur Verfügung. Diese sind beim CrowPi mit ´NC, NO, COM´ beschriftet. Die Anschlüsse für die Ansteuerung durch den CrowPi
-sind natürlich, wie bei den anderen Komponenten bereits vor verkabelt.
+sind wie auch bei den anderen Komponenten bereits fertig verkabelt.
 
 Auf dem Schaltbild des Relais kann sehr gut erkannt werden, wie das Relais zu benutzen ist. Dabei stellt das Schaltsymbol immer den
 stromlosen Zustand einer Komponente dar. Also der digitale Ausgang im Status `LOW` ist.  
@@ -50,10 +50,10 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 ## Beispielapplikation
 
 Die Beispielapplikation initialisiert kurz das Relais. Danach wird es einige Male hin und her geschaltet, um das `Toggle` zu demonstrieren.
-Alles in allem eine kurz und knappe Anwendung. Die Herausforderung bei einem Relais liegt mehr in der richtigen Verkabelung als in der
+Alles in allem eine kurze und kompakte Anwendung. Die Herausforderung bei einem Relais liegt mehr in der richtigen Verkabelung als in der
 Software.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/RelayApp.java"language="java" >}}
+{{< code file="src/main/java/ch/fhnw/crowpi/applications/RelayApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 
@@ -61,5 +61,4 @@ Software.
   programmieren.
 - Eine LED korrekt verkabeln und mit dem
   [Lichtsensor]({{< ref "components/light-sensor" >}}) kombinieren.
-
 
