@@ -7,7 +7,7 @@ tags: ["gpio"]
 
 Bei einer Button-Matrix handelt es sich um nichts anderes als ein Gitter von Knöpfen, also zum Beispiel 4 × 4 Knöpfe wie beim CrowPi. In der
 simpelsten Form könnte jeder Knopf einzeln mit einem GPIO Pin verbunden werden, jedoch stösst man auf diese Art und Weise schnell an die
-maximale Kapazität von GPIO Pins von einem Raspberry Pi.
+maximale Kapazität von GPIO Pins eines Raspberry Pi.
 
 Eine andere Methode, welche auch von der Button-Matrix auf dem CrowPi genutzt wird, ist, dass die Kombination der beiden Achsen für das
 Auslesen der einzelnen Knöpfe verwendet wird. In der Komponente werden hierbei sogenannte `Selector` und `Button` Pins definiert, welche
@@ -105,4 +105,3 @@ an wiederholten Elementen entspricht.
 - Ein eigenes Spiel ausdenken, welches sich in Kombination mit anderen Komponenten vom CrowPi aufbauen lässt.
 
 - Nutzung als hexadezimale Eingabe, so könnte die 4x4 Matrix ein Ziffernblock für 0-9 und A-F sein.
-
