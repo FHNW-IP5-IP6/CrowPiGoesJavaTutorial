@@ -48,6 +48,7 @@ Komponenten aufgeführt:
 | Komponente                                                               | Einsatzzweck                                       | Schnittstelle | Position von DIP Switches            |
 |:-------------------------------------------------------------------------|:---------------------------------------------------|:--------------|:-------------------------------------|
 | [7-Segment Anzeige]({{< ref "components/seven-segment" >}})              | Anzeigen von bis zu 4 Ziffern                      | I²C           | {{< dip-switches >}}                 |
+| [Button]({{< ref "components/button" >}})                                | Abfragen von vier unabhängigen Knöpfen             | GPIO          | {{< dip-switches 5 6 7 8 >}}         |
 | [Button Matrix]({{< ref "components/button-matrix" >}})                  | Abfragen von Matrix aus 4 × 4 Knöpfen              | GPIO          | {{< dip-switches 1 2 3 4 5 6 7 8 >}} |
 | [Buzzer]({{< ref "components/buzzer" >}})                                | Abspielen von verschiedenen Tönen                  | PWM           | {{< dip-switches >}}                 |
 | [LCD Display]({{< ref "components/lcd-display" >}})                      | Anzeige von Text und Zahlen                        | I²C, GPIO     | {{< dip-switches >}}                 |
@@ -63,3 +64,4 @@ Komponenten aufgeführt:
 
 - [Offizielle Anleitung von Hersteller (Englisch)](https://www.elecrow.com/download/product/SES14002K/CrowPi_User_Manual.pdf)
 - [Ursprüngliche Kickstarter-Kampagne für CrowPi (Englisch)](https://www.kickstarter.com/projects/elecrow/crowpi-lead-you-go-from-zero-to-hero-with-raspberr)
+
