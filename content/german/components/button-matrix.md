@@ -42,10 +42,10 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Konstruktoren
 
-| Konstruktor                                                                                                                             | Bemerkung                                                                                                                                            |
-|:----------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| `ButtonMatrixComponent(com.pi4j.context.Context pi4j)`                                                                                  | Initialisiert eine Button-Matrix mit den Standardeinstellungen für den CrowPi.                                                                       |
-| `ButtonMatrixComponent (com.pi4j.context.Context pi4j, int[] selectorPins, int[] buttonPins, int[] stateMappings, long pollerPeriodMs)` | Initialisiert eine Button-Matrix mit frei definierbaren Selector / Button Pins, einem eigenen Mapping sowie einer benutzerdefinierten Polling-Dauer. |
+| Konstruktor                                                                                                                            | Bemerkung                                                                                                                                            |
+|:---------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `ButtonMatrixComponent(com.pi4j.context.Context pi4j)`                                                                                 | Initialisiert eine Button-Matrix mit den Standardeinstellungen für den CrowPi.                                                                       |
+| `ButtonMatrixComponent(com.pi4j.context.Context pi4j, int[] selectorPins, int[] buttonPins, int[] stateMappings, long pollerPeriodMs)` | Initialisiert eine Button-Matrix mit frei definierbaren Selector / Button Pins, einem eigenen Mapping sowie einer benutzerdefinierten Polling-Dauer. |
 
 ### Methoden
 
@@ -58,9 +58,15 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 | `int[] getPressedButtons()`                           | Gibt die Nummern aller Knöpfe zurück welche zurzeit aktiv gedrückt werden. Falls keine Knöpfe gedrückt werden, so wird eine leere Liste zurückgegeben.                                |
 | `boolean isDown(int number)`                          | Gibt `true` zurück falls der Knopf mit der angegebenen Nummer zurzeit gedrückt wird.                                                                                                  |
 | `boolean isUp(int number)`                            | Gibt `true` zurück falls der Knopf mit der angegebenen Nummer zurzeit **nicht** gedrückt wird.                                                                                        |
-| `boolean getState(int number)`                        | Gibt `true` zurück falls der Knopf mit der angegebenen Nummer zurzeit gedrückt wird.                                                                                                  |
+| `ButtonState getState(int number)`                    | Gibt den aktuellen Zustand vom Knopf mit der angegebenen Nummer zurück.                                                                                                               |
 | `void onDown(int number, SimpleEventHandler handler)` | Setzt den Event Handler welcher beim Drücken des angegebenen Knopfs aufgerufen werden soll. `null` deaktiviert diesen Event Listener.                                                 |
-| `void onUp(int number, SimpleEventHandler handler)`   | Setzt den Event Handler welcher beim Loslassen des angegebenen Knopfs aufgerufen werden soll. `null` deaktiviert diesen Event Listener.                                              |
+| `void onUp(int number, SimpleEventHandler handler)`   | Setzt den Event Handler welcher beim Loslassen des angegebenen Knopfs aufgerufen werden soll. `null` deaktiviert diesen Event Listener.                                               |
+
+### Enumerationen
+
+- {{< javadoc class="ch.fhnw.crowpi.components.ButtonComponent" subclass="ButtonState" >}} enthält alle möglichen Zustände welche von einem
+  Knopf zurückgegeben werden können. Es wird hierbei absichtlich die Enumeration von der einfacheren `ButtonComponent` mitverwendet um eine
+  möglichst ähnliche Nutzung zu ermöglichen.
 
 ## Beispielapplikation
 
