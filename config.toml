@@ -14,26 +14,31 @@ weight = 1
 contentDir = "content/german"
 languageName = "German"
 landingPageName = "<i class='fas fa-fw fa-home'></i> Startseite"
-landingPageURL = "/fhnw-crowpi/de"
+landingPageURL = "/CrowPiGoesJavaTutorial/de"
 
 [languages.en]
 weight = 2
 contentDir = "content/english"
 languageName = "English"
-landingPageURL = "/fhnw-crowpi/en"
+landingPageURL = "/CrowPiGoesJavaTutorial/en"
 
 [[menu.shortcuts]]
 weight = 10
-name = "<i class='fab fa-fw fa-github'></i> GitHub Repository"
-url = "https://github.com/ppmathis/fhnw-crowpi"
+name = "<i class='fab fa-fw fa-github'></i> GitHub Repository (Code)"
+url = "https://github.com/Pi4J/pi4j-example-crowpi"
 
 [[menu.shortcuts]]
 weight = 20
+name = "<i class='fab fa-fw fa-github'></i> GitHub Repository (Doku)"
+url = "https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial"
+
+[[menu.shortcuts]]
+weight = 30
 name = "<i class='fas fa-fw fa-cogs'></i> Pi4J Website"
 url = "https://www.pi4j.com/"
 
 [[menu.shortcuts]]
-weight = 30
+weight = 40
 name = "<i class='fas fa-fw fa-university'></i> FHNW Website"
 url = "https://www.fhnw.ch/en/"
 
