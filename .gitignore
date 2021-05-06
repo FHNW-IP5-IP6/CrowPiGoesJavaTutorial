@@ -1,3 +1,13 @@
+# Hugo
 /public
 /resources/_gen
-/static/apidocs
+
+# Eclipse
+.classpath
+.factorypath
+.project
+.settings
+
+# IntelliJ
+/.idea/
+*.iml
