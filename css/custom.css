@@ -1,0 +1,16 @@
+.btn-small {
+    padding: 0 5px !important;
+}
+
+.cpi-code-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -1.5rem !important;
+}
+
+code {
+    white-space: break-spaces;
+}
