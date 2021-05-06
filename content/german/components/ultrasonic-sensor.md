@@ -32,7 +32,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass 
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.UltrasonicDistanceSensorComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.UltrasonicDistanceSensorComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -54,7 +54,7 @@ Die nachfolgende Beispielapplikation gibt zuerst einige Messwerte mit verschiede
 von Temperaturschwankungen auf den Messwert hervorragen analysiert werden. Anschliessend wird eine kurze `for`-Schleife gestartet welche 
 jede Sekunde einen neuen Messwert ausgibt. Dies verschafft etwas Zeit, um auch einmal die Hand über den Sensor zu halten.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/UltrasonicDistanceSensorApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/UltrasonicDistanceSensorApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

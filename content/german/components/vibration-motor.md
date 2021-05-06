@@ -21,7 +21,7 @@ Für diese Komponente muss einer der DIP-Switches auf die folgende Position eing
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.RelayComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.RelayComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -46,7 +46,7 @@ Die Beispielapplikation führt erst einen kleinen Test mit Ein- und Ausschalten 
 Variation der Pulslänge versucht einen möglichst nervigen Ton zu erstellen. Dadurch soll der Benutzer aufgeweckt werden, falls er vor dem PC
 eingeschlafen ist. Sobald der Benutzer das Aufwachen mit `YES` bestätigt wird die Applikation beendet.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/VibrationMotorApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/VibrationMotorApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

@@ -30,7 +30,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass 
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.TouchSensorComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.TouchSensorComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -50,7 +50,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Enumerationen
 
-- {{< javadoc class="ch.fhnw.crowpi.components.TouchSensorComponent" subclass="TouchState" >}} enthält alle möglichen Zustände welche vom
+- {{< javadoc class="com.pi4j.crowpi.components.TouchSensorComponent" subclass="TouchState" >}} enthält alle möglichen Zustände welche vom
   Touch Sensor zurückgegeben werden können.
 
 ## Beispielapplikation
@@ -60,7 +60,7 @@ ein minimales Event aus. Es wird jedes Mal in dieser Zeit, wenn der Sensor berü
 ausgegeben. Nach Ablauf der Zeit werden die Listener wieder vom Berührungssensor entfernt und mittels der `isTouched()` Methode gewartet bis
 der Benutzer die Beispielapplikation beendet. Durch Verwendung des Konstruktors mit nur einem Argument wird in dieser Applikation die
 Standardeinstellung für die Entprellung benutzt. Diese liegt bei 10'000 Mikrosekunden und passt ganz gut für die meisten menschlichen
-Eingaben. {{< code file="src/main/java/ch/fhnw/crowpi/applications/TouchSensorApp.java" language="java" >}}
+Eingaben. {{< code file="src/main/java/com/pi4j/crowpi/applications/TouchSensorApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

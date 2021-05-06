@@ -28,7 +28,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass 
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.SevenSegmentComponent" >}} beschrieben. Es ist
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.SevenSegmentComponent" >}} beschrieben. Es ist
 hierbei wichtig zu beachten, dass alle Methoden mit dem Wort "Buffer:" am Anfang der Beschreibung nicht eine direkte Auswirkung haben,
 sondern erst mit einem Aufruf von `void refresh()` auf der Anzeige sichtbar werden. Es ist somit zu empfehlen, alle gewünschten
 Einstellungen zu tätigen und dann mit einem einzigen Aufruf die Änderungen auf dem Gerät darzustellen.
@@ -75,7 +75,7 @@ Nachdem diese Ladeanimation abgespielt wurde, geht die Applikation in eine Endlo
 API-Methode `print(LocalTime time)` übernimmt hierbei den Grossteil der Arbeit und blinkt sogar automatisch wenn die Sekundenzahl zurzeit
 ungerade ist. Durch das Abbrechen vom Maven-Prozess lässt sich diese Applikation anschliessend wieder beenden.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/SevenSegmentApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/SevenSegmentApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

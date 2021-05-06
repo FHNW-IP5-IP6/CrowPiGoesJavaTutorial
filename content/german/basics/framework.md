@@ -26,13 +26,13 @@ mvn install -Dcrowpi.launcher.args=BuzzerApp
 Um eine neue Applikation anzulegen, welche anschliessend über den integrierten Launcher gestartet werden kann, sind nur wenige einfache 
 Schritte erforderlich. Die nachfolgende Anleitung führt Schritt für Schritt zur ersten eigenen Applikation.
 
-Zuerst muss eine Java-Klasse unterhalb von `src/main/java/ch/fhnw/crowpi/applications` erstellt werden mit einem beliebigen Namen, 
+Zuerst muss eine Java-Klasse unterhalb von `src/main/java/com/pi4j/crowpi/applications` erstellt werden mit einem beliebigen Namen,
 welche das Interface `Application` implementiert. Zum Beispiel könnte diese Klasse `ExampleApp` heissen und folgenden Code enthalten:
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/ExampleApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/ExampleApp.java" language="java" >}}
 
-Anschliessend muss die Applikation nur noch in der Klasse `ch.fhnw.crowpi.Launcher` zur Liste `APPLICATIONS` hinzugefügt werden. Die 
-Datei ist unter `src/main/java/ch/fhnw/crowpi/Launcher.java` aufzufinden und muss an dieser Stelle erweitert werden:
+Anschliessend muss die Applikation nur noch in der Klasse `com.pi4j.crowpi.Launcher` zur Liste `APPLICATIONS` hinzugefügt werden. Die
+Datei ist unter `src/main/java/com/pi4j/crowpi/Launcher.java` aufzufinden und muss an dieser Stelle erweitert werden:
 
 ```java
 public final class Launcher implements Runnable {
@@ -76,4 +76,4 @@ Normalfall ist es aber aufgrund potenzieller Namenskonflikte nicht empfohlen, di
 Zur Vollständigkeit ist hier noch das komplette `Application` Interface eingebunden. Dieses besteht aus exakt drei Methoden, wobei 
 hiervon nur `execute()` implementiert werden muss da die anderen Methoden bereits über eine Standardimplementation verfügen.
 
-{{< code file="/src/main/java/ch/fhnw/crowpi/Application.java" language="java" >}}
+{{< code file="/src/main/java/com/pi4j/crowpi/Application.java" language="java" >}}

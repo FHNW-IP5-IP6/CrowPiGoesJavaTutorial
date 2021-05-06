@@ -23,7 +23,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass 
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.LightSensorComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.LightSensorComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -47,7 +47,7 @@ Nachdem der Messwert eingelesen ist, wird er mit einer einfachen Logik zu Textau
 automatisch ein oder ausgeschaltet werden. Die Grenzwerte können dabei einfach über `DARK_VALUE` als unteren Schaltpunkt und `BRIGHT_VALUE` als oberen Schaltpunkt konfiguriert werden.
 Die Wiederholung der Messung und Ausgabe wird dabei durch einen `for-loop` umgesetzt. Zu beachten gilt speziell: Da der Sensor eine kleine Zeit für eine Messung benötigt
 kann eine zu kurze Taktrate zu ungültigen Messergebnissen führen. Weniger als 150 Millisekunden werden als Einstellung für `DELAY` nicht empfohlen.
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/LightSensorApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/LightSensorApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

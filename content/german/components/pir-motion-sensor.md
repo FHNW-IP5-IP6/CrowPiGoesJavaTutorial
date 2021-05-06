@@ -27,7 +27,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass d
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.PirMotionSensorComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.PirMotionSensorComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -48,7 +48,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Enumerationen
 
-- {{< javadoc class="ch.fhnw.crowpi.components.PirMotionSensorComponent" subclass="MotionState" >}} enthält alle möglichen Zustände welche
+- {{< javadoc class="com.pi4j.crowpi.components.PirMotionSensorComponent" subclass="MotionState" >}} enthält alle möglichen Zustände welche
   vom PIR Motion Sensor zurückgegeben werden können.
 
 ## Beispielapplikation
@@ -61,7 +61,7 @@ Anschliessend wird die Alarmanlage aktiviert und überwacht für 30 Sekunden sä
 Hierfür werden die Funktionen `onMovement()` und `onStillstand()` benötigt, welche Event Handler zur Protokollierung von Änderungen
 registrieren. Nach 30 Sekunden wird die Anwendung automatisch beendet.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/PirMotionSensorApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/PirMotionSensorApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

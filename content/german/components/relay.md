@@ -29,7 +29,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass d
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.RelayComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.RelayComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -53,7 +53,7 @@ Die Beispielapplikation initialisiert kurz das Relais. Danach wird es einige Mal
 Alles in allem eine kurze und kompakte Anwendung. Die Herausforderung bei einem Relais liegt mehr in der richtigen Verkabelung als in der
 Software.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/RelayApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/RelayApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

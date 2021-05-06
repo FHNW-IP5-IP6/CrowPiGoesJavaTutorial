@@ -1,4 +1,4 @@
-{{ $module := default "ch.fhnw.crowpi" (.Get "module") }}
+{{ $module := default "com.pi4j.crowpi" (.Get "module") }}
 {{ $class := .Get "class" }}
 {{ $subclass := .Get "subclass" | default "" }}
 {{ $classURL := print (replace $class "." "/") (cond (not (eq $subclass "")) (print "." $subclass) "") ".html" }}

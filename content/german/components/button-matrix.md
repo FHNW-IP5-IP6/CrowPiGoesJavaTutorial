@@ -38,7 +38,7 @@ nutzen lässt. Die Stellung der DIP Switches sollte anschliessend so aussehen:
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.ButtonMatrixComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.ButtonMatrixComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -64,7 +64,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Enumerationen
 
-- {{< javadoc class="ch.fhnw.crowpi.components.ButtonComponent" subclass="ButtonState" >}} enthält alle möglichen Zustände welche von einem
+- {{< javadoc class="com.pi4j.crowpi.components.ButtonComponent" subclass="ButtonState" >}} enthält alle möglichen Zustände welche von einem
   Knopf zurückgegeben werden können. Es wird hierbei absichtlich die Enumeration von der einfacheren `ButtonComponent` mitverwendet um eine
   möglichst ähnliche Nutzung zu ermöglichen.
 
@@ -95,7 +95,7 @@ nächsten Spielers beginnt.
 Wenn irgendwann nur noch ein aktiver Spieler verbleibt, so wird eine Gewinnmeldung ausgegeben und die totale Punktzahl, welcher der Anzahl
 an wiederholten Elementen entspricht.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/ButtonMatrixApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/ButtonMatrixApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

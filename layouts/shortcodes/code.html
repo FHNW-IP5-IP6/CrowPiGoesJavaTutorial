@@ -1,6 +1,7 @@
-{{ $codePath := printf "%s%s" "code/" (strings.TrimPrefix "/" (.Get "file")) }}
+{{ $codePath := strings.TrimPrefix "/" (.Get "file") }}
+{{ $codeFile := printf "%s%s" "code/" $codePath }}
 {{ $codeURL := printf "%s/%s" (strings.TrimSuffix "/" .Site.Params.codeURL) $codePath }}
-{{ $codeContents := readFile $codePath }}{{ $lang := .Get "language" }}
+{{ $codeContents := readFile $codeFile }}{{ $lang := .Get "language" }}
 
 <!-- Code Block Header -->
 <div class="cpi-code-header">

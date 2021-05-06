@@ -28,7 +28,7 @@ der DIP Switches sollte anschliessend so aussehen:
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.TiltSensorComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.TiltSensorComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -51,7 +51,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Enumerationen
 
-- {{< javadoc class="ch.fhnw.crowpi.components.TiltSensorComponent" subclass="TiltState" >}} enthält alle möglichen Zustände welche vom Tilt
+- {{< javadoc class="com.pi4j.crowpi.components.TiltSensorComponent" subclass="TiltState" >}} enthält alle möglichen Zustände welche vom Tilt
   Sensor zurückgegeben werden können.
 
 ## Beispielapplikation
@@ -66,7 +66,7 @@ Die Applikation wartet nun 20 Sekunden, um dem Anwender genug Zeit zu geben die 
 Event Listener wieder entfernt und die Applikation beendet sich. Das Entfernen der Event Listeners ist nicht explizit notwendig, da dies
 beim Beenden der JVM sowieso passiert, jedoch empfohlen.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/TiltSensorApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/TiltSensorApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

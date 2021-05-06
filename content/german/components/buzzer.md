@@ -27,7 +27,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass 
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.BuzzerComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.BuzzerComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -58,7 +58,7 @@ Die effektive Länge in Millisekunden wird mit der Formel `1 / <tempo>` berechne
 Sekunden Länge entspricht. Damit sich die Noten besser voneinander unterscheiden lassen, wird zudem jeweils noch eine kleine Pause 
 mit dem Faktor `1.3` eingefügt.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/BuzzerApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/BuzzerApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

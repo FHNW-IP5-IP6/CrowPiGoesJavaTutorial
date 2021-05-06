@@ -36,7 +36,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass d
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.LcdDisplayComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.LcdDisplayComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -70,7 +70,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Enumerationen
 
-- {{< javadoc class="ch.fhnw.crowpi.components.LcdDisplayComponent" subclass="Symbol" >}} enthält alle unterstützten Symbole welche von
+- {{< javadoc class="com.pi4j.crowpi.components.LcdDisplayComponent" subclass="Symbol" >}} enthält alle unterstützten Symbole welche von
   dieser Komponenten-Klasse dargestellt werden können. Es handelt sich hierbei um eine Sammlung von ASCII-Codes sowie diversen Symbolen.
   Zusätzlich können mit `\1` bis `\7` die eigenen Zeichen aufgerufen und eingefügt werden. Die Werte sind jeweils als `byte` hinterlegt, was
   der internen Darstellung des LCD Displays
@@ -84,7 +84,7 @@ verschiedensten Symbole erstellen. Nun folgen nochmals einige Textausgaben. Wäh
 stellt jeweils die aktuelle Schreibposition des Displays dar. Er kann durch auch sehr einfach verschoben werden. Auch das wird kurz
 demonstriert. Zum Abschluss folgen nochmals einige Textausgaben auch in kombination mit manuellen Zeilenumbrüchen. Dazu wird ein `\n` in den
 String eingefügt. Dies erzeugt dann sofort einen Zeilenumbruch.
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/LcdDisplayApp.java"language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/LcdDisplayApp.java"language="java" >}}
 
 ## Weitere Möglichkeiten
 

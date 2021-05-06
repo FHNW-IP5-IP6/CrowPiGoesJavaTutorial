@@ -27,7 +27,7 @@ Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass d
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.LedMatrixComponent" >}} beschrieben. Es handelt sich
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.LedMatrixComponent" >}} beschrieben. Es handelt sich
 hierbei um eine sehr mächtige und komplexe Klasse, da eine Vielzahl von Funktionalitäten angeboten wird. Ein Blick auf das Beispiel zeigt
 jedoch, dass sich diese weiterhin sehr einfach anwenden lässt.
 
@@ -70,7 +70,7 @@ werden jeweils sofort ausgeführt, da diese immer die ganze Anzeige betreffen.
 
 ### Enumerationen
 
-- {{< javadoc class="ch.fhnw.crowpi.components.LedMatrixComponent" subclass="Symbol" >}} enthält alle unterstützten Symbole welche von
+- {{< javadoc class="com.pi4j.crowpi.components.LedMatrixComponent" subclass="Symbol" >}} enthält alle unterstützten Symbole welche von
   dieser Komponenten-Klasse dargestellt werden können. Es handelt sich hierbei um alle ASCII-Codes von 32 bis 127 sowie diversen Symbolen
   wie beispielsweise `HEART` für ein Herz. Die Werte sind jeweils als `byte[]` Array hinterlegt, was der internen Darstellung der LED Matrix
   Anzeige entspricht. Jedes Element ist eine Zeile und die Bits `0-7` entsprechen den jeweiligen Spalten in umgekehrter Reihenfolge, sprich
@@ -103,7 +103,7 @@ Zeichen auf der Anzeige mit Scroll-Effekt dargestellt werden. Intern wird hierf�
 genutzt. Um die `print` Methode zusammen mit Symbolen zu nutzen, können beliebig viele Symbole mit dem Muster `{NAME}`
 eingebunden werden, sprich `{HEART}` wird durch das eigentliche `HEART` Zeichen von `LedMatrixComponent.Symbol` ersetzt.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/LedMatrixApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/LedMatrixApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 

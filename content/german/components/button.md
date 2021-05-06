@@ -23,7 +23,7 @@ nutzen lassen. Die Stellung der DIP Switches sollte anschliessend so aussehen:
 
 ## Verwendung
 
-Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.components.ButtonComponent" >}} beschrieben.
+Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.components.ButtonComponent" >}} beschrieben.
 
 ### Konstruktoren
 
@@ -44,10 +44,10 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="ch.fhnw.crowpi.com
 
 ### Enumerationen
 
-- {{< javadoc class="ch.fhnw.crowpi.components.ButtonComponent" subclass="ButtonState" >}} enthält alle möglichen Zustände welche vom Knopf
+- {{< javadoc class="com.pi4j.crowpi.components.ButtonComponent" subclass="ButtonState" >}} enthält alle möglichen Zustände welche vom Knopf
   zurückgegeben werden können.
 
-- {{< javadoc class="ch.fhnw.crowpi.components.definitions.Button" >}} enthält die Pins der vier verschiedenen Knöpfe auf dem CrowPi und
+- {{< javadoc class="com.pi4j.crowpi.components.definitions.Button" >}} enthält die Pins der vier verschiedenen Knöpfe auf dem CrowPi und
   wird im Konstruktor verwendet werden um den gewünschten Knopf anzugeben.
 
 ## Beispielapplikation
@@ -56,7 +56,7 @@ Die Beispielapplikation ist sehr simpel gehalten und initialisiert alle 4 Knöpf
 gedrückt (onDown) sowie losgelassen (onUp) zu registrieren. Anschliessend schläft die Applikation für 15 Sekunden, um ein Testen der
 verschiedenen Knöpfe zu ermöglichen.
 
-{{< code file="src/main/java/ch/fhnw/crowpi/applications/ButtonApp.java" language="java" >}}
+{{< code file="src/main/java/com/pi4j/crowpi/applications/ButtonApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
 
