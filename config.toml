@@ -45,6 +45,7 @@ url = "https://www.fhnw.ch/en/"
 [params]
 repoURL = "https://github.com/Pi4J/pi4j-example-crowpi"
 codeURL = "https://github.com/Pi4J/pi4j-example-crowpi/blob/main/"
+docsURL = "https://pi4j.com/pi4j-example-crowpi/"
 editURL = "https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/"
 author = "Pascal Mathis, Tobias Siegrist"
 description = "CrowPi goes Java: An easy introduction to electronics programming"

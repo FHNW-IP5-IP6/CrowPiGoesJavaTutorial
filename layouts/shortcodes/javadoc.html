@@ -2,7 +2,7 @@
 {{ $class := .Get "class" }}
 {{ $subclass := .Get "subclass" | default "" }}
 {{ $classURL := print (replace $class "." "/") (cond (not (eq $subclass "")) (print "." $subclass) "") ".html" }}
-{{ $docsURL := relURL (print "/apidocs/" $module "/" $classURL) }}
+{{ $docsURL := printf "%s/%s/%s" (strings.TrimSuffix "/" .Site.Params.docsURL) $module $classURL }}
 
 {{ (print "```" $class "```") | markdownify }}
 <a href="{{ $docsURL }}" target="_blank" class="btn btn-default btn-small">
