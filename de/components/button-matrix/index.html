@@ -1,0 +1,629 @@
+<!doctype html><html lang=de class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.83.1">
+<meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
+<meta name=author content="Pascal Mathis, Tobias Siegrist">
+<link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
+<title>Button Matrix :: CrowPi goes Java</title>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1620302441 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1620302441></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
+<nav id=sidebar class=showVisitedLinks>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href=/fhnw-crowpi/de>
+<img src=/CrowPiGoesJavaTutorial/images/fhnw-logo.svg style=width:40%;height:40%>
+<h3 style=margin:0;color:#fff>CrowPi goes Java</h3>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Suchen...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1620302441></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1620302441></script>
+<script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1620302441></script>
+</div>
+<section id=homelinks>
+<ul>
+<li>
+<a class=padding href=/fhnw-crowpi/de><i class="fas fa-fw fa-home"></i> Startseite</a>
+</li>
+</ul>
+</section>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/>
+<b>1. </b>Vorbereitungen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/requirements/ title=Anforderungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/requirements/>
+Anforderungen
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/raspberry/>
+Raspberry PI Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/intellij/>
+IntelliJ IDEA Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/>
+<b>2. </b>Grundlagen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/crowpi/ title="Die CrowPi Plattform" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/crowpi/>
+Die CrowPi Plattform
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/running/>
+Starten der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>
+Debugging der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/framework/>
+Application Framework
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/dev-process/>
+Entwicklungsprozess
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class="dd-item
+parent">
+<a href=/CrowPiGoesJavaTutorial/de/components/>
+<b>3. </b>Komponenten
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/seven-segment/ title="7-Segment Anzeige" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>
+7-Segment Anzeige
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button/>
+Button
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class="dd-item active">
+<a href=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
+Button Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/buzzer/>
+Buzzer
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
+LCD Display
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
+LED Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
+Lichtsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
+PIR Motion Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/relay/>
+Relais
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/>
+Tilt Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/touch-sensor/>
+Touch Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/>
+Ultraschall Distanzsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/vibration-motor/>
+Vibrationsmotor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/>
+<b>4. </b>Hardware
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/i2c/ title=I²C class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>
+I²C
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/pwm/>
+Pulse Width Modulation (PWM)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>
+Serial Peripheral Interface (SPI)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<section id=shortcuts>
+<h3>Mehr</h3>
+<ul>
+<li>
+<a class=padding href=https://github.com/ppmathis/fhnw-crowpi><i class="fab fa-fw fa-github"></i> GitHub Repository</a>
+</li>
+<li>
+<a class=padding href=https://www.pi4j.com/><i class="fas fa-fw fa-cogs"></i> Pi4J Website</a>
+</li>
+<li>
+<a class=padding href=https://www.fhnw.ch/en/><i class="fas fa-fw fa-university"></i> FHNW Website</a>
+</li>
+</ul>
+</section>
+<section id=prefooter>
+<hr>
+<ul>
+<li>
+<a class=padding>
+<i class="fas fa-language fa-fw"></i>
+<div class=select-style>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/button-matrix/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+</div>
+</a>
+</li>
+<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li>
+</ul>
+</section>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=top-github-link>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/button-matrix.md target=blank>
+<i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Bearbeite diese Seite</span>
+</a>
+</div>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > Button Matrix
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#funktionsweise>Funktionsweise</a></li>
+<li><a href=#voraussetzungen>Voraussetzungen</a>
+<ul>
+<li><a href=#dip-switches>DIP Switches</a></li>
+</ul>
+</li>
+<li><a href=#verwendung>Verwendung</a>
+<ul>
+<li><a href=#konstruktoren>Konstruktoren</a></li>
+<li><a href=#methoden>Methoden</a></li>
+<li><a href=#enumerationen>Enumerationen</a></li>
+</ul>
+</li>
+<li><a href=#beispielapplikation>Beispielapplikation</a></li>
+<li><a href=#weitere-möglichkeiten>Weitere Möglichkeiten</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+<div class=tags>
+<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/gpio>gpio</a>
+</div>
+</div>
+<div id=body-inner>
+<h1>
+Button Matrix
+</h1>
+<h2 id=funktionsweise>Funktionsweise</h2>
+<p>Bei einer Button-Matrix handelt es sich um nichts anderes als ein Gitter von Knöpfen, also zum Beispiel 4 × 4 Knöpfe wie beim CrowPi. In der
+simpelsten Form könnte jeder Knopf einzeln mit einem GPIO Pin verbunden werden, jedoch stösst man auf diese Art und Weise schnell an die
+maximale Kapazität von GPIO Pins eines Raspberry Pi.</p>
+<p>Eine andere Methode, welche auch von der Button-Matrix auf dem CrowPi genutzt wird, ist, dass die Kombination der beiden Achsen für das
+Auslesen der einzelnen Knöpfe verwendet wird. In der Komponente werden hierbei sogenannte <code>Selector</code> und <code>Button</code> Pins definiert, welche
+dann zusammen das effiziente Anbinden einer Button-Matrix ermöglichen.</p>
+<p>Der <code>Selector</code> Pin legt hierbei dann jeweils fest, welche Spalte (vertikal) ausgelesen wird. Nachdem der Pin der gewünschten Spalte
+angesteuert wurde, können nun alle Zeilen dieser Spalte mithilfe der einzelnen <code>Button</code> Pins ausgelesen werden. Um also den zweiten Knopf
+von links in der ersten Reihe einzulesen, muss zuerst der zweite <code>Selector</code> Pin aktiviert werden (= Spalte 2), um anschliessend den ersten
+<code>Button</code> Pin (= Zeile 1) auszulesen. Somit werden für ein 4 × 4 Gitter nur 8 statt 12 GPIO Pins benötigt.</p>
+<p>Dies bedeutet jedoch auch, dass sich nun nicht mehr einfach so der Zustand eines Pins überwachen lässt, um Events für einen Knopf zu
+erhalten. Stattdessen muss nun eine Polling-Methode verwendet werden, sprich es müssen immer wieder Spalte für Spalte alle Knöpfe abgefragt
+werden. Diese Komplexität entfällt jedoch bei Nutzung der Komponente, da diese automatisch einen <code>Poller</code> im Hintergrund startet.</p>
+<p>Die Buttons auf dem CrowPi sind auf der Platine beschriftet und von links nach rechts, oben nach unten von 1 bis 16 durchnummeriert. Die
+Komponente nimmt bei allen Methoden jeweils diese Nummer entgegen, sprich <code>7</code> entspricht dem dritten Knopf von links in der zweiten Zeile.</p>
+<img src=/CrowPiGoesJavaTutorial/images/components/button-matrix.jpg? alt="Nummerierung von Button Matrix">
+<h2 id=voraussetzungen>Voraussetzungen</h2>
+<h3 id=dip-switches>DIP Switches</h3>
+<p>Für diese Komponente müssen alle DIP-Switches vom linken Block aktiviert werden, da sich die Button Matrix sonst nicht oder nur teilweise
+nutzen lässt. Die Stellung der DIP Switches sollte anschliessend so aussehen:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="10.5833" width="4.2333" height="4.2333"/><rect x="7.6729" y="10.5833" width="4.2333" height="4.2333"/><rect x="14.023" y="10.5833" width="4.2333" height="4.2333"/><rect x="20.373" y="10.5833" width="4.2333" height="4.2333"/><rect x="26.723" y="10.5833" width="4.2333" height="4.2333"/><rect x="33.073" y="10.5833" width="4.2333" height="4.2333"/><rect x="39.423" y="10.5833" width="4.2333" height="4.2333"/><rect x="45.773" y="10.5833" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
+<h2 id=verwendung>Verwendung</h2>
+<p>Nachfolgend wird die Verwendung der Klasse
+<code>com.pi4j.crowpi.components.ButtonMatrixComponent</code>
+<a href=/CrowPiGoesJavaTutorial/apidocs/com.pi4j.crowpi/com/pi4j/crowpi/components/ButtonMatrixComponent.html target=_blank class="btn btn-default btn-small">
+<i class="fas fa-external-link-alt"></i>
+Javadoc
+</a>
+beschrieben.</p>
+<h3 id=konstruktoren>Konstruktoren</h3>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Konstruktor</th>
+<th style=text-align:left>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>ButtonMatrixComponent(com.pi4j.context.Context pi4j)</code></td>
+<td style=text-align:left>Initialisiert eine Button-Matrix mit den Standardeinstellungen für den CrowPi.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>ButtonMatrixComponent(com.pi4j.context.Context pi4j, int[] selectorPins, int[] buttonPins, int[] stateMappings, long pollerPeriodMs)</code></td>
+<td style=text-align:left>Initialisiert eine Button-Matrix mit frei definierbaren Selector / Button Pins, einem eigenen Mapping sowie einer benutzerdefinierten Polling-Dauer.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=methoden>Methoden</h3>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Methode</th>
+<th style=text-align:left>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>void startPoller(long pollerPeriodMs)</code></td>
+<td style=text-align:left>Startet den Poller (siehe Funktionsweise) mit dem angegebenen Intervall. Diese Methode wird <strong>automatisch</strong> vom Konstruktor aufgerufen und muss normalerweise nicht verwendet werden.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void stopPoller()</code></td>
+<td style=text-align:left>Stoppt den Poller sofort und aktualisiert hiermit den Zustand der Buttons nicht mehr.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>int readBlocking()</code></td>
+<td style=text-align:left>Wartet endlos darauf dass ein Knopf gedrückt und wieder losgelassen wird, um anschliessend dessen Nummer zurückzugeben. Im Fehlerfall wird der Wert -1 zurückgegeben.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>int readBlocking(long timeoutMs)</code></td>
+<td style=text-align:left>Wartet bis zu <code>timeoutMs</code> Millisekunden darauf, dass ein Knopf gedrückt und wieder losgelassen wird. Verhält sich ansonsten gleich wie <code>int readBlocking()</code>.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>int[] getPressedButtons()</code></td>
+<td style=text-align:left>Gibt die Nummern aller Knöpfe zurück welche zurzeit aktiv gedrückt werden. Falls keine Knöpfe gedrückt werden, so wird eine leere Liste zurückgegeben.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>boolean isDown(int number)</code></td>
+<td style=text-align:left>Gibt <code>true</code> zurück falls der Knopf mit der angegebenen Nummer zurzeit gedrückt wird.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>boolean isUp(int number)</code></td>
+<td style=text-align:left>Gibt <code>true</code> zurück falls der Knopf mit der angegebenen Nummer zurzeit <strong>nicht</strong> gedrückt wird.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>ButtonState getState(int number)</code></td>
+<td style=text-align:left>Gibt den aktuellen Zustand vom Knopf mit der angegebenen Nummer zurück.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void onDown(int number, SimpleEventHandler handler)</code></td>
+<td style=text-align:left>Setzt den Event Handler welcher beim Drücken des angegebenen Knopfs aufgerufen werden soll. <code>null</code> deaktiviert diesen Event Listener.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void onUp(int number, SimpleEventHandler handler)</code></td>
+<td style=text-align:left>Setzt den Event Handler welcher beim Loslassen des angegebenen Knopfs aufgerufen werden soll. <code>null</code> deaktiviert diesen Event Listener.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=enumerationen>Enumerationen</h3>
+<ul>
+<li>
+<code>com.pi4j.crowpi.components.ButtonComponent</code>
+<a href=/CrowPiGoesJavaTutorial/apidocs/com.pi4j.crowpi/com/pi4j/crowpi/components/ButtonComponent.ButtonState.html target=_blank class="btn btn-default btn-small">
+<i class="fas fa-external-link-alt"></i>
+Javadoc
+</a>
+enthält alle möglichen Zustände welche von einem
+Knopf zurückgegeben werden können. Es wird hierbei absichtlich die Enumeration von der einfacheren <code>ButtonComponent</code> mitverwendet um eine
+möglichst ähnliche Nutzung zu ermöglichen.</li>
+</ul>
+<h2 id=beispielapplikation>Beispielapplikation</h2>
+<p>Die folgende Beispielapplikation ist etwas komplexer und stellt ein vollständiges Spiel auf Basis der Button Matrix dar. Es gleicht dem
+sogenannten Memory Game oder auch dem deutschen Spiel „Ich packe meinen Koffer mit “. Zuerst werden mit der Hilfsmethode
+<code>determinePlayers()</code> alle Spielernamen gesammelt, welche am Spiel teilnehmen sollen. Die Methode sorgt hierbei dafür, dass mindestens zwei
+Spieler existieren, da dies eine Voraussetzung vom Spiel darstellt. Diese Spieler werden schliesslich in <code>players</code> gespeichert.</p>
+<p>Anschliessend wird eine leere Liste namens <code>history</code> erzeugt, welche jeweils alle vorherigen Knöpfe bzw. deren Nummer beinhaltet. Nun ist
+das Spiel vollständig initialisiert und eine <code>while</code>-Schleife läuft bis nur noch ein aktiver Spieler existiert und alle anderen Spieler
+aufgrund einem falschen Zug verloren haben.</p>
+<p>Innerhalb dieser Schleife wird mit einem Iterator jeweils der nächste Spieler ermittelt. Sobald der Iterator, welcher in der originalen
+Reihenfolge über alle Spieler iteriert, am Ende angekommen ist, wird dieser neu erstellt und startet damit wieder am Anfang. So kommt ein
+Spieler nach dem anderen zum Zug und dies lässt sich endlos wiederholen.</p>
+<p>Nun erfolgen ein paar Ausgaben auf der Kommandozeile und danach eine <code>for</code>-Schleife, welche den Spieler auffordert jeden vorherigen Zug der
+in <code>history</code> gespeichert wurde zu wiederholen. Wird hierbei ein Fehler erkannt, so wird die Schleife vorzeitig verlassen und das Flag
+<code>hasFailed</code> auf <code>true</code> gesetzt. Falls dem Spieler keine Fehler passieren, endet die Schleife normal und der Wert von <code>hasFailed</code> bleibt auf
+<code>false</code>.</p>
+<p>Ist <code>hasFailed</code> nach der Schleife nun gesetzt, so wird der Spieler über seinen Fehler informiert, aus der aktiven Spielerliste gelöscht und
+mit <code>continue</code> der nächste Spielzug forciert. War hingegen alles richtig, so kann der Spieler nun einen neuen Knopf wählen und der Zug des
+nächsten Spielers beginnt.</p>
+<p>Wenn irgendwann nur noch ein aktiver Spieler verbleibt, so wird eine Gewinnmeldung ausgegeben und die totale Punktzahl, welcher der Anzahl
+an wiederholten Elementen entspricht.</p>
+<div class=cpi-code-header>
+<div>
+<strong>Pfad zum Codebeispiel: </strong>
+<code>src/main/java/com/pi4j/crowpi/applications/ButtonMatrixApp.java</code>
+</div>
+<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/ButtonMatrixApp.java target=_blank class="btn btn-default">
+<i class="fab fa-github"></i>
+Auf GitHub ansehen
+</a>
+</div>
+<div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#f92672>package</span> com.pi4j.crowpi.applications<span style=color:#f92672>;</span>
+
+<span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.ButtonMatrixComponent<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
+
+<span style=color:#f92672>import</span> java.io.BufferedReader<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> java.io.IOException<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> java.io.InputStreamReader<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> java.util.ArrayList<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> java.util.List<span style=color:#f92672>;</span>
+
+<span style=color:#75715e>/**
+</span><span style=color:#75715e> * This example is actually also known as &#34;memory game&#34; or &#34;Ich packe meinen Koffer mit ...&#34; in German. During startup, it will first ask
+</span><span style=color:#75715e> * for at least two players which will play against each other. Once all players have been entered, the actual game starts. During each turn
+</span><span style=color:#75715e> * the player has to repeat all the previously pressed buttons in the same order and then pick a new button. The active player loses if an
+</span><span style=color:#75715e> * incorrect button is pressed while having to repeat the previous ones. Otherwise, the game will move to the next player. The last player
+</span><span style=color:#75715e> * remaining automatically wins the game.
+</span><span style=color:#75715e> */</span>
+<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ButtonMatrixApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
+    <span style=color:#a6e22e>@Override</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+        <span style=color:#75715e>// Initialize button matrix component
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var buttonMatrix <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ButtonMatrixComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Initialize game state
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> List<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> players <span style=color:#f92672>=</span> determinePlayers<span style=color:#f92672>();</span>
+        <span style=color:#66d9ef>final</span> List<span style=color:#f92672>&lt;</span>Integer<span style=color:#f92672>&gt;</span> history <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;&gt;();</span>
+
+        <span style=color:#75715e>// Repeat the game loop until there is only a single active player left
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// This means the game will go on until everyone but one has lost
+</span><span style=color:#75715e></span>        var playerIterator <span style=color:#f92672>=</span> players<span style=color:#f92672>.</span><span style=color:#a6e22e>iterator</span><span style=color:#f92672>();</span>
+        <span style=color:#66d9ef>while</span> <span style=color:#f92672>(</span>players<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>&gt;=</span> 2<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+            <span style=color:#75715e>// Determine active player by fetching the next active player from the list
+</span><span style=color:#75715e></span>            <span style=color:#75715e>// An iterator basically loops over all entries and returns one after another each time .next() is called
+</span><span style=color:#75715e></span>            <span style=color:#75715e>// When we reach the end of the iterator (hasNext() returns false), we create a new iterator to start from the beginning
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(!</span>playerIterator<span style=color:#f92672>.</span><span style=color:#a6e22e>hasNext</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
+                playerIterator <span style=color:#f92672>=</span> players<span style=color:#f92672>.</span><span style=color:#a6e22e>iterator</span><span style=color:#f92672>();</span>
+            <span style=color:#f92672>}</span>
+            <span style=color:#66d9ef>final</span> var activePlayer <span style=color:#f92672>=</span> playerIterator<span style=color:#f92672>.</span><span style=color:#a6e22e>next</span><span style=color:#f92672>();</span>
+
+            <span style=color:#75715e>// Print a message which informs about the currently active player whose turn it is
+</span><span style=color:#75715e></span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>();</span>
+            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;&gt;&gt;&gt; NEXT TURN: Good luck, &#34;</span> <span style=color:#f92672>+</span> activePlayer<span style=color:#f92672>);</span>
+
+            <span style=color:#75715e>// Print a message about the total number of moves which have to be repeated
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>history<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>&gt;</span> 0<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Please repeat all previous &#34;</span> <span style=color:#f92672>+</span> history<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; button presses in order...&#34;</span><span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span>
+
+            <span style=color:#75715e>// Make the player repeat the whole history and abort if incorrect
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>boolean</span> hasFailed <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> history<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>();</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+                <span style=color:#75715e>// Wait for the player to press a button
+</span><span style=color:#75715e></span>                <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> number <span style=color:#f92672>=</span> buttonMatrix<span style=color:#f92672>.</span><span style=color:#a6e22e>readBlocking</span><span style=color:#f92672>();</span>
+
+                <span style=color:#75715e>// Compare the button with the history at the currently checked position &#34;i&#34;
+</span><span style=color:#75715e></span>                <span style=color:#75715e>// If incorrect, break out of this loop with the failed flag set to true
+</span><span style=color:#75715e></span>                <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>number <span style=color:#f92672>!=</span> history<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span>i<span style=color:#f92672>))</span> <span style=color:#f92672>{</span>
+                    hasFailed <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span><span style=color:#f92672>;</span>
+                    <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+                <span style=color:#f92672>}</span>
+
+                <span style=color:#75715e>// Inform the user about the remaining moves if there are any
+</span><span style=color:#75715e></span>                <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> movesLeft <span style=color:#f92672>=</span> history<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>-</span> i <span style=color:#f92672>-</span> 1<span style=color:#f92672>;</span>
+                <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>movesLeft <span style=color:#f92672>&gt;</span> 0<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                    System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Correct! &#34;</span> <span style=color:#f92672>+</span> <span style=color:#f92672>(</span>history<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>-</span> i <span style=color:#f92672>-</span> 1<span style=color:#f92672>)</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; more numbers to go...&#34;</span><span style=color:#f92672>);</span>
+                <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#f92672>{</span>
+                    System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Well done, you&#39;ve repeated all buttons correctly!&#34;</span><span style=color:#f92672>);</span>
+                <span style=color:#f92672>}</span>
+            <span style=color:#f92672>}</span>
+
+            <span style=color:#75715e>// If the player has failed, print a message, remove the player and continue with the next turn
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>hasFailed<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Incorrect! You&#39;ve lost and are out, &#34;</span> <span style=color:#f92672>+</span> activePlayer <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;!&#34;</span><span style=color:#f92672>);</span>
+                playerIterator<span style=color:#f92672>.</span><span style=color:#a6e22e>remove</span><span style=color:#f92672>();</span>
+                <span style=color:#66d9ef>continue</span><span style=color:#f92672>;</span>
+            <span style=color:#f92672>}</span>
+
+            <span style=color:#75715e>// Let the player choose a new button which shall be added to the history
+</span><span style=color:#75715e></span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Press any button of your choice to add it to the list...&#34;</span><span style=color:#f92672>);</span>
+            <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> number <span style=color:#f92672>=</span> buttonMatrix<span style=color:#f92672>.</span><span style=color:#a6e22e>readBlocking</span><span style=color:#f92672>();</span>
+
+            <span style=color:#75715e>// Add the chosen number to the history and print it on the CLI
+</span><span style=color:#75715e></span>            history<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>number<span style=color:#f92672>);</span>
+            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Turn completed, button &#34;</span> <span style=color:#f92672>+</span> number <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; has been added.&#34;</span><span style=color:#f92672>);</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#75715e>// Print the winner, which will be the last and single element in the list
+</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Congratulations, &#34;</span> <span style=color:#f92672>+</span> players<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span>0<span style=color:#f92672>)</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;, you have won!&#34;</span><span style=color:#f92672>);</span>
+        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Your score: &#34;</span> <span style=color:#f92672>+</span> history<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; points&#34;</span><span style=color:#f92672>);</span>
+    <span style=color:#f92672>}</span>
+
+    <span style=color:#66d9ef>private</span> List<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>determinePlayers</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+        <span style=color:#75715e>// Initialize empty list of players
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var players <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;();</span>
+
+        <span style=color:#75715e>// Initialize buffered reader for reading from command line
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var reader <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> BufferedReader<span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> InputStreamReader<span style=color:#f92672>(</span>System<span style=color:#f92672>.</span><span style=color:#a6e22e>in</span><span style=color:#f92672>));</span>
+
+        <span style=color:#75715e>// Gather player names from command line
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>while</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+            <span style=color:#75715e>// Print prompt to ask for the player names
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>players<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>&gt;=</span> 2<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>print</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Please enter another player name or nothing to start the game: &#34;</span><span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>print</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;At least 2 players are needed. Please enter a player name: &#34;</span><span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span>
+
+            <span style=color:#75715e>// Read the next player name from command line
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>final</span> String player<span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
+                player <span style=color:#f92672>=</span> reader<span style=color:#f92672>.</span><span style=color:#a6e22e>readLine</span><span style=color:#f92672>();</span>
+            <span style=color:#f92672>}</span> <span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>IOException e<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                <span style=color:#66d9ef>continue</span><span style=color:#f92672>;</span>
+            <span style=color:#f92672>}</span>
+
+            <span style=color:#75715e>// Determine if we are ready to start the game or need more players
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>players<span style=color:#f92672>.</span><span style=color:#a6e22e>size</span><span style=color:#f92672>()</span> <span style=color:#f92672>&gt;=</span> 2 <span style=color:#f92672>&amp;&amp;</span> player<span style=color:#f92672>.</span><span style=color:#a6e22e>isEmpty</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
+                <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#f92672>(!</span>player<span style=color:#f92672>.</span><span style=color:#a6e22e>isEmpty</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
+                players<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>player<span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#66d9ef>return</span> players<span style=color:#f92672>;</span>
+    <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+
+</code></pre></div>
+<h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
+<ul>
+<li>
+<p>Das bestehende Spiel um LCD Display und/oder Buzzer erweitern, um gewisse Ausgaben direkt auf dem CrowPi auszugeben und je nach Knopfdruck
+einen anderen Ton / eine andere Frequenz abzuspielen.</p>
+</li>
+<li>
+<p>Ein eigenes Spiel ausdenken, welches sich in Kombination mit anderen Komponenten vom CrowPi aufbauen lässt.</p>
+</li>
+<li>
+<p>Nutzung als hexadezimale Eingabe, so könnte die 4x4 Matrix ein Ziffernblock für 0-9 und A-F sein.</p>
+</li>
+</ul>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/button/ title=Button> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1620302441></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1620302441></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>

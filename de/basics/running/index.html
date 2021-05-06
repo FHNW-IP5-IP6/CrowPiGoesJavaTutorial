@@ -1,0 +1,373 @@
+<!doctype html><html lang=de class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.83.1">
+<meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
+<meta name=author content="Pascal Mathis, Tobias Siegrist">
+<link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
+<title>Starten der Applikation :: CrowPi goes Java</title>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1620302441 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1620302441></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/CrowPiGoesJavaTutorial/de/basics/running/>
+<nav id=sidebar class=showVisitedLinks>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href=/fhnw-crowpi/de>
+<img src=/CrowPiGoesJavaTutorial/images/fhnw-logo.svg style=width:40%;height:40%>
+<h3 style=margin:0;color:#fff>CrowPi goes Java</h3>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Suchen...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1620302441></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1620302441></script>
+<script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1620302441></script>
+</div>
+<section id=homelinks>
+<ul>
+<li>
+<a class=padding href=/fhnw-crowpi/de><i class="fas fa-fw fa-home"></i> Startseite</a>
+</li>
+</ul>
+</section>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/>
+<b>1. </b>Vorbereitungen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/requirements/ title=Anforderungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/requirements/>
+Anforderungen
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/raspberry/>
+Raspberry PI Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/intellij/>
+IntelliJ IDEA Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class="dd-item
+parent">
+<a href=/CrowPiGoesJavaTutorial/de/basics/>
+<b>2. </b>Grundlagen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/crowpi/ title="Die CrowPi Plattform" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/crowpi/>
+Die CrowPi Plattform
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class="dd-item active">
+<a href=/CrowPiGoesJavaTutorial/de/basics/running/>
+Starten der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>
+Debugging der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/framework/>
+Application Framework
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/dev-process/>
+Entwicklungsprozess
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/>
+<b>3. </b>Komponenten
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/seven-segment/ title="7-Segment Anzeige" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>
+7-Segment Anzeige
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button/>
+Button
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
+Button Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/buzzer/>
+Buzzer
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
+LCD Display
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
+LED Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
+Lichtsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
+PIR Motion Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/relay/>
+Relais
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/>
+Tilt Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/touch-sensor/>
+Touch Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/>
+Ultraschall Distanzsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/vibration-motor/>
+Vibrationsmotor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/>
+<b>4. </b>Hardware
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/i2c/ title=I²C class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>
+I²C
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/pwm/>
+Pulse Width Modulation (PWM)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>
+Serial Peripheral Interface (SPI)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<section id=shortcuts>
+<h3>Mehr</h3>
+<ul>
+<li>
+<a class=padding href=https://github.com/ppmathis/fhnw-crowpi><i class="fab fa-fw fa-github"></i> GitHub Repository</a>
+</li>
+<li>
+<a class=padding href=https://www.pi4j.com/><i class="fas fa-fw fa-cogs"></i> Pi4J Website</a>
+</li>
+<li>
+<a class=padding href=https://www.fhnw.ch/en/><i class="fas fa-fw fa-university"></i> FHNW Website</a>
+</li>
+</ul>
+</section>
+<section id=prefooter>
+<hr>
+<ul>
+<li>
+<a class=padding>
+<i class="fas fa-language fa-fw"></i>
+<div class=select-style>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/basics/running/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+</div>
+</a>
+</li>
+<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li>
+</ul>
+</section>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=top-github-link>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/basics/running.md target=blank>
+<i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Bearbeite diese Seite</span>
+</a>
+</div>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/basics/>Grundlagen</a> > Starten der Applikation
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#starten-des-application-framework>Starten des Application Framework</a></li>
+<li><a href=#hahahugoshortcode-s2-hbhb>HAHAHUGOSHORTCODE-s1-HBHB
+HAHAHUGOSHORTCODE-s2-HBHB</a></li>
+<li><a href=#was-passiert-beim-start>Was passiert beim Start</a></li>
+<li><a href=#start-mit-argument>Start mit Argument</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<div id=body-inner>
+<h1>
+Starten der Applikation
+</h1>
+<p>In diesem Kapitel wird genauer beschrieben, was alles beim Starten einer Applikation passiert und wie das Framework benutzt werden kann.
+Der genaue Aufbau des <a href=/CrowPiGoesJavaTutorial/de/basics/framework/>Application Frameworks</a> welches dies alles auf diese Art und Weise ermöglicht ist
+in einem einzelnen Kapitel zu finden.</p>
+<hr>
+<h2 id=starten-des-application-framework>Starten des Application Framework</h2>
+<p>Grundsätzlich wurde ein erster Start bereits zum Test am Ende des Setups ausgeführt. Benötigt wurden folgende 3 Schritte:</p>
+<ol>
+<li>Anwählen der Run Config <code>crowpi-examples [install]</code></li>
+<li>Starten mit Run Button</li>
+<li>Wählen der Applikation auf der Kommandozeile (falls keine Argumente verwendet werden)</li>
+</ol>
+<h2 id=hahahugoshortcode-s2-hbhb>
+<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-start-firstapplication.JPG?height=500px" alt="Start der Applikation">
+<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-run-example.JPG?height=500px" alt="Run Output von IntelliJ">
+</h2>
+<h2 id=was-passiert-beim-start>Was passiert beim Start</h2>
+<p>Durch die Startkonfiguration und das Maven Projekt werden automatisch verschiedene Schritte beim Starten der Applikation ausgeführt.
+Grundsätzlich folgt der Ablauf immer diesem Schema:
+<div class=mermaid align=middle>
+graph TB;
+A[Resolve Dependencies] --> B
+B[Compile Java Code] --> C
+C[Run Unit Tests] --> D
+D[Copy Code to Raspberry Pi] --> E
+E[Start Application]
+</div>
+</p>
+<p>Bei jedem Start werden also sogar die Unittests ausgeführt. So kann eine optimale Codequalität beim Entwickeln erreicht werden.</p>
+<hr>
+<h2 id=start-mit-argument>Start mit Argument</h2>
+<p>Der Start mit einem Argument soll es ermöglichen direkt eine der Applikationen auszuwählen, ohne die Nummer in der Kommandozeile eintippen
+zu müssen. Dazu muss die <code>Run Konfiguration</code> angepasst werden. Dies funktioniert sowohl für <code>crowpi-examples [install]</code> als auch für
+<code>crowpi-examples [debug]</code> genau gleich.</p>
+<ul>
+<li>Das Kontextmenü bei der Run Konfiguration <code>Edit Configurations ...</code> öffnen.</li>
+<li>Nun bei der gewünschten Konfiguration den Tab <code>Runner</code> öffnen und mit dem <code>+</code> ein neues Argument hinzufügen. Gewählt werden muss das <code>crowpi. laucher.args</code> und als Wert wird der exakte Name einer Applikation wie zum Beispiel <code>BuzzerApp</code> eingetragen.</li>
+<li>Normales Starten der Applikation mit dem Play Button
+<img src="/CrowPiGoesJavaTutorial/images/basics/intellij-runconfig-args.JPG?height=500px" alt="Start mit Argument">
+</li>
+</ul>
+<p>Jetzt startet der übliche Ablauf. Anstelle der Auswahl einer ExampleApp wird jedoch direkt die angegebene Applikation gestartet, also in diesem Fall die BuzzerApp.</p>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/basics/crowpi/ title="Die CrowPi Plattform"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1620302441></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1620302441></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>

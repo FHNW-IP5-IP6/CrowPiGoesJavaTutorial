@@ -1,0 +1,678 @@
+<!doctype html><html lang=de class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.83.1">
+<meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
+<meta name=author content="Pascal Mathis, Tobias Siegrist">
+<link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
+<title>LCD Display :: CrowPi goes Java</title>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1620302441 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1620302441></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
+<nav id=sidebar class=showVisitedLinks>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href=/fhnw-crowpi/de>
+<img src=/CrowPiGoesJavaTutorial/images/fhnw-logo.svg style=width:40%;height:40%>
+<h3 style=margin:0;color:#fff>CrowPi goes Java</h3>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Suchen...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1620302441></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1620302441></script>
+<script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1620302441></script>
+</div>
+<section id=homelinks>
+<ul>
+<li>
+<a class=padding href=/fhnw-crowpi/de><i class="fas fa-fw fa-home"></i> Startseite</a>
+</li>
+</ul>
+</section>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/>
+<b>1. </b>Vorbereitungen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/requirements/ title=Anforderungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/requirements/>
+Anforderungen
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/raspberry/>
+Raspberry PI Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/intellij/>
+IntelliJ IDEA Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/>
+<b>2. </b>Grundlagen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/crowpi/ title="Die CrowPi Plattform" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/crowpi/>
+Die CrowPi Plattform
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/running/>
+Starten der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>
+Debugging der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/framework/>
+Application Framework
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/dev-process/>
+Entwicklungsprozess
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class="dd-item
+parent">
+<a href=/CrowPiGoesJavaTutorial/de/components/>
+<b>3. </b>Komponenten
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/seven-segment/ title="7-Segment Anzeige" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>
+7-Segment Anzeige
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button/>
+Button
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
+Button Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/buzzer/>
+Buzzer
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class="dd-item active">
+<a href=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
+LCD Display
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
+LED Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
+Lichtsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
+PIR Motion Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/relay/>
+Relais
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/>
+Tilt Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/touch-sensor/>
+Touch Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/>
+Ultraschall Distanzsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/vibration-motor/>
+Vibrationsmotor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/>
+<b>4. </b>Hardware
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/i2c/ title=I²C class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>
+I²C
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/pwm/>
+Pulse Width Modulation (PWM)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>
+Serial Peripheral Interface (SPI)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<section id=shortcuts>
+<h3>Mehr</h3>
+<ul>
+<li>
+<a class=padding href=https://github.com/ppmathis/fhnw-crowpi><i class="fab fa-fw fa-github"></i> GitHub Repository</a>
+</li>
+<li>
+<a class=padding href=https://www.pi4j.com/><i class="fas fa-fw fa-cogs"></i> Pi4J Website</a>
+</li>
+<li>
+<a class=padding href=https://www.fhnw.ch/en/><i class="fas fa-fw fa-university"></i> FHNW Website</a>
+</li>
+</ul>
+</section>
+<section id=prefooter>
+<hr>
+<ul>
+<li>
+<a class=padding>
+<i class="fas fa-language fa-fw"></i>
+<div class=select-style>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/lcd-display/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+</div>
+</a>
+</li>
+<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li>
+</ul>
+</section>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=top-github-link>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/lcd-display.md target=blank>
+<i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Bearbeite diese Seite</span>
+</a>
+</div>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > LCD Display
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#funktionsweise>Funktionsweise</a></li>
+<li><a href=#voraussetzungen>Voraussetzungen</a>
+<ul>
+<li><a href=#dip-switches>DIP Switches</a></li>
+</ul>
+</li>
+<li><a href=#verwendung>Verwendung</a>
+<ul>
+<li><a href=#konstruktoren>Konstruktoren</a></li>
+<li><a href=#methoden>Methoden</a></li>
+<li><a href=#enumerationen>Enumerationen</a></li>
+</ul>
+</li>
+<li><a href=#beispielapplikation>Beispielapplikation</a></li>
+<li><a href=#weitere-möglichkeiten>Weitere Möglichkeiten</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+<div class=tags>
+<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/gpio>gpio</a>
+<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/i2c>i2c</a>
+</div>
+</div>
+<div id=body-inner>
+<h1>
+LCD Display
+</h1>
+<h2 id=funktionsweise>Funktionsweise</h2>
+<p>Beim LCD Display handelt es sich um eine der komplexesten Komponenten des CrowPi. Die betrifft sowohl die Ansteuerung in der Software als
+auch die Funktionalität des Displays an sich. Das LCD Display verfügt auf 2 Zeilen jeweils über 16 kleine Pixelfelder. Diese bestehen aus je
+5x8 Pixeln. Jedes dieser Pixel wird von den Mikrocontrollern des Displays einzeln angesteuert um so Buchstaben, Zahlen und Sonderzeichen zu
+zeigen. Auf diese Weise können also bis zu 32 Zeichen gleichzeitig angezeigt werden. Damit nun der Benutzer nicht jedes Pixel einzeln
+ansteuern muss, sind schon die wichtigsten Zeichen vorprogrammiert. Es können <code>a-Z, 0–9 und einige Sonderzeichen</code> einfach genutzt werden. Um
+dem Benutzer noch mehr Möglichkeiten zu offerieren, können zudem noch 8 benutzerdefinierte Zeichen erfasst werden. Durch diese
+vielfältigkeit und doch schon eine grosse Menge an Platz für die Anzeige von Text und Zahlen bieten sich unzählige Anwendungsmöglichkeiten
+für ein solches LCD-Display.</p>
+<p>Die Ansteuerung des Displays erfolgt über einfache digitale Signale. Da jedoch 8 Stück benutzt werden und der Raspberry Pi nur wenige zur
+Verfügung hat gibt es eine kleine Zwischenschaltung. Es wird ein Baustein verwendet welcher mittels
+<a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>I²C</a> einige zusätzliche digitale Ein- und Ausgänge zur Verfügung stellt. Auf dem Bild ist diese Verschaltung
+nochmals skizziert:
+<img src=/CrowPiGoesJavaTutorial/images/components/lcd-display-wiring.jpg? alt="Schaltung des LCD-Display">
+</p>
+<p>Die Helligkeit des Displays wird bei dem Aufbau im CrowPi mit einem Potentiometer eingestellt. Mit dem Schraubenzieher kann dieses so
+eingestellt werden bis das Display einen optimalen Kontrast hat und alles gut lesbar ist. Das Potentiometer befindet sich direkt links neben
+dem Display. Es ist relativ klein und kann gut übersehen werden. Auf dem folgenden Bild wird es daher nochmals kurz gezeigt.
+<img src="/CrowPiGoesJavaTutorial/images/components/potentiometer-lcd-display.png?height=500px" alt="Potentiometer des LCD-Display">
+</p>
+<p>Die verbaute Hardware beim CrowPi ist ein <code>MCP23008 I/O Expander</code> mit einem <code>1602A-1 LCD Display</code>.</p>
+<h2 id=voraussetzungen>Voraussetzungen</h2>
+<h3 id=dip-switches>DIP Switches</h3>
+<p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
+<h2 id=verwendung>Verwendung</h2>
+<p>Nachfolgend wird die Verwendung der Klasse
+<code>com.pi4j.crowpi.components.LcdDisplayComponent</code>
+<a href=/CrowPiGoesJavaTutorial/apidocs/com.pi4j.crowpi/com/pi4j/crowpi/components/LcdDisplayComponent.html target=_blank class="btn btn-default btn-small">
+<i class="fas fa-external-link-alt"></i>
+Javadoc
+</a>
+beschrieben.</p>
+<h3 id=konstruktoren>Konstruktoren</h3>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Konstruktor</th>
+<th style=text-align:left>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>LcdDisplayComponent(com.pi4j.context.Context pi4j)</code></td>
+<td style=text-align:left>Initialisiert ein LCD Display mit der Standard Bus- und Geräteadresse.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>LcdDisplayComponent(com.pi4j.context.Context pi4j, int address)</code></td>
+<td style=text-align:left>Initialisiert ein LCD Display mit einer benutzerdefinierten Bus- und Geräteadresse.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=methoden>Methoden</h3>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Methode</th>
+<th style=text-align:left>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>void initialize()</code></td>
+<td style=text-align:left>initialisiert das Display und bereitet alles für die Benutzung vor.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void writeCharacter(char c)</code></td>
+<td style=text-align:left>Schreibt einen einzelnen Character auf die aktuelle Cursorposition</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void writeCharacter(char c, int digit, int line)</code></td>
+<td style=text-align:left>Schreibt einen einzelnen Character auf die übergebene Displayposition</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void writeLine(String text, int line)</code></td>
+<td style=text-align:left>Schreibt den maximal 16 Zeichen langen Text auf die in gewählte Zeile des Displays</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void writeText(String text)</code></td>
+<td style=text-align:left>Schreibt einen 32 Zeichen langen Test auf beide Zeilen des Displays. Der Zeilenumbruch funktioniert automatisch oder kann mit <code>\n</code> eingefügt werden.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void moveCursorHome()</code></td>
+<td style=text-align:left>Bewegt den Cursor an die Position erste Zeile erstes Zeichen.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void moveCursorRight()</code></td>
+<td style=text-align:left>Bewegt den Cursor eine Stelle nach rechts.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void moveCursorLeft()</code></td>
+<td style=text-align:left>Bewegt den Cursor eine Stelle nach links.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void setCursorToPosition(int digit, int line)</code></td>
+<td style=text-align:left>Bewegt den Cursor auf angegebene Position.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void setCursorToLine(int line)</code></td>
+<td style=text-align:left>Schiebt den aktuellen Zeiger auf die gewünschte Zeile des Displays.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void setCursorVisibility(boolean show)</code></td>
+<td style=text-align:left>Hiermit kann der Cursor angezeigt (<code>true</code>) oder versteckt (<code>false</code>) werden.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void setCursorBlinking(boolean blink)</code></td>
+<td style=text-align:left>Das Feld, auf dem der Cursor sich aktuell befindet, blinkt (<code>true</code>) oder nicht (<code>false</code>)</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void moveDisplayRight()</code></td>
+<td style=text-align:left>Bewegt alles auf dem Display um eine Stelle nach rechts.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void moveDisplayLeft()</code></td>
+<td style=text-align:left>Bewegt alles auf dem Display um eine Stelle nach links.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void createCharacter(int location, byte[] character)</code></td>
+<td style=text-align:left>Erstellt einen benutzerdefinierten Charakter auf der gewünschten Speicherstelle. Das Array muss genau der Länge acht entsprechen</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void setDisplayBacklight(boolean state)</code></td>
+<td style=text-align:left>Schaltet die Hintergrundbeleuchtung des Displays ein oder aus.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void clearDisplay()</code></td>
+<td style=text-align:left>Löscht alle auf dem Display gezeigten Zeichen.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void clearLine(int line)</code></td>
+<td style=text-align:left>Löscht alle Zeichen auf einer gewählten Zeile.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=enumerationen>Enumerationen</h3>
+<ul>
+<li>
+<code>com.pi4j.crowpi.components.LcdDisplayComponent</code>
+<a href=/CrowPiGoesJavaTutorial/apidocs/com.pi4j.crowpi/com/pi4j/crowpi/components/LcdDisplayComponent.Symbol.html target=_blank class="btn btn-default btn-small">
+<i class="fas fa-external-link-alt"></i>
+Javadoc
+</a>
+enthält alle unterstützten Symbole welche von
+dieser Komponenten-Klasse dargestellt werden können. Es handelt sich hierbei um eine Sammlung von ASCII-Codes sowie diversen Symbolen.
+Zusätzlich können mit <code>\1</code> bis <code>\7</code> die eigenen Zeichen aufgerufen und eingefügt werden. Die Werte sind jeweils als <code>byte</code> hinterlegt, was
+der internen Darstellung des LCD Displays</li>
+</ul>
+<h2 id=beispielapplikation>Beispielapplikation</h2>
+<p>In der Beispielapplikation werden verschiedenste Varianten der Text- und Zeichenausgabe mit dem LCD Display demonstriert. Als erster Schritt
+wird auf zwei Zeilen einzeln der Klassiker <code>Hello World!</code> ausgegeben. Anschliessend folgt eine sehr interessante Funktion. Diese erlaubt es
+eigene Zeichen zu definieren. Bis zu 7 verschiedene Zeichen sind gleichzeitig speicherbar. Mit etwas Fantasie lassen sich so die
+verschiedensten Symbole erstellen. Nun folgen nochmals einige Textausgaben. Während diesen Ausgaben wird kurz der <code>Cursor</code> angezeigt. Dieser
+stellt jeweils die aktuelle Schreibposition des Displays dar. Er kann durch auch sehr einfach verschoben werden. Auch das wird kurz
+demonstriert. Zum Abschluss folgen nochmals einige Textausgaben auch in kombination mit manuellen Zeilenumbrüchen. Dazu wird ein <code>\n</code> in den
+String eingefügt. Dies erzeugt dann sofort einen Zeilenumbruch.
+<div class=cpi-code-header>
+<div>
+<strong>Pfad zum Codebeispiel: </strong>
+<code>src/main/java/com/pi4j/crowpi/applications/LcdDisplayApp.java</code>
+</div>
+<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/LcdDisplayApp.java target=_blank class="btn btn-default">
+<i class="fab fa-github"></i>
+Auf GitHub ansehen
+</a>
+</div>
+<div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#f92672>package</span> com.pi4j.crowpi.applications<span style=color:#f92672>;</span>
+
+<span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.LcdDisplayComponent<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
+
+<span style=color:#75715e>/**
+</span><span style=color:#75715e> * Example Application of using the Crow Pi LCD Display
+</span><span style=color:#75715e> */</span>
+<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>LcdDisplayApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
+    <span style=color:#a6e22e>@Override</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+        LcdDisplayComponent lcd <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> LcdDisplayComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
+        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Here we go.. let&#39;s have some fun with that LCD Display!&#34;</span><span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// First we need to setup the LCD Display. That for just call initialize
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>initialize</span><span style=color:#f92672>();</span>
+
+        <span style=color:#75715e>// Write text to the lines separate
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeLine</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Hello&#34;</span><span style=color:#f92672>,</span>1<span style=color:#f92672>);</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeLine</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;   World!&#34;</span><span style=color:#f92672>,</span> 2<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Wait a little to have some time to read it
+</span><span style=color:#75715e></span>        sleep<span style=color:#f92672>(</span>3000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Clear the display to start next parts
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>clearDisplay</span><span style=color:#f92672>();</span>
+
+        <span style=color:#75715e>// Let&#39;s try to draw a house. To keep this method short and clean we create the characters in a separate
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// method below.
+</span><span style=color:#75715e></span>        createCharacters<span style=color:#f92672>(</span>lcd<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Now all characters are ready. Just draw them on the right place by moving the cursor and writing the
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// created characters to specific positions
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeCharacter</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#39;\1&#39;</span><span style=color:#f92672>,</span> 1<span style=color:#f92672>,</span> 1<span style=color:#f92672>);</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeCharacter</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#39;\2&#39;</span><span style=color:#f92672>,</span> 2<span style=color:#f92672>,</span> 1<span style=color:#f92672>);</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeCharacter</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#39;\3&#39;</span><span style=color:#f92672>,</span> 1<span style=color:#f92672>,</span> 2<span style=color:#f92672>);</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeCharacter</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#39;\4&#39;</span><span style=color:#f92672>,</span> 2<span style=color:#f92672>,</span> 2<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Delay a few seconds to let you enjoy our little house
+</span><span style=color:#75715e></span>        sleep<span style=color:#f92672>(</span>3000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Uhm but the view from our house would be better from the other side. lets move it over there
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> 10<span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+            lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>moveDisplayRight</span><span style=color:#f92672>();</span>
+            sleep<span style=color:#f92672>(</span>100<span style=color:#f92672>);</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#75715e>// Enjoy the new view from our house
+</span><span style=color:#75715e></span>        sleep<span style=color:#f92672>(</span>5000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// To clean up or start with something new just use the clearDisplay method
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>clearDisplay</span><span style=color:#f92672>();</span>
+
+        <span style=color:#75715e>// To write some text there are different methods. The simplest one is this one which automatically inserts
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// linebreaks if needed.
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeText</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Boohoo that&#39;s so simple to use!&#34;</span><span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Delay again
+</span><span style=color:#75715e></span>        sleep<span style=color:#f92672>(</span>3000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Of course it is also possible to write a single line
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeLine</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;hard to usE!&#34;</span><span style=color:#f92672>,</span> 2<span style=color:#f92672>);</span>
+        sleep<span style=color:#f92672>(</span>3000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// The display always works with a current position. That&#39;s called the cursor. You can simply modify the
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// cursor with a few method calls
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>setCursorVisibility</span><span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>);</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>setCursorBlinking</span><span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Now you can see the cursor is right behind the last character we wrote before.
+</span><span style=color:#75715e></span>        sleep<span style=color:#f92672>(</span>5000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// The last text had a mistake so let&#39;s move there and fix it.
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>moveCursorLeft</span><span style=color:#f92672>();</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>moveCursorLeft</span><span style=color:#f92672>();</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>moveCursorLeft</span><span style=color:#f92672>();</span>
+        sleep<span style=color:#f92672>(</span>1000<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Oops moved too far, lets move one to the right
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>moveCursorRight</span><span style=color:#f92672>();</span>
+        <span style=color:#75715e>// And fix it
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeCharacter</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#39;e&#39;</span><span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Now it looks fine
+</span><span style=color:#75715e></span>        sleep<span style=color:#f92672>(</span>3000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Cursor annoying? Simply turn it off and clear the display again
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>setCursorBlinking</span><span style=color:#f92672>(</span><span style=color:#66d9ef>false</span><span style=color:#f92672>);</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>setCursorVisibility</span><span style=color:#f92672>(</span><span style=color:#66d9ef>false</span><span style=color:#f92672>);</span>
+        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>clearDisplay</span><span style=color:#f92672>();</span>
+
+        <span style=color:#75715e>// Some more text writings
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeText</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Want more fun?&#34;</span><span style=color:#f92672>);</span>
+        sleep<span style=color:#f92672>(</span>3000<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Its also possible to just clear a single line
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>clearLine</span><span style=color:#f92672>(</span>2<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Write on the previously cleared line
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeLine</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;No, thanks.&#34;</span><span style=color:#f92672>,</span> 2<span style=color:#f92672>);</span>
+        sleep<span style=color:#f92672>(</span>3000<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// A \n makes a manual line break
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>writeText</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Okay ...\nBye Bye! :-(&#34;</span><span style=color:#f92672>);</span>
+        sleep<span style=color:#f92672>(</span>5000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Turn off the backlight makes the display appear turned off
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>setDisplayBacklight</span><span style=color:#f92672>(</span><span style=color:#66d9ef>false</span><span style=color:#f92672>);</span>
+    <span style=color:#f92672>}</span>
+
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>createCharacters</span><span style=color:#f92672>(</span>LcdDisplayComponent lcd<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+        <span style=color:#75715e>// Create upper left part of the house
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>createCharacter</span><span style=color:#f92672>(</span>1<span style=color:#f92672>,</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>byte</span><span style=color:#f92672>[]{</span>
+            0b00000<span style=color:#f92672>,</span>
+            0b00000<span style=color:#f92672>,</span>
+            0b00000<span style=color:#f92672>,</span>
+            0b00001<span style=color:#f92672>,</span>
+            0b00011<span style=color:#f92672>,</span>
+            0b00111<span style=color:#f92672>,</span>
+            0b01111<span style=color:#f92672>,</span>
+            0b11111
+        <span style=color:#f92672>});</span>
+
+        <span style=color:#75715e>// Create upper right part of the house
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>createCharacter</span><span style=color:#f92672>(</span>2<span style=color:#f92672>,</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>byte</span><span style=color:#f92672>[]{</span>
+            0b00000<span style=color:#f92672>,</span>
+            0b00000<span style=color:#f92672>,</span>
+            0b00010<span style=color:#f92672>,</span>
+            0b10010<span style=color:#f92672>,</span>
+            0b11010<span style=color:#f92672>,</span>
+            0b11110<span style=color:#f92672>,</span>
+            0b11110<span style=color:#f92672>,</span>
+            0b11111
+        <span style=color:#f92672>});</span>
+
+        <span style=color:#75715e>// Create lower left part of the house
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>createCharacter</span><span style=color:#f92672>(</span>3<span style=color:#f92672>,</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>byte</span><span style=color:#f92672>[]{</span>
+            0b11111<span style=color:#f92672>,</span>
+            0b11111<span style=color:#f92672>,</span>
+            0b11111<span style=color:#f92672>,</span>
+            0b11111<span style=color:#f92672>,</span>
+            0b10001<span style=color:#f92672>,</span>
+            0b10001<span style=color:#f92672>,</span>
+            0b10001<span style=color:#f92672>,</span>
+            0b10001
+        <span style=color:#f92672>});</span>
+
+        <span style=color:#75715e>// Create lower right part of the house
+</span><span style=color:#75715e></span>        lcd<span style=color:#f92672>.</span><span style=color:#a6e22e>createCharacter</span><span style=color:#f92672>(</span>4<span style=color:#f92672>,</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>byte</span><span style=color:#f92672>[]{</span>
+            0b11111<span style=color:#f92672>,</span>
+            0b11111<span style=color:#f92672>,</span>
+            0b11111<span style=color:#f92672>,</span>
+            0b10001<span style=color:#f92672>,</span>
+            0b10001<span style=color:#f92672>,</span>
+            0b10001<span style=color:#f92672>,</span>
+            0b11111<span style=color:#f92672>,</span>
+            0b11111
+        <span style=color:#f92672>});</span>
+    <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+
+</code></pre></div>
+</p>
+<h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
+<ul>
+<li>Das Display mit anderen Komponenten kombinieren. Dabei bieten sich unzählige Möglichkeiten. Es könnten die aktuelle Temperatur oder
+Helligkeit angezeigt werden.</li>
+<li>Eine Karaoke Maschine. Mittels des Buzzers einen Song abspielen und auf dem Display jeweils den aktuellen Text anzeigen. Viel Spass beim
+Singen und Programmieren!</li>
+</ul>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1620302441></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1620302441></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>

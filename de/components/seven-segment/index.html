@@ -1,0 +1,551 @@
+<!doctype html><html lang=de class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.83.1">
+<meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
+<meta name=author content="Pascal Mathis, Tobias Siegrist">
+<link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
+<title>7-Segment Anzeige :: CrowPi goes Java</title>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1620302441 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1620302441 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1620302441></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/CrowPiGoesJavaTutorial/de/components/seven-segment/>
+<nav id=sidebar class=showVisitedLinks>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href=/fhnw-crowpi/de>
+<img src=/CrowPiGoesJavaTutorial/images/fhnw-logo.svg style=width:40%;height:40%>
+<h3 style=margin:0;color:#fff>CrowPi goes Java</h3>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Suchen...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1620302441></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1620302441></script>
+<script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1620302441></script>
+</div>
+<section id=homelinks>
+<ul>
+<li>
+<a class=padding href=/fhnw-crowpi/de><i class="fas fa-fw fa-home"></i> Startseite</a>
+</li>
+</ul>
+</section>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/>
+<b>1. </b>Vorbereitungen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/requirements/ title=Anforderungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/requirements/>
+Anforderungen
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/raspberry/>
+Raspberry PI Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/intellij/>
+IntelliJ IDEA Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/>
+<b>2. </b>Grundlagen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/crowpi/ title="Die CrowPi Plattform" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/crowpi/>
+Die CrowPi Plattform
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/running/>
+Starten der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>
+Debugging der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/framework/>
+Application Framework
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/dev-process/>
+Entwicklungsprozess
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class="dd-item
+parent">
+<a href=/CrowPiGoesJavaTutorial/de/components/>
+<b>3. </b>Komponenten
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/seven-segment/ title="7-Segment Anzeige" class="dd-item active">
+<a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>
+7-Segment Anzeige
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button/>
+Button
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
+Button Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/buzzer/>
+Buzzer
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
+LCD Display
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
+LED Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
+Lichtsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
+PIR Motion Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/relay/>
+Relais
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/>
+Tilt Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/touch-sensor/>
+Touch Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/>
+Ultraschall Distanzsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/vibration-motor/>
+Vibrationsmotor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/>
+<b>4. </b>Hardware
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/i2c/ title=I²C class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>
+I²C
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/pwm/>
+Pulse Width Modulation (PWM)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>
+Serial Peripheral Interface (SPI)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<section id=shortcuts>
+<h3>Mehr</h3>
+<ul>
+<li>
+<a class=padding href=https://github.com/ppmathis/fhnw-crowpi><i class="fab fa-fw fa-github"></i> GitHub Repository</a>
+</li>
+<li>
+<a class=padding href=https://www.pi4j.com/><i class="fas fa-fw fa-cogs"></i> Pi4J Website</a>
+</li>
+<li>
+<a class=padding href=https://www.fhnw.ch/en/><i class="fas fa-fw fa-university"></i> FHNW Website</a>
+</li>
+</ul>
+</section>
+<section id=prefooter>
+<hr>
+<ul>
+<li>
+<a class=padding>
+<i class="fas fa-language fa-fw"></i>
+<div class=select-style>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/seven-segment/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+</div>
+</a>
+</li>
+<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li>
+</ul>
+</section>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=top-github-link>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/seven-segment.md target=blank>
+<i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Bearbeite diese Seite</span>
+</a>
+</div>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > 7-Segment Anzeige
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#funktionsweise>Funktionsweise</a></li>
+<li><a href=#voraussetzungen>Voraussetzungen</a>
+<ul>
+<li><a href=#dip-switches>DIP Switches</a></li>
+</ul>
+</li>
+<li><a href=#verwendung>Verwendung</a>
+<ul>
+<li><a href=#konstruktoren>Konstruktoren</a></li>
+<li><a href=#methoden>Methoden</a></li>
+</ul>
+</li>
+<li><a href=#beispielapplikation>Beispielapplikation</a></li>
+<li><a href=#weitere-möglichkeiten>Weitere Möglichkeiten</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+<div class=tags>
+<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/i2c>i2c</a>
+</div>
+</div>
+<div id=body-inner>
+<h1>
+7-Segment Anzeige
+</h1>
+<h2 id=funktionsweise>Funktionsweise</h2>
+<p>Die 7-Segment Anzeige auf dem CrowPi besteht aus 4 verschiedenen Ziffern, welche jeweils die Werte <code>0-9</code> sowie <code>A-F</code> darstellen können.
+Der Name ist dabei auch Programm, da jede Ziffer grundsätzlich aus 7 verschiedenen Segmenten besteht, welche je nach Zustand (an/aus)
+dann die verschiedenen Werte darstellen können. Dies bedeutet jedoch auch dass bei der Anzeige auf dem CrowPi insgesamt 33 verschiedene
+Segmente existieren (4x 7-Segment, 4x Dezimalpunkt, 1x Doppelpunkt), welche alle einzeln angeschlossen und gesteuert werden müssten.</p>
+<p>Um dies zu vermeiden, verwendet die 7-Segment Anzeige den <code>HT16K33</code>, einen elektronischen Baustein zur Ansteuerung von mehreren LEDs
+über eine einzelne Schnittstelle. Hierfür wird der Bus <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>I2C</a> eingesetzt, über welchen verschiedene
+Steuerungsbefehle an die 7-Segment Anzeige gesendet werden können.</p>
+<p>Da das Übertragen jeder einzelnen Änderung an die Komponente sehr ineffizient ist, wird üblicherweise ein Buffer in der Software
+implementiert. Alle gewünschten Anpassungen verändern somit nur den Buffer, welcher anschliessend mit nur einem einzigen Befehl übertragen
+werden kann. Dieses Prinzip wird auch von der Komponenten-Klasse <code>SevenSegmentComponent</code> verwendet.</p>
+<h2 id=voraussetzungen>Voraussetzungen</h2>
+<h3 id=dip-switches>DIP Switches</h3>
+<p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
+<h2 id=verwendung>Verwendung</h2>
+<p>Nachfolgend wird die Verwendung der Klasse
+<code>com.pi4j.crowpi.components.SevenSegmentComponent</code>
+<a href=/CrowPiGoesJavaTutorial/apidocs/com.pi4j.crowpi/com/pi4j/crowpi/components/SevenSegmentComponent.html target=_blank class="btn btn-default btn-small">
+<i class="fas fa-external-link-alt"></i>
+Javadoc
+</a>
+beschrieben. Es ist
+hierbei wichtig zu beachten, dass alle Methoden mit dem Wort &ldquo;Buffer:&rdquo; am Anfang der Beschreibung nicht eine direkte Auswirkung haben,
+sondern erst mit einem Aufruf von <code>void refresh()</code> auf der Anzeige sichtbar werden. Es ist somit zu empfehlen, alle gewünschten
+Einstellungen zu tätigen und dann mit einem einzigen Aufruf die Änderungen auf dem Gerät darzustellen.</p>
+<h3 id=konstruktoren>Konstruktoren</h3>
+<table>
+<thead>
+<tr>
+<th>Konstruktor</th>
+<th>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SevenSegmentComponent(com.pi4j.context.Context pi4j)</code></td>
+<td>Initialisiert eine 7-Segment Anzeige mit der Standard Bus- und Geräteadresse für den CrowPi.</td>
+</tr>
+<tr>
+<td><code>SevenSegmentComponent(com.pi4j.context.Context pi4j, int bus, int device)</code></td>
+<td>Initialisiert eine 7-Segment Anzeige mit einer benutzerdefinierten Bus- und Geräteadresse.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=methoden>Methoden</h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void print(int i)</code></td>
+<td>Gibt eine Ganzzahl mit bis zu 4 Ziffern auf der Anzeige aus. Zu lange Zahlen werden nach hinten abgeschnitten.</td>
+</tr>
+<tr>
+<td><code>void print(double d)</code></td>
+<td>Gibt eine Kommazahl mit bis zu 4 Ziffern auf der Anzeige aus. Zu lange Zahlen werden nach hinten abgeschnitten.</td>
+</tr>
+<tr>
+<td><code>void print(java.time.LocalTime time)</code></td>
+<td>Gibt die übergebene Uhrzeit in Stunden und Minuten auf der Anzeige aus. Der Doppelpunkt auf der Anzeige wird bei ungerader Sekundenzahl aktiviert und ansonsten deaktiviert.</td>
+</tr>
+<tr>
+<td><code>void print(String s)</code></td>
+<td>Gibt die ersten 4 übergebenen Zeichen auf der Anzeige aus. Hierbei ist zu beachten dass die Anzeige nur wenige Zeichen unterstützt und ansonsten eine <code>IllegalArgumentException</code> wirft.</td>
+</tr>
+<tr>
+<td><code>void clear()</code></td>
+<td>Löscht den internen Buffer ohne die Anzeige zu aktualisieren.</td>
+</tr>
+<tr>
+<td><code>void refresh()</code></td>
+<td>Aktualisiert die Anzeige mit dem aktuellen Inhalt des Buffers.</td>
+</tr>
+<tr>
+<td><code>void setEnabled(boolean enabled)</code></td>
+<td>Schaltet die Anzeige ein oder aus gemäss Boolean-Wert.</td>
+</tr>
+<tr>
+<td><code>void setBlinkRate(int rate)</code></td>
+<td>Setzt die gewünschte Blink-Geschwindigkeit der ganzen Anzeige zwischen 0 (aus) und 3 (am schnellsten).</td>
+</tr>
+<tr>
+<td><code>void setBrightness(int brightness)</code></td>
+<td>Setzt die gewünschte Helligkeit der ganzen Anzeige zwischen 0 (am dunkelsten) und 15 (am hellsten).</td>
+</tr>
+<tr>
+<td><code>void setColon(boolean enabled)</code></td>
+<td><em>Buffer:</em> Aktiviert/deaktiviert den Doppelpunkt auf der Anzeige.</td>
+</tr>
+<tr>
+<td><code>void setDecimalPoint(int position, boolean enabled)</code></td>
+<td><em>Buffer:</em> Aktiviert/deaktiviert den entsprechenden Dezimalpunkt auf der Anzeige. Diese Einstellung wird durch Setzen einer Ziffer automatisch wieder deaktiviert.</td>
+</tr>
+<tr>
+<td><code>void setDigit(int position, int i)</code></td>
+<td><em>Buffer:</em> Setzt die entsprechende Ziffer auf die übergebene Zahl zwischen 0 und 9.</td>
+</tr>
+<tr>
+<td><code>void setDigit(int position, char c)</code></td>
+<td><em>Buffer:</em> Setzt die entsprechende Ziffer auf das übergebene Zeichen.</td>
+</tr>
+<tr>
+<td><code>void setDigit(int position, Segment... segments)</code></td>
+<td><em>Buffer:</em> Setzt bei der entsprechenden Ziffer die übergebenen Segmente.</td>
+</tr>
+</tbody>
+</table>
+<h2 id=beispielapplikation>Beispielapplikation</h2>
+<p>Die nachfolgende Beispielapplikation besteht aus 3 verschiedenen Sektionen, welche die Vielfältigkeit der 7-Segment Anzeige veranschaulichen
+sollen. Zuerst werden die 4 Ziffern auf der Anzeige auf verschiedene Werte gesetzt, wobei es sich bei der letzten Ziffer sogar um ein
+komplett eigenes Symbol handelt.</p>
+<p>Nach einer Wartezeit von 3 Sekunden wird eine kleine Ladeanimation auf der Anzeige dargestellt. Hierfür wird ein Array <code>states</code>
+definiert, in welchem die Ladeposition mithilfe von Zeichenketten dargestellt wird. Es handelt sich hierbei um einen Strich, welcher sich
+jeweils von links nach rechts bewegt. Hierfür wird eine verschachtelte <code>for</code>-Schleife eingesetzt, wobei mit <code>i</code> die ganze Animation
+insgesamt fünfmal wiederholt wird, während die innere Schleife über alle möglichen Animationszustände iteriert und diese nacheinander mit
+einer Verzögerung von 50 Millisekunden ausgibt.</p>
+<p>Nachdem diese Ladeanimation abgespielt wurde, geht die Applikation in eine Endlosschleife und stellt jeweils die aktuelle Uhrzeit dar. Die
+API-Methode <code>print(LocalTime time)</code> übernimmt hierbei den Grossteil der Arbeit und blinkt sogar automatisch wenn die Sekundenzahl zurzeit
+ungerade ist. Durch das Abbrechen vom Maven-Prozess lässt sich diese Applikation anschliessend wieder beenden.</p>
+<div class=cpi-code-header>
+<div>
+<strong>Pfad zum Codebeispiel: </strong>
+<code>src/main/java/com/pi4j/crowpi/applications/SevenSegmentApp.java</code>
+</div>
+<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/SevenSegmentApp.java target=_blank class="btn btn-default">
+<i class="fab fa-github"></i>
+Auf GitHub ansehen
+</a>
+</div>
+<div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#f92672>package</span> com.pi4j.crowpi.applications<span style=color:#f92672>;</span>
+
+<span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.SevenSegmentComponent<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.SevenSegmentComponent.Segment<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
+
+<span style=color:#f92672>import</span> java.time.LocalTime<span style=color:#f92672>;</span>
+
+<span style=color:#75715e>/**
+</span><span style=color:#75715e> * Shows some basic digits and a fake loading indicator before acting as a clock which endlessly displays the current time on the CrowPi.
+</span><span style=color:#75715e> * The colon on the seven-segment display will blink for every odd second.
+</span><span style=color:#75715e> */</span>
+<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SevenSegmentApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
+    <span style=color:#a6e22e>@Override</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+        <span style=color:#75715e>// Initialize and enable seven-segment display component
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var segment <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> SevenSegmentComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
+        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>setEnabled</span><span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Activate full brightness and disable blinking
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// These are the defaults and just here for demonstration purposes
+</span><span style=color:#75715e></span>        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>setBlinkRate</span><span style=color:#f92672>(</span>0<span style=color:#f92672>);</span>
+        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>setBrightness</span><span style=color:#f92672>(</span>15<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Manually set some digits and symbols to demonstrate the advanced API
+</span><span style=color:#75715e></span>        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>setDigit</span><span style=color:#f92672>(</span>0<span style=color:#f92672>,</span> <span style=color:#e6db74>&#39;1&#39;</span><span style=color:#f92672>);</span> <span style=color:#75715e>// Place the character &#34;1&#34; into the first digit
+</span><span style=color:#75715e></span>        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>setDecimalPoint</span><span style=color:#f92672>(</span>0<span style=color:#f92672>,</span> <span style=color:#66d9ef>true</span><span style=color:#f92672>);</span> <span style=color:#75715e>// Activate the decimal point after the first digit
+</span><span style=color:#75715e></span>        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>setDigit</span><span style=color:#f92672>(</span>1<span style=color:#f92672>,</span> <span style=color:#e6db74>&#39;a&#39;</span><span style=color:#f92672>);</span> <span style=color:#75715e>// Place the character &#34;a&#34; into the second digit
+</span><span style=color:#75715e></span>        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>setDigit</span><span style=color:#f92672>(</span>2<span style=color:#f92672>,</span> 4<span style=color:#f92672>);</span> <span style=color:#75715e>// Place the number 4 into the third digit
+</span><span style=color:#75715e></span>        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>setDigit</span><span style=color:#f92672>(</span>3<span style=color:#f92672>,</span> Segment<span style=color:#f92672>.</span><span style=color:#a6e22e>TOP</span><span style=color:#f92672>,</span> Segment<span style=color:#f92672>.</span><span style=color:#a6e22e>BOTTOM</span><span style=color:#f92672>);</span> <span style=color:#75715e>// Activate top and bottom segment for fourth digit
+</span><span style=color:#75715e></span>        segment<span style=color:#f92672>.</span><span style=color:#a6e22e>refresh</span><span style=color:#f92672>();</span> <span style=color:#75715e>// Send updated buffer to display
+</span><span style=color:#75715e></span>
+        <span style=color:#75715e>// Sleep for three seconds before moving on...
+</span><span style=color:#75715e></span>        sleep<span style=color:#f92672>(</span>3000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Show fake loading indicator by moving a single dash from left to right several times
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// We do so by initializing an array with all possible states (forward &amp; reverse) and printing it in order
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var states <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> String<span style=color:#f92672>[]{</span><span style=color:#e6db74>&#34;-   &#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34; -  &#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;  - &#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;   -&#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;  - &#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34; -  &#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;-   &#34;</span><span style=color:#f92672>};</span>
+        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> 5<span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span>String state <span style=color:#f92672>:</span> states<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                <span style=color:#75715e>// Print current state and sleep for 50 milliseconds
+</span><span style=color:#75715e></span>                segment<span style=color:#f92672>.</span><span style=color:#a6e22e>print</span><span style=color:#f92672>(</span>state<span style=color:#f92672>);</span>
+                sleep<span style=color:#f92672>(</span>50<span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#75715e>// Loop endlessly and print the current time every second
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>while</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+            <span style=color:#75715e>// Print current local time
+</span><span style=color:#75715e></span>            segment<span style=color:#f92672>.</span><span style=color:#a6e22e>print</span><span style=color:#f92672>(</span>LocalTime<span style=color:#f92672>.</span><span style=color:#a6e22e>now</span><span style=color:#f92672>());</span>
+
+            <span style=color:#75715e>// Sleep for one second before continuing
+</span><span style=color:#75715e></span>            sleep<span style=color:#f92672>(</span>1000<span style=color:#f92672>);</span>
+        <span style=color:#f92672>}</span>
+    <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+
+</code></pre></div>
+<h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
+<ul>
+<li>
+<p>Das Beispiel könnte so umgeschrieben werden, dass von einer vordefinierten Zeit heruntergezählt wird und die Anzeige nach Erreichen von 0
+entsprechend blinkt. In Kombination mit dem Buzzer wäre somit sogar eine Eieruhr möglich.</p>
+</li>
+<li>
+<p>Statt jeweils nur die aktuelle Zeit mit <code>LocalTime.now()</code> anzuzeigen, könnte auch die aktuelle Uhrzeit in verschiedenen Zeitzonen
+hintereinander dargestellt werden.</p>
+</li>
+<li>
+<p>In Kombination mit den vorhandenen Buttons lassen sich Eingaben für Zahlen realisieren, sodass beispielsweise eine Stoppuhr implementiert
+werden könnte.</p>
+</li>
+</ul>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/button/ title=Button style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1620302441></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1620302441></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1620302441></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>
