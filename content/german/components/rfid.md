@@ -1,5 +1,5 @@
 ---
-title: RFID Reader/Writer
+title: RFID
 tags: ["spi"]
 ---
 
