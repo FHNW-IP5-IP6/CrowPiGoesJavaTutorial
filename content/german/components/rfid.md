@@ -15,9 +15,10 @@ eigene Stromversorgung benötigen. Im CrowPi ist die Komponente `MFRC522` verbau
 beispielsweise die beiden beigelegten Tags des CrowPi ausgelesen und beschrieben werden. Dies funktioniert dabei mit beliebigen Daten.
 
 Die Technologie dahinter ist sehr komplex und die entsprechenden Informationen dazu sind auf mehrere Standards aufgeteilt, hauptsächlich
-`ISO-14443` für den allgemein Aufbau und die Kommunikation sowie die entsprechenden Spezifikationen von NXP Semiconductors, dem Hersteller
+ISO-14443 für den allgemeinen Aufbau und die Kommunikation sowie die entsprechenden Spezifikationen von NXP Semiconductors, dem Hersteller
 des Lese- und Schreibgeräts sowie von den meisten RFID Karten. Die Einhaltung dieser Standards ist hierbei sehr wichtig, da eine RFID Karte
-bei falschen Schreiboperationen auch permanent beschädigt werden kann.
+bei falschen Schreiboperationen auch permanent beschädigt werden kann. Im Fachjargon wird das Lese- und Schreibgerät "Proximity Coupling
+Device" (PCD) genannt, während die verschiedenen Karten "Proximity Integrated Circuit Card" (PICC) heissen.
 
 Es besteht hier jedoch kein Grund zur Sorge, da sich diese Komponente um all die komplexen Aufgaben im Hintergrund kümmert und eine einfache
 sowie zuverlässige Schnittstelle bietet, um mit solchen RFID Karten zu interagieren. So bietet `RfidComponent` die Möglichkeit an, Karten zu
@@ -107,3 +108,9 @@ auszuprobieren. Nach Ablauf der Zeit wird der Event Handler wieder sauber entfer
 - Statt dem Speichern von Personen könnten auch andere Daten auf einer Karte abgelegt werden, zum Beispiel eine (nicht sehr sichere)
   Implementation einer Bank wo auf jeder Karte der Inhaber sowie der aktuelle Kontostand gespeichert wird. Hierfür wäre die Methode
   `waitForAnyCard` praktisch, um eine bereits aufgelegte Karte erneut zu beschreiben.
+
+
+## Zusätzliche Links
+- [NXP Semiconductors: ISO/IEC 14443 PICC Selection](https://www.nxp.com/docs/en/application-note/AN10834.pdf)
+- [NXP Semiconductors: Spezifikation zu MFRC522](https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf)
+- [NXP Semiconductors: Spezifikation zu MIFARE Classic 1K](https://www.nxp.com/docs/en/data-sheet/MF1S50YYX_V1.pdf)
