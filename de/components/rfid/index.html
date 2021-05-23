@@ -1,0 +1,672 @@
+<!doctype html><html lang=de class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.83.1">
+<meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
+<meta name=author content="Pascal Mathis, Tobias Siegrist">
+<link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
+<title>RFID :: CrowPi goes Java</title>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1621787334 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1621787334 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1621787334></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/CrowPiGoesJavaTutorial/de/components/rfid/>
+<nav id=sidebar class=showVisitedLinks>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href=/CrowPiGoesJavaTutorial/de>
+<img src=/CrowPiGoesJavaTutorial/images/fhnw-logo.svg style=width:40%;height:40%>
+<h3 style=margin:0;color:#fff>CrowPi goes Java</h3>
+</a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Suchen...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1621787334></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1621787334></script>
+<script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1621787334></script>
+</div>
+<section id=homelinks>
+<ul>
+<li>
+<a class=padding href=/CrowPiGoesJavaTutorial/de><i class="fas fa-fw fa-home"></i> Startseite</a>
+</li>
+</ul>
+</section>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/>
+<b>1. </b>Vorbereitungen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/requirements/ title=Anforderungen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/requirements/>
+Anforderungen
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/raspberry/>
+Raspberry PI Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/intellij/>
+IntelliJ IDEA Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/>
+<b>2. </b>Grundlagen
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/crowpi/ title="Die CrowPi Plattform" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/crowpi/>
+Die CrowPi Plattform
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/running/>
+Starten der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>
+Debugging der Applikation
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/framework/>
+Application Framework
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/basics/dev-process/>
+Entwicklungsprozess
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class="dd-item
+parent">
+<a href=/CrowPiGoesJavaTutorial/de/components/>
+<b>3. </b>Komponenten
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/seven-segment/ title="7-Segment Anzeige" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>
+7-Segment Anzeige
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button/>
+Button
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
+Button Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/buzzer/>
+Buzzer
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
+LCD Display
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
+LED Matrix
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
+Lichtsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
+PIR Motion Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/relay/>
+Relais
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID class="dd-item active">
+<a href=/CrowPiGoesJavaTutorial/de/components/rfid/>
+RFID
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/>
+Tilt Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/touch-sensor/>
+Touch Sensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/>
+Ultraschall Distanzsensor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/components/vibration-motor/>
+Vibrationsmotor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/>
+<b>4. </b>Hardware
+<i class="fas fa-check read-icon"></i>
+</a>
+<ul>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/i2c/ title=I²C class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>
+I²C
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/pwm/>
+Pulse Width Modulation (PWM)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>
+Serial Peripheral Interface (SPI)
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<section id=shortcuts>
+<h3>Mehr</h3>
+<ul>
+<li>
+<a class=padding href=https://github.com/Pi4J/pi4j-example-crowpi><i class="fab fa-fw fa-github"></i> GitHub Repository (Code)</a>
+</li>
+<li>
+<a class=padding href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial><i class="fab fa-fw fa-github"></i> GitHub Repository (Doku)</a>
+</li>
+<li>
+<a class=padding href=https://www.pi4j.com/><i class="fas fa-fw fa-cogs"></i> Pi4J Website</a>
+</li>
+<li>
+<a class=padding href=https://www.fhnw.ch/en/><i class="fas fa-fw fa-university"></i> FHNW Website</a>
+</li>
+</ul>
+</section>
+<section id=prefooter>
+<hr>
+<ul>
+<li>
+<a class=padding>
+<i class="fas fa-language fa-fw"></i>
+<div class=select-style>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/rfid/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+</div>
+</a>
+</li>
+<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li>
+</ul>
+</section>
+<section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=top-github-link>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/rfid.md target=blank>
+<i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Bearbeite diese Seite</span>
+</a>
+</div>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > RFID
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#funktionsweise>Funktionsweise</a></li>
+<li><a href=#voraussetzungen>Voraussetzungen</a>
+<ul>
+<li><a href=#dip-switches>DIP Switches</a></li>
+</ul>
+</li>
+<li><a href=#verwendung>Verwendung</a>
+<ul>
+<li><a href=#konstruktoren>Konstruktoren</a></li>
+<li><a href=#methoden>Methoden</a></li>
+<li><a href=#karten-methoden>Karten-Methoden</a></li>
+</ul>
+</li>
+<li><a href=#beispielapplikation>Beispielapplikation</a></li>
+<li><a href=#weitere-möglichkeiten>Weitere Möglichkeiten</a></li>
+<li><a href=#zusätzliche-links>Zusätzliche Links</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+<div class=tags>
+<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/spi>spi</a>
+</div>
+</div>
+<div id=body-inner>
+<h1>
+RFID
+</h1>
+<h2 id=funktionsweise>Funktionsweise</h2>
+<p>Bei RFID, abgekürzt für Radio Frequency Identification, handelt es sich um eine Technologie, welche es ermöglicht automatisch und kontaktlos
+mit einer Karte entsprechende Informationen auszutauschen. Dies wird zum Beispiel bei weit bekannten NFC Tags verwendet, jedoch auch für
+Anwendungen wie das kontaktlose Zahlen per Kreditkarte.</p>
+<p>Ein grosser Vorteil ist hierbei, dass die jeweiligen Karten/Tags, auch Transponder genannt, so klein wie ein Reiskorn sein können und keine
+eigene Stromversorgung benötigen. Im CrowPi ist die Komponente <code>MFRC522</code> verbaut, welche ein hochfrequentes elektronisches Wechselfeld bei
+13.56 MHz erzeugt, um damit einerseits die Karte mit Strom zu versorgen und andererseits mit dieser zu kommunizieren. Somit können
+beispielsweise die beiden beigelegten Tags des CrowPi ausgelesen und beschrieben werden. Dies funktioniert dabei mit beliebigen Daten.</p>
+<p>Die Technologie dahinter ist sehr komplex und die entsprechenden Informationen dazu sind auf mehrere Standards aufgeteilt, hauptsächlich
+ISO-14443 für den allgemeinen Aufbau und die Kommunikation sowie die entsprechenden Spezifikationen von NXP Semiconductors, dem Hersteller
+des Lese- und Schreibgeräts sowie von den meisten RFID Karten. Die Einhaltung dieser Standards ist hierbei sehr wichtig, da eine RFID Karte
+bei falschen Schreiboperationen auch permanent beschädigt werden kann. Im Fachjargon wird das Lese- und Schreibgerät &ldquo;Proximity Coupling
+Device&rdquo; (PCD) genannt, während die verschiedenen Karten &ldquo;Proximity Integrated Circuit Card&rdquo; (PICC) heissen.</p>
+<p>Es besteht hier jedoch kein Grund zur Sorge, da sich diese Komponente um all die komplexen Aufgaben im Hintergrund kümmert und eine einfache
+sowie zuverlässige Schnittstelle bietet, um mit solchen RFID Karten zu interagieren. So bietet <code>RfidComponent</code> die Möglichkeit an, Karten zu
+erkennen und ein beliebiges Java-Objekt darauf zu speichern oder wieder zu lesen.</p>
+<h2 id=voraussetzungen>Voraussetzungen</h2>
+<h3 id=dip-switches>DIP Switches</h3>
+<p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
+<h2 id=verwendung>Verwendung</h2>
+<p>Nachfolgend wird die Verwendung der Klasse
+<code>com.pi4j.crowpi.components.RfidComponent</code>
+<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/RfidComponent.html target=_blank class="btn btn-default btn-small">
+<i class="fas fa-external-link-alt"></i>
+Javadoc
+</a>
+beschrieben.</p>
+<h3 id=konstruktoren>Konstruktoren</h3>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Konstruktor</th>
+<th style=text-align:left>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>RfidComponent(com.pi4j.context.Context pi4j)</code></td>
+<td style=text-align:left>Initialisiert einen RFID Reader/Writer mit der Standard Reset-Pin und SPI Adresse sowie SPI Bandbreite für den CrowPi.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>RfidComponent(com.pi4j.context.Context pi4j, int spiChannel, int spiBaud)</code></td>
+<td style=text-align:left>Initialisiert einen RFID Reader/Writer mit einer benutzerdefinierten SPI Adresse und Bandbreite ohne Reset-Pin.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>RfidComponent(com.pi4j.context.Context pi4j, Integer gpioResetPin, int spiChannel, int spiBaud)</code></td>
+<td style=text-align:left>Initialisiert einen RFID Reader/Writer mit einem benutzerdefinierten Reset-Pin, SPI-Adresse sowie Bandbreite.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=methoden>Methoden</h3>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Methode</th>
+<th style=text-align:left>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>boolean isNewCardPresent()</code></td>
+<td style=text-align:left>Gibt einen boolschen Wert zurück, ob eine neue Karte erkannt wurde, welche noch nicht gelesen wurde.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>boolean isAnyCardPresent()</code></td>
+<td style=text-align:left>Gibt einen boolschen Wert zurück, ob irgendeine Karte erkannt wurde. Diese Methode erkennt im Gegensatz zu <code>isNewCardPresent()</code> auch bereits gelesene Karten.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>RfidCard initializeCard()</code></td>
+<td style=text-align:left>Erzeugt eine neue Instanz von <code>RfidCard</code>, welche anschliessend zur Interaktion mit der Karte verwendet werden kann. Erfordert dass <code>isNewCardPresent</code> oder <code>isAnyCardPresent</code> vorher aufgerufen wurde und <code>true</code> zurückgab.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void uninitializeCard()</code></td>
+<td style=text-align:left>Muss zwingend nach dem Abschliessen aller Aktionen mit einer Karte aufgerufen werden, um die Kommunikation mit der Karte sauber zu beenden und neue Karten erkennen zu können.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void onCardDetected(EventHandler&lt;RfidCard> handler)</code></td>
+<td style=text-align:left>Definiert einen Event Handler, welcher jedes Mal aufgerufen wird wenn eine neue Karte erkennt wird. Als erster Parameter wird hierbei die erkannte Karte übergeben.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void waitForNewCard(EventHandler&lt;RfidCard> handler)</code></td>
+<td style=text-align:left>Gleiche Funktionsweise wie <code>onCardDetected</code>, blockiert jedoch den aktuellen Thread und wartet bis eine neue Karte erkannt wird, um dann einmalig einen Handler aufzurufen. Diese Methode deaktiviert den aktuellen Event Listener für <code>onCardDetected</code>.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void waitForAnyCard(EventHandler&lt;RfidCard> handler)</code></td>
+<td style=text-align:left>Gleiche Funktionsweise wie <code>waitForNewCard</code>, akzeptiert jedoch auch eine Karte welche bereits gelesen oder beschrieben wurde und führt auf dieser die Aktion durch. Diese Methode deaktiviert den aktuellen Event Listener für <code>onCardDetected</code>.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void reset()</code></td>
+<td style=text-align:left>Setzt die Komponente auf den Ausgangszustand zurück, was bei allfälligen Problemen Abhilfe schaffen kann. Normalerweise nicht erforderlich für den normalen Betrieb.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=karten-methoden>Karten-Methoden</h3>
+<p>Die Klasse
+<code>com.pi4j.crowpi.components.internal.rfid.RfidCard</code>
+<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/internal/rfid/RfidCard.html target=_blank class="btn btn-default btn-small">
+<i class="fas fa-external-link-alt"></i>
+Javadoc
+</a>
+welche als Rückgabewert bei <code>initializeCard()</code> oder als
+Parameter bei den Event Handlern <code>onCardDetected()</code>, <code>waitForNewCard()</code> sowie <code>waitForAnyCard</code> verwendet wird, bietet verschiedene Methoden
+um mit der erkannten Karte zu interagieren. Wichtig zu beachten ist, dass nach Ausführung eines Event Handlers automatisch
+<code>uninitializeCard()</code> aufgerufen wird, sodass sich die erkannte Karte nicht weiter nutzen lässt.</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Methode</th>
+<th style=text-align:left>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>String getSerial()</code></td>
+<td style=text-align:left>Gibt die Seriennummer der aktuellen Karte als String zurück.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>int getCapacity()</code></td>
+<td style=text-align:left>Gibt die maximale Kapazität der aktuellen Karte in Bytes zurück.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void writeObject(Object data)</code></td>
+<td style=text-align:left>Schreibt das übergebene Objekt in die Karte. Wird dieser Befehl mehrfach aufgerufen, so wird dieses jeweils überschrieben. Das Objekt muss das Interface <code>Serializable</code> implementieren. Wirft eine <code>RfidException</code> falls die Operation nicht erfolgreich war.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>Object readObject()</code></td>
+<td style=text-align:left>Liest das auf der Karte gespeicherte Objekt aus und gibt dieses als generischen <code>Object</code>-Typ zurück. Wirft eine <code>RfidException</code> falls die Operation nicht erfolgreich war.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>T readObject(Class&lt;T> type)</code></td>
+<td style=text-align:left>Gleiche Funktionsweise wie <code>readObject()</code>, aber gibt das Objekt gleich mit dem gewünschten Typ zurück. Wurde zum Beispiel mit <code>writeObject</code> vorher ein <code>Animal</code> gespeichert, so gibt <code>readObject(Animal.class)</code> direkt die <code>Animal</code>-Instanz zurück.</td>
+</tr>
+</tbody>
+</table>
+<h2 id=beispielapplikation>Beispielapplikation</h2>
+<p>Die nachfolgende Beispielapplikation definiert eine Klasse namens <code>Person</code>, um von einer beliebigen Person den Vornamen und Nachnamen, die
+Adresse sowie das Geburtsdatum zusammen mit einer zufällig generierten ID zu speichern. Nun werden zuerst zwei Personen generiert und in den
+Variablen <code>personA</code> sowie <code>personB</code> gespeichert, welche beide über verschiedene Daten verfügen.</p>
+<p>Anschliessend wird mit der <code>waitForNewCard</code> Methode die Anwendung so lange blockiert, bis eine neue Karte vom RFID Gerät erkannt wurde.
+Sobald dies der Fall ist, wird die übergebene Funktion ausgeführt, welche die Instanz <code>personA</code> von der <code>Person</code>-Klasse auf der Karte mit
+<code>writeObject</code> speichert. Es kann jedes beliebige Java-Objekt gespeichert werden, solange dieses das <code>Serializable</code> mit <code>implements Serializable</code> implementiert. Wichtig ist hierbei zu beachten, dass diese Methode eine <code>RfidException</code> werfen kann, welche abgefangen werden
+muss. Diese tritt auf, wenn die Karte nicht ordnungsgemäss beschrieben werden konnte.</p>
+<p>Nachdem die erste Karte beschrieben wurde, wird der gleiche Prozess für die zweite Karte wiederholt. Da mit <code>waitForNewCard</code> grundsätzlich
+nur neue Karten erkannt werden und eine Karte nach erfolgter Interaktion in einen Schlafzustand geht, kann hier garantiert werden dass nicht
+sofort die zweite Person auf die gleiche Karte geschrieben wird, sondern sich eine neue Karte annähern oder die bestehende Karte kurzfristig
+entfernt werden muss.</p>
+<p>Sobald beide Karten beschrieben wurden, wird ein Event Handler mit <code>onCardDetected</code> registriert, welcher asynchron jedes Mal aufgerufen wird
+wenn eine neue Karte erkannt wurde. Da der RFID-Standard ein Verfahren gegen Kollisionen besitzt, können sich sogar mehrere Karten
+gleichzeitig auf dem Lese- und Schreibgerät befinden. Bei jeder ermittelten Karte wird mit <code>readObject(Person.class)</code> versucht, eine vorher
+gespeicherte Instanz der <code>Person</code>-Klasse auszulesen und in die Variable <code>person</code> zu speichern. Wenn dies gelingt, so wird die Person auf der
+Konsole ausgegeben. Auch hier muss eine allfällige <code>RfidException</code> aufgefangen werden, welche zum Beispiel auftritt, wenn die Daten nicht
+gelesen werden können oder korrupt sind.</p>
+<p>Nach der Registrierung des Event Handlers schläft die Applikation für 30 Sekunden, um genug Zeit zu geben, die zwei verwendeten Karten
+auszuprobieren. Nach Ablauf der Zeit wird der Event Handler wieder sauber entfernt und die Applikation beendet sich.</p>
+<div class=cpi-code-header>
+<div>
+<strong>Pfad zum Codebeispiel: </strong>
+<code>src/main/java/com/pi4j/crowpi/applications/RfidApp.java</code>
+</div>
+<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/RfidApp.java target=_blank class="btn btn-default">
+<i class="fab fa-github"></i>
+Auf GitHub ansehen
+</a>
+</div>
+<div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#f92672>package</span> com.pi4j.crowpi.applications<span style=color:#f92672>;</span>
+
+<span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.RfidComponent<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.exceptions.RfidException<span style=color:#f92672>;</span>
+
+<span style=color:#f92672>import</span> java.io.Serializable<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> java.time.LocalDate<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> java.util.UUID<span style=color:#f92672>;</span>
+
+<span style=color:#75715e>/**
+</span><span style=color:#75715e> * This example first waits for the user to approach two different RFID cards and writes a different instance of a {@link Person} class into
+</span><span style=color:#75715e> * each card. After doing so, the application registers an event listener which reads any approached cards and outputs the read and
+</span><span style=color:#75715e> * deserialized {@link Person} class. The example will then sleep for 30 seconds to give the user some time to test the two tags or approach
+</span><span style=color:#75715e> * other tags before shutting down cleanly by de-registering the event listener.
+</span><span style=color:#75715e> */</span>
+<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>RfidApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
+    <span style=color:#a6e22e>@Override</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+        <span style=color:#75715e>// Initialize RFID component
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var rfid <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> RfidComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Generate two persons which will be written to tags
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// Values taken from fakenamegenerator.com, these are not real identities :-)
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var personA <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Person<span style=color:#f92672>(</span>
+            <span style=color:#e6db74>&#34;Robert&#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Parson&#34;</span><span style=color:#f92672>,</span>
+            <span style=color:#e6db74>&#34;21 Southern Street, Bohemia, NY 11716&#34;</span><span style=color:#f92672>,</span>
+            LocalDate<span style=color:#f92672>.</span><span style=color:#a6e22e>of</span><span style=color:#f92672>(</span>1948<span style=color:#f92672>,</span> 2<span style=color:#f92672>,</span> 23<span style=color:#f92672>)</span>
+        <span style=color:#f92672>);</span>
+        <span style=color:#66d9ef>final</span> var personB <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Person<span style=color:#f92672>(</span>
+            <span style=color:#e6db74>&#34;Lisa&#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Knee&#34;</span><span style=color:#f92672>,</span>
+            <span style=color:#e6db74>&#34;1944 Veltri Drive, Old Harbor, AK 99643&#34;</span><span style=color:#f92672>,</span>
+            LocalDate<span style=color:#f92672>.</span><span style=color:#a6e22e>of</span><span style=color:#f92672>(</span>2000<span style=color:#f92672>,</span> 8<span style=color:#f92672>,</span> 11<span style=color:#f92672>)</span>
+        <span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Wait for the user to approach a first card and write person A
+</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Please approach a first card to write person A&#34;</span><span style=color:#f92672>);</span>
+        rfid<span style=color:#f92672>.</span><span style=color:#a6e22e>waitForNewCard</span><span style=color:#f92672>(</span>card <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
+                card<span style=color:#f92672>.</span><span style=color:#a6e22e>writeObject</span><span style=color:#f92672>(</span>personA<span style=color:#f92672>);</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Person A was written to card &#34;</span> <span style=color:#f92672>+</span> card<span style=color:#f92672>.</span><span style=color:#a6e22e>getSerial</span><span style=color:#f92672>());</span>
+            <span style=color:#f92672>}</span> <span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>RfidException e<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Could not write card for person A: &#34;</span> <span style=color:#f92672>+</span> e<span style=color:#f92672>.</span><span style=color:#a6e22e>getMessage</span><span style=color:#f92672>());</span>
+            <span style=color:#f92672>}</span>
+        <span style=color:#f92672>});</span>
+
+        <span style=color:#75715e>// Wait for the user to approach a second card and write person B
+</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Please approach a second card to write person B&#34;</span><span style=color:#f92672>);</span>
+        rfid<span style=color:#f92672>.</span><span style=color:#a6e22e>waitForNewCard</span><span style=color:#f92672>(</span>card <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
+                card<span style=color:#f92672>.</span><span style=color:#a6e22e>writeObject</span><span style=color:#f92672>(</span>personB<span style=color:#f92672>);</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Person B was written to card &#34;</span> <span style=color:#f92672>+</span> card<span style=color:#f92672>.</span><span style=color:#a6e22e>getSerial</span><span style=color:#f92672>());</span>
+            <span style=color:#f92672>}</span> <span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>RfidException e<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Could not write card for person B: &#34;</span> <span style=color:#f92672>+</span> e<span style=color:#f92672>.</span><span style=color:#a6e22e>getMessage</span><span style=color:#f92672>());</span>
+            <span style=color:#f92672>}</span>
+        <span style=color:#f92672>});</span>
+
+        <span style=color:#75715e>// Register event listener to detect card in proximity
+</span><span style=color:#75715e></span>        rfid<span style=color:#f92672>.</span><span style=color:#a6e22e>onCardDetected</span><span style=color:#f92672>(</span>card <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
+            <span style=color:#75715e>// Print serial number and capacity of approached card
+</span><span style=color:#75715e></span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Detected card with serial &#34;</span> <span style=color:#f92672>+</span> card<span style=color:#f92672>.</span><span style=color:#a6e22e>getSerial</span><span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; and capacity of &#34;</span> <span style=color:#f92672>+</span> card<span style=color:#f92672>.</span><span style=color:#a6e22e>getCapacity</span><span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; bytes&#34;</span><span style=color:#f92672>);</span>
+
+            <span style=color:#75715e>// Read `Person` object from card and print it
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
+                <span style=color:#66d9ef>final</span> var person <span style=color:#f92672>=</span> card<span style=color:#f92672>.</span><span style=color:#a6e22e>readObject</span><span style=color:#f92672>(</span>Person<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>);</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Read person from card: &#34;</span> <span style=color:#f92672>+</span> person<span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span> <span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>RfidException e<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Could not read person from card: &#34;</span> <span style=color:#f92672>+</span> e<span style=color:#f92672>.</span><span style=color:#a6e22e>getMessage</span><span style=color:#f92672>());</span>
+            <span style=color:#f92672>}</span>
+        <span style=color:#f92672>});</span>
+
+        <span style=color:#75715e>// Sleep for 30 seconds to give the user some time to approach various cards
+</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Waiting 30 seconds for new RFID cards, try switching between the previously written cards...&#34;</span><span style=color:#f92672>);</span>
+        sleep<span style=color:#f92672>(</span>30000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Cleanup by unregistering the event handler
+</span><span style=color:#75715e></span>        rfid<span style=color:#f92672>.</span><span style=color:#a6e22e>onCardDetected</span><span style=color:#f92672>(</span><span style=color:#66d9ef>null</span><span style=color:#f92672>);</span>
+    <span style=color:#f92672>}</span>
+
+    <span style=color:#75715e>/**
+</span><span style=color:#75715e>     * This class represents a person with a random unique identifier (UUID), first name, last name, address and date of birth.
+</span><span style=color:#75715e>     * There is no magic involved here, except the implementation of the {@link Serializable} interface which is needed.
+</span><span style=color:#75715e>     * You can read and write any kind of class from/to a RFID card as long as it is serializable.
+</span><span style=color:#75715e>     */</span>
+    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Person</span> <span style=color:#66d9ef>implements</span> Serializable <span style=color:#f92672>{</span>
+        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> UUID uuid<span style=color:#f92672>;</span>
+        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> String firstName<span style=color:#f92672>;</span>
+        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> String lastName<span style=color:#f92672>;</span>
+        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> String address<span style=color:#f92672>;</span>
+        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> LocalDate dateOfBirth<span style=color:#f92672>;</span>
+
+        <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>Person</span><span style=color:#f92672>(</span>String firstName<span style=color:#f92672>,</span> String lastName<span style=color:#f92672>,</span> String address<span style=color:#f92672>,</span> LocalDate dateOfBirth<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+            <span style=color:#75715e>// Generate a random UUID for this person
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>uuid</span> <span style=color:#f92672>=</span> UUID<span style=color:#f92672>.</span><span style=color:#a6e22e>randomUUID</span><span style=color:#f92672>();</span>
+
+            <span style=color:#75715e>// Store all other attributes in this class
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>firstName</span> <span style=color:#f92672>=</span> firstName<span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>lastName</span> <span style=color:#f92672>=</span> lastName<span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>address</span> <span style=color:#f92672>=</span> address<span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>dateOfBirth</span> <span style=color:#f92672>=</span> dateOfBirth<span style=color:#f92672>;</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#66d9ef>public</span> UUID <span style=color:#a6e22e>getUuid</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>return</span> uuid<span style=color:#f92672>;</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getFirstName</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>return</span> firstName<span style=color:#f92672>;</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getLastName</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>return</span> lastName<span style=color:#f92672>;</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getAddress</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>return</span> address<span style=color:#f92672>;</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#66d9ef>public</span> LocalDate <span style=color:#a6e22e>getDateOfBirth</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>return</span> dateOfBirth<span style=color:#f92672>;</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#75715e>/**
+</span><span style=color:#75715e>         * Generate a nice description for this object when converted to a string which contains all attributes
+</span><span style=color:#75715e>         *
+</span><span style=color:#75715e>         * @return Human-readable string describing this person
+</span><span style=color:#75715e>         */</span>
+        <span style=color:#a6e22e>@Override</span>
+        <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>toString</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>return</span> getUuid<span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;: &#34;</span> <span style=color:#f92672>+</span> getFirstName<span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; &#34;</span> <span style=color:#f92672>+</span> getLastName<span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; @ &#34;</span> <span style=color:#f92672>+</span> getAddress<span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;, born &#34;</span> <span style=color:#f92672>+</span> getDateOfBirth<span style=color:#f92672>();</span>
+        <span style=color:#f92672>}</span>
+    <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+
+</code></pre></div>
+<h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
+<ul>
+<li>
+<p>Das Beispiel zu einer Art Zutrittskontrolle ausbauen und beispielsweise nur Personen mit einem bestimmten Attribut zulassen.</p>
+</li>
+<li>
+<p>Statt dem Speichern von Personen könnten auch andere Daten auf einer Karte abgelegt werden, zum Beispiel eine (nicht sehr sichere)
+Implementation einer Bank wo auf jeder Karte der Inhaber sowie der aktuelle Kontostand gespeichert wird. Hierfür wäre die Methode
+<code>waitForAnyCard</code> praktisch, um eine bereits aufgelegte Karte erneut zu beschreiben.</p>
+</li>
+</ul>
+<h2 id=zusätzliche-links>Zusätzliche Links</h2>
+<ul>
+<li><a href=https://www.nxp.com/docs/en/application-note/AN10834.pdf>NXP Semiconductors: ISO/IEC 14443 PICC Selection</a></li>
+<li><a href=https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf>NXP Semiconductors: Spezifikation zu MFRC522</a></li>
+<li><a href=https://www.nxp.com/docs/en/data-sheet/MF1S50YYX_V1.pdf>NXP Semiconductors: Spezifikation zu MIFARE Classic 1K</a></li>
+</ul>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1621787334></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1621787334></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1621787334></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1621787334></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1621787334></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1621787334></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1621787334></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1621787334></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1621787334></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1621787334></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>
