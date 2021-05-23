@@ -12,7 +12,7 @@ Anwendungen wie das kontaktlose Zahlen per Kreditkarte.
 Ein grosser Vorteil ist hierbei, dass die jeweiligen Karten/Tags, auch Transponder genannt, so klein wie ein Reiskorn sein können und keine
 eigene Stromversorgung benötigen. Im CrowPi ist die Komponente `MFRC522` verbaut, welche ein hochfrequentes elektronisches Wechselfeld bei
 13.56 MHz erzeugt, um damit einerseits die Karte mit Strom zu versorgen und andererseits mit dieser zu kommunizieren. Somit können
-beispielsweise die beiden beigelegten Tags des CrowPi ausgelesen und beschrieben werden mit beliebigen Daten.
+beispielsweise die beiden beigelegten Tags des CrowPi ausgelesen und beschrieben werden. Dies funktioniert dabei mit beliebigen Daten.
 
 Die Technologie dahinter ist sehr komplex und die entsprechenden Informationen dazu sind auf mehrere Standards aufgeteilt, hauptsächlich
 `ISO-14443` für den allgemein Aufbau und die Kommunikation sowie die entsprechenden Spezifikationen von NXP Semiconductors, dem Hersteller
