@@ -1,7 +1,8 @@
 ---
+
 title: Sound Sensor
 tags: ["gpio"]
----
+--------------
 
 ## Funktionsweise
 
@@ -36,13 +37,13 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 
 ### Methoden
 
-| Methode                 | Bemerkung                                                                                                                          |
-|:------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
-| `boolean isNoisy()`     | Gibt true zurück, wenn aktuell ein Geräusch vom Sensor erkannt wird                                                                |
-| `boolean isSilent()`    | Gibt true zurück, wenn aktuell stille herrscht.                                                                                    |
-| `SoundState getState()` | Gibt den aktuellen Zustand des Sensors in Form des SoundState zurück.                                                              |
-| `void onNoise()`        | Setzt den Event Handler, welcher bei auftretendem Lärm am Sensor aufgerufen werden soll. null deaktiviert diesen Event Listener.   |
-| `void onSilence()`      | Setzt den Event Handler, welcher bei verschwundenem Lärm am Sensor aufgerufen werden soll. null deaktiviert diesen Event Listener. |
+| Methode                                      | Bemerkung                                                                                                                          |
+|:---------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
+| `boolean isNoisy()`                          | Gibt true zurück, wenn aktuell ein Geräusch vom Sensor erkannt wird                                                                |
+| `boolean isSilent()`                         | Gibt true zurück, wenn aktuell stille herrscht.                                                                                    |
+| `SoundState getState()`                      | Gibt den aktuellen Zustand des Sensors in Form des SoundState zurück.                                                              |
+| `void onNoise(SimpleEventHandler handler)`   | Setzt den Event Handler, welcher bei auftretendem Lärm am Sensor aufgerufen werden soll. null deaktiviert diesen Event Listener.   |
+| `void onSilence(SimpleEventHandler handler)` | Setzt den Event Handler, welcher bei verschwundenem Lärm am Sensor aufgerufen werden soll. null deaktiviert diesen Event Listener. |
 
 ### Enumerationen
 
@@ -64,3 +65,4 @@ file="src/main/java/com/pi4j/crowpi/applications/SoundSensorApp.java" language="
 
 - Mit der Relaiskomponente kombiniert könnte eine Lampe mittels klatschen ein und ausgeschaltet werden.
 - Es könnte eine Alarmanlage gebaut werden, welche anhand von Lärm einen Eindringling erkennt.
+
