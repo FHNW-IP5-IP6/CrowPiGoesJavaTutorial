@@ -6,7 +6,7 @@
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>Lichtsensor :: CrowPi goes Java</title>
+<title>Sound Sensor :: CrowPi goes Java</title>
 <link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622117167 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622117167 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622117167 rel=stylesheet>
@@ -22,7 +22,7 @@
 <script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622117167></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
-<body data-url=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
+<body data-url=/CrowPiGoesJavaTutorial/de/components/sound-sensor/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -157,7 +157,7 @@ LED Matrix
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class="dd-item active">
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
 Lichtsensor
 <i class="fas fa-check read-icon"></i>
@@ -181,7 +181,7 @@ RFID
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" class=dd-item>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/components/sound-sensor/>
 Sound Sensor
 <i class="fas fa-check read-icon"></i>
@@ -264,7 +264,7 @@ Serial Peripheral Interface (SPI)
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/light-sensor/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/sound-sensor/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div>
 </a>
 </li>
@@ -282,7 +282,7 @@ Serial Peripheral Interface (SPI)
 <div>
 <div id=top-bar>
 <div id=top-github-link>
-<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/light-sensor.md target=blank>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/sound-sensor.md target=blank>
 <i class="fas fa-code-branch"></i>
 <span id=top-github-link-text>Bearbeite diese Seite</span>
 </a>
@@ -295,7 +295,7 @@ Serial Peripheral Interface (SPI)
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > Lichtsensor
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > Sound Sensor
 </span>
 </div>
 <div class=progress>
@@ -312,6 +312,7 @@ Serial Peripheral Interface (SPI)
 <ul>
 <li><a href=#konstruktoren>Konstruktoren</a></li>
 <li><a href=#methoden>Methoden</a></li>
+<li><a href=#enumerationen>Enumerationen</a></li>
 </ul>
 </li>
 <li><a href=#beispielapplikation>Beispielapplikation</a></li>
@@ -324,28 +325,31 @@ Serial Peripheral Interface (SPI)
 </div>
 <div id=head-tags>
 <div class=tags>
-<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/i2c>i2c</a>
+<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/gpio>gpio</a>
 </div>
 </div>
 <div id=body-inner>
 <h1>
-Lichtsensor
+Sound Sensor
 </h1>
+<hr>
 <h2 id=funktionsweise>Funktionsweise</h2>
-<p>Der Lichtsensor nutzt photoelektronische Effekte, um Lichteinstrahlung in ein elektrisches Signal zu wandeln. Dieses Signal kann mittels Elektronik so skaliert werden, dass ein Messwert
-in der Einheit Lux entsteht. Beim CrowPi wird dazu der Umgebungslichtsensor BH1750 verwendet. Dieser arbeitet mit einer Photodiode. Zusätzlich erlaubt der verwendete Sensor eine Konfiguration
-der Messgenauigkeit. Er kann mit 3 verschiedenen Auflösungen betrieben werden. Diese sind: 0.5 Lux, 1 Lux oder 4 Lux. Die Zeit, welche für eine Messung benötigt wird, schwankt dabei massiv. Bei einer Auflösung von 4 Lux werden
-typischerweise 16 Millisekunden benötigt. Bei einer Auflösung 0.5 Lux hingegen bereits 120 Millisekunden. Diese Zeit ist natürlich auch bei der Programmierung des Sensors zu beachten. Zu schnelle
-Lesevorgänge können zu ungültigen Messwerten führen.</p>
-<p>Angesteuert wird der Lichtsensor BH1750 mittels des Bus I2C. Näheres zu diesem Bus kann unter <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>Hardware I2C</a> nachgeschlagen werden. Obwohl der Sensor nur wenige
-Einstellmöglichkeiten bietet, sind die Kombinationsmöglichkeiten eines Lichtsensors beinahe unendlich. Es gibt viele mögliche Szenarien wie der Sensor eingesetzt werden könnte.</p>
+<p>Ein Sound Sensor funktioniert mittels eines Mikrofons. Die vom Mikrofon in elektrische Signale umgewandelten akustischen Schwingungen werden
+gegen einen Schwellenwert verglichen. Sobald die elektrischen Signale in ihrer Stärke einen gewissen Schwellwert übersteigen wird am Sensor
+ein digitaler Ausgang geschaltet. Es wurde Lärm oder ein Geräusch erkannt.</p>
+<p>Am CrowPi kann dieser Schwellwert mittels eines Potentiometers eingestellt werden. Am einfachsten geht das, wenn man auf das entsprechende
+LED bei den Status LEDS achtet und den entsprechenden Lärm verursacht welcher erkannt werden soll. Wird das Potentiometer nach rechts
+gedreht muss das entsprechende akustische Signal lauter sein, um vom Sensor erkannt zu werden. Auf die linke Seite gedreht am Potentiometer
+macht den Sensor viel empfindlicher gegenüber leisen Geräuschen. Zu finden ist das Potentiometer wie auf diesem Bild gezeigt:
+<img src=/CrowPiGoesJavaTutorial/images/components/sound-sensor-potentiometer.jpg? alt="Potentiometer des Sound Sensor">
+</p>
 <h2 id=voraussetzungen>Voraussetzungen</h2>
 <h3 id=dip-switches>DIP Switches</h3>
 <p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
 <h2 id=verwendung>Verwendung</h2>
 <p>Nachfolgend wird die Verwendung der Klasse
-<code>com.pi4j.crowpi.components.LightSensorComponent</code>
-<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/LightSensorComponent.html target=_blank class="btn btn-default btn-small">
+<code>com.pi4j.crowpi.components.SoundSensorComponent</code>
+<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/SoundSensorComponent.html target=_blank class="btn btn-default btn-small">
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
@@ -354,18 +358,18 @@ beschrieben.</p>
 <table>
 <thead>
 <tr>
-<th>Konstruktor</th>
-<th>Bemerkung</th>
+<th style=text-align:left>Konstruktor</th>
+<th style=text-align:left>Bemerkung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>LightSensorComponent(com.pi4j.context.Context pi4j)</code></td>
-<td>Initialisiert einen Lichtsensor mit der Standard Bus- und Geräteadresse.</td>
+<td style=text-align:left><code>SoundSensorComponent(com.pi4j.context.Context pi4j)</code></td>
+<td style=text-align:left>Initialisiert einen Sound Sensor mit dem Standard-Pin für den CrowPi.</td>
 </tr>
 <tr>
-<td><code>LightSensorComponent(com.pi4j.context.Context pi4j, int address)</code></td>
-<td>Initialisiert einen Lichtsensor mit einer benutzerdefinierten Bus- und Geräteadresse.</td>
+<td style=text-align:left><code>SoundSensorComponent(com.pi4j.context.Context pi4j, int address, long debounce)</code></td>
+<td style=text-align:left>Initialisiert einen Sound Sensor mit einem benutzerdefinierten Pin. Zusätzlich kann mit <code>debounce</code> noch eine Entprellzeit in Mikrosekunden angegeben werden</td>
 </tr>
 </tbody>
 </table>
@@ -373,35 +377,58 @@ beschrieben.</p>
 <table>
 <thead>
 <tr>
-<th>Methode</th>
-<th>Bemerkung</th>
+<th style=text-align:left>Methode</th>
+<th style=text-align:left>Bemerkung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>double readLight()</code></td>
-<td>Liest einmalig die Helligkeit aus dem Lichtsensor. Es wird die Standardauflösung von 1 Lux genutzt.</td>
+<td style=text-align:left><code>boolean isNoisy()</code></td>
+<td style=text-align:left>Gibt true zurück, wenn aktuell ein Geräusch vom Sensor erkannt wird</td>
 </tr>
 <tr>
-<td><code>double readLight(int resolution)</code></td>
-<td>Liest einmalig die Helligkeit aus dem Lichtsensor. Es können 3 verschiedene Auflösungen benutzt werden. Die gewünschte Auflösung wird als Integer gemäss folgender Definition übergeben: 0 = 4 Lux / 1 = 1 Lux / 2 = 0.5 Lux.</td>
+<td style=text-align:left><code>boolean isSilent()</code></td>
+<td style=text-align:left>Gibt true zurück, wenn aktuell stille herrscht.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>SoundState getState()</code></td>
+<td style=text-align:left>Gibt den aktuellen Zustand des Sensors in Form des SoundState zurück.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void onNoise(SimpleEventHandler handler)</code></td>
+<td style=text-align:left>Setzt den Event Handler, welcher bei auftretendem Lärm am Sensor aufgerufen werden soll. null deaktiviert diesen Event Listener.</td>
+</tr>
+<tr>
+<td style=text-align:left><code>void onSilence(SimpleEventHandler handler)</code></td>
+<td style=text-align:left>Setzt den Event Handler, welcher bei verschwundenem Lärm am Sensor aufgerufen werden soll. null deaktiviert diesen Event Listener.</td>
 </tr>
 </tbody>
 </table>
+<h3 id=enumerationen>Enumerationen</h3>
+<ul>
+<li>
+<code>com.pi4j.crowpi.components.SoundSensorComponent</code>
+<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/SoundSensorComponent.SoundState.html target=_blank class="btn btn-default btn-small">
+<i class="fas fa-external-link-alt"></i>
+Javadoc
+</a>
+enthält alle möglichen Zustände welche vom
+Sound Sensor zurückgegeben werden können.</li>
+</ul>
 <h2 id=beispielapplikation>Beispielapplikation</h2>
-<p>Die nachfolgende Beispielapplikation liest mit einem definierten Takt (<code>DELAY</code>) in Millisekunden den aktuellen Messwert des Lichtsensors aus. Die Anzahl
-gelesener Werte und somit die Ausführungsdauer des Programms kann mit <code>NUMBER_OF_LOOPS</code> definiert werden. Die Applikation läuft also genau
-<code>DELAY</code> mal <code>NUMBER_OF_LOOPS</code> Millisekunden. Mit den voreingestellten Werten wären das entsprechend genau 20 Sekunden.
-Nachdem der Messwert eingelesen ist, wird er mit einer einfachen Logik zu Textausgaben verarbeitet. Nach diesem Prinzip könnte zum Beispiel eine Lampe
-automatisch ein oder ausgeschaltet werden. Die Grenzwerte können dabei einfach über <code>DARK_VALUE</code> als unteren Schaltpunkt und <code>BRIGHT_VALUE</code> als oberen Schaltpunkt konfiguriert werden.
-Die Wiederholung der Messung und Ausgabe wird dabei durch einen <code>for-loop</code> umgesetzt. Zu beachten gilt speziell: Da der Sensor eine kleine Zeit für eine Messung benötigt
-kann eine zu kurze Taktrate zu ungültigen Messergebnissen führen. Weniger als 150 Millisekunden werden als Einstellung für <code>DELAY</code> nicht empfohlen.
+<p>Bei dieser Komponente wurde ein sehr simples Beispiel gewählt. Damit die Applikation jedoch richtig funktioniert muss erst der Sound Sensor
+so eingestellt werden, dass ein Händeklatschen erkannt wird. Am besten wie in der Funktionsweise beschrieben kurz ausprobieren. Als erstes
+wird mit einer simplen Statusabfrage geprüft, ob gerade stille im Raum herrscht. Falls es gerade schon zu laut wäre, würde das Programm
+abbrechen. Ist es ruhig registriert das Programm einen <code>onNoise</code> Event Handler, welcher mittels einer Zählvariable zählt wie oft schon Lärm
+erkannt wurde. Nach 3x Händeklatschen beendet die Applikation wieder. Für das Zählen in einer Lambdafunktion in Java muss ein spezieller
+Datentyp verwendet werden. Man sieht dies am <code>AtomicInteger count</code>. Der <code>AtomicInteger</code> ist eine spezielle Form eines normalen Integers,
+welcher jedoch auch innerhalb einer Lambdafunktion benutzt werden kann.
 <div class=cpi-code-header>
 <div>
 <strong>Pfad zum Codebeispiel: </strong>
-<code>src/main/java/com/pi4j/crowpi/applications/LightSensorApp.java</code>
+<code>src/main/java/com/pi4j/crowpi/applications/SoundSensorApp.java</code>
 </div>
-<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/LightSensorApp.java target=_blank class="btn btn-default">
+<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/SoundSensorApp.java target=_blank class="btn btn-default">
 <i class="fab fa-github"></i>
 Auf GitHub ansehen
 </a>
@@ -410,55 +437,50 @@ Auf GitHub ansehen
 
 <span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
 <span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.components.LightSensorComponent<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.SoundSensorComponent<span style=color:#f92672>;</span>
+
+<span style=color:#f92672>import</span> java.util.concurrent.atomic.AtomicInteger<span style=color:#f92672>;</span>
 
 <span style=color:#75715e>/**
-</span><span style=color:#75715e> * Measures the current illuminance with the CrowPi Light sensor and prints some outputs to the user.
+</span><span style=color:#75715e> * A example application to show how the sound sensor could be used. It registers a event handler to the sensors and
+</span><span style=color:#75715e> * the program loops until you clapped 3 times.
 </span><span style=color:#75715e> */</span>
-<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>LightSensorApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
-
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * Define a measurement interval in millis (to short interval can&#39;t be handled by the sensor)
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> DELAY <span style=color:#f92672>=</span> 1000<span style=color:#f92672>;</span>
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * Define a number of loops until the App shuts down
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> NUMBER_OF_LOOPS <span style=color:#f92672>=</span> 20<span style=color:#f92672>;</span>
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * Define lower light limit to work with
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> DARK_VALUE <span style=color:#f92672>=</span> 150<span style=color:#f92672>;</span>
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * Define upper light limit to work with
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> BRIGHT_VALUE <span style=color:#f92672>=</span> 3000<span style=color:#f92672>;</span>
-
+<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SoundSensorApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
     <span style=color:#a6e22e>@Override</span>
     <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#75715e>// Initialize a new Light Sensor
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var sensor <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> LightSensorComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
+        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Welcome to the SoundSensor Test&#34;</span><span style=color:#f92672>);</span>
 
-        <span style=color:#75715e>// Start the measurements:
-</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Starting new measurements ...&#34;</span><span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Initialize clap counting variable
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// There is a special kind of integer used because java lambda functions support only final variables
+</span><span style=color:#75715e></span>        AtomicInteger count <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> AtomicInteger<span style=color:#f92672>();</span>
 
-        <span style=color:#75715e>// Loop until number of loops is reached
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> NUMBER_OF_LOOPS<span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-            <span style=color:#75715e>// Read the current illumination from sensor
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>double</span> value <span style=color:#f92672>=</span> sensor<span style=color:#f92672>.</span><span style=color:#a6e22e>readLight</span><span style=color:#f92672>(</span>2<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Initialize a SoundSensor component
+</span><span style=color:#75715e></span>        var soundSensor <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> SoundSensorComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
 
-            <span style=color:#75715e>// Analyze measured value and react accordingly
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&lt;</span> DARK_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Whoo that&#39;s dark... You should turn on light&#34;</span><span style=color:#f92672>);</span>
-            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&gt;=</span> DARK_VALUE <span style=color:#f92672>&amp;&amp;</span> value <span style=color:#f92672>&lt;</span> BRIGHT_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;I feel good. Very nice light in here!&#34;</span><span style=color:#f92672>);</span>
-            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&gt;=</span> BRIGHT_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Oh no .. it&#39;s so bright ... please ... please turn off the light&#34;</span><span style=color:#f92672>);</span>
-            <span style=color:#f92672>}</span>
-
-            <span style=color:#75715e>// Sleep before continuing with next measurement
-</span><span style=color:#75715e></span>            sleep<span style=color:#f92672>(</span>DELAY<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// If it is already noisy we can not run the clap example. You need to setup the potentiometer first.
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>soundSensor<span style=color:#f92672>.</span><span style=color:#a6e22e>isNoisy</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
+            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;It is already really noisy. Setup the potentiometer first&#34;</span><span style=color:#f92672>);</span>
+            <span style=color:#66d9ef>return</span><span style=color:#f92672>;</span>
         <span style=color:#f92672>}</span>
+
+        <span style=color:#75715e>// Ready to start the example so register the event handler which counts the number of claps.
+</span><span style=color:#75715e></span>        soundSensor<span style=color:#f92672>.</span><span style=color:#a6e22e>onNoise</span><span style=color:#f92672>(()</span> <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
+            var currentCounter <span style=color:#f92672>=</span> count<span style=color:#f92672>.</span><span style=color:#a6e22e>getAndIncrement</span><span style=color:#f92672>();</span>
+            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>3 <span style=color:#f92672>-</span> currentCounter <span style=color:#f92672>&gt;</span> 0<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;You clapped! &#34;</span> <span style=color:#f92672>+</span> <span style=color:#f92672>(</span>3 <span style=color:#f92672>-</span> currentCounter<span style=color:#f92672>)</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; more times &#34;</span> <span style=color:#f92672>+</span>
+                    <span style=color:#e6db74>&#34;to finish&#34;</span><span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Done&#34;</span><span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span>
+        <span style=color:#f92672>});</span>
+
+        <span style=color:#75715e>// Loop until clapped 3 times
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>while</span> <span style=color:#f92672>(</span>count<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>()</span> <span style=color:#f92672>&lt;</span> 3<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+            sleep<span style=color:#f92672>(</span>10<span style=color:#f92672>);</span>
+        <span style=color:#f92672>}</span>
+
+        <span style=color:#75715e>// Clean the event handler
+</span><span style=color:#75715e></span>        soundSensor<span style=color:#f92672>.</span><span style=color:#a6e22e>onNoise</span><span style=color:#f92672>(</span><span style=color:#66d9ef>null</span><span style=color:#f92672>);</span>
     <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 
@@ -466,22 +488,16 @@ Auf GitHub ansehen
 </p>
 <h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
 <ul>
-<li>
-<p>Das Beispiel könnte um einen Eingang erweitert werden, mit dem die Schaltpunkte während des Betriebs verändert werden können. Dazu müsste nur die Deklaration des <code>DELAY</code>
-angepasst werden und eine Logik für einen Eingang ergänzt werden.</p>
-</li>
-<li>
-<p>Statt die Zeitdauer über <code>DELAY</code> und <code>NUMBER_OF_LOOPS</code> zu regulieren könnte eine Benutzeraktion zum Beenden des Programms verwendet werden. Denkbar wäre dabei ein Knopf oder auch eine
-Eingabe des Benutzers in der Konsole der Entwicklungsumgebung.</p>
-</li>
+<li>Mit der Relaiskomponente kombiniert könnte eine Lampe mittels klatschen ein und ausgeschaltet werden.</li>
+<li>Es könnte eine Alarmanlage gebaut werden, welche anhand von Lärm einen Eindringling erkennt.</li>
 </ul>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
