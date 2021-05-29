@@ -11,8 +11,8 @@ Der Rotor dreht sich dabei immer so, dass sich ein möglichst starker magnetisch
 sich beim Schrittmotor jedoch nur im Stator Spulen. Durch gezieltest ein- und ausschalten dieser Spulen wird der Motor in Drehung versetzt.
 Mit korrekter abfolge der Steuerung lassen sich so Vorwärts und Rückwärtslauf implementieren. Der Name des Motors kommt aus der tatsache das
 sich ebenfalls durch Steuerung der Spulen einzelne Schritte mit dem Motor bewegen lassen. Die Schrittgrösse ist dabei abhängig vom
-physikalischen Aufbau des Schrittmotors. Um die Position des Rotors zu bestimmen, genügt es, ausgehend von einer
-Ausgangslage die Schritte im bzw. gegen den Uhrzeigersinn zu zählen und mit dem Schrittwinkel zu multiplizieren.
+physikalischen Aufbau des Schrittmotors. Um die Position des Rotors zu bestimmen, genügt es, ausgehend von einer Ausgangslage die Schritte
+im bzw. gegen den Uhrzeigersinn zu zählen und mit dem Schrittwinkel zu multiplizieren.
 
 Die Schrittmotoren bieten folgende Vorteile:
 - Genaue Positionierung, keine kumulierten Fehler
