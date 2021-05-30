@@ -1,5 +1,4 @@
 ---
-
 title: Die CrowPi Plattform
 weight: 10
 ---
@@ -70,4 +69,3 @@ Komponenten aufgeführt:
 
 - [Offizielle Anleitung von Hersteller (Englisch)](https://www.elecrow.com/download/product/SES14002K/CrowPi_User_Manual.pdf)
 - [Ursprüngliche Kickstarter-Kampagne für CrowPi (Englisch)](https://www.kickstarter.com/projects/elecrow/crowpi-lead-you-go-from-zero-to-hero-with-raspberr)
-
