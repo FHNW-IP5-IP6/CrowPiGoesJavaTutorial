@@ -6,7 +6,7 @@
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>Relais :: CrowPi goes Java</title>
+<title>Schrittmotor :: CrowPi goes Java</title>
 <link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622375662 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622375662 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622375662 rel=stylesheet>
@@ -22,7 +22,7 @@
 <script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622375662></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
-<body data-url=/CrowPiGoesJavaTutorial/de/components/relay/>
+<body data-url=/CrowPiGoesJavaTutorial/de/components/step-motor/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -169,7 +169,7 @@ PIR Motion Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class="dd-item active">
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/relay/>
 Relais
 <i class="fas fa-check read-icon"></i>
@@ -181,7 +181,7 @@ RFID
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/step-motor/ title=Schrittmotor class=dd-item>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/step-motor/ title=Schrittmotor class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/components/step-motor/>
 Schrittmotor
 <i class="fas fa-check read-icon"></i>
@@ -270,7 +270,7 @@ Serial Peripheral Interface (SPI)
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/relay/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/step-motor/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div>
 </a>
 </li>
@@ -288,7 +288,7 @@ Serial Peripheral Interface (SPI)
 <div>
 <div id=top-bar>
 <div id=top-github-link>
-<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/relay.md target=blank>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/step-motor.md target=blank>
 <i class="fas fa-code-branch"></i>
 <span id=top-github-link-text>Bearbeite diese Seite</span>
 </a>
@@ -301,7 +301,7 @@ Serial Peripheral Interface (SPI)
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > Relais
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > Schrittmotor
 </span>
 </div>
 <div class=progress>
@@ -335,28 +335,32 @@ Serial Peripheral Interface (SPI)
 </div>
 <div id=body-inner>
 <h1>
-Relais
+Schrittmotor
 </h1>
 <h2 id=funktionsweise>Funktionsweise</h2>
-<p>Das Relais ist eine Komponente, welche es ermöglichen soll mit geringen Schaltströmen grosse Lasten zu schalten. So kann beispielsweise mit
-dem Raspberry Pi eine grosse Lampe geschaltet werden, ohne den Raspberry Pi zu beschädigen. Um eine Last zu verkabeln, stellt das Relais
-drei Anschlüsse zur Verfügung. Diese sind beim CrowPi mit ´NC, NO, COM´ beschriftet. Die Anschlüsse für die Ansteuerung durch den CrowPi
-sind wie auch bei den anderen Komponenten bereits fertig verkabelt.</p>
-<p>Auf dem Schaltbild des Relais kann sehr gut erkannt werden, wie das Relais zu benutzen ist. Dabei stellt das Schaltsymbol immer den
-stromlosen Zustand einer Komponente dar. Also der digitale Ausgang im Status <code>LOW</code> ist.<br>
-<img src=/CrowPiGoesJavaTutorial/images/components/relay-scheme.jpg? alt="Schaltung des Relais">
-Auf dem Bild stellt das Rechteck die Spule des Relais dar. Wenn die
-Spule unter Strom gesetzt wird, bewegt sich der Kontakt entsprechend auf die andere Position. So kann ein Stromkreis jeweils zwischen <code>COM - NC</code> oder <code>COM - NO</code> geschlossen werden.</p>
-<div class="notices warning"><p>Beim im CrowPi verbauten Relais handelt es sich um ein <strong>24VDC/3A oder 120VAC/3A</strong> Produkt. Diese technische
-Spezifikation ist zwingend zu beachten. Überlastung des Relais kann den CrowPi beschädigen. <strong>Es besteht Brandgefahr!</strong></p>
-</div>
+<p>Der Schrittmotor, bestehend aus festem Stator und bewegenden Rotor, erhält sein Drehmoment durch unterschiedlich ausgerichtete Magnetfelder.
+Der Rotor dreht sich dabei immer so, dass sich ein möglichst starker magnetischer Fluss ausbildet. Anders als bei anderen Motoren befinden
+sich beim Schrittmotor jedoch nur im Stator Spulen. Durch gezieltes Ein- und Ausschalten dieser Spulen wird der Motor in Drehung versetzt.
+Mit korrekter Abfolge der Steuerung lassen sich so Vorwärts und Rückwärtslauf implementieren. Der Name des Motors kommt aus der Tatsache das
+sich ebenfalls durch Steuerung der Spulen einzelne Schritte mit dem Motor bewegen lassen. Die Schrittgrösse ist dabei abhängig vom
+physikalischen Aufbau des Schrittmotors. Um die Position des Rotors zu bestimmen, genügt es, ausgehend von einer Ausgangslage die Schritte
+im bzw. gegen den Uhrzeigersinn zu zählen und mit dem Schrittwinkel zu multiplizieren.</p>
+<p>Die Schrittmotoren bieten folgende Vorteile:</p>
+<ul>
+<li>Genaue Positionierung, keine kumulierten Fehler</li>
+<li>Haltemoment in Ruhelage</li>
+<li>Günstige Antriebslösung mit hoher Genauigkeit</li>
+<li>Einfacher Aufbau des Treibers</li>
+</ul>
+<img src="/CrowPiGoesJavaTutorial/images/components/step-motor.jpg?height=500px" alt="Anschluss für Schrittmotor">
 <h2 id=voraussetzungen>Voraussetzungen</h2>
 <h3 id=dip-switches>DIP Switches</h3>
-<p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
+<p>Für diese Komponente müssen vier DIP Switches des rechten Blockes gesetzt werden. Die Stellung der DIP Switches sollte anschliessend so
+aussehen:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="10.5833" width="4.2333" height="4.2333"/><rect x="20.373" y="10.5833" width="4.2333" height="4.2333"/><rect x="26.723" y="10.5833" width="4.2333" height="4.2333"/><rect x="33.073" y="10.5833" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
 <h2 id=verwendung>Verwendung</h2>
 <p>Nachfolgend wird die Verwendung der Klasse
-<code>com.pi4j.crowpi.components.RelayComponent</code>
-<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/RelayComponent.html target=_blank class="btn btn-default btn-small">
+<code>com.pi4j.crowpi.components.StepMotorComponent</code>
+<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/StepMotorComponent.html target=_blank class="btn btn-default btn-small">
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
@@ -371,12 +375,12 @@ beschrieben.</p>
 </thead>
 <tbody>
 <tr>
-<td style=text-align:left><code>RelayComponent(com.pi4j.context.Context pi4j)</code></td>
-<td style=text-align:left>Initialisiert ein Relais mit dem Standard-Pin für den CrowPi.</td>
+<td style=text-align:left><code>StepMotorComponent(com.pi4j.context.Context pi4j)</code></td>
+<td style=text-align:left>Initialisiert einen Schrittmotor mit den Standardeinstellungen für den CrowPi.</td>
 </tr>
 <tr>
-<td style=text-align:left><code>RelayComponent(com.pi4j.context.Context pi4j, int address)</code></td>
-<td style=text-align:left>Initialisiert eine Relais mit einem benutzerdefinierten Pin.</td>
+<td style=text-align:left><code>StepMotorComponent(com.pi4j.context.Context pi4j, int[] addresses, int[][] steps, long pulseMilliseconds)</code></td>
+<td style=text-align:left>Initialisiert einen Schrittmotor mit frei wählbaren Pins. Diese werden mit dem Parameter <code>steps</code> an entsprechende Schritte des Motors gekoppelt. Zusätzlich kann noch die Pulslänge übergeben werden.</td>
 </tr>
 </tbody>
 </table>
@@ -390,33 +394,30 @@ beschrieben.</p>
 </thead>
 <tbody>
 <tr>
-<td style=text-align:left><code>void setStateOn()</code></td>
-<td style=text-align:left>Schaltet das Relais ein.</td>
+<td style=text-align:left><code>void turnDegrees(int degrees)</code></td>
+<td style=text-align:left>Dreht die Achse des Schrittmotors um den übergebenen Winkel in Grad [°]. Ein negativer Winkel dreht den Motor rückwärts.</td>
 </tr>
 <tr>
-<td style=text-align:left><code>void setStateOff()</code></td>
-<td style=text-align:left>Schaltet das Relais aus.</td>
+<td style=text-align:left><code>void turnForward(int steps)</code></td>
+<td style=text-align:left>Dreht den Motor um die spezifizierte Anzahl Schritte vorwärts.</td>
 </tr>
 <tr>
-<td style=text-align:left><code>boolean toggleState()</code></td>
-<td style=text-align:left>Wechselt den Zustand des Relais abhängigen vom aktuellen Zustand. Gibt den neuen Zustand als <code>boolean</code> zurück.</td>
-</tr>
-<tr>
-<td style=text-align:left><code>void setState(boolean on)</code></td>
-<td style=text-align:left>Setzt den aktuellen Zustand des Relais auf den Wert des <code>boolean on</code>.</td>
+<td style=text-align:left><code>void turnBackward(int steps)</code></td>
+<td style=text-align:left>Dreht den Motor um die spezifizierte Anzahl Schritte rückwärts.</td>
 </tr>
 </tbody>
 </table>
 <h2 id=beispielapplikation>Beispielapplikation</h2>
-<p>Die Beispielapplikation initialisiert kurz das Relais. Danach wird es einige Male hin und her geschaltet, um das <code>Toggle</code> zu demonstrieren.
-Alles in allem eine kurze und kompakte Anwendung. Die Herausforderung bei einem Relais liegt mehr in der richtigen Verkabelung als in der
-Software.</p>
+<p>Die Beispielanwendung zeigt auf einfache Art und Weise wie die verschiedenen Methoden der <code>StepMotorComponent</code> zu verwenden sind. Als Erstes
+wird nach einer kurzen Warnung der Motor um 50 Schritte vorwärts gedreht. Anschliessend dreht der Motor rückwärts ebenfalls um 50 Schritte.
+Der Motor ist also wieder in Ausgangsposition. Als letztes werden nun mithilfe eines <code>for-loops</code> einige Male hin und her gedreht. Dazu wird
+nun die <code>turnDegrees</code> Methode verwendet.</p>
 <div class=cpi-code-header>
 <div>
 <strong>Pfad zum Codebeispiel: </strong>
-<code>src/main/java/com/pi4j/crowpi/applications/RelayApp.java</code>
+<code>src/main/java/com/pi4j/crowpi/applications/StepMotorApp.java</code>
 </div>
-<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/RelayApp.java target=_blank class="btn btn-default">
+<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/StepMotorApp.java target=_blank class="btn btn-default">
 <i class="fab fa-github"></i>
 Auf GitHub ansehen
 </a>
@@ -425,49 +426,63 @@ Auf GitHub ansehen
 
 <span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
 <span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.components.RelayComponent<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.StepMotorComponent<span style=color:#f92672>;</span>
 
 <span style=color:#75715e>/**
-</span><span style=color:#75715e> * This example shows how to use the relay component by creating a clock-like sound by repeatedly toggling the relay on and off.
+</span><span style=color:#75715e> * This example shows how the step motor on the CrowPi can be used. It allows for precise rotation in either direction and requires the DIP
+</span><span style=color:#75715e> * switches 3, 4, 5 and 6 on the right DIP switch to be set. Turning by either a given count or degrees is being demonstrated below.
 </span><span style=color:#75715e> */</span>
-<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>RelayApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
+<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>StepMotorApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
     <span style=color:#a6e22e>@Override</span>
     <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#75715e>// Create a new RelayComponent with default Pin
-</span><span style=color:#75715e></span>        RelayComponent relay <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> RelayComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Initialize step motor with default configuration for CrowPi
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var stepMotor <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> StepMotorComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
 
-        <span style=color:#75715e>// Turn on the relay to have a defined state
-</span><span style=color:#75715e></span>        relay<span style=color:#f92672>.</span><span style=color:#a6e22e>setStateOn</span><span style=color:#f92672>();</span>
+        <span style=color:#75715e>// &#39;Warn&#39; the user about the upcoming action
+</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Watch your step motor closely, it will start moving in 5 seconds...&#34;</span><span style=color:#f92672>);</span>
+        sleep<span style=color:#f92672>(</span>5000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Turn the motor 50 times forward and backward, resulting in the same position
+</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Moving 50 steps forward...&#34;</span><span style=color:#f92672>);</span>
+        stepMotor<span style=color:#f92672>.</span><span style=color:#a6e22e>turnForward</span><span style=color:#f92672>(</span>50<span style=color:#f92672>);</span>
         sleep<span style=color:#f92672>(</span>1000<span style=color:#f92672>);</span>
 
-        <span style=color:#75715e>// Make a clock alike sound by toggle the relay every second once
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> 10<span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span>relay<span style=color:#f92672>.</span><span style=color:#a6e22e>toggleState</span><span style=color:#f92672>());</span>
-            sleep<span style=color:#f92672>(</span>1000<span style=color:#f92672>);</span>
-        <span style=color:#f92672>}</span>
+        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;...and moving 50 steps backward...&#34;</span><span style=color:#f92672>);</span>
+        stepMotor<span style=color:#f92672>.</span><span style=color:#a6e22e>turnBackward</span><span style=color:#f92672>(</span>50<span style=color:#f92672>);</span>
 
-        <span style=color:#75715e>// That&#39;s all so turn off the relay and quit
-</span><span style=color:#75715e></span>        relay<span style=color:#f92672>.</span><span style=color:#a6e22e>setStateOff</span><span style=color:#f92672>();</span>
-        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;off&#34;</span><span style=color:#f92672>);</span>
-        sleep<span style=color:#f92672>(</span>2000<span style=color:#f92672>);</span>
+        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;...and we are back at our previous position!&#34;</span><span style=color:#f92672>);</span>
+        sleep<span style=color:#f92672>(</span>1000<span style=color:#f92672>);</span>
+
+        <span style=color:#75715e>// Simulate a sweeping motion (forward -&gt; backward + backward -&gt; forward)
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 5<span style=color:#f92672>;</span> i <span style=color:#f92672>&gt;</span> 0<span style=color:#f92672>;</span> i<span style=color:#f92672>--)</span> <span style=color:#f92672>{</span>
+            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Sweep sweep sweep... just &#34;</span> <span style=color:#f92672>+</span> i <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; more times&#34;</span><span style=color:#f92672>);</span>
+
+            <span style=color:#75715e>// Start by rotating 90 degrees forward...
+</span><span style=color:#75715e></span>            stepMotor<span style=color:#f92672>.</span><span style=color:#a6e22e>turnDegrees</span><span style=color:#f92672>(</span>90<span style=color:#f92672>);</span>
+
+            <span style=color:#75715e>// ...then rotating 180 degrees backwards to the other side...
+</span><span style=color:#75715e></span>            <span style=color:#75715e>// note: a negative amount of degrees means going backward
+</span><span style=color:#75715e></span>            stepMotor<span style=color:#f92672>.</span><span style=color:#a6e22e>turnDegrees</span><span style=color:#f92672>(-</span>180<span style=color:#f92672>);</span>
+
+            <span style=color:#75715e>// ...then back to the center by going 90 degrees forward again
+</span><span style=color:#75715e></span>            stepMotor<span style=color:#f92672>.</span><span style=color:#a6e22e>turnDegrees</span><span style=color:#f92672>(</span>90<span style=color:#f92672>);</span>
+        <span style=color:#f92672>}</span>
     <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 
 </code></pre></div>
 <h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
 <ul>
-<li>Eine eigene Komponente wie einen kleinen PC Lüfter oder ähnliches korrekt an das Relais verkabeln und dann eine Steuerung davon
-programmieren.</li>
-<li>Eine LED korrekt verkabeln und mit dem
-<a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>Lichtsensor</a> kombinieren.</li>
+<li>Ein 3D-Drucker könnte aus der Kombination von mehreren Schrittmotoren gebaut werden.</li>
+<li>Automatisches Heizventil in Kombination mit einem Temperatursensor.</li>
 </ul>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
