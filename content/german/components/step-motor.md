@@ -1,8 +1,7 @@
 ---
-
 title: Schrittmotor
 tags: ["gpio"]
---------------
+---
 
 ## Funktionsweise
 

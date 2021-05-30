@@ -1,8 +1,7 @@
 ---
-
 title: Die CrowPi Plattform
 weight: 10
-----------
+---
 
 ## Das Wichtigste in Kürze
 
@@ -58,7 +57,7 @@ Komponenten aufgeführt:
 | [PIR Motion Sensor]({{< ref "components/pir-motion-sensor" >}})          | Erkennen von Bewegung mit passivem Infrarot        | GPIO          | {{< dip-switches >}}                 |
 | [Relais]({{< ref "components/relay" >}})                                 | Schaltung eines elektrischen Kontakts              | GPIO          | {{< dip-switches >}}                 |
 | [RFID]({{< ref "components/rfid" >}})                                    | Kontaktloses Lesen und Schreiben von Karten        | SPI           | {{< dip-switches >}}                 |
-| [Schrittmotor]({{< ref "components/step-motor" >}})                   | Bewegen eines Schrittmotors                        | GPIO          | {{< dip-switches 11 12 13 14>}}      |
+| [Schrittmotor]({{< ref "components/step-motor" >}})                      | Bewegen eines Schrittmotors                        | GPIO          | {{< dip-switches 11 12 13 14>}}      |
 | [Sound Sensor]({{< ref "components/sound-sensor" >}})                    | Erkennen von Lärm oder Stille                      | GPIO          | {{< dip-switches >}}                 |
 | [Tilt Sensor]({{< ref "components/tilt-sensor" >}})                      | Erkennt aktuelle Neigung (links/rechts) von CrowPi | GPIO          | {{< dip-switches 10 >}}              |
 | [Touch Sensor]({{< ref "components/touch-sensor" >}})                    | Erkennen von Berührungen                           | GPIO          | {{< dip-switches >}}                 |
