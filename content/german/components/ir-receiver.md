@@ -26,6 +26,11 @@ Eine saubere Alternative, welche sich weiterhin mit Pi4J umsetzen lässt, wäre 
 Infrarot-Signale zu verwenden, welcher dann über einen anderen Bus wie I²C oder SPI die Signale an den Raspberry Pi sendet. Auf dem CrowPi
 ist dies jedoch nicht vorhanden, sodass diese Möglichkeit nicht bestand.
 
+Für die Verwendung dieser Komponente muss die beigelegte Infrarot-Diode auf dem CrowPi in die 3 Pin-Header eingesteckt werden, da sich diese
+nicht direkt auf dem CrowPi befindet. Auf dem nachfolgenden Foto ist angegeben, wo die Infrarot-Photodiode einzustecken ist:
+
+{{< img alt="Anschluss für Infrarot-Diode" src="components/ir-receiver.jpg" height="500px" >}}
+
 ## Voraussetzungen
 
 ### DIP Switches
