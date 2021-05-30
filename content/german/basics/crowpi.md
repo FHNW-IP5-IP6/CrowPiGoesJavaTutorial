@@ -51,6 +51,7 @@ Komponenten aufgeführt:
 | [Button]({{< ref "components/button" >}})                                | Abfragen von vier unabhängigen Knöpfen             | GPIO          | {{< dip-switches 5 6 7 8 >}}         |
 | [Button Matrix]({{< ref "components/button-matrix" >}})                  | Abfragen von Matrix aus 4 × 4 Knöpfen              | GPIO          | {{< dip-switches 1 2 3 4 5 6 7 8 >}} |
 | [Buzzer]({{< ref "components/buzzer" >}})                                | Abspielen von verschiedenen Tönen                  | PWM           | {{< dip-switches >}}                 |
+| [Infrarot Empfänger]({{< ref "components/ir-receiver" >}})               | Empfangen von Infrarot-Signalen                    | GPIO          | {{< dip-switches >}}                 |
 | [LCD Display]({{< ref "components/lcd-display" >}})                      | Anzeige von Text und Zahlen                        | I²C, GPIO     | {{< dip-switches >}}                 |
 | [LED Matrix]({{< ref "components/led-matrix" >}})                        | Darstellen von beliebigen Symbolen                 | SPI           | {{< dip-switches >}}                 |
 | [Lichtsensor]({{< ref "components/light-sensor" >}})                     | Erkennen von aktueller Lichtstärke                 | I²C           | {{< dip-switches >}}                 |
