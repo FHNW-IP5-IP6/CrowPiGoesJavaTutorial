@@ -6,7 +6,7 @@
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>LED Matrix :: CrowPi goes Java</title>
+<title>Infrarot Empfänger :: CrowPi goes Java</title>
 <link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622390308 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622390308 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622390308 rel=stylesheet>
@@ -22,7 +22,7 @@
 <script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622390308></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
-<body data-url=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
+<body data-url=/CrowPiGoesJavaTutorial/de/components/ir-receiver/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -145,7 +145,7 @@ Buzzer
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ir-receiver/ title="Infrarot Empfänger" class=dd-item>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ir-receiver/ title="Infrarot Empfänger" class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/components/ir-receiver/>
 Infrarot Empfänger
 <i class="fas fa-check read-icon"></i>
@@ -157,7 +157,7 @@ LCD Display
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class="dd-item active">
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
 LED Matrix
 <i class="fas fa-check read-icon"></i>
@@ -282,7 +282,7 @@ Serial Peripheral Interface (SPI)
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/led-matrix/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/ir-receiver/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div>
 </a>
 </li>
@@ -300,7 +300,7 @@ Serial Peripheral Interface (SPI)
 <div>
 <div id=top-bar>
 <div id=top-github-link>
-<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/led-matrix.md target=blank>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/ir-receiver.md target=blank>
 <i class="fas fa-code-branch"></i>
 <span id=top-github-link-text>Bearbeite diese Seite</span>
 </a>
@@ -313,7 +313,7 @@ Serial Peripheral Interface (SPI)
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > LED Matrix
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > Infrarot Empfänger
 </span>
 </div>
 <div class=progress>
@@ -343,56 +343,61 @@ Serial Peripheral Interface (SPI)
 </div>
 <div id=head-tags>
 <div class=tags>
-<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/spi>spi</a>
+<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/gpio>gpio</a>
 </div>
 </div>
 <div id=body-inner>
 <h1>
-LED Matrix
+Infrarot Empfänger
 </h1>
 <h2 id=funktionsweise>Funktionsweise</h2>
-<p>Bei der LED Matrix handelt es sich um eine Anzeige, welche aus einem Gitter von LEDs besteht. Im konkreten Fall vom CrowPi steht eine
-quadratische 8 × 8 LED Matrix zur Verfügung, sodass insgesamt 64 individuelle LEDs gesteuert werden können. Damit können neben der
-statischen Anzeige von Buchstaben, Zahlen und Symbolen auch einfache Animationen realisiert werden.</p>
-<p>Zur Ansteuerung der einzelnen LEDs wären individuell steuerbare Leitungen unpraktisch, weshalb der elektronische Baustein <code>MAX7219</code>
-verwendet wird. Dieser ermöglicht die Steuerung der gesamten LED Matrix über die <a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>SPI-Schnittstelle</a>, sodass
-lediglich drei Pins benötigt werden.</p>
-<p>Da das Übertragen jeder einzelnen Änderung an die Komponente sehr ineffizient ist, wird üblicherweise ein Buffer in der Software
-implementiert. Alle gewünschten Anpassungen verändern somit nur den Buffer, welcher anschliessend mit nur einem einzigen Befehl übertragen
-werden kann. Dieses Prinzip wird auch von der Komponenten-Klasse <code>LedMatrixComponent</code> verwendet.</p>
+<p>Mithilfe von Infrarot können über einige Meter Distanz digitale Informationen übertragen werden, was zum Beispiel oft für die Fernbedienung
+eines Fernsehers genutzt wird. Die Übertragungsart gleich hierbei etwas dem Prinzip des Morsens, da die Infrarot-LED im Sendegerät eine
+Abfolge von Bits durch unterschiedlich lange Pausen zu dem Empfängergerät überträgt. Da jedoch auch viele andere Dinge in der Natur wie
+beispielsweise unsere Sonne ein Infrarot-Licht emittieren, wird für die elektronische Verwendung nur eine Frequenz von 38kHz verwendet.</p>
+<p>Um zu vermeiden, dass eine Fernbedienung über eine oder gar mehrere Sekunden komplett still gehalten werden muss, werden die einzelnen Bits
+in sehr kurzen zeitlichen Abständen übertragen. Dies klingt im ersten Moment natürlich praktisch, bedeutet jedoch auch dass das empfangende
+Gerät sehr präzise zeitliche Messungen durchführen können muss. Genau dies war jedoch beim CrowPi mit der Verwendung von Java in Kombination
+mit Pi4J nicht möglich, da eine Genauigkeit von rund 60 Mikrosekunden (0.00006 Sekunden) benötigt wird, was sich mit dem Design der Java
+Virtual Machine nicht umsetzen lässt.</p>
+<p>Um diese Komponente jedoch trotzdem zur Verfügung zu stellen, nutzt diese Implementation eine vorinstallierte Applikation namens <code>mode2</code>
+welche in C geschrieben wurde. Diese gibt die entsprechend erkannten Signale über die Konsole aus, welche dann automatisch in Java
+ausgewertet, geprüft und weitergegeben werden. Ein grosser Teil der Logik ist somit weiterhin innerhalb dieser Komponenten-Klasse
+aufzufinden, das Erkennen der Signale findet jedoch nicht mit Pi4J statt. Sollten sich hier in Zukunft neue Möglichkeiten ergeben, so würde
+sich die Komponente regulär via GPIO auslesen lassen.</p>
+<p>Eine saubere Alternative, welche sich weiterhin mit Pi4J umsetzen lässt, wäre einen dedizierten Mikrocontroller für das Empfangen der
+Infrarot-Signale zu verwenden, welcher dann über einen anderen Bus wie beispielsweise <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>I²C</a> oder <a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>SPI</a> die Signale an den Raspberry Pi sendet. Auf dem CrowPi ist dies jedoch nicht vorhanden, sodass diese Möglichkeit nicht
+bestand.</p>
+<p>Für die Verwendung dieser Komponente muss die beigelegte Infrarot-Diode auf dem CrowPi in die 3 Pin-Header eingesteckt werden, da sich diese
+nicht direkt auf dem CrowPi befindet. Auf dem nachfolgenden Foto ist angegeben, wo die Infrarot-Photodiode einzustecken ist:</p>
+<img src="/CrowPiGoesJavaTutorial/images/components/ir-receiver.jpg?height=500px" alt="Anschluss für Infrarot-Diode">
 <h2 id=voraussetzungen>Voraussetzungen</h2>
 <h3 id=dip-switches>DIP Switches</h3>
 <p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
 <h2 id=verwendung>Verwendung</h2>
 <p>Nachfolgend wird die Verwendung der Klasse
-<code>com.pi4j.crowpi.components.LedMatrixComponent</code>
-<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/LedMatrixComponent.html target=_blank class="btn btn-default btn-small">
+<code>com.pi4j.crowpi.components.IrReceiverComponent</code>
+<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/IrReceiverComponent.html target=_blank class="btn btn-default btn-small">
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
-beschrieben. Es handelt sich
-hierbei um eine sehr mächtige und komplexe Klasse, da eine Vielzahl von Funktionalitäten angeboten wird. Ein Blick auf das Beispiel zeigt
-jedoch, dass sich diese weiterhin sehr einfach anwenden lässt.</p>
-<p>Es ist hierbei wichtig zu beachten, dass die beiden Methoden <code>setPixel</code> und <code>getPixel</code>, welche auch mit dem Wort &ldquo;Buffer:&rdquo; am Anfang
-gekennzeichnet wurden, nicht direkt eine Auswirkung auf die Anzeige haben, sondern erst nach Aufruf von <code>void refresh()</code> aktiv werden. Somit
-lassen sich viele einzelne Pixel setzen, welche dann mit einem einzelnen Aufruf an die Anzeige übermittelt werden. Alle anderen Befehle
-werden jeweils sofort ausgeführt, da diese immer die ganze Anzeige betreffen.</p>
+beschrieben.</p>
 <h3 id=konstruktoren>Konstruktoren</h3>
 <table>
 <thead>
 <tr>
-<th>Konstruktor</th>
-<th>Bemerkung</th>
+<th style=text-align:left>Konstruktor</th>
+<th style=text-align:left>Bemerkung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>LedMatrixComponent(com.pi4j.context.Context pi4j)</code></td>
-<td>Initialisiert eine LED Matrix mit der Standard SPI Adresse und Bandbreite für den CrowPi.</td>
+<td style=text-align:left><code>IrReceiverComponent()</code></td>
+<td style=text-align:left>Initialisiert einen Infrarot-Empfänger mit Standardeinstellungen für den CrowPi.</td>
 </tr>
 <tr>
-<td><code>LedMatrixComponent(com.pi4j.context.Context pi4j, int channel, int baud)</code></td>
-<td>Initialisiert eine LED Matrix mit einer benutzerdefinierten SPI Adresse und Bandbreite.</td>
+<td style=text-align:left><code>IrReceiverComponent(String mode2Binary, String devicePath)</code></td>
+<td style=text-align:left>Initialisiert einen Infrarot-Empfänger mit benutzerdefiniertem Pfad zur <code>mode2</code> Applikation sowie einem Gerätepfad.</td>
 </tr>
 </tbody>
 </table>
@@ -400,134 +405,42 @@ werden jeweils sofort ausgeführt, da diese immer die ganze Anzeige betreffen.</
 <table>
 <thead>
 <tr>
-<th>Methode</th>
-<th>Bemerkung</th>
+<th style=text-align:left></th>
+<th style=text-align:left>Methode</th>
+<th style=text-align:left>Bemerkung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>void setEnabled(boolean enabled)</code></td>
-<td>Schaltet die Anzeige ein oder aus gemäss Boolean-Wert.</td>
-</tr>
-<tr>
-<td><code>void setTestMode(boolean enabled)</code></td>
-<td>Schaltet den Testmodus der Anzeige ein oder aus. Ist dieser eingeschaltet, leuchten alle LEDs bedingungslos auf und alle anderen Operationen werden <strong>nicht</strong> ausgeführt.</td>
-</tr>
-<tr>
-<td><code>void setBrightness(int brightness)</code></td>
-<td>Setzt die gewünschte Helligkeit der ganzen Anzeige zwischen 0 (am dunkelsten) und 15 (am hellsten).</td>
-</tr>
-<tr>
-<td><code>void setPixel(int x, int y, boolean enabled)</code></td>
-<td><em>Buffer:</em> Schaltet einen einzelnen Pixel an der gewünschten Stelle ein (<code>true</code>) oder aus (<code>false</code>).</td>
-</tr>
-<tr>
-<td><code>boolean getPixel(int x, int y)</code></td>
-<td><em>Buffer:</em> Gibt den aktuellen Zustand eines einzelnen Pixels an der gewünschten Stelle an.</td>
-</tr>
-<tr>
-<td><code>void clear()</code></td>
-<td>Löscht den internen Buffer ohne die Anzeige zu aktualisieren.</td>
-</tr>
-<tr>
-<td><code>void refresh()</code></td>
-<td>Aktualisiert die Anzeige mit dem aktuellen Inhalt des Buffers.</td>
-</tr>
-<tr>
-<td><code>void scroll(Direction direction)</code></td>
-<td>Scrollt die Anzeige und lässt die hierbei entstehende Lücke leer.</td>
-</tr>
-<tr>
-<td><code>void rotate(Direction direction)</code></td>
-<td>Scrollt die Anzeige und verschiebt die &ldquo;herausgefallene&rdquo; Zeile / Spalte ans andere Ende.</td>
-</tr>
-<tr>
-<td><code>void print(String string)</code></td>
-<td>Gibt den String auf der Anzeige mit einem Scroll-Effekt von rechts nach links aus. Die Anzeige wird hierbei vor und nach der Ausgabe automatisch gelöscht. Mit dem Muster <code>{SYMBOL-NAME}</code> innerhalb der Zeichenkette können Symbole in den Text eingebunden werden.</td>
-</tr>
-<tr>
-<td><code>void print(String string, Direction scrollDirection)</code></td>
-<td>Gleiche Funktion wie <code>print(String)</code>, jedoch mit einer benutzerdefinierten Richtung.</td>
-</tr>
-<tr>
-<td><code>void print(String string, Direction scrollDirection, long scrollDelay)</code></td>
-<td>Gleiche Funktion wie void <code>print(String, Direction)</code>, jedoch mit benutzerdefinierten zeitlichen Abständen in Millisekunden zwischen dem Scrollen.</td>
-</tr>
-<tr>
-<td><code>void print(char c)</code></td>
-<td>Gibt das gewünschte Zeichen sofort auf der Anzeige aus.</td>
-</tr>
-<tr>
-<td><code>void print(Symbol s)</code></td>
-<td>Gibt das gewünschte Symbol sofort auf der Anzeige aus.</td>
-</tr>
-<tr>
-<td><code>void transition(Symbol symbol)</code></td>
-<td>Schiebt das Symbol in die Anzeige von rechts nach links rein.</td>
-</tr>
-<tr>
-<td><code>void transition(Symbol symbol, Direction scrollDirection)</code></td>
-<td>Gleiche Funktion wie <code>transition(Symbol)</code>, jedoch mit einer benutzerdefinierten Richtung.</td>
-</tr>
-<tr>
-<td><code>void transition(Symbol symbol, Direction scrollDirection, long scrollDelay)</code></td>
-<td>Gleiche Funktion wie <code>transition(Symbol)</code>, jedoch mit benutzerdefinierten zeitlichen Abständen in Millisekunden zwischen dem Scrollen.</td>
-</tr>
-<tr>
-<td><code>void draw(Consumer&lt;Graphics2D> drawer)</code></td>
-<td>Ruft die übergebene Lambda-Funktion mit einem <code>Graphics2D</code> Kontext auf, so dass ein Bild gezeichnet werden kann. Dieses wird anschliessend sofort auf der Anzeige dargestellt.</td>
-</tr>
-<tr>
-<td><code>void draw(BufferedImage image)</code></td>
-<td>Gibt das übergebene <code>BufferedImage</code> auf der Anzeige aus. Dieses muss den Typ <code>TYPE_BYTE_BINARY</code> (1bit Farbtiefe = nur schwarz/weiss) sowie eine Grösse von 8x8 Pixeln aufweisen.</td>
-</tr>
-<tr>
-<td><code>void draw(BufferedImage image, int x, int y)</code></td>
-<td>Gleiche Funktion wie <code>BufferedImage</code>, jedoch kann hier auch ein grösseres Bild angegeben werden, da automatisch ein Ausschnitt von 8x8 Pixeln ab der genannten X/Y Position erzeugt wird.</td>
+<td style=text-align:left><code>void onKeyPressed(EventHandler&lt;Key> handler)</code></td>
+<td style=text-align:left>Setzt den Event Handler, welcher gedrückte Tasten auf der Infrarot-Fernbedienung als ersten Parameter erhält. Durch die Angabe von <code>null</code> kann das Empfangen von Infrarot-Signalen deaktiviert werden.</td>
+<td style=text-align:left></td>
 </tr>
 </tbody>
 </table>
 <h3 id=enumerationen>Enumerationen</h3>
 <ul>
 <li>
-<code>com.pi4j.crowpi.components.LedMatrixComponent</code>
-<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/LedMatrixComponent.Symbol.html target=_blank class="btn btn-default btn-small">
+<code>com.pi4j.crowpi.components.IrReceiverComponent</code>
+<a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/IrReceiverComponent.Key.html target=_blank class="btn btn-default btn-small">
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
-enthält alle unterstützten Symbole welche von
-dieser Komponenten-Klasse dargestellt werden können. Es handelt sich hierbei um alle ASCII-Codes von 32 bis 127 sowie diversen Symbolen
-wie beispielsweise <code>HEART</code> für ein Herz. Die Werte sind jeweils als <code>byte[]</code> Array hinterlegt, was der internen Darstellung der LED Matrix
-Anzeige entspricht. Jedes Element ist eine Zeile und die Bits <code>0-7</code> entsprechen den jeweiligen Spalten in umgekehrter Reihenfolge, sprich
-das Bit <code>7</code> stellt die Spalte an der X-Position <code>0</code> dar.</li>
+enthält alle unterstützten Tasten, welche sich auf
+der beigelegten Infrarot-Fernbedienung des CrowPi befinden. Diese Enumeration kann genutzt werden, um innerhalb eines Events die erhaltene
+Taste zu vergleichen und unterschiedliche Aktionen durchzuführen.</li>
 </ul>
 <h2 id=beispielapplikation>Beispielapplikation</h2>
-<p>Die nachfolgende Beispielapplikation zeigt nacheinander 4 verschiedene Beispiele für die LED Matrix, um dessen Vielfältigkeit und die
-verschiedenen zur Verfügung gestellten Funktionen dieser Bibliothek zu demonstrieren. Zuerst wird die Komponente initialisiert, mit der
-Funktion <code>setEnabled</code> aktiviert und eine mittlere Helligkeit mit <code>setBrightness</code> konfiguriert.</p>
-<p>Das erste Beispiel zeigt nun die Verwendung von <code>draw(Consumer&lt;Graphics2D>)</code> mit einer anonymen Lambda-Funktion. Dies klingt zuerst
-kompliziert, jedoch ist dies nichts anderes als die Möglichkeit eine eigene Funktion zu übergeben, um darin beliebige Zeichenoperationen
-durchzuführen. Der Parameter <code>graphics</code> entspricht dabei der Standard-Klasse <code>java.awt.Graphics2D</code>, wofür sich
-<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/Graphics2D.html>im Internet</a> weitere Dokumentation finden lässt.
-Hier wird nun ein Kreuz gezeichnet (zuerst eine Linie von oben-links nach unten-rechts, dann von oben-rechts nach unten-links) und
-anschliessend ein Kreis darüber. Das Resultat wird dann auf der LED Matrix dargestellt.</p>
-<p>Das zweite Beispiel zeigt nach einer kurzen Pause eine Schleife über eine Liste von vordefinierten Symbolen, in diesem Fall vier
-verschiedenen Smileys. Diese werden jeweils mit einer kurzen Pause nacheinander dargestellt und demonstrieren somit einige der
-vordefinierten Symbole. In der Enumeration <code>LedMatrixComponent.Symbol</code> lassen sich noch weitere Symbole zur freien Verwendung finden.
-Konkret wird mit der <code>for</code>-Schleife über das Array von Symbolen iteriert und jedes wird nacheinander mit <code>print</code> sofort angezeigt.</p>
-<p>Das dritte Beispiel zeigt ebenfalls vier verschiedene Symbole, dieses Mal jedoch unter Verwendung der <code>transition</code> Methode. Diese ersetzt
-den Inhalt der LED Matrix nicht sofort, sondern schiebt das neue Symbol in die Anzeige rein mit der gewünschten Richtung. Wird also zum
-Beispiel <code>Direction.UP</code> gewählt, so wird das neue Symbol von unten nach oben in die Anzeige reingeschoben.</p>
-<p>Das vierte Beispiel gibt schliesslich einen längeren Text aus. Die Methode <code>print</code> stellt diesen automatisch so dar, dass nacheinander alle
-Zeichen auf der Anzeige mit Scroll-Effekt dargestellt werden. Intern wird hierfür ebenfalls die <code>transition</code> Methode vom vorherigen Beispiel
-genutzt. Um die <code>print</code> Methode zusammen mit Symbolen zu nutzen, können beliebig viele Symbole mit dem Muster <code>{NAME}</code>
-eingebunden werden, sprich <code>{HEART}</code> wird durch das eigentliche <code>HEART</code> Zeichen von <code>LedMatrixComponent.Symbol</code> ersetzt.</p>
+<p>Die Beispielapplikation initialisiert zuerst den Infrarot-Empfänger, wobei hier nicht einmal der übliche Pi4J-Kontext übergeben werden muss,
+da wie bereits weiter oben beschrieben von dieser Komponente die Pi4J-Library nicht genutzt wird. Nach erfolgter Initialisierung wird ein
+Event Handler registriert, welcher jeden Tastendruck auf der Konsole ausgibt sowie beim Drücken der &ldquo;CH&rdquo; Taste eine zusätzliche Ausgabe
+vornimmt. Anschliessend wird 30 Sekunden gewartet, bevor der Event Handler wieder deaktiviert wird und die Applikation sich beendet.</p>
 <div class=cpi-code-header>
 <div>
 <strong>Pfad zum Codebeispiel: </strong>
-<code>src/main/java/com/pi4j/crowpi/applications/LedMatrixApp.java</code>
+<code>src/main/java/com/pi4j/crowpi/applications/IrReceiverApp.java</code>
 </div>
-<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/LedMatrixApp.java target=_blank class="btn btn-default">
+<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/IrReceiverApp.java target=_blank class="btn btn-default">
 <i class="fab fa-github"></i>
 Auf GitHub ansehen
 </a>
@@ -536,83 +449,61 @@ Auf GitHub ansehen
 
 <span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
 <span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.components.LedMatrixComponent<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.components.LedMatrixComponent.Symbol<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.components.definitions.Direction<span style=color:#f92672>;</span>
+<span style=color:#f92672>import</span> com.pi4j.crowpi.components.IrReceiverComponent<span style=color:#f92672>;</span>
 
 <span style=color:#75715e>/**
-</span><span style=color:#75715e> * Demonstrates the countless abilities of the 8x8 LED matrix by showing multiple demo examples one after another.
+</span><span style=color:#75715e> * This example demonstrates the infrared receiver component on the CrowPi. Please note that the receiver LED must first be plugged into the
+</span><span style=color:#75715e> * three small pinholes labelled as &#34;IR&#34; for this example to work. As Java does not allow for precise enough timings itself, this component
+</span><span style=color:#75715e> * does not use Pi4J to retrieve the pulses of the GPIO pin for the IR sensor and instead relies on mode2, an executable provided as part of
+</span><span style=color:#75715e> * LIRC for reading from an IR input.
+</span><span style=color:#75715e> * &lt;p&gt;
+</span><span style=color:#75715e> * A clean alternative would be using a separate microcontroller which handles the super precise timing-based communication itself and
+</span><span style=color:#75715e> * interacts with the Raspberry Pi using I²C, SPI or any other bus. This would offload the work and guarantee even more accurate results. As
+</span><span style=color:#75715e> * the CrowPi does not have such a dedicated microcontroller though, using `mode2` was the best available approach.
 </span><span style=color:#75715e> */</span>
-<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>LedMatrixApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
+<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>IrReceiverApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
     <span style=color:#a6e22e>@Override</span>
     <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#75715e>// Initialize and enable LED matrix with medium brightness
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var matrix <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> LedMatrixComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
-        matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>setEnabled</span><span style=color:#f92672>(</span><span style=color:#66d9ef>true</span><span style=color:#f92672>);</span>
-        matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>setBrightness</span><span style=color:#f92672>(</span>7<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Initialize the IR receiver component
+</span><span style=color:#75715e></span>        <span style=color:#75715e>// We do not use Pi4J here at all, so there is no need to pass the context...
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var ir <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> IrReceiverComponent<span style=color:#f92672>();</span>
 
-        <span style=color:#75715e>// Draw a cross with a circle over it using a Graphics2D lambda function
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// Further commands for Graphics2D can be found in the official Java documentation
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// This can be adjusted to draw your own symbols and images on the LED matrix
-</span><span style=color:#75715e></span>        matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>draw</span><span style=color:#f92672>(</span>graphics <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
-            graphics<span style=color:#f92672>.</span><span style=color:#a6e22e>drawLine</span><span style=color:#f92672>(</span>0<span style=color:#f92672>,</span> 0<span style=color:#f92672>,</span> 7<span style=color:#f92672>,</span> 7<span style=color:#f92672>);</span>
-            graphics<span style=color:#f92672>.</span><span style=color:#a6e22e>drawLine</span><span style=color:#f92672>(</span>7<span style=color:#f92672>,</span> 0<span style=color:#f92672>,</span> 0<span style=color:#f92672>,</span> 7<span style=color:#f92672>);</span>
-            graphics<span style=color:#f92672>.</span><span style=color:#a6e22e>drawOval</span><span style=color:#f92672>(</span>1<span style=color:#f92672>,</span> 1<span style=color:#f92672>,</span> 5<span style=color:#f92672>,</span> 5<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Register an event listener for key presses
+</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Welcome to the IR demo! An event listener for key presses will now be registered...&#34;</span><span style=color:#f92672>);</span>
+        ir<span style=color:#f92672>.</span><span style=color:#a6e22e>onKeyPressed</span><span style=color:#f92672>(</span>key <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
+            <span style=color:#75715e>// Print the key which just has been pressed
+</span><span style=color:#75715e></span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Key on IR remote has been pressed: &#34;</span> <span style=color:#f92672>+</span> key<span style=color:#f92672>);</span>
+
+            <span style=color:#75715e>// It is also possible to check if a specific key was pressed
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>key <span style=color:#f92672>==</span> IrReceiverComponent<span style=color:#f92672>.</span><span style=color:#a6e22e>Key</span><span style=color:#f92672>.</span><span style=color:#a6e22e>CH</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;You pressed the super special CH key! (it is actually not special, sorry to disappoint)&#34;</span><span style=color:#f92672>);</span>
+            <span style=color:#f92672>}</span>
         <span style=color:#f92672>});</span>
 
-        <span style=color:#75715e>// Sleep for a second before moving to the next example...
-</span><span style=color:#75715e></span>        sleep<span style=color:#f92672>(</span>1000<span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Give the user some time to press buttons
+</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Done! You now have 30 seconds to try out pressing various keys on the IR remote...&#34;</span><span style=color:#f92672>);</span>
+        sleep<span style=color:#f92672>(</span>30000<span style=color:#f92672>);</span>
 
-        <span style=color:#75715e>// Display list of smiley symbols with a short delay between each one
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var symbols <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Symbol<span style=color:#f92672>[]{</span>
-            Symbol<span style=color:#f92672>.</span><span style=color:#a6e22e>SMILEY_HAPPY</span><span style=color:#f92672>,</span>
-            Symbol<span style=color:#f92672>.</span><span style=color:#a6e22e>SMILEY_SAD</span><span style=color:#f92672>,</span>
-            Symbol<span style=color:#f92672>.</span><span style=color:#a6e22e>SMILEY_NEUTRAL</span><span style=color:#f92672>,</span>
-            Symbol<span style=color:#f92672>.</span><span style=color:#a6e22e>SMILEY_SHOCKED</span>
-        <span style=color:#f92672>};</span>
-        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span>Symbol symbol <span style=color:#f92672>:</span> symbols<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-            matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>print</span><span style=color:#f92672>(</span>symbol<span style=color:#f92672>);</span>
-            sleep<span style=color:#f92672>(</span>1000<span style=color:#f92672>);</span>
-        <span style=color:#f92672>}</span>
-
-        <span style=color:#75715e>// Transition to all four arrows with each sliding in from the direction its pointing towards
-</span><span style=color:#75715e></span>        matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>transition</span><span style=color:#f92672>(</span>Symbol<span style=color:#f92672>.</span><span style=color:#a6e22e>ARROW_UP</span><span style=color:#f92672>,</span> Direction<span style=color:#f92672>.</span><span style=color:#a6e22e>UP</span><span style=color:#f92672>);</span>
-        matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>transition</span><span style=color:#f92672>(</span>Symbol<span style=color:#f92672>.</span><span style=color:#a6e22e>ARROW_DOWN</span><span style=color:#f92672>,</span> Direction<span style=color:#f92672>.</span><span style=color:#a6e22e>DOWN</span><span style=color:#f92672>);</span>
-        matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>transition</span><span style=color:#f92672>(</span>Symbol<span style=color:#f92672>.</span><span style=color:#a6e22e>ARROW_LEFT</span><span style=color:#f92672>,</span> Direction<span style=color:#f92672>.</span><span style=color:#a6e22e>LEFT</span><span style=color:#f92672>);</span>
-        matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>transition</span><span style=color:#f92672>(</span>Symbol<span style=color:#f92672>.</span><span style=color:#a6e22e>ARROW_RIGHT</span><span style=color:#f92672>,</span> Direction<span style=color:#f92672>.</span><span style=color:#a6e22e>RIGHT</span><span style=color:#f92672>);</span>
-
-        <span style=color:#75715e>// Print a long text which gets automatically scrolled across the LED matrix
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// Any text written between curly braces gets automatically looked up in the Symbol table
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// In this example, &#34;{HEART}&#34; will be replaced with the actual &#34;Symbol.HEART&#34; value
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// If such a pattern exists but no symbol is found with that name, it gets ignored and printed as-is.
-</span><span style=color:#75715e></span>        matrix<span style=color:#f92672>.</span><span style=color:#a6e22e>print</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;CrowPi + Pi4J = {HEART}&#34;</span><span style=color:#f92672>);</span>
+        <span style=color:#75715e>// Cleanup the event listener
+</span><span style=color:#75715e></span>        ir<span style=color:#f92672>.</span><span style=color:#a6e22e>onKeyPressed</span><span style=color:#f92672>(</span><span style=color:#66d9ef>null</span><span style=color:#f92672>);</span>
     <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 
 </code></pre></div>
 <h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
 <ul>
-<li>
-<p>Statt nur einmal eine eigene Grafik mit <code>draw(Consumer&lt;Graphics2D>)</code> zu zeichnen, könnten in einer Schleife verschiedene Grafiken
-gezeichnet werden, um eine kleine Animation zu realisieren.</p>
-</li>
-<li>
-<p>Das Beispiel könnte so verändert werden, dass auf der Standardeingabe ein Text entgegengenommen wird, welcher anschliessend mit
-<code>print(String)</code> auf der Anzeige ausgegeben wird.</p>
-</li>
-<li>
-<p>In Kombination mit einem nicht-binären Sensor wie der Distanzanzeige könnte auf der Anzeige ein Graph dargestellt werden. Hierfür könnte
-eine Kombination aus <code>rotate</code> und <code>setPixel</code> verwendet werden, um nacheinander den alten Messwert auf die Seite zu schieben und den neuen
-Messwert einzuzeichnen.</p>
-</li>
+<li>Mit der beigelegten Fernbedienung lassen sich einwandfrei numerische Eingaben tätigen, z.B. um einen einfachen Taschenrechner mit Addition
+und Subtraktion zu bauen, wofür sich die Zahlentasten sowie Plus und Minus nutzen lassen würden.</li>
+<li>Die Steuerungstasten für Previous, Next sowie Play/Pause könnten genutzt werden, um den Buzzer zu steuern und verschiedene Melodien damit
+abzuspielen.</li>
 </ul>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
