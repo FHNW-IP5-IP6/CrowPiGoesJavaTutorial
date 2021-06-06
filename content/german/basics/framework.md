@@ -5,7 +5,7 @@ weight: 40
 
 ## Grundlagen
 Um ein möglichst einfaches Arbeiten mit diesem Projekt zu gewährleisten, wurde ein einfaches Application Framework definiert. Dieses 
-besteht aus einem regulären Java Interface und schon mit wenigen Zeilen Code kann eine neue Applikation mit eigenem Code gebaut werden. 
+besteht aus einem regulären Java Interface und somit kann schon mit wenigen Zeilen Code eine neue Applikation mit eigenem Code gebaut werden. 
 An jede Applikation wird hierbei jeweils der Pi4J `Context` übergeben, mit welchem alle Komponenten des CrowPi angesteuert werden können.
 
 ## Starten einer Applikation
@@ -23,7 +23,7 @@ mvn install -Dcrowpi.launcher.args=BuzzerApp
 ```
 
 ## Neue Applikation anlegen
-Um eine neue Applikation anzulegen, welche anschliessend über den integrierten Launcher gestartet werden kann, sind nur wenige einfache 
+Um eine neue Applikation anzulegen, welche anschliessend über den integrierten Launcher gestartet werden kann, sind nur wenige  
 Schritte erforderlich. Die nachfolgende Anleitung führt Schritt für Schritt zur ersten eigenen Applikation.
 
 Zuerst muss eine Java-Klasse unterhalb von `src/main/java/com/pi4j/crowpi/applications` erstellt werden mit einem beliebigen Namen,
@@ -45,7 +45,7 @@ public final class Launcher implements Runnable {
 }
 ```
 
-Nun kann diese neue Applikation beliebig erweitert werden, indem weiterer Code innerhalb der `execute()` Methode hinzugefügt wird. Die 
+Nun kann diese neue Applikation beliebig erweitert werden, indem weitere Codes innerhalb der `execute()` Methode hinzugefügt werden. Die 
 Applikation kann jederzeit durch Starten des Launchers getestet werden und erscheint bei fehlender Angabe der gewünschten Applikation 
 nun dort auch automatisch in der Auswahlliste.
 
@@ -69,11 +69,11 @@ public class ExampleApp implements Application {
 }
 ```
 
-Der Name entspricht hierbei auch dem Parameter, welcher an den Launcher übergeben werden muss, um die Applikation direkt zu starten. Im 
+Der Name entspricht hierbei auch dem Parameter, der an den Launcher übergeben werden muss, um die Applikation direkt zu starten. Im 
 Normalfall ist es aber aufgrund potenzieller Namenskonflikte nicht empfohlen, diesen zu überschreiben.
 
 ## Das Interface
 Zur Vollständigkeit ist hier noch das komplette `Application` Interface eingebunden. Dieses besteht aus exakt drei Methoden, wobei 
-hiervon nur `execute()` implementiert werden muss da die anderen Methoden bereits über eine Standardimplementation verfügen.
+hiervon nur `execute()` implementiert werden muss, da die anderen Methoden bereits über eine Standardimplementation verfügen.
 
 {{< code file="/src/main/java/com/pi4j/crowpi/Application.java" language="java" >}}

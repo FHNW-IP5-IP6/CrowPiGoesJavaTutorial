@@ -5,7 +5,7 @@ tags: ["gpio"]
 
 ## Funktionsweise
 
-Beim PIR Motion Sensor handelt es sich um einen Bewegungssensor welcher mit passivem Infrarot arbeitet. Diese Komponente benutzt einen
+Beim PIR Motion Sensor handelt es sich um einen Bewegungssensor, der mit passivem Infrarot arbeitet. Diese Komponente nutzt einen
 pyroelektrischen Sensor, welcher Infrarot-Strahlung erkennen kann. Da jedes Lebewesen und Objekt abhängig von seiner jeweiligen Temperatur
 eine unterschiedliche Menge an Infrarot-Strahlen emittiert, ist der Sensor in der Lage diese zu erkennen.
 
@@ -15,7 +15,7 @@ Strahlung, was anschliessend per GPIO an den Raspberry Pi als erkannte Bewegung 
 
 Mit dieser Komponente lässt sich zwar nicht feststellen wie viele Personen in der Nähe sind oder wie nahe sich diese am Sensor befinden,
 jedoch ist die vorhandene Funktionalität meist ausreichend. Somit finden Bewegungssensoren von diesem Typ auch oft Verwendung im Alltag, zum
-Beispiel für Aussenbeleuchtungen welche automatisch eingeschaltet werden sollen.
+Beispiel für Aussenbeleuchtungen, die automatisch eingeschaltet werden sollen.
 
 ## Voraussetzungen
 
@@ -48,13 +48,13 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 
 ### Enumerationen
 
-- {{< javadoc class="com.pi4j.crowpi.components.PirMotionSensorComponent" subclass="MotionState" >}} enthält alle möglichen Zustände welche
+- {{< javadoc class="com.pi4j.crowpi.components.PirMotionSensorComponent" subclass="MotionState" >}} enthält alle möglichen Zustände, die
   vom PIR Motion Sensor zurückgegeben werden können.
 
 ## Beispielapplikation
 
-Die nachfolgende Beispielapplikation stellt eine vereinfachte Alarmanlage dar, welche zuerst darauf wartet, dass der Sensor keine Bewegung
-mehr erkennt. Hierfür wird eine endlose `while`-Schleife verwendet, welche zwischen jeder Überprüfung zuerst eine Sekunde wartet, um nicht
+Die nachfolgende Beispielapplikation stellt eine vereinfachte Alarmanlage dar, die zuerst darauf wartet, dass der Sensor keine Bewegung
+mehr erkennt. Hierfür wird eine endlose `while`-Schleife verwendet, die zwischen jeder Überprüfung zuerst eine Sekunde wartet, um nicht
 unnötige Rechenlast zu erzeugen.
 
 Anschliessend wird die Alarmanlage aktiviert und überwacht für 30 Sekunden sämtliche auftretenden Zustandsänderungen vom Bewegungssensor.

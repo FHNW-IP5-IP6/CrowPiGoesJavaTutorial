@@ -5,8 +5,8 @@ tags: ["spi"]
 
 ## Funktionsweise
 
-Bei der LED Matrix handelt es sich um eine Anzeige, welche aus einem Gitter von LEDs besteht. Im konkreten Fall vom CrowPi steht eine
-quadratische 8 × 8 LED Matrix zur Verfügung, sodass insgesamt 64 individuelle LEDs gesteuert werden können. Damit können neben der
+Bei der LED Matrix handelt es sich um eine Anzeige, die aus einem Gitter von LEDs besteht. Im konkreten Fall vom CrowPi steht eine
+quadratische 8×8 LED Matrix zur Verfügung, sodass insgesamt 64 individuelle LEDs gesteuert werden können. Damit können neben der
 statischen Anzeige von Buchstaben, Zahlen und Symbolen auch einfache Animationen realisiert werden.
 
 Zur Ansteuerung der einzelnen LEDs wären individuell steuerbare Leitungen unpraktisch, weshalb der elektronische Baustein `MAX7219`
@@ -14,7 +14,7 @@ verwendet wird. Dieser ermöglicht die Steuerung der gesamten LED Matrix über d
 lediglich drei Pins benötigt werden.
 
 Da das Übertragen jeder einzelnen Änderung an die Komponente sehr ineffizient ist, wird üblicherweise ein Buffer in der Software
-implementiert. Alle gewünschten Anpassungen verändern somit nur den Buffer, welcher anschliessend mit nur einem einzigen Befehl übertragen
+implementiert. Alle gewünschten Anpassungen verändern somit nur den Buffer, der anschliessend mit nur einem einzigen Befehl übertragen
 werden kann. Dieses Prinzip wird auch von der Komponenten-Klasse `LedMatrixComponent` verwendet.
 
 ## Voraussetzungen

@@ -10,7 +10,7 @@ dem Raspberry Pi eine grosse Lampe geschaltet werden, ohne den Raspberry Pi zu b
 drei Anschlüsse zur Verfügung. Diese sind beim CrowPi mit ´NC, NO, COM´ beschriftet. Die Anschlüsse für die Ansteuerung durch den CrowPi
 sind wie auch bei den anderen Komponenten bereits fertig verkabelt.
 
-Auf dem Schaltbild des Relais kann sehr gut erkannt werden, wie das Relais zu benutzen ist. Dabei stellt das Schaltsymbol immer den
+Auf dem Schaltbild des Relais ist sehr gut zu erkennen, wie das Relais zu benutzen ist. Dabei stellt das Schaltsymbol immer den
 stromlosen Zustand einer Komponente dar. Also der digitale Ausgang im Status `LOW` ist.  
 {{< img alt="Schaltung des Relais"src="components/relay-scheme.jpg" >}} Auf dem Bild stellt das Rechteck die Spule des Relais dar. Wenn die
 Spule unter Strom gesetzt wird, bewegt sich der Kontakt entsprechend auf die andere Position. So kann ein Stromkreis jeweils zwischen `COM -

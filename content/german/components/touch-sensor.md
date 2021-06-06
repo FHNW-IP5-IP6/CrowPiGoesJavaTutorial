@@ -14,17 +14,17 @@ eingesetzt.
 
 Eine oft verwendete Funktion bei digitalen Eingängen ist die Entprellung. Dies bedeutet das nach jeder Statusänderung des Eingangs jeweils
 erst eine «Abkühlzeit» verstreichen muss. Solche Mehrfachauslösungen kommen fast bei jeder Art von Hardware-Knopf vor und sollten deshalb
-immer berücksichtigt werden. Wird die Entprellzeit zu kurz gewählt, kann es vorkommen das durch 1x betätigen mehrere Events ausgelöst
+immer berücksichtigt werden. Wird die Entprellzeit zu kurz gewählt, kann es vorkommen, dass durch 1x Betätigen mehrere Events ausgelöst
 werden. Das wäre natürlich unerwünschtes Verhalten der Software.
 
-Die boolesche Verhaltensweise des Sensors macht die Benutzung während des Programmierens natürlich sehr einfach. Die Herausforderung liegt
+Die boolesche Verhaltensweise des Sensors macht die Benutzung während des Programmierens sehr einfach. Die Herausforderung liegt
 dabei meist mehr beim Gerüst rund um den Sensor herum. Zum Beispiel im Eventhandling, wenn der Knopf jederzeit funktionieren soll.
 
 ## Voraussetzungen
 
 ### DIP Switches
 
-Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:
 
 {{< dip-switches >}}
 
@@ -50,7 +50,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 
 ### Enumerationen
 
-- {{< javadoc class="com.pi4j.crowpi.components.TouchSensorComponent" subclass="TouchState" >}} enthält alle möglichen Zustände welche vom
+- {{< javadoc class="com.pi4j.crowpi.components.TouchSensorComponent" subclass="TouchState" >}} enthält alle möglichen Zustände, die vom
   Touch Sensor zurückgegeben werden können.
 
 ## Beispielapplikation

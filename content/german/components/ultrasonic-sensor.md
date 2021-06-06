@@ -13,21 +13,21 @@ kurze pulsierendes Töne ausgeben. Beim im CrowPi verbauten Modell `HC-SR04` han
 eigenen Ton wieder hört, schaltet er entsprechend seinen digitalen Ausgang. Zum Starten des Messvorgangs bietet der Sensor zusätzlich einen
 digitalen Eingang.
 
-Wenn nun mit einem Programm die Zeit zwischen Aussenden des Tons (Trigger) und dem Wiedereintreffen des Tons gemessen wird kann daraus
+Wenn nun mit einem Programm die Zeit zwischen Aussenden des Tons (Trigger) und dem Wiedereintreffen des Tons gemessen wird, kann daraus
 mithilfe der Schallgeschwindigkeit die Distanz zum Objekt berechnet werden. Diese Funktion wird von der `UltrasonicDistanceSensorComponent`
 übernommen. Sie liefert direkt einen Messwert in Zentimetern.
 
 Mit dem `HC-SR04` können Distanzen zwischen von 2 bis 3000 Zentimetern gemessen werden. Dabei ist mit einer Toleranz von etwa 3 Millimetern
 zu rechnen. Je nach Messdistanz variiert dieser Wert etwas. Genaueres dazu findet sich im
 [Datenblatt](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf) des Sensors. Wichtig ist auch zu wissen, dass mehrere
-Ultraschallsensoren sich gegenseitig stören können. Weiter ist die Schallgeschwindkeit von der Umgebungstemperatur abhängig. Die Messwerte
+Ultraschallsensoren sich gegenseitig stören können. Weiter ist die Schallgeschwindigkeit von der Umgebungstemperatur abhängig. Die Messwerte
 können einige Prozent schwanken, wenn es kälter oder wärmer ist.
 
 ## Voraussetzungen
 
 ### DIP Switches
 
-Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:
 
 {{< dip-switches >}}
 
