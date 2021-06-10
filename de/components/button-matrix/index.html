@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>Button Matrix :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1622804209 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622804209></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623355433 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623355433></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1622804209></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623355433></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623355433></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623355433></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -357,14 +357,14 @@ Serial Peripheral Interface (SPI)
 Button Matrix
 </h1>
 <h2 id=funktionsweise>Funktionsweise</h2>
-<p>Bei einer Button-Matrix handelt es sich um nichts anderes als ein Gitter von Knöpfen, also zum Beispiel 4 × 4 Knöpfe wie beim CrowPi. In der
+<p>Bei einer Button-Matrix handelt es sich einfach gesagt um ein Gitter von Knöpfen, also zum Beispiel 4 × 4 Knöpfe wie beim CrowPi. In der
 simpelsten Form könnte jeder Knopf einzeln mit einem GPIO Pin verbunden werden, jedoch stösst man auf diese Art und Weise schnell an die
 maximale Kapazität von GPIO Pins eines Raspberry Pi.</p>
-<p>Eine andere Methode, welche auch von der Button-Matrix auf dem CrowPi genutzt wird, ist, dass die Kombination der beiden Achsen für das
-Auslesen der einzelnen Knöpfe verwendet wird. In der Komponente werden hierbei sogenannte <code>Selector</code> und <code>Button</code> Pins definiert, welche
+<p>Bei einer anderen Methode, welche auch von der Button-Matrix auf dem CrowPi genutzt wird, wird die Kombination der beiden Achsen für das
+Auslesen der einzelnen Knöpfe verwendet. In der Komponente werden hierbei sogenannte <code>Selector</code> und <code>Button</code> Pins definiert, die
 dann zusammen das effiziente Anbinden einer Button-Matrix ermöglichen.</p>
-<p>Der <code>Selector</code> Pin legt hierbei dann jeweils fest, welche Spalte (vertikal) ausgelesen wird. Nachdem der Pin der gewünschten Spalte
-angesteuert wurde, können nun alle Zeilen dieser Spalte mithilfe der einzelnen <code>Button</code> Pins ausgelesen werden. Um also den zweiten Knopf
+<p>Der <code>Selector</code> Pin legt hierbei jeweils fest, welche Spalte (vertikal) ausgelesen wird. Nachdem der Pin der gewünschten Spalte
+angesteuert wurde, können nun alle Zeilen (horizontal) dieser Spalte mithilfe der einzelnen <code>Button</code> Pins ausgelesen werden. Um den zweiten Knopf
 von links in der ersten Reihe einzulesen, muss zuerst der zweite <code>Selector</code> Pin aktiviert werden (= Spalte 2), um anschliessend den ersten
 <code>Button</code> Pin (= Zeile 1) auszulesen. Somit werden für ein 4 × 4 Gitter nur 8 statt 12 GPIO Pins benötigt.</p>
 <p>Dies bedeutet jedoch auch, dass sich nun nicht mehr einfach so der Zustand eines Pins überwachen lässt, um Events für einen Knopf zu
@@ -375,7 +375,7 @@ Komponente nimmt bei allen Methoden jeweils diese Nummer entgegen, sprich <code>
 <img src=/CrowPiGoesJavaTutorial/images/components/button-matrix.jpg? alt="Nummerierung von Button Matrix">
 <h2 id=voraussetzungen>Voraussetzungen</h2>
 <h3 id=dip-switches>DIP Switches</h3>
-<p>Für diese Komponente müssen alle DIP-Switches vom linken Block aktiviert werden, da sich die Button Matrix sonst nicht oder nur teilweise
+<p>Für diese Komponente müssen alle DIP-Switches vom linken Block aktiviert werden, da sich die Button-Matrix sonst nicht oder nur teilweise
 nutzen lässt. Die Stellung der DIP Switches sollte anschliessend so aussehen:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="10.5833" width="4.2333" height="4.2333"/><rect x="7.6729" y="10.5833" width="4.2333" height="4.2333"/><rect x="14.023" y="10.5833" width="4.2333" height="4.2333"/><rect x="20.373" y="10.5833" width="4.2333" height="4.2333"/><rect x="26.723" y="10.5833" width="4.2333" height="4.2333"/><rect x="33.073" y="10.5833" width="4.2333" height="4.2333"/><rect x="39.423" y="10.5833" width="4.2333" height="4.2333"/><rect x="45.773" y="10.5833" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
 <h2 id=verwendung>Verwendung</h2>
 <p>Nachfolgend wird die Verwendung der Klasse
@@ -431,7 +431,7 @@ beschrieben.</p>
 </tr>
 <tr>
 <td style=text-align:left><code>int[] getPressedButtons()</code></td>
-<td style=text-align:left>Gibt die Nummern aller Knöpfe zurück welche zurzeit aktiv gedrückt werden. Falls keine Knöpfe gedrückt werden, so wird eine leere Liste zurückgegeben.</td>
+<td style=text-align:left>Gibt die Nummern aller Knöpfe zurück, die zurzeit aktiv gedrückt werden. Falls keine Knöpfe gedrückt werden, so wird eine leere Liste zurückgegeben.</td>
 </tr>
 <tr>
 <td style=text-align:left><code>boolean isDown(int number)</code></td>
@@ -447,11 +447,11 @@ beschrieben.</p>
 </tr>
 <tr>
 <td style=text-align:left><code>void onDown(int number, SimpleEventHandler handler)</code></td>
-<td style=text-align:left>Setzt den Event Handler welcher beim Drücken des angegebenen Knopfs aufgerufen werden soll. <code>null</code> deaktiviert diesen Event Listener.</td>
+<td style=text-align:left>Setzt den Event Handler, welcher beim Drücken des angegebenen Knopfs aufgerufen werden soll. <code>null</code> deaktiviert diesen Event Listener.</td>
 </tr>
 <tr>
 <td style=text-align:left><code>void onUp(int number, SimpleEventHandler handler)</code></td>
-<td style=text-align:left>Setzt den Event Handler welcher beim Loslassen des angegebenen Knopfs aufgerufen werden soll. <code>null</code> deaktiviert diesen Event Listener.</td>
+<td style=text-align:left>Setzt den Event Handler, welcher beim Loslassen des angegebenen Knopfs aufgerufen werden soll. <code>null</code> deaktiviert diesen Event Listener.</td>
 </tr>
 </tbody>
 </table>
@@ -463,29 +463,29 @@ beschrieben.</p>
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
-enthält alle möglichen Zustände welche von einem
-Knopf zurückgegeben werden können. Es wird hierbei absichtlich die Enumeration von der einfacheren <code>ButtonComponent</code> mitverwendet um eine
+enthält alle möglichen Zustände, die von einem
+Knopf zurückgegeben werden können. Es wird hierbei absichtlich die Enumeration von der einfacheren <code>ButtonComponent</code> mitverwendet, um eine
 möglichst ähnliche Nutzung zu ermöglichen.</li>
 </ul>
 <h2 id=beispielapplikation>Beispielapplikation</h2>
-<p>Die folgende Beispielapplikation ist etwas komplexer und stellt ein vollständiges Spiel auf Basis der Button Matrix dar. Es gleicht dem
-sogenannten Memory Game oder auch dem deutschen Spiel „Ich packe meinen Koffer mit “. Zuerst werden mit der Hilfsmethode
+<p>Die folgende Beispielapplikation ist etwas komplexer und stellt ein vollständiges Spiel auf Basis der Button-Matrix dar. Es gleicht dem
+sogenannten Memory Game oder auch dem deutschen Spiel „Ich packe in meinen Koffer“. Zuerst werden mit der Hilfsmethode
 <code>determinePlayers()</code> alle Spielernamen gesammelt, welche am Spiel teilnehmen sollen. Die Methode sorgt hierbei dafür, dass mindestens zwei
 Spieler existieren, da dies eine Voraussetzung vom Spiel darstellt. Diese Spieler werden schliesslich in <code>players</code> gespeichert.</p>
-<p>Anschliessend wird eine leere Liste namens <code>history</code> erzeugt, welche jeweils alle vorherigen Knöpfe bzw. deren Nummer beinhaltet. Nun ist
+<p>Anschliessend wird eine leere Liste namens <code>history</code> erzeugt, die jeweils alle vorherigen Knöpfe bzw. deren Nummer beinhaltet. Nun ist
 das Spiel vollständig initialisiert und eine <code>while</code>-Schleife läuft bis nur noch ein aktiver Spieler existiert und alle anderen Spieler
-aufgrund einem falschen Zug verloren haben.</p>
+aufgrund eines falschen Zugs verloren haben.</p>
 <p>Innerhalb dieser Schleife wird mit einem Iterator jeweils der nächste Spieler ermittelt. Sobald der Iterator, welcher in der originalen
 Reihenfolge über alle Spieler iteriert, am Ende angekommen ist, wird dieser neu erstellt und startet damit wieder am Anfang. So kommt ein
 Spieler nach dem anderen zum Zug und dies lässt sich endlos wiederholen.</p>
-<p>Nun erfolgen ein paar Ausgaben auf der Kommandozeile und danach eine <code>for</code>-Schleife, welche den Spieler auffordert jeden vorherigen Zug der
-in <code>history</code> gespeichert wurde zu wiederholen. Wird hierbei ein Fehler erkannt, so wird die Schleife vorzeitig verlassen und das Flag
+<p>Nun erfolgen ein paar Ausgaben auf der Kommandozeile und danach eine <code>for</code>-Schleife, welche den Spieler auffordert, jeden vorherigen Zug der
+in <code>history</code> gespeichert wurde, zu wiederholen. Wird hierbei ein Fehler erkannt, so wird die Schleife vorzeitig verlassen und das Flag
 <code>hasFailed</code> auf <code>true</code> gesetzt. Falls dem Spieler keine Fehler passieren, endet die Schleife normal und der Wert von <code>hasFailed</code> bleibt auf
 <code>false</code>.</p>
 <p>Ist <code>hasFailed</code> nach der Schleife nun gesetzt, so wird der Spieler über seinen Fehler informiert, aus der aktiven Spielerliste gelöscht und
 mit <code>continue</code> der nächste Spielzug forciert. War hingegen alles richtig, so kann der Spieler nun einen neuen Knopf wählen und der Zug des
 nächsten Spielers beginnt.</p>
-<p>Wenn irgendwann nur noch ein aktiver Spieler verbleibt, so wird eine Gewinnmeldung ausgegeben und die totale Punktzahl, welcher der Anzahl
+<p>Wenn irgendwann nur noch ein aktiver Spieler verbleibt, so wird eine Gewinnmeldung ausgegeben und die totale Punktzahl, welche der Anzahl
 an wiederholten Elementen entspricht.</p>
 <div class=cpi-code-header>
 <div>
@@ -630,7 +630,7 @@ Auf GitHub ansehen
 <h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
 <ul>
 <li>
-<p>Das bestehende Spiel um LCD Display und/oder Buzzer erweitern, um gewisse Ausgaben direkt auf dem CrowPi auszugeben und je nach Knopfdruck
+<p>Das bestehende Spiel um LCD Display und/oder Buzzer erweitern, um gewisse Ausgaben direkt auf dem CrowPi zu erzeugen und je nach Knopfdruck
 einen anderen Ton / eine andere Frequenz abzuspielen.</p>
 </li>
 <li>
@@ -652,17 +652,17 @@ einen anderen Ton / eine andere Frequenz abzuspielen.</p>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623355433></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623355433></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

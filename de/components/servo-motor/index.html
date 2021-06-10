@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>Servomotor :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1622804209 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622804209></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623355433 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623355433></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/components/servo-motor/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1622804209></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623355433></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623355433></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623355433></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -356,9 +356,9 @@ Serial Peripheral Interface (SPI)
 Servomotor
 </h1>
 <h2 id=funktionsweise>Funktionsweise</h2>
-<p>Servomotoren sind in einer Vielzahl von Bauformen und Grössen erhältlich. Eine Eigenschaft welche einen Servomotor von einem
-normalen Elektromotor unterscheidet ist die Existenz eines Regelkreises. Dieser Regelkreis ermöglicht also erst die Kontrolle über
-Drehgeschwindigkeit, Beschleunigung und Winkelposition des Motors. Im Gegensatz zum Schrittmotor sorgt also nicht der physikalische Aufbau
+<p>Servomotoren sind in einer Vielzahl von Bauformen und Grössen erhältlich. Eine Eigenschaft, welche einen Servomotor von einem
+normalen Elektromotor unterscheidet, ist die Existenz eines Regelkreises. Dieser Regelkreis ermöglicht also erst die Kontrolle über
+Drehgeschwindigkeit, Beschleunigung und Winkelposition des Motors. Im Gegensatz zum Schrittmotor sorgt nicht der physikalische Aufbau
 für diese Kontrollmöglichkeiten, sondern eine Regelung. Die Regelung im Falle des beim CrowPi beiliegenden Servomotors wird durch ein
 simples Potentiometer erreicht. Bei industriellen, hochwertigen Servomotoren werden für die Positionsrückmeldung spezielle Encoder
 verwendet. Diese erlauben viel höhere Genauigkeiten als die Bauform mit Potentiometer. Verwendet wird diese vereinfachte Form häufig im
@@ -442,7 +442,7 @@ beschrieben.</p>
 </table>
 <h2 id=beispielapplikation>Beispielapplikation</h2>
 <p>Die Beispielanwendung zeigt auf einfache Art und Weise wie die verschiedenen Methoden der <code>ServoMotorComponent</code> zu verwenden sind. Als
-Erstes wird demonstriert wie einfach mit der prozentualen Positionierung gearbeitet werden kann. Dazu wird die Methode <code>setPercent</code>
+Erstes wird demonstriert, wie einfach mit der prozentualen Positionierung gearbeitet werden kann. Dazu wird die Methode <code>setPercent</code>
 verwendet. Als Zweites folgt dann ein Beispiel einer Positionierung mittels der Funktion <code>setAngle</code>, welche einen Winkel in Grad
 entgegennimmt. Zuletzt wird eine benutzerdefinierte Skalierung mit dem Beispiel einer Temperaturanzeige genutzt. Mittels <code>setRange</code> wird der
 Messbereich des Sensors einprogrammiert. Danach wird mit <code>moveOnRange</code> der Messwert in eine entsprechende Positionierung des Servomotors
@@ -526,17 +526,17 @@ Auf GitHub ansehen
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623355433></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623355433></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>Application Framework :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1622804209 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622804209></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623355433 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623355433></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/basics/framework/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1622804209></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623355433></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623355433></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623355433></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -344,7 +344,7 @@ Application Framework
 </h1>
 <h2 id=grundlagen>Grundlagen</h2>
 <p>Um ein möglichst einfaches Arbeiten mit diesem Projekt zu gewährleisten, wurde ein einfaches Application Framework definiert. Dieses
-besteht aus einem regulären Java Interface und schon mit wenigen Zeilen Code kann eine neue Applikation mit eigenem Code gebaut werden.
+besteht aus einem regulären Java Interface und somit kann schon mit wenigen Zeilen Code eine neue Applikation mit eigenem Code gebaut werden.
 An jede Applikation wird hierbei jeweils der Pi4J <code>Context</code> übergeben, mit welchem alle Komponenten des CrowPi angesteuert werden können.</p>
 <h2 id=starten-einer-applikation>Starten einer Applikation</h2>
 <p>Der integrierte Launcher kann zu jeder Zeit mit Maven gestartet werden. Falls der Code direkt auf dem Raspberry Pi zur Verfügung steht,
@@ -357,7 +357,7 @@ mvn install
 <span style=color:#75715e># Im Beispiel wird direkt die &#34;BuzzerApp&#34; gestartet.</span>
 mvn install -Dcrowpi.launcher.args<span style=color:#f92672>=</span>BuzzerApp
 </code></pre></div><h2 id=neue-applikation-anlegen>Neue Applikation anlegen</h2>
-<p>Um eine neue Applikation anzulegen, welche anschliessend über den integrierten Launcher gestartet werden kann, sind nur wenige einfache
+<p>Um eine neue Applikation anzulegen, welche anschliessend über den integrierten Launcher gestartet werden kann, sind nur wenige<br>
 Schritte erforderlich. Die nachfolgende Anleitung führt Schritt für Schritt zur ersten eigenen Applikation.</p>
 <p>Zuerst muss eine Java-Klasse unterhalb von <code>src/main/java/com/pi4j/crowpi/applications</code> erstellt werden mit einem beliebigen Namen,
 welche das Interface <code>Application</code> implementiert. Zum Beispiel könnte diese Klasse <code>ExampleApp</code> heissen und folgenden Code enthalten:</p>
@@ -394,7 +394,7 @@ Datei ist unter <code>src/main/java/com/pi4j/crowpi/Launcher.java</code> aufzufi
     <span style=color:#f92672>));</span>
     <span style=color:#75715e>// ...
 </span><span style=color:#75715e></span><span style=color:#f92672>}</span>
-</code></pre></div><p>Nun kann diese neue Applikation beliebig erweitert werden, indem weiterer Code innerhalb der <code>execute()</code> Methode hinzugefügt wird. Die
+</code></pre></div><p>Nun kann diese neue Applikation beliebig erweitert werden, indem weitere Codes innerhalb der <code>execute()</code> Methode hinzugefügt werden. Die
 Applikation kann jederzeit durch Starten des Launchers getestet werden und erscheint bei fehlender Angabe der gewünschten Applikation
 nun dort auch automatisch in der Auswahlliste.</p>
 <p>Optional ist es auch möglich, den Namen oder die Beschreibung der Applikation selber anzupassen. Es ist hierbei wichtig, dass der Name
@@ -413,11 +413,11 @@ Applikationsklasse verwendet werden:</p>
     <span style=color:#f92672>}</span>
     <span style=color:#75715e>// ...
 </span><span style=color:#75715e></span><span style=color:#f92672>}</span>
-</code></pre></div><p>Der Name entspricht hierbei auch dem Parameter, welcher an den Launcher übergeben werden muss, um die Applikation direkt zu starten. Im
+</code></pre></div><p>Der Name entspricht hierbei auch dem Parameter, der an den Launcher übergeben werden muss, um die Applikation direkt zu starten. Im
 Normalfall ist es aber aufgrund potenzieller Namenskonflikte nicht empfohlen, diesen zu überschreiben.</p>
 <h2 id=das-interface>Das Interface</h2>
 <p>Zur Vollständigkeit ist hier noch das komplette <code>Application</code> Interface eingebunden. Dieses besteht aus exakt drei Methoden, wobei
-hiervon nur <code>execute()</code> implementiert werden muss da die anderen Methoden bereits über eine Standardimplementation verfügen.</p>
+hiervon nur <code>execute()</code> implementiert werden muss, da die anderen Methoden bereits über eine Standardimplementation verfügen.</p>
 <div class=cpi-code-header>
 <div>
 <strong>Pfad zum Codebeispiel: </strong>
@@ -493,17 +493,17 @@ Auf GitHub ansehen
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623355433></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623355433></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>PIR Motion Sensor :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1622804209 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622804209></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623355433 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623355433></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1622804209></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623355433></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623355433></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623355433></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -357,7 +357,7 @@ Serial Peripheral Interface (SPI)
 PIR Motion Sensor
 </h1>
 <h2 id=funktionsweise>Funktionsweise</h2>
-<p>Beim PIR Motion Sensor handelt es sich um einen Bewegungssensor welcher mit passivem Infrarot arbeitet. Diese Komponente benutzt einen
+<p>Beim PIR Motion Sensor handelt es sich um einen Bewegungssensor, der mit passivem Infrarot arbeitet. Diese Komponente nutzt einen
 pyroelektrischen Sensor, welcher Infrarot-Strahlung erkennen kann. Da jedes Lebewesen und Objekt abhängig von seiner jeweiligen Temperatur
 eine unterschiedliche Menge an Infrarot-Strahlen emittiert, ist der Sensor in der Lage diese zu erkennen.</p>
 <p>Um nun jedoch nicht das Grundrauschen zu messen, sondern effektiv Bewegung zu erkennen, ist der Sensor in zwei Hälften aufgeteilt, welche
@@ -365,7 +365,7 @@ sich gegenseitig bei Stillstand wieder aufheben. Findet nun aber eine Bewegung s
 Strahlung, was anschliessend per GPIO an den Raspberry Pi als erkannte Bewegung übermittelt werden kann.</p>
 <p>Mit dieser Komponente lässt sich zwar nicht feststellen wie viele Personen in der Nähe sind oder wie nahe sich diese am Sensor befinden,
 jedoch ist die vorhandene Funktionalität meist ausreichend. Somit finden Bewegungssensoren von diesem Typ auch oft Verwendung im Alltag, zum
-Beispiel für Aussenbeleuchtungen welche automatisch eingeschaltet werden sollen.</p>
+Beispiel für Aussenbeleuchtungen, die automatisch eingeschaltet werden sollen.</p>
 <h2 id=voraussetzungen>Voraussetzungen</h2>
 <h3 id=dip-switches>DIP Switches</h3>
 <p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
@@ -435,12 +435,12 @@ beschrieben.</p>
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
-enthält alle möglichen Zustände welche
+enthält alle möglichen Zustände, die
 vom PIR Motion Sensor zurückgegeben werden können.</li>
 </ul>
 <h2 id=beispielapplikation>Beispielapplikation</h2>
-<p>Die nachfolgende Beispielapplikation stellt eine vereinfachte Alarmanlage dar, welche zuerst darauf wartet, dass der Sensor keine Bewegung
-mehr erkennt. Hierfür wird eine endlose <code>while</code>-Schleife verwendet, welche zwischen jeder Überprüfung zuerst eine Sekunde wartet, um nicht
+<p>Die nachfolgende Beispielapplikation stellt eine vereinfachte Alarmanlage dar, die zuerst darauf wartet, dass der Sensor keine Bewegung
+mehr erkennt. Hierfür wird eine endlose <code>while</code>-Schleife verwendet, die zwischen jeder Überprüfung zuerst eine Sekunde wartet, um nicht
 unnötige Rechenlast zu erzeugen.</p>
 <p>Anschliessend wird die Alarmanlage aktiviert und überwacht für 30 Sekunden sämtliche auftretenden Zustandsänderungen vom Bewegungssensor.
 Hierfür werden die Funktionen <code>onMovement()</code> und <code>onStillstand()</code> benötigt, welche Event Handler zur Protokollierung von Änderungen
@@ -526,17 +526,17 @@ lange Zeit. Hier könnte sogar ein einfaches Highscore-System eingebaut werden.<
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623355433></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623355433></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

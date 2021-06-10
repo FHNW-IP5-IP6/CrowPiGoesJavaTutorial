@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>Debugging der Applikation :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1622804209 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622804209></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623355433 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623355433></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/basics/debugging/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1622804209></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623355433></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623355433></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623355433></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -345,69 +345,69 @@ Serial Peripheral Interface (SPI)
 <h1>
 Debugging der Applikation
 </h1>
-<p>Auf dieser Seite werden die Grundlagen der Fehlersuche mit dem Setup aus <a href=/CrowPiGoesJavaTutorial/de/setup/>dem ersten Kapitel</a> beschrieben. Es wird
-Schritt für Schritt erklärt wie man den Debugger starten und verwenden kann.</p>
+<p>Auf dieser Seite werden die Grundlagen der Fehlersuche mit dem Setup aus <a href=/CrowPiGoesJavaTutorial/de/setup/>dem ersten Kapitel</a> beschrieben. Dazu wird
+Schritt für Schritt erklärt, wie man den Debugger starten und verwenden kann.</p>
 <hr>
 <h3 id=applikation-mit-debugger-starten>Applikation mit Debugger starten</h3>
-<p>Zum Starten der Applikation mit Debugger werden die beiden Run Konfigurationenen <code>crowpi-examples [debug]</code> und <code>Remote Debug</code> benötigt.
-Diese sind nach dem Setup bereits korrekt eingestellt und können verwendet werden. Wichtig dabei ist die Reihenfolge mit der die
+<p>Zum Starten der Applikation mit Debugger werden die beiden Run Konfigurationen <code>crowpi-examples [debug]</code> und <code>Remote Debug</code> benötigt.
+Diese sind nach dem Setup bereits korrekt eingestellt und können verwendet werden. Wichtig dabei ist die Reihenfolge, mit der die
 Konfigurationen gestartet werden. Dieses Vorgehen ist:</p>
 <ol>
 <li>Start von <code>crowpi-examples [debug]</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
 <li>Warten bis die Konsolenausgabe meldet <code>Listening for transport dt_socket at address: 5005 (Attach debugger)</code></li>
 <li>Starten von <code>Remote Debug</code></li>
 </ol>
-<p>Nun dieser Ablauf nochmals kurz mit entsprechenden Abbildungen. Als erstes wird die Applikation im Debugmodus gestartet. Dazu muss die
+<p>Nachfolgend wird der Ablauf mit entsprechenden Abbildungen ergänzt. Als Erstes wird die Applikation im Debugmodus gestartet. Dazu muss die
 Konfiguration <code>crowpi-examples [debug]</code> angewählt werden. Gestartet wird die Konfiguration mit dem <strong>Play Button</strong>.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-select-and-start-debug.JPG? alt="Debugmodus wählen und starten">
 </p>
-<p>Als Schritt 2 wird nun gewartet bis die korrekte Augabe im Konsolenfenster erscheint. Das sieht dann so aus:
+<p>Als Zweites wird nun gewartet, bis die korrekte Ausgabe im Konsolenfenster erscheint:
 <img src="/CrowPiGoesJavaTutorial/images/basics/intellij-waiting-for-debugger.JPG?height=500px" alt="App wartet auf Debugger">
 </p>
-<p>Jetzt ist alles bereit um den Remote Debugger zu starten. Dazu die entsprechende Run Konfiguration <code>Remote Debug</code> auswählen und mit einem
-Klick auf das Käfer-Icon (Debug) starten. Das Debugfenster meldet nun ob die Verbindung geklappt hat.
+<p>Zum Starten des Remote Debugger die entsprechende Run Konfiguration <code>Remote Debug</code> auswählen und mit einem
+Klick auf das Käfer-Icon (Debug) starten. Das Debugfenster meldet nun, ob eine Verbindung hergestellt wurde.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-start-remote-debug.JPG? alt="Remote Debug starten">
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-debug-connected.JPG? alt="Remote Debug verbunden">
 </p>
 <p>Nun kann zwischen den beiden Tabs <code>Run</code> und <code>Debug</code> hin und her gewechselt werden. Im Tab <code>Run</code> wird zum Beispiel die Ausgabe der
 Applikation angezeigt. Bei <code>Debug</code> finden sich Knöpfe und Informationen zu Breakpoints und Variablen. Wenn nun ein Beispiel ausgeführt wird,
-startet dies ganz normal und läuft bis das Programm beendet wird. Solange keine Breakpoints oder ähnliches im Programmablauf vorkommen hat
+startet dies ganz normal und läuft, bis das Programm beendet wird. Solange keine Breakpoints oder ähnliches im Programmablauf vorkommen, hat
 der Debugger keinen weiteren Einfluss auf die Applikation.</p>
 <hr>
 <h3 id=einsatz-von-breakpoints>Einsatz von Breakpoints</h3>
-<p>Wenn nun ein Problem auftritt, wird oft an der entsprechenden Codestelle ein Breakpoint gesetzt. Dieser Breakpoint weist den Debugger an die
-laufende Applikation zu unterbrechen und den aktuellen Programmstatus auf dieser Zeile im Code auszugeben. Nun wird an der
-Beispielapplikation <a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>7-Segment Anzeige</a> demonstriert wie ein Breakpoint verwendet werden kann.
-Untersucht soll die Anzeige der <code>- - - -</code> werden. Wie im Beispielcode ersichtlich passiert die mit einem <code>for-loop</code>. Dieser wird nun genauer
+<p>Wenn nun ein Problem auftritt, wird oft an der entsprechenden Codestelle ein Breakpoint gesetzt. Dieser Breakpoint weist den Debugger an, die
+laufende Applikation zu unterbrechen und den aktuellen Programmstatus auf dieser Zeile im Code auszugeben. An der
+Beispielapplikation <a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>7-Segment Anzeige</a> wird demonstriert, wie ein Breakpoint verwendet werden kann.
+Untersucht soll die Anzeige der <code>- - - -</code> werden. Wie im Beispielcode ersichtlich passiert dies mit einem <code>for-loop</code>. Dieser wird nun genauer
 betrachtet.</p>
 <h4 id=setzen-des-breakpoints-an-codestelle>Setzen des Breakpoints an Codestelle</h4>
 <p>Ein Breakpoint kann in IntelliJ sehr einfach durch Klicken neben die Zeilennummer in einem Programm eingefügt werden. Platziert wird der
-Breakpoint hier bewusst vor den zu untersuchenden <code>for-loop</code>. So kann sichergestellt werden, dass nichts verpasst wird. Wenn nicht ganz
+Breakpoint hier bewusst vor den zu untersuchenden <code>for-loop</code>. So kann sichergestellt werden, dass nichts verpasst wird. Wenn nicht
 genau bekannt ist, wo ein Problem verursacht wird, lohnt es sich fast immer den Breakpoint ein paar Zeilen über der kritischen Stelle zu
-platzieren. So kann auch die Ausgangslage gut analysiert werden.
+platzieren. So kann die Ausgangslage gut analysiert werden.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-setbreakpoint-before-loop.JPG? alt="Breakpoint vor Loop gesetzt">
 </p>
 <h4 id=starten-der-applikation-mit-debugger>Starten der Applikation mit Debugger</h4>
-<p>Wie bereits in den oberen Abschnitten erklärt wird, nachdem der Breakpoint platziert ist, die Applikation im Debugmodus gestartet und der
+<p>Wie vorgängig erklärt, wird zuerst der Breakpoint platziert, die Applikation im Debugmodus gestartet und der
 Debugger angehängt. Es werden also diese 3 Schritte durchgeführt:</p>
 <ol>
-<li>Start von `crowpi-examples [debug]`` <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
+<li>Start von <code>crowpi-examples [debug]</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
 <li>Warten bis die Konsolenausgabe meldet <code>Listening for transport dt_socket at address: 5005 (Attach debugger)</code></li>
 <li>Starten von <code>Remote Debug</code></li>
 </ol>
 <p>Da ein Fehler im 7-Segment Beispiel gesucht werden soll, wird das entsprechende Beispielprogramm nach Programmstart angewählt. Die Applikation
-läuft sofort bis der Debugger am Breakpoint die Ausführung der Anwendung unterbricht.
+läuft sofort, bis der Debugger am Breakpoint die Ausführung der Anwendung unterbricht.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-start-sevensegment.JPG? alt="Start von 7-Segment Beispiel">
-Hier wird gezeigt wie nun die Ansicht in IntelliJ aussieht, wenn der Debugger das Programm unterbrochen hat und IntelliJ markiert die
+Nachfolgend die Ansicht in IntelliJ, wenn der Debugger das Programm unterbrochen hat. IntelliJ markiert die
 entsprechende aktuelle Zeile im Programm. Im Debug-Tab werden zudem die aktuellen Variablen mit Werten der Applikation ausgegeben.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-debugger-stopped-at-breakpoint.JPG? alt="Example stoppt an Breakpoint">
 </p>
 <h4 id=navigation-am-breakpoint>Navigation am Breakpoint</h4>
-<p>Um nun die Programmausführung schrittweise fortzusetzen, verfügt die Entwicklungsumgebung über verschiedene Funktionen. Zum einen gibt es
-Grundfunktionen wie das Fortsetzen der Applikation oder das komplette Stoppen der Applikation. Die wichtigsten nun kurz erklärt:</p>
+<p>Um nun die Programmausführung schrittweise fortzusetzen, verfügt die Entwicklungsumgebung über verschiedene Funktionen. Diese beinhalten
+Grundfunktionen wie das Fortsetzen der Applikation oder das komplette Stoppen der Applikation. Die wichtigsten kurz erklärt:</p>
 <ul>
 <li><code>Resume Program</code> setzt das Programm fort bis zum nächsten Breakpoint oder Applikationsende</li>
-<li><code>Stop Remote Debug</code> stoppt den Debugger. Da in diesem Setup jedoch die Applikation und der Debugger getrennt laufen, hat diese Optionen
+<li><code>Stop Remote Debug</code> stoppt den Debugger. Da in diesem Setup jedoch die Applikation und der Debugger getrennt laufen, hat die Option
 keinen sinnvollen Effekt. Zum Stoppen des Programms sollte immer <code>Stop All</code> verwendet werden. Dies wird auf dem zweiten Bild gezeigt.</li>
 <li><code>Mute Breakpoints / Disable all Breakpoints</code> der Debugger deaktiviert alle Breakpoints. So wird das Programm bei weiterer Ausführung nicht
 mehr unterbrochen.
@@ -415,29 +415,29 @@ mehr unterbrochen.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-stop-program.JPG? alt="Stopp der Applikation">
 </li>
 </ul>
-<p>Für die schrittweise Ausführung des Programms stellt der Debugger noch weitere Tasten zur Verfügung. Diese sind:</p>
+<p>Für die schrittweise Ausführung des Programms stellt der Debugger noch weitere Tasten zur Verfügung:</p>
 <ul>
-<li><code>Step Over</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf wird der Rückgabewert ermittelt ohne die Methode zu
+<li><code>Step Over</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf wird der Rückgabewert ermittelt, ohne die Methode zu
 betreten.</li>
 <li><code>Step Into</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf wird der Code der Methode geöffnet und das Debugging
 geht in der Methode weiter.</li>
-<li><code>Force Step Into</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf welcher normalerweise Step Into ignoriert wird
-das eintauchen in die Methode erzwungen.</li>
-<li><code>Step Out</code> die aktuelle Methode wird ausgeführt bis der Code wieder am aufrufenden Ort angekommen ist. Wird zum vorzeitigen Rückkehren
+<li><code>Force Step Into</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf, welcher normalerweise bei Step Into ignoriert, wird
+das Eintauchen in die Methode erzwungen.</li>
+<li><code>Step Out</code> die aktuelle Methode wird ausgeführt, bis der Code wieder am aufrufenden Ort angekommen ist. Wird zum vorzeitigen Rückkehren
 aus <code>Step Into</code> verwendet.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-debug-navigations.JPG? alt="Navigation mit Debugger">
 </li>
 </ul>
-<p>Noch genauere Erklärungen zu den einzelnen Funktionen können auch direkt in
-der <a href=https://www.jetbrains.com/help/idea/stepping-through-the-program.html>IntelliJ Anleitung</a> gefunden werden.</p>
+<p>Noch genauere Erklärungen zu den einzelnen Funktionen können auch direkt
+der <a href=https://www.jetbrains.com/help/idea/stepping-through-the-program.html>IntelliJ Anleitung</a> entnommen werden.</p>
 <hr>
 <h3 id=analyse-von-variablen>Analyse von Variablen</h3>
 <p>Inzwischen wurden einige Steps an der Codestelle des <code>for-loops</code> ausgeführt. Nun nochmals ein Blick auf die Variablenliste des Debuggers.
-Im auf dem Bild kann nun erkannt werden wie der Debugger dem Benutzer anzeigt welche Variablen nun welche Werte haben. Aktuell ist es
+Im auf dem Bild kann erkannt werden, wie der Debugger dem Benutzer anzeigt welche Variablen nun welche Werte haben. Aktuell ist es
 also: <code>i=2</code> und <code>state="- "</code>
-Da der <code>for-loop</code> erst bei <code>i > 5</code> stoppt könnte nun mit dem Debugger jede weitere Iteration nachvollzogen werden.
+Da der <code>for-loop</code> erst bei <code>i > 5</code> stoppt, könnte nun mit dem Debugger jede weitere Iteration nachvollzogen werden.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-shows-variables.JPG? alt="Variablen mit Debugger">
-Auf genau diese Weise lassen sich auch Entscheidungen bei <code>if (this) {then that} else {other things}</code> nachvollziehen. Jede Variable kann
+Auf diese Weise lassen sich auch Entscheidungen bei <code>if (this) {then that} else {other things}</code> nachvollziehen. Jede Variable kann
 auf ihren Zustand geprüft und somit bei Fehlentscheiden die Logik angepasst werden.</p>
 <footer class=footline>
 </footer>
@@ -451,17 +451,17 @@ auf ihren Zustand geprüft und somit bei Fehlentscheiden die Logik angepasst wer
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623355433></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623355433></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

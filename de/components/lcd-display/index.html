@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>LCD Display :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1622804209 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622804209></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623355433 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623355433></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1622804209></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623355433></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623355433></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623355433></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -358,23 +358,23 @@ Serial Peripheral Interface (SPI)
 LCD Display
 </h1>
 <h2 id=funktionsweise>Funktionsweise</h2>
-<p>Beim LCD Display handelt es sich um eine der komplexesten Komponenten des CrowPi. Die betrifft sowohl die Ansteuerung in der Software als
-auch die Funktionalität des Displays an sich. Das LCD Display verfügt auf 2 Zeilen jeweils über 16 kleine Pixelfelder. Diese bestehen aus je
+<p>Beim LCD Display handelt es sich um eine der komplexesten Komponenten des CrowPi. Diese betrifft sowohl die Ansteuerung in der Software, als
+auch die Funktionalität des Displays an sich. Das LCD-Display verfügt auf 2 Zeilen jeweils über 16 kleine Pixelfelder. Diese bestehen aus je
 5x8 Pixeln. Jedes dieser Pixel wird von den Mikrocontrollern des Displays einzeln angesteuert um so Buchstaben, Zahlen und Sonderzeichen zu
 zeigen. Auf diese Weise können also bis zu 32 Zeichen gleichzeitig angezeigt werden. Damit nun der Benutzer nicht jedes Pixel einzeln
 ansteuern muss, sind schon die wichtigsten Zeichen vorprogrammiert. Es können <code>a-Z, 0–9 und einige Sonderzeichen</code> einfach genutzt werden. Um
 dem Benutzer noch mehr Möglichkeiten zu offerieren, können zudem noch 8 benutzerdefinierte Zeichen erfasst werden. Durch diese
-vielfältigkeit und doch schon eine grosse Menge an Platz für die Anzeige von Text und Zahlen bieten sich unzählige Anwendungsmöglichkeiten
+Vielfältigkeit und doch schon eine beachtliche Menge an Platz für die Anzeige von Text und Zahlen bieten sich unzählige Anwendungsmöglichkeiten
 für ein solches LCD-Display.</p>
 <p>Die Ansteuerung des Displays erfolgt über einfache digitale Signale. Da jedoch 8 Stück benutzt werden und der Raspberry Pi nur wenige zur
-Verfügung hat gibt es eine kleine Zwischenschaltung. Es wird ein Baustein verwendet welcher mittels
+Verfügung hat, gibt es eine kleine Zwischenschaltung. Es wird ein Baustein verwendet, der mittels
 <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>I²C</a> einige zusätzliche digitale Ein- und Ausgänge zur Verfügung stellt. Auf dem Bild ist diese Verschaltung
 nochmals skizziert:
 <img src=/CrowPiGoesJavaTutorial/images/components/lcd-display-wiring.jpg? alt="Schaltung des LCD-Display">
 </p>
 <p>Die Helligkeit des Displays wird bei dem Aufbau im CrowPi mit einem Potentiometer eingestellt. Mit dem Schraubenzieher kann dieses so
 eingestellt werden bis das Display einen optimalen Kontrast hat und alles gut lesbar ist. Das Potentiometer befindet sich direkt links neben
-dem Display. Es ist relativ klein und kann gut übersehen werden. Auf dem folgenden Bild wird es daher nochmals kurz gezeigt.
+dem Display. Es ist relativ klein und kann gut übersehen werden. Nachfolgend wird es daher abgebildet.
 <img src="/CrowPiGoesJavaTutorial/images/components/potentiometer-lcd-display.png?height=500px" alt="Potentiometer des LCD-Display">
 </p>
 <p>Die verbaute Hardware beim CrowPi ist ein <code>MCP23008 I/O Expander</code> mit einem <code>1602A-1 LCD Display</code>.</p>
@@ -400,11 +400,11 @@ beschrieben.</p>
 <tbody>
 <tr>
 <td style=text-align:left><code>LcdDisplayComponent(com.pi4j.context.Context pi4j)</code></td>
-<td style=text-align:left>Initialisiert ein LCD Display mit der Standard Bus- und Geräteadresse.</td>
+<td style=text-align:left>Initialisiert ein LCD-Display mit der Standard Bus- und Geräteadresse.</td>
 </tr>
 <tr>
 <td style=text-align:left><code>LcdDisplayComponent(com.pi4j.context.Context pi4j, int address)</code></td>
-<td style=text-align:left>Initialisiert ein LCD Display mit einer benutzerdefinierten Bus- und Geräteadresse.</td>
+<td style=text-align:left>Initialisiert ein LCD-Display mit einer benutzerdefinierten Bus- und Geräteadresse.</td>
 </tr>
 </tbody>
 </table>
@@ -423,15 +423,15 @@ beschrieben.</p>
 </tr>
 <tr>
 <td style=text-align:left><code>void writeCharacter(char c)</code></td>
-<td style=text-align:left>Schreibt einen einzelnen Character auf die aktuelle Cursorposition</td>
+<td style=text-align:left>Schreibt einen einzelnen Character auf die aktuelle Cursorposition.</td>
 </tr>
 <tr>
 <td style=text-align:left><code>void writeCharacter(char c, int digit, int line)</code></td>
-<td style=text-align:left>Schreibt einen einzelnen Character auf die übergebene Displayposition</td>
+<td style=text-align:left>Schreibt einen einzelnen Character auf die übergebene Displayposition.</td>
 </tr>
 <tr>
 <td style=text-align:left><code>void writeLine(String text, int line)</code></td>
-<td style=text-align:left>Schreibt den maximal 16 Zeichen langen Text auf die in gewählte Zeile des Displays</td>
+<td style=text-align:left>Schreibt den maximal 16 Zeichen langen Text auf die in gewählte Zeile des Displays.</td>
 </tr>
 <tr>
 <td style=text-align:left><code>void writeText(String text)</code></td>
@@ -463,7 +463,7 @@ beschrieben.</p>
 </tr>
 <tr>
 <td style=text-align:left><code>void setCursorBlinking(boolean blink)</code></td>
-<td style=text-align:left>Das Feld, auf dem der Cursor sich aktuell befindet, blinkt (<code>true</code>) oder nicht (<code>false</code>)</td>
+<td style=text-align:left>Das Feld, auf dem der Cursor sich aktuell befindet, blinkt (<code>true</code>) oder nicht (<code>false</code>).</td>
 </tr>
 <tr>
 <td style=text-align:left><code>void moveDisplayRight()</code></td>
@@ -475,7 +475,7 @@ beschrieben.</p>
 </tr>
 <tr>
 <td style=text-align:left><code>void createCharacter(int location, byte[] character)</code></td>
-<td style=text-align:left>Erstellt einen benutzerdefinierten Charakter auf der gewünschten Speicherstelle. Das Array muss genau der Länge acht entsprechen</td>
+<td style=text-align:left>Erstellt einen benutzerdefinierten Charakter auf der gewünschten Speicherstelle. Das Array muss genau der Länge acht entsprechen.</td>
 </tr>
 <tr>
 <td style=text-align:left><code>void setDisplayBacklight(boolean state)</code></td>
@@ -499,18 +499,18 @@ beschrieben.</p>
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
-enthält alle unterstützten Symbole welche von
+enthält alle unterstützten Symbole, die von
 dieser Komponenten-Klasse dargestellt werden können. Es handelt sich hierbei um eine Sammlung von ASCII-Codes sowie diversen Symbolen.
 Zusätzlich können mit <code>\1</code> bis <code>\7</code> die eigenen Zeichen aufgerufen und eingefügt werden. Die Werte sind jeweils als <code>byte</code> hinterlegt, was
-der internen Darstellung des LCD Displays</li>
+der internen Darstellung des LCD-Displays entspricht.</li>
 </ul>
 <h2 id=beispielapplikation>Beispielapplikation</h2>
-<p>In der Beispielapplikation werden verschiedenste Varianten der Text- und Zeichenausgabe mit dem LCD Display demonstriert. Als erster Schritt
-wird auf zwei Zeilen einzeln der Klassiker <code>Hello World!</code> ausgegeben. Anschliessend folgt eine sehr interessante Funktion. Diese erlaubt es
+<p>In der Beispielapplikation werden verschiedenste Varianten der Text- und Zeichenausgabe mit dem LCD-Display demonstriert. Als erster Schritt
+wird auf zwei Zeilen einzeln der Klassiker <code>Hello World!</code> ausgegeben. Anschliessend folgt eine sehr spannende Funktion. Diese erlaubt es
 eigene Zeichen zu definieren. Bis zu 7 verschiedene Zeichen sind gleichzeitig speicherbar. Mit etwas Fantasie lassen sich so die
 verschiedensten Symbole erstellen. Nun folgen nochmals einige Textausgaben. Während diesen Ausgaben wird kurz der <code>Cursor</code> angezeigt. Dieser
-stellt jeweils die aktuelle Schreibposition des Displays dar. Er kann durch auch sehr einfach verschoben werden. Auch das wird kurz
-demonstriert. Zum Abschluss folgen nochmals einige Textausgaben auch in kombination mit manuellen Zeilenumbrüchen. Dazu wird ein <code>\n</code> in den
+stellt jeweils die aktuelle Schreibposition des Displays dar. Er kann auch sehr einfach verschoben werden. Dies wird kurz
+demonstriert. Zum Abschluss folgen nochmals einige Textausgaben auch in Kombination mit manuellen Zeilenumbrüchen. Dazu wird ein <code>\n</code> in den
 String eingefügt. Dies erzeugt dann sofort einen Zeilenumbruch.
 <div class=cpi-code-header>
 <div>
@@ -684,7 +684,7 @@ Auf GitHub ansehen
 </p>
 <h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
 <ul>
-<li>Das Display mit anderen Komponenten kombinieren. Dabei bieten sich unzählige Möglichkeiten. Es könnten die aktuelle Temperatur oder
+<li>Das Display mit anderen Komponenten kombinieren. Dabei bieten sich unzählige Möglichkeiten. Es könnten beispielsweise die aktuelle Temperatur oder
 Helligkeit angezeigt werden.</li>
 <li>Eine Karaoke Maschine. Mittels des Buzzers einen Song abspielen und auf dem Display jeweils den aktuellen Text anzeigen. Viel Spass beim
 Singen und Programmieren!</li>
@@ -701,17 +701,17 @@ Singen und Programmieren!</li>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623355433></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623355433></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

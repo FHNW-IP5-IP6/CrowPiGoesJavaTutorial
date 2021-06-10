@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>Infrarot Empfänger :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1622804209 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1622804209 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1622804209></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623355433 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623355433 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623355433></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/components/ir-receiver/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1622804209></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623355433></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623355433></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1622804209></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623355433></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -357,12 +357,12 @@ Serial Peripheral Interface (SPI)
 Infrarot Empfänger
 </h1>
 <h2 id=funktionsweise>Funktionsweise</h2>
-<p>Mithilfe von Infrarot können über einige Meter Distanz digitale Informationen übertragen werden, was zum Beispiel oft für die Fernbedienung
-eines Fernsehers genutzt wird. Die Übertragungsart gleich hierbei etwas dem Prinzip des Morsens, da die Infrarot-LED im Sendegerät eine
+<p>Mithilfe von Infrarot können über einige Meter Distanz digitale Informationen übertragen werden, was beispielsweise oft für die Fernbedienung
+eines Fernsehers genutzt wird. Die Übertragungsart gleicht hierbei dem Prinzip des Morsens, da die Infrarot-LED im Sendegerät eine
 Abfolge von Bits durch unterschiedlich lange Pausen zu dem Empfängergerät überträgt. Da jedoch auch viele andere Dinge in der Natur wie
 beispielsweise unsere Sonne ein Infrarot-Licht emittieren, wird für die elektronische Verwendung nur eine Frequenz von 38kHz verwendet.</p>
 <p>Um zu vermeiden, dass eine Fernbedienung über eine oder gar mehrere Sekunden komplett still gehalten werden muss, werden die einzelnen Bits
-in sehr kurzen zeitlichen Abständen übertragen. Dies klingt im ersten Moment natürlich praktisch, bedeutet jedoch auch dass das empfangende
+in sehr kurzen zeitlichen Abständen übertragen. Dies klingt im ersten Moment natürlich praktisch, bedeutet jedoch auch, dass das empfangende
 Gerät sehr präzise zeitliche Messungen durchführen können muss. Genau dies war jedoch beim CrowPi mit der Verwendung von Java in Kombination
 mit Pi4J nicht möglich, da eine Genauigkeit von rund 60 Mikrosekunden (0.00006 Sekunden) benötigt wird, was sich mit dem Design der Java
 Virtual Machine nicht umsetzen lässt.</p>
@@ -371,9 +371,9 @@ welche in C geschrieben wurde. Diese gibt die entsprechend erkannten Signale üb
 ausgewertet, geprüft und weitergegeben werden. Ein grosser Teil der Logik ist somit weiterhin innerhalb dieser Komponenten-Klasse
 aufzufinden, das Erkennen der Signale findet jedoch nicht mit Pi4J statt. Sollten sich hier in Zukunft neue Möglichkeiten ergeben, so würde
 sich die Komponente regulär via GPIO auslesen lassen.</p>
-<p>Eine saubere Alternative, welche sich weiterhin mit Pi4J umsetzen lässt, wäre einen dedizierten Mikrocontroller für das Empfangen der
+<p>Eine saubere Alternative, die sich weiterhin mit Pi4J umsetzen lässt, wäre einen dedizierten Mikrocontroller für das Empfangen der
 Infrarot-Signale zu verwenden, welcher dann über einen anderen Bus wie beispielsweise <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>I²C</a> oder <a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>SPI</a> die Signale an den Raspberry Pi sendet. Auf dem CrowPi ist dies jedoch nicht vorhanden, sodass diese Möglichkeit nicht
-bestand.</p>
+besteht.</p>
 <p>Für die Verwendung dieser Komponente muss die beigelegte Infrarot-Diode auf dem CrowPi in die 3 Pin-Header eingesteckt werden, da sich diese
 nicht direkt auf dem CrowPi befindet. Auf dem nachfolgenden Foto ist angegeben, wo die Infrarot-Photodiode einzustecken ist:</p>
 <img src="/CrowPiGoesJavaTutorial/images/components/ir-receiver.jpg?height=500px" alt="Anschluss für Infrarot-Diode">
@@ -438,8 +438,8 @@ Taste zu vergleichen und unterschiedliche Aktionen durchzuführen.</li>
 </ul>
 <h2 id=beispielapplikation>Beispielapplikation</h2>
 <p>Die Beispielapplikation initialisiert zuerst den Infrarot-Empfänger, wobei hier nicht einmal der übliche Pi4J-Kontext übergeben werden muss,
-da wie bereits weiter oben beschrieben von dieser Komponente die Pi4J-Library nicht genutzt wird. Nach erfolgter Initialisierung wird ein
-Event Handler registriert, welcher jeden Tastendruck auf der Konsole ausgibt sowie beim Drücken der &ldquo;CH&rdquo; Taste eine zusätzliche Ausgabe
+da wie bereits weiter oben beschrieben, von dieser Komponente die Pi4J-Library nicht genutzt wird. Nach erfolgter Initialisierung wird ein
+Event Handler registriert, der jeden Tastendruck auf der Konsole ausgibt sowie beim Drücken der &ldquo;CH&rdquo; Taste eine zusätzliche Ausgabe
 vornimmt. Anschliessend wird 30 Sekunden gewartet, bevor der Event Handler wieder deaktiviert wird und die Applikation sich beendet.</p>
 <div class=cpi-code-header>
 <div>
@@ -515,17 +515,17 @@ abzuspielen.</li>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623355433></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1622804209></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1622804209></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623355433></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623355433></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
