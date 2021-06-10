@@ -7,12 +7,12 @@ tags: ["gpio"]
 ## Funktionsweise
 
 Ein Sound Sensor funktioniert mittels eines Mikrofons. Die vom Mikrofon in elektrische Signale umgewandelten akustischen Schwingungen werden
-gegen einen Schwellenwert verglichen. Sobald die elektrischen Signale in ihrer Stärke einen gewissen Schwellwert übersteigen wird am Sensor
+gegen einen Schwellenwert verglichen. Sobald die elektrischen Signale in ihrer Stärke einen gewissen Schwellwert übersteigen, wird am Sensor
 ein digitaler Ausgang geschaltet. Es wurde Lärm oder ein Geräusch erkannt.
 
 Am CrowPi kann dieser Schwellwert mittels eines Potentiometers eingestellt werden. Am einfachsten geht das, wenn man auf das entsprechende
 LED bei den Status LEDS achtet und den entsprechenden Lärm verursacht welcher erkannt werden soll. Wird das Potentiometer nach rechts
-gedreht muss das entsprechende akustische Signal lauter sein, um vom Sensor erkannt zu werden. Auf die linke Seite gedreht am Potentiometer
+gedreht, muss das entsprechende akustische Signal lauter sein, um vom Sensor erkannt zu werden. Auf die linke Seite gedreht am Potentiometer
 macht den Sensor viel empfindlicher gegenüber leisen Geräuschen. Zu finden ist das Potentiometer wie auf diesem Bild gezeigt: {{< img
 alt="Potentiometer des Sound Sensor" src="components/sound-sensor-potentiometer.jpg" >}}
 
@@ -20,7 +20,7 @@ alt="Potentiometer des Sound Sensor" src="components/sound-sensor-potentiometer.
 
 ### DIP Switches
 
-Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:
 
 {{< dip-switches >}}
 
@@ -40,7 +40,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 | Methode                                      | Bemerkung                                                                                                                          |
 |:---------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
 | `boolean isNoisy()`                          | Gibt true zurück, wenn aktuell ein Geräusch vom Sensor erkannt wird                                                                |
-| `boolean isSilent()`                         | Gibt true zurück, wenn aktuell stille herrscht.                                                                                    |
+| `boolean isSilent()`                         | Gibt true zurück, wenn aktuell Stille herrscht.                                                                                    |
 | `SoundState getState()`                      | Gibt den aktuellen Zustand des Sensors in Form des SoundState zurück.                                                              |
 | `void onNoise(SimpleEventHandler handler)`   | Setzt den Event Handler, welcher bei auftretendem Lärm am Sensor aufgerufen werden soll. null deaktiviert diesen Event Listener.   |
 | `void onSilence(SimpleEventHandler handler)` | Setzt den Event Handler, welcher bei verschwundenem Lärm am Sensor aufgerufen werden soll. null deaktiviert diesen Event Listener. |
@@ -52,10 +52,10 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 
 ## Beispielapplikation
 
-Bei dieser Komponente wurde ein sehr simples Beispiel gewählt. Damit die Applikation jedoch richtig funktioniert muss erst der Sound Sensor
+Bei dieser Komponente wurde ein sehr simples Beispiel gewählt. Damit die Applikation jedoch richtig funktioniert, muss erst der Sound Sensor
 so eingestellt werden, dass ein Händeklatschen erkannt wird. Am besten wie in der Funktionsweise beschrieben kurz ausprobieren. Als erstes
 wird mit einer simplen Statusabfrage geprüft, ob gerade stille im Raum herrscht. Falls es gerade schon zu laut wäre, würde das Programm
-abbrechen. Ist es ruhig registriert das Programm einen `onNoise` Event Handler, welcher mittels einer Zählvariable zählt wie oft schon Lärm
+abbrechen. Ist es ruhig registriert das Programm einen `onNoise` Event Handler, welcher mittels einer Zählvariable zählt, wie oft schon Lärm
 erkannt wurde. Nach 3x Händeklatschen beendet die Applikation wieder. Für das Zählen in einer Lambdafunktion in Java muss ein spezieller
 Datentyp verwendet werden. Man sieht dies am `AtomicInteger count`. Der `AtomicInteger` ist eine spezielle Form eines normalen Integers,
 welcher jedoch auch innerhalb einer Lambdafunktion benutzt werden kann.{{< code
@@ -63,6 +63,6 @@ file="src/main/java/com/pi4j/crowpi/applications/SoundSensorApp.java" language="
 
 ## Weitere Möglichkeiten
 
-- Mit der Relaiskomponente kombiniert könnte eine Lampe mittels klatschen ein und ausgeschaltet werden.
+- Mit der Relaiskomponente kombiniert könnte eine Lampe mittels Klatschen ein- und ausgeschaltet werden.
 - Es könnte eine Alarmanlage gebaut werden, welche anhand von Lärm einen Eindringling erkennt.
 

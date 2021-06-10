@@ -5,18 +5,18 @@ tags: ["gpio"]
 
 ## Funktionsweise
 
-Der im CrowPi benutzte DHT11 Temperatur- und Luftfeuchtigkeitssensor arbeitet für die Messung der Temperatur mit einem NTC-Temperatursensor.
+Der im CrowPi verwendete DHT11 Temperatur- und Luftfeuchtigkeitssensor arbeitet für die Messung der Temperatur mit einem NTC-Temperatursensor.
 Dies ist ein temperaturabhängiger elektrischer Widerstand. Je nach Umgebungstemperatur leitet dieser den Strom besser oder schlechter. Diese
 Differenzen lassen sich messen und anhand von Referenzwerten kann die Temperatur ausgewertet werden. Das ist ein sehr einfaches Prinzip,
-welches häufig zum Einsatz kommt bei der Messung von Temperaturen. Für die Feuchtigkeit liegt zwischen zwei Elektroden ein spezielles
-Granulat. Je mehr Feuchte in diesem Granulat festgehalten wird, desto einfacher kann der Strom fliessen. Es ändert sich also auch hier der
+welches häufig bei der Messung von Temperaturen zum Einsatz kommt. Für die Feuchtigkeit liegt zwischen zwei Elektroden ein spezielles
+Granulat. Je mehr Feuchtigkeit in diesem Granulat festgehalten wird, desto einfacher kann der Strom fliessen. Es ändert sich also auch hier der
 elektrische Widerstand. Die Übertragung der Messdaten erfolgt dann etwas speziell über einen einzelnen digitalen Ausgang am Sensor. Dieser
 wird in kurzen Pulsen im Mikrosekundenbereich angesteuert.
 
 Java mit Pi4J ist leider nicht in der Lage diese Pulse genügend schnell zu verarbeiten. Die Verzögerungen durch die vielen Schichten einer
 Applikation bis zur Hardware benötigen einfach zu viel Zeit. Deshalb wurde in diesem Beispiel ein Linux Treiber verwendet, welcher die
 Messwerte des Sensors in eine Datei schreibt. Diese wird von Java ausgelesen und so kann dennoch mit dem Sensor gearbeitet werden. Das ist
-keine optimale Lösung aber es ermöglicht immerhin die Arbeit mit dem Sensor innerhalb des CrowPi. Besser wäre eine separate Ansteuerung
+keine optimale Lösung, aber sie ermöglicht immerhin die Arbeit mit dem Sensor innerhalb des CrowPi. Besser wäre eine separate Ansteuerung
 mittels eines Mikrocontrollers. Diese können aufgrund der Einfachheit ihres Aufbaus viel schneller auf die eingehenden Impulse reagieren
 und sind so in der Lage zuverlässigere Resultate als der Raspberry Pi zu liefern.
 
@@ -24,7 +24,7 @@ und sind so in der Lage zuverlässigere Resultate als der Raspberry Pi zu liefer
 
 ### DIP Switches
 
-Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:
 
 {{< dip-switches >}}
 

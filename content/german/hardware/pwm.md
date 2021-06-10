@@ -8,7 +8,7 @@ Die Abkürzung PWM steht für Pulse Width Modulation und wird im Deutschen auch 
 bezeichnet. Diese Technik wird unter anderem für die Steuerung von Servomotoren eingesetzt und findet beispielsweise auch Verwendung bei den 
 Lüftern von einem regulären Computer.
 
-Mit PWM ist es möglich, eine Komponente wie einen Motor nicht nur mehr rein binär zu steuern, sprich Aus (0% Leistung) oder An (100% 
+Mit PWM ist es möglich, eine Komponente wie einen Motor nicht nur mehr rein binär zu steuern, sprich aus (0% Leistung) oder ein (100% 
 Leistung), sondern diese fast beliebig zu steuern. Die Funktionsweise von PWM funktioniert hierbei so, dass die Komponente in einem 
 bestimmten Zeitraum immer wieder aus- und angeschaltet wird.
 
@@ -22,7 +22,7 @@ Auf dem Raspberry Pi und somit auch dem CrowPi stehen zwei verschiedene Arten vo
 Hardware-Implementation. Beide bieten grundsätzlich die gleichen Möglichkeiten, jedoch können mit der Software-Version keine präzisen 
 oder besonders schnellen Frequenzen erreicht werden.
 
-Der Grund dafür ist dass bei der Software-Implementation für jeden einzelnen Zyklus (an/aus) wieder ein erneuter Steuerbefehl von der 
+Der Grund dafür ist, dass bei der Software-Implementation für jeden einzelnen Zyklus (ein/aus) wieder ein erneuter Steuerbefehl von der 
 JVM (Java Virtual Machine) bis zur entsprechenden Komponente übertragen werden muss, während bei der Hardware-Implementation der 
 Raspberry Pi sich die gewünschte Frequenz merkt und diese selbstständig direkt auf der Platine regelt.
 

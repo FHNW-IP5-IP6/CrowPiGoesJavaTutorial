@@ -5,7 +5,7 @@ tags: ["spi"]
 
 ## Funktionsweise
 
-Bei RFID, abgekürzt für Radio Frequency Identification, handelt es sich um eine Technologie, welche es ermöglicht automatisch und kontaktlos
+Bei RFID, abgekürzt für Radio Frequency Identification, handelt es sich um eine Technologie, die es ermöglicht automatisch und kontaktlos
 mit einer Karte entsprechende Informationen auszutauschen. Dies wird zum Beispiel bei weit bekannten NFC Tags verwendet, jedoch auch für
 Anwendungen wie das kontaktlose Zahlen per Kreditkarte.
 
@@ -15,8 +15,8 @@ eigene Stromversorgung benötigen. Im CrowPi ist die Komponente `MFRC522` verbau
 beispielsweise die beiden beigelegten Tags des CrowPi ausgelesen und beschrieben werden. Dies funktioniert dabei mit beliebigen Daten.
 
 Die Technologie dahinter ist sehr komplex und die entsprechenden Informationen dazu sind auf mehrere Standards aufgeteilt, hauptsächlich
-ISO-14443 für den allgemeinen Aufbau und die Kommunikation sowie die entsprechenden Spezifikationen von NXP Semiconductors, dem Hersteller
-des Lese- und Schreibgeräts sowie von den meisten RFID Karten. Die Einhaltung dieser Standards ist hierbei sehr wichtig, da eine RFID Karte
+ISO-14443 für den allgemeinen Aufbau und die Kommunikation, sowie die entsprechenden Spezifikationen von NXP Semiconductors, dem Hersteller
+des Lese- und Schreibgeräts, sowie von den meisten RFID Karten. Die Einhaltung dieser Standards ist hierbei sehr wichtig, da eine RFID Karte
 bei falschen Schreiboperationen auch permanent beschädigt werden kann. Im Fachjargon wird das Lese- und Schreibgerät "Proximity Coupling
 Device" (PCD) genannt, während die verschiedenen Karten "Proximity Integrated Circuit Card" (PICC) heissen.
 
@@ -81,15 +81,15 @@ Variablen `personA` sowie `personB` gespeichert, welche beide über verschiedene
 Anschliessend wird mit der `waitForNewCard` Methode die Anwendung so lange blockiert, bis eine neue Karte vom RFID Gerät erkannt wurde.
 Sobald dies der Fall ist, wird die übergebene Funktion ausgeführt, welche die Instanz `personA` von der `Person`-Klasse auf der Karte mit
 `writeObject` speichert. Es kann jedes beliebige Java-Objekt gespeichert werden, solange dieses das `Serializable` mit `implements
-Serializable` implementiert. Wichtig ist hierbei zu beachten, dass diese Methode eine `RfidException` werfen kann, welche abgefangen werden
+Serializable` implementiert. Hierbei gilt zu beachten, dass diese Methode eine `RfidException` werfen kann, welche abgefangen werden
 muss. Diese tritt auf, wenn die Karte nicht ordnungsgemäss beschrieben werden konnte.
 
 Nachdem die erste Karte beschrieben wurde, wird der gleiche Prozess für die zweite Karte wiederholt. Da mit `waitForNewCard` grundsätzlich
-nur neue Karten erkannt werden und eine Karte nach erfolgter Interaktion in einen Schlafzustand geht, kann hier garantiert werden dass nicht
+nur neue Karten erkannt werden und eine Karte nach erfolgter Interaktion in einen Schlafzustand geht, kann hier garantiert werden, dass nicht
 sofort die zweite Person auf die gleiche Karte geschrieben wird, sondern sich eine neue Karte annähern oder die bestehende Karte kurzfristig
 entfernt werden muss.
 
-Sobald beide Karten beschrieben wurden, wird ein Event Handler mit `onCardDetected` registriert, welcher asynchron jedes Mal aufgerufen wird
+Sobald beide Karten beschrieben wurden, wird ein Event Handler mit `onCardDetected` registriert, welcher asynchron jedes Mal aufgerufen wird,
 wenn eine neue Karte erkannt wurde. Da der RFID-Standard ein Verfahren gegen Kollisionen besitzt, können sich sogar mehrere Karten
 gleichzeitig auf dem Lese- und Schreibgerät befinden. Bei jeder ermittelten Karte wird mit `readObject(Person.class)` versucht, eine vorher
 gespeicherte Instanz der `Person`-Klasse auszulesen und in die Variable `person` zu speichern. Wenn dies gelingt, so wird die Person auf der
