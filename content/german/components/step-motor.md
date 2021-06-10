@@ -52,9 +52,9 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 
 ## Beispielapplikation
 
-Die Beispielanwendung zeigt auf einfache Art und Weise wie die verschiedenen Methoden der `StepMotorComponent` zu verwenden sind. Als Erstes
+Die Beispielanwendung zeigt auf einfache Art und Weise wie die verschiedenen Methoden der `StepMotorComponent` zu verwenden sind. Zuerst
 wird nach einer kurzen Warnung der Motor um 50 Schritte vorwärts gedreht. Anschliessend dreht der Motor rückwärts ebenfalls um 50 Schritte.
-Der Motor ist also wieder in Ausgangsposition. Als letztes werden nun mithilfe eines `for-loops` einige Male hin und her gedreht. Dazu wird
+Der Motor ist also wieder in Ausgangsposition. Abschliessend wird nun mithilfe eines `for-loops` einige Male hin und her gedreht. Dazu wird
 nun die `turnDegrees` Methode verwendet.
 
 {{< code file="src/main/java/com/pi4j/crowpi/applications/StepMotorApp.java" language="java">}}

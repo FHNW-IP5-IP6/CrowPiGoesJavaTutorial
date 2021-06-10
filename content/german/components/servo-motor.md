@@ -5,9 +5,9 @@ tags: ["pwm"]
 
 ## Funktionsweise
 
-Servomotoren sind in einer Vielzahl von Bauformen und Grössen erhältlich. Eine Eigenschaft welche einen Servomotor von einem
-normalen Elektromotor unterscheidet ist die Existenz eines Regelkreises. Dieser Regelkreis ermöglicht also erst die Kontrolle über
-Drehgeschwindigkeit, Beschleunigung und Winkelposition des Motors. Im Gegensatz zum Schrittmotor sorgt also nicht der physikalische Aufbau
+Servomotoren sind in einer Vielzahl von Bauformen und Grössen erhältlich. Eine Eigenschaft, welche einen Servomotor von einem
+normalen Elektromotor unterscheidet, ist die Existenz eines Regelkreises. Dieser Regelkreis ermöglicht also erst die Kontrolle über
+Drehgeschwindigkeit, Beschleunigung und Winkelposition des Motors. Im Gegensatz zum Schrittmotor sorgt nicht der physikalische Aufbau
 für diese Kontrollmöglichkeiten, sondern eine Regelung. Die Regelung im Falle des beim CrowPi beiliegenden Servomotors wird durch ein
 simples Potentiometer erreicht. Bei industriellen, hochwertigen Servomotoren werden für die Positionsrückmeldung spezielle Encoder
 verwendet. Diese erlauben viel höhere Genauigkeiten als die Bauform mit Potentiometer. Verwendet wird diese vereinfachte Form häufig im
@@ -52,7 +52,7 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 ## Beispielapplikation
 
 Die Beispielanwendung zeigt auf einfache Art und Weise wie die verschiedenen Methoden der `ServoMotorComponent` zu verwenden sind. Als
-Erstes wird demonstriert wie einfach mit der prozentualen Positionierung gearbeitet werden kann. Dazu wird die Methode `setPercent`
+Erstes wird demonstriert, wie einfach mit der prozentualen Positionierung gearbeitet werden kann. Dazu wird die Methode `setPercent`
 verwendet. Als Zweites folgt dann ein Beispiel einer Positionierung mittels der Funktion `setAngle`, welche einen Winkel in Grad
 entgegennimmt. Zuletzt wird eine benutzerdefinierte Skalierung mit dem Beispiel einer Temperaturanzeige genutzt. Mittels `setRange` wird der
 Messbereich des Sensors einprogrammiert. Danach wird mit `moveOnRange` der Messwert in eine entsprechende Positionierung des Servomotors

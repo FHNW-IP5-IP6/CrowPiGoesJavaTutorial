@@ -7,7 +7,7 @@ tags: ["i2c"]
 
 Die 7-Segment Anzeige auf dem CrowPi besteht aus 4 verschiedenen Ziffern, welche jeweils die Werte `0-9` sowie `A-F` darstellen können. 
 Der Name ist dabei auch Programm, da jede Ziffer grundsätzlich aus 7 verschiedenen Segmenten besteht, welche je nach Zustand (an/aus) 
-dann die verschiedenen Werte darstellen können. Dies bedeutet jedoch auch dass bei der Anzeige auf dem CrowPi insgesamt 33 verschiedene 
+dann die verschiedenen Werte darstellen können. Dies bedeutet jedoch auch, dass bei der Anzeige auf dem CrowPi insgesamt 33 verschiedene 
 Segmente existieren (4x 7-Segment, 4x Dezimalpunkt, 1x Doppelpunkt), welche alle einzeln angeschlossen und gesteuert werden müssten.
 
 Um dies zu vermeiden, verwendet die 7-Segment Anzeige den `HT16K33`, einen elektronischen Baustein zur Ansteuerung von mehreren LEDs 
@@ -22,7 +22,7 @@ werden kann. Dieses Prinzip wird auch von der Komponenten-Klasse `SevenSegmentCo
 
 ### DIP Switches
 
-Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:
 
 {{< dip-switches >}}
 
@@ -80,7 +80,7 @@ ungerade ist. Durch das Abbrechen vom Maven-Prozess lässt sich diese Applikatio
 ## Weitere Möglichkeiten
 
 - Das Beispiel könnte so umgeschrieben werden, dass von einer vordefinierten Zeit heruntergezählt wird und die Anzeige nach Erreichen von 0
-  entsprechend blinkt. In Kombination mit dem Buzzer wäre somit sogar eine Eieruhr möglich.
+  entsprechend blinkt. In Kombination mit dem Buzzer wäre so sogar eine Eieruhr möglich.
 
 - Statt jeweils nur die aktuelle Zeit mit `LocalTime.now()` anzuzeigen, könnte auch die aktuelle Uhrzeit in verschiedenen Zeitzonen
   hintereinander dargestellt werden.

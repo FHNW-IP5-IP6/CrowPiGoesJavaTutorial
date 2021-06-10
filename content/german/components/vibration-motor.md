@@ -5,7 +5,7 @@ tags: ["gpio"]
 
 ## Funktionsweise
 
-Beim Vibrationsmotor handelt es sich um einen sehr kleinen Motor welcher über eine kleine Unwucht verfügt. Durch diesen Fehler im Rundlauf
+Beim Vibrationsmotor handelt es sich um einen sehr kleinen Motor, der über eine kleine Unwucht verfügt. Durch diesen Fehler im Rundlauf
 entsteht die gewünschte Vibration. Aufgrund des elektrischen Anschlusses beim CrowPi ist jedoch nur ein Ein- und Ausschalten des Motors
 möglich. Theoretisch wäre aber auch
 [PWM]({{< ref "hardware/pwm" >}}) denkbar. Jedoch verfügt der verwendete Pin über keine
@@ -50,6 +50,6 @@ eingeschlafen ist. Sobald der Benutzer das Aufwachen mit `YES` bestätigt wird d
 
 ## Weitere Möglichkeiten
 
-- Einen benutzerdefinierten Vibrationsalarm einrichten unter verwendung eines spezifischen Pulsates.
+- Einen benutzerdefinierten Vibrationsalarm einrichten unter Verwendung eines spezifischen Pulsates.
 - In Kombination mit Knöpfen und Sensoren kann der Vibrationsmotor verwendet werden, um den Benutzer auf etwas aufmerksam zu machen.
 

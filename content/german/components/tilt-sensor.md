@@ -10,7 +10,7 @@ einige verschiedene Ausführungen, die Komponente auf dem CrowPi basiert jedoch 
 somit lediglich eine Neigung nach links (`HIGH`) oder rechts (`LOW`) erkennen kann.
 
 Hierfür ist der silberne Draht auf der linken Seite der Komponente mit einer leitenden Innenhülle verbunden, in welcher sich zwei kleine
-Metallkugeln befinden. Innerhalb dieser Hülle ist auf der rechten Seite ein Kontaktpunkt vorhanden, welcher mit dem goldigen Draht auf der
+Metallkugeln befinden. Innerhalb dieser Hülle ist auf der rechten Seite ein Kontaktpunkt vorhanden, welcher mit dem goldenen Draht auf der
 rechten Seite der Komponente verbunden ist. Abhängig von der Neigung berühren diese Kugeln nun den Kontaktpunkt oder eben nicht, sodass sich
 der aktuelle Zustand jeweils einfach via GPIO erkennen lässt.
 
@@ -51,13 +51,13 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 
 ### Enumerationen
 
-- {{< javadoc class="com.pi4j.crowpi.components.TiltSensorComponent" subclass="TiltState" >}} enthält alle möglichen Zustände welche vom Tilt
+- {{< javadoc class="com.pi4j.crowpi.components.TiltSensorComponent" subclass="TiltState" >}} enthält alle möglichen Zustände, welche vom Tilt
   Sensor zurückgegeben werden können.
 
 ## Beispielapplikation
 
 Die nachfolgende Beispielapplikation gibt zuerst den aktuellen Zustand des Tilt Sensors aus, welcher je nach Lage / Positionierung des
-CrowPi variieren kann. Anschliessend werden zwei Event Listener mit `onTiltLeft()` bzw. `onTiltRight()` registriert, welche bei jedem
+CrowPi variieren kann. Danach werden zwei Event Listener mit `onTiltLeft()` bzw. `onTiltRight()` registriert, welche bei jedem
 Zustandswechsel des Sensors eine Nachricht auf die Konsole ausgibt. Somit wird nun eine Nachricht ausgegeben, wenn der CrowPi
 abwechslungsweise nach links oder rechts geneigt wird. Zudem wird noch ein Event Listener für `onShake()` registriert, welcher beim
 Schütteln des CrowPi eine spezielle Meldung ausgibt.

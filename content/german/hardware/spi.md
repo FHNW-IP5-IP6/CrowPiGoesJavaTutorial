@@ -6,7 +6,7 @@ tags: ["spi"]
 ## Das Wichtigste in Kürze
 
 Das Serial Peripheral Interface, abgekürzt SPI, ist ein Bus-System welches eine Kommunikation zwischen einem Hauptgerät (englisch als
-«Master» bezeichnet) und ein oder mehreren Nebengeräten (englisch als «Slave» bezeichnet) ermöglicht. Eine direkte Kommunikation zwischen
+«Master» bezeichnet) und einem oder mehreren Nebengeräten (englisch als «Slave» bezeichnet) ermöglicht. Eine direkte Kommunikation zwischen
 allen Teilnehmern ist hierbei nicht möglich, viel mehr kann der Master jederzeit auswählen mit welchem Slave er Daten austauschen möchte.
 
 Um nur einen Slave anzusprechen werden insgesamt 3 Signalleitungen benötigt, wovon zwei für die bidirektionale Datenübertragung und eine als

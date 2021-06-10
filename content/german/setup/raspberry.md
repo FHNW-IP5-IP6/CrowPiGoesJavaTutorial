@@ -17,8 +17,8 @@ Anleitungen zur Installation sind ebenfalls auf der genannten Homepage verfügba
 
 ### 2. Herunterladen des FHNW CrowPi Image
 
-Das Image für den CrowPi welches das Betriebssystem für den Raspberry PI beinhaltet kann direkt aus dem Github
-Repository des CrowPi Projekts bezogen werden. Das neustste Release des Betriebssystems findet unter diesem Link:
+Das Image für den CrowPi, welches das Betriebssystem für den Raspberry PI beinhaltet kann direkt aus dem Github
+Repository des CrowPi Projekts bezogen werden. Das neueste Release des Betriebssystems findet ihr unter diesem Link:
 [Download CrowPi Image]({{% siteparam "repoURL" %}}/releases/latest)
 
 Bei GitHub kann das Image dann hier heruntergeladen werden:
@@ -35,7 +35,7 @@ befinden, überschrieben!
 {{% /notice %}}
 
 Als Erstes muss die SD-Karte auf dem Computer als Laufwerk verfügbar sein. Dazu gibt es verschiedene Möglichkeiten. Es
-eignen sich Kartenlesegeräte genauso wie auch USB Adapter. Nun wird das Tool Raspberry Pi Imager gestartet. Als erstes
+eignen sich Kartenlesegeräte genauso wie auch USB Adapter. Nun wird das Tool Raspberry Pi Imager gestartet. Als Erstes
 muss das Betriebssystem gewählt werden. Dazu den Knopf `OS WÄHLEN` drücken.
 {{< img alt="Bild des Hauptmenüs vom Raspberry Pi Imager" src="setup/mainmenu-raspberrypi-imager.JPG" >}}
 Nun findet sich ganz unten in der Auswahl `Eigenes Image`. Im Auswahldialog das vorher heruntergeladene und entpackte
@@ -51,7 +51,7 @@ Im Zweifelsfall aber einfach Datenträger mit wichtigen Medien vorher ausstecken
 {{< img alt="Auswahl SD-Karte" src="setup/selectsdcard-raspberrypi-imager.JPG" >}}
 
 Schon ist alles bereit um das Image auf die SD-Karte zu schreiben. Der Vorgang kann durch Betätigen vom `SCHREIBEN`
-Knopf ausgelöst werden. Es folgt nochmals ein Bestätigungsdialog bevor dann endgültig sämtlicher Inhalt der SD-Karte
+Knopf ausgelöst werden. Es folgt nochmals ein Bestätigungsdialog, bevor dann endgültig sämtlicher Inhalt der SD-Karte
 überschrieben wird. Das Schreiben des Image auf die SD-Karte kann einige Minuten dauern. Das ist völlig normal. Sobald
 der Vorgang abgeschlossen ist, kommt die entsprechende Fertigmeldung. Die SD-Karte kann nun aus dem Computer entfernt
 werden.
@@ -71,7 +71,7 @@ eingesteckt werden. Sobald alles wieder an seinem Platz ist, kann der CrowPi mit
 
 {{< img alt="Raspberry Pi SD-Karten Einschub" src="setup/crowpi-raspberrypi-sdslot.JPG" height="600px" >}}
 
-Bevor der CrowPi nun in Betrieb genommen wird, sollte noch einmal überprüft werden ob alle 3 Kabel mit dem Raspberry Pi verbunden sind. Es
+Bevor der CrowPi nun in Betrieb genommen wird, sollte noch einmal überprüft werden, ob alle 3 Kabel mit dem Raspberry Pi verbunden sind. Es
 sollte sowohl der HDMI-Adapter auf der linken Seite, das USB-Kabel auf der unteren Seite sowie das GPIO Flachbandkabel auf der rechten Seite
 verbunden sein. Diese zwingend erforderlichen Kabel sind in der nächsten Grafik mit roten Kreisen umrahmt. Optional kann noch eine Tastatur
 und Maus per USB verbunden werden, was nachfolgend mit einem pinken Kreis markiert wurde:
@@ -109,7 +109,7 @@ werden, worauf sich anschliessend das gewünschte Netzwerk aussuchen lässt. Ans
 WLAN Passwort bei gesicherten Verbindungen eintippen. Einige Sekunden nach der Verbindung wird sich das Hintergrundbild
 des CrowPi automatisch aktualisieren und die zugewiesene IP-Adresse anzeigen. Auf den Bildern ist zusätzlich auch eine
 Ethernet Adresse sichtbar. Das heisst es war im Moment der Aufnahme zusätzlich noch ein Ethernetkabel verbunden mit dem
-Raspberry Pi. Nach dem wir nun eine Netzwerkverbindung zum CrowPi haben sind wir bereit für das Einrichten der
+Raspberry Pi. Nachdem wir nun eine Netzwerkverbindung zum CrowPi haben, sind wir bereit für das Einrichten der
 Entwicklungsumgebung als nächsten Schritt.
 
 {{< img alt="CrowPi WLAN wählen" src="setup/crowpi-selectwlan.JPG?&width=865px&height=500px" >}}

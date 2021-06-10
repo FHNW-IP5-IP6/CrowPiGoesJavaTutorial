@@ -15,10 +15,10 @@ anschliessende Einrichten von IntelliJ IDEA verhält sich ebenfalls auf allen Pl
 
 ---
 
-### 1. Klonen des Repositories
+### 1. Klonen des Repository
 
 Sobald wir nun die Entwicklungsumgebung installiert haben geht es an das Klonen des Einstiegsprojekts für den CrowPi. Dabei findet sich der
-Sourcecode auf [GitHub]({{% siteparam "repoURL" %}}). Um nun das Repository zu klonen muss auf GitHub
+Sourcecode auf [GitHub]({{% siteparam "repoURL" %}}). Um nun das Repository zu klonen, muss auf GitHub
 der entsprechende Link kopiert werden und dann in IntelliJ IDEA importiert werden. Dazu nun schrittweise in Bildern eine etwas genauere
 Anleitung.
 
@@ -31,7 +31,7 @@ kann.
 ### 2. Importieren des Projekts
 
 Im Startfenster von IntelliJ ist die Option `Get from VCS` verfügbar. Diese muss angewählt werden damit direkt aus GitHub der Code geklont
-werden kann. Danach kann einfach der Link welcher zuvor bei GitHub kopiert wurde eingefügt werden. Durch die Bestätigung mit
+werden kann. Danach kann einfach der Link, welcher zuvor bei GitHub kopiert wurde, eingefügt werden. Durch die Bestätigung mit
 `Clone` wird der Vorgang gestartet und eine allenfalls nötige Authentifizierung des Benutzers wird ausgeführt. Dabei einfach den Anweisungen des
 Tools folgen.
 {{< img alt="Importieren von VCS" src="setup/intellij-getfromvcs.JPG" height="500px" >}}
@@ -80,11 +80,11 @@ Nun öffnet sich der Dialog zum Einstellen der Konfigurationen. EIn kleiner Hinw
 steht bereits als Platzhalter `Add CrowPi IP here`. 
 {{< img alt="Die drei Konfigurationen" src="setup/intellj-three-configs.JPG" height="500px" >}}
 
-Als erstes wird `crowpi-examples [debug]` konfiuriert. Dazu wie auf dem Bild den Tab `Runner` öffnen und dann auf `Add CrowPi IP here` 
+Als Erstes wird `crowpi-examples [debug]` konfiguriert. Dazu wie auf dem Bild den Tab `Runner` öffnen und dann auf `Add CrowPi IP here` 
 doppelklicken. Danach öffnet sich das Dialogfenster für das Eintippen der IP-Adresse. Kurz mit `OK` bestätigen und mit `Apply` speichern. 
 {{< img alt="Einstellungen Debug" src="setup/intellij-setup-debugconfig.JPG" height="500px" >}}
 
-Als zweites folgt die `crowpi-examples [install]` Konfiguration. Diese funktioniert genau gleich wie eben die `crowpi-examples [debug]` 
+Als Zweites folgt die `crowpi-examples [install]` Konfiguration. Diese funktioniert genau gleich wie eben die `crowpi-examples [debug]` 
 Konfiguration. Genau die gleiche Einstellung ist nötig. Wiederum mit `Apply` speichern.
 {{< img alt="Einstellungen Install" src="setup/intellij-setup-runconfig.JPG" height="500px" >}}
 

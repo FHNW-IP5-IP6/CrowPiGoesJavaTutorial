@@ -5,18 +5,18 @@ tags: ["gpio"]
 
 ## Funktionsweise
 
-Bei einem Button handelt es sich schlichtweg um einen ganz einfachen Knopf, welcher entweder gedrückt wird oder eben nicht. Auf dem CrowPi
-stehen neben der [Button Matrix]({{< ref "components/button-matrix" >}}) auch vier unabhängige Knöpfe zur Verfügung, welche mit den
-Richtungen Up (oben), Down (unten), Left (links), Right (right) bezeichnet sind.
+Bei einem Button handelt es sich schlicht um einen ganz einfachen Knopf, der entweder gedrückt wird oder eben nicht. Auf dem CrowPi
+stehen neben der [Button Matrix]({{< ref "components/button-matrix" >}}) auch vier unabhängige Knöpfe zur Verfügung, die mit den
+Richtungen Up (oben), Down (unten), Left (links), Right (rechts) bezeichnet sind.
 
-Bei dieser Komponente wird schlichtweg der entsprechende GPIO-Pin direkt ausgelesen und ohne weitere Verarbeitung ausgewertet. Somit lässt
-sich diese sehr einfach verwenden und kann jedoch trotzdem für viele verschiedene Zwecke eingesetzt werden.
+Bei dieser Komponente wird der entsprechende GPIO-Pin direkt ausgelesen und ohne weitere Verarbeitung ausgewertet. Somit lässt
+sich diese Komponente sehr einfach verwenden und kann dennoch für viele unterschiedliche Zwecke eingesetzt werden.
 
 ## Voraussetzungen
 
 ### DIP Switches
 
-Für diese Komponente müssen die DIP Switches 1-5, 1-6, 1-7 sowie 1-8 aktiviert werden, da sich die Buttons sonst nicht oder nur teilweise
+Für diese Komponente müssen die DIP Switches 1-5, 1-6, 1-7 sowie 1-8 aktiviert werden, da sich die Buttons sonst nicht oder nur eingeschränkt
 nutzen lassen. Die Stellung der DIP Switches sollte anschliessend so aussehen:
 
 {{< dip-switches 5 6 7 8 >}}
@@ -44,11 +44,11 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 
 ### Enumerationen
 
-- {{< javadoc class="com.pi4j.crowpi.components.ButtonComponent" subclass="ButtonState" >}} enthält alle möglichen Zustände welche vom Knopf
+- {{< javadoc class="com.pi4j.crowpi.components.ButtonComponent" subclass="ButtonState" >}} enthält alle möglichen Zustände, die vom Knopf
   zurückgegeben werden können.
 
 - {{< javadoc class="com.pi4j.crowpi.components.definitions.Button" >}} enthält die Pins der vier verschiedenen Knöpfe auf dem CrowPi und
-  wird im Konstruktor verwendet werden um den gewünschten Knopf anzugeben.
+  wird im Konstruktor verwendet werden, um den gewünschten Knopf anzugeben.
 
 ## Beispielapplikation
 
@@ -60,8 +60,8 @@ verschiedenen Knöpfe zu ermöglichen.
 
 ## Weitere Möglichkeiten
 
-- Mit den vier Knöpfen lassen sich leicht diverse Spiele realisieren, da jeder Knopf in eine bestimmte Richtung zeigt was sich als Steuerung
-  für einen Spieler oder ähnliches verwenden lässt.
+- Mit den vier Knöpfen lassen sich leicht diverse Spiele realisieren, da jeder Knopf in eine bestimmte Richtung zeigt, was sich als Steuerung
+  für einen Spieler beispielsweise verwenden lässt.
 
-- Mit den vier Knöpfen den Cursor auf dem LCD Display steuerbar machen, um an eine beliebige Stelle navigieren zu können.
+- Mit den vier Knöpfen lässt sich der Cursor auf dem LCD Display steuerbar machen, um an eine beliebige Stelle zu navigieren.
 

@@ -3,8 +3,8 @@ title: Starten der Applikation
 weight: 20
 ---
 In diesem Kapitel wird genauer beschrieben, was alles beim Starten einer Applikation passiert und wie das Framework benutzt werden kann. 
-Der genaue Aufbau des [Application Frameworks]({{< ref "basics/framework" >}}) welches dies alles auf diese Art und Weise ermöglicht ist 
-in einem einzelnen Kapitel zu finden. 
+Der genaue Aufbau des [Application Frameworks]({{< ref "basics/framework" >}}) welches dies alles auf diese Art und Weise ermöglicht, ist 
+in einem separaten Kapitel zu finden. 
 
 ---
 
@@ -30,7 +30,7 @@ D[Copy Code to Raspberry Pi] --> E
 E[Start Application]
 {{< /mermaid >}}
 
-Bei jedem Start werden also sogar die Unittests ausgeführt. So kann eine optimale Codequalität beim Entwickeln erreicht werden.
+Bei jedem Start werden also sogar die Unit tests ausgeführt. So kann eine optimale Codequalität beim Entwickeln erreicht werden.
 
 ---
 

@@ -14,14 +14,14 @@ abgespielt werden können. Um eine zuverlässige Wiedergabe der gewünschten Fre
 [Hardware PWM]({{< ref "hardware/pwm" >}}). Mehr Informationen dazu finden sich auf der verlinkten Seite.
 
 Um das mühsame Abtippen der einzelnen Frequenzen zu erleichtern, wird zudem eine Hilfsklasse `Note` bereitgestellt. Dieser Aufzählungstyp
-enthält alle bekannten Musiknoten von `B0` zu `DS8` und bildet diese auf die entsprechenden Tonfrequenzen ab, so dass diese direkt an
+enthält alle bekannten Musiknoten von `B0` zu `DS8` und bildet diese auf die entsprechenden Tonfrequenzen ab, sodass diese direkt an
 die `playTone()` Methode übergeben werden können.
 
 ## Voraussetzungen
 
 ### DIP Switches
 
-Für diese Komponente werden keine spezifischen DIP-Switches benötigt, so dass diese in der Standardkonfiguration belassen werden können:
+Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:
 
 {{< dip-switches >}}
 
@@ -50,11 +50,11 @@ Die nachfolgende Beispielapplikation steuert den Buzzer via PWM an, um eine beka
 `Note` verwendet, welches die entsprechenden Musiknoten auf eine Frequenz [Hz] für PWM abbildet, dies klingt dann wie der gesuchte Ton. Die Applikation spielt nacheinander alle
 Noten ab, indem die Funktionen `playTone` sowie `playSilence` der Buzzer-Komponente verwendet werden.
 
-Die Noten welche gespielt werden sollen sind alle in der statischen Variable `NOTES` zu finden, welche durch die zusätzliche statische 
+Die Noten, die gespielt werden sollen, sind alle in der statischen Variable `NOTES` zu finden, welche durch die zusätzliche statische 
 Variable mit dem Namen `TEMPO` um die Angabe der Notenlänge ergänzt wird. Die Applikation iteriert schliesslich mit einer `for`-Schleife 
 über alle Noten und spielt diese mit der jeweiligen Länge ab.
 
-Die effektive Länge in Millisekunden wird mit der Formel `1 / <tempo>` berechnet, so dass ein Tempo-Wert von 4 einer Viertelnote mit 0.25
+Die effektive Länge in Millisekunden wird mit der Formel `1 / <tempo>` berechnet, sodass ein Tempo-Wert von 4 einer Viertelnote mit 0.25
 Sekunden Länge entspricht. Damit sich die Noten besser voneinander unterscheiden lassen, wird zudem jeweils noch eine kleine Pause 
 mit dem Faktor `1.3` eingefügt.
 

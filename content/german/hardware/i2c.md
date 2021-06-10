@@ -4,15 +4,15 @@ tags: ["i2c"]
 ---
 
 ## Das Wichtigste in Kürze
-I²C (gesprochen Englisch als I-Squared-C) ist ein ursprünglich von Philips erfundener Bus. Er ist als klassischer Master-Slave-Bus konzipiert. Wobei 
-eine Datenübertragung immer durch einen Master initiiert wird. Auch ein Aufbau in einem Multi-Master System ist möglich. 
+I²C (gesprochen Englisch als I-Squared-C) ist ein ursprünglich von Philips erfundener Bus. Er ist als klassischer Master-Slave-Bus konzipiert. Hierbei wird 
+eine Datenübertragung immer durch einen Master initiiert. Auch ein Aufbau in einem Multi-Master System ist möglich. 
 Angeschlossen wird I²C über zwei Signalleitungen (Datenleitung und Taktleitung).
 Die Übertragungsrate des Buses kann je nach Taktrate zwischen 0.1 Mbit/s bis zu 3.4 Mbit/s liegen. Sofern nur eine unidirektionale Verbindung nötig ist,
-wäre sogar 5.0 Mbit/s möglich. Zu beachten ist dabei: Je höher die Taktrate, desto störanfälliger wird das Gesamtsystem. Die niedrige Betriebsspannung
+wäre sogar 5.0 Mbit/s möglich. Zu beachten ist dabei: Je höher die Taktrate, desto störungsanfälliger wird das Gesamtsystem. Die niedrige Betriebsspannung
 von nur 3.3V trägt ebenfalls nicht zur Störresistenz bei. 
 
 ## Verwendungen
-I²C wird vor allem zur Kommunikation zwischen Mikrocontrollern eingesetzt. Der Vorteil dass dabei über nur 2 Leitungen eine ganze Reihe von Mikrocontrollern
+I²C wird vor allem zur Kommunikation zwischen Mikrocontrollern eingesetzt. Der Vorteil, dass dabei über nur 2 Leitungen eine ganze Reihe von Mikrocontrollern
 gesteuert werden kann, ist natürlich sehr interessant für das Platinenlayout. Die Vorteile von I²C liegen vor allem in der Einfachheit. Es gibt sehr wohl 
 neuere Bussysteme mit besseren Übertragungsraten. Kaum ein Bussystem ist jedoch so einfach zu benutzen wie I²C. Sogar ein "Hot-Plugging" also ein ein- und
 ausstecken der Geräte während dem Betrieb ist mit I²C möglich.
