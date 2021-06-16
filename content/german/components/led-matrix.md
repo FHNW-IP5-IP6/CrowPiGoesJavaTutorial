@@ -103,6 +103,8 @@ Zeichen auf der Anzeige mit Scroll-Effekt dargestellt werden. Intern wird hierf�
 genutzt. Um die `print` Methode zusammen mit Symbolen zu nutzen, können beliebig viele Symbole mit dem Muster `{NAME}`
 eingebunden werden, sprich `{HEART}` wird durch das eigentliche `HEART` Zeichen von `LedMatrixComponent.Symbol` ersetzt.
 
+Bevor die Applikation endet, wird die LED Matrix ordnungsgemäss mit `setEnabled` deaktiviert.
+
 {{< code file="src/main/java/com/pi4j/crowpi/applications/LedMatrixApp.java" language="java" >}}
 
 ## Weitere Möglichkeiten
