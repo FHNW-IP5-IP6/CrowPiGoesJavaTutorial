@@ -18,13 +18,25 @@ anschliessende Einrichten von IntelliJ IDEA verhält sich ebenfalls auf allen Pl
 ### 1. Klonen des Repository
 
 Sobald wir nun die Entwicklungsumgebung installiert haben geht es an das Klonen des Einstiegsprojekts für den CrowPi. Dabei findet sich der
-Sourcecode auf [GitHub]({{% siteparam "repoURL" %}}). Um nun das Repository zu klonen, muss auf GitHub
-der entsprechende Link kopiert werden und dann in IntelliJ IDEA importiert werden. Dazu nun schrittweise in Bildern eine etwas genauere
-Anleitung.
+Sourcecode auf [GitHub]({{% siteparam "repoURL" %}}). Um nun das Repository zu klonen, muss auf GitHub der entsprechende Link kopiert werden
+und dann in IntelliJ IDEA importiert werden. Dazu nun schrittweise in Bildern eine etwas genauere Anleitung.
 
-Besuche [CrowPi]({{% siteparam "repoURL" %}}) auf GitHub und kopiere den Link zum Klonen wie auf dem Bild beschrieben.
-kann.
-{{< img alt="GitHub Clone Project" src="setup/github-clone-project.JPG" height="500px" >}}
+Um Konflikte mit dem offiziellen Repository zu vermeiden, ist es jedoch am besten seine eigene Kopie zu erstellen. Besuche hierfür zuerst 
+[das CrowPi Repository]({{% siteparam "repoURL" %}}) auf GitHub und klicke auf den angezeigten Knopf `Use this template` um dein eigenes 
+Repository mit dem gleichen Inhalt zu erhalten:
+
+{{< img alt="Neues Repository erzeugen via Template" src="setup/github-template-step1.png" height="500px" >}}
+
+Nun erscheint eine neue Seite, wo ein beliebiger Name für das eigene Repository vergeben werden muss. Die weiteren Optionen können nach 
+Belieben angepasst werden, sind jedoch nicht erforderlich. Mit einem Klick auf `Create repository for this template` wird nun eine Kopie 
+vom Repository erzeugt:
+
+{{< img alt="Informationen für neues Repository angeben" src="setup/github-template-step2.png" height="500px" >}}
+
+Nach einer kurzen Ladezeit steht das eigene Repository anschliessend zur Verfügung. Nun ist auf den angezeigten grünen Knopf `Code` zu 
+klicken, um den Link zum eigenen Repository zu erhalten, welcher im nächsten Schritt im IntelliJ angegeben wird:
+
+{{< img alt="URL für eigenes Repository finden" src="setup/github-template-step3.png" height="500px" >}}
 
 ---
 
