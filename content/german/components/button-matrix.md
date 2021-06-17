@@ -93,7 +93,8 @@ mit `continue` der nächste Spielzug forciert. War hingegen alles richtig, so ka
 nächsten Spielers beginnt.
 
 Wenn irgendwann nur noch ein aktiver Spieler verbleibt, so wird eine Gewinnmeldung ausgegeben und die totale Punktzahl, welche der Anzahl
-an wiederholten Elementen entspricht.
+an wiederholten Elementen entspricht. Bevor die Applikation endet, wird noch der Poller gestoppt um die Button Matrix nicht länger
+abzufragen und somit Ressourcen freizugeben.
 
 {{< code file="src/main/java/com/pi4j/crowpi/applications/ButtonMatrixApp.java" language="java" >}}
 

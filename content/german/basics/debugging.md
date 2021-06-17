@@ -10,22 +10,22 @@ Schritt für Schritt erklärt, wie man den Debugger starten und verwenden kann.
 
 ### Applikation mit Debugger starten
 
-Zum Starten der Applikation mit Debugger werden die beiden Run Konfigurationen `crowpi-examples [debug]` und `Remote Debug` benötigt.
+Zum Starten der Applikation mit Debugger werden die beiden Run Konfigurationen `CrowPi Debug` und `CrowPi Remote Debug` benötigt.
 Diese sind nach dem Setup bereits korrekt eingestellt und können verwendet werden. Wichtig dabei ist die Reihenfolge, mit der die
 Konfigurationen gestartet werden. Dieses Vorgehen ist:
 
-1. Start von `crowpi-examples [debug]` **ohne** Verwendung vom Debug-Knopf
+1. Start von `CrowPi Debug` **ohne** Verwendung vom Debug-Knopf
 2. Warten bis die Konsolenausgabe meldet `Listening for transport dt_socket at address: 5005 (Attach debugger)`
-3. Starten von `Remote Debug`
+3. Starten von `CrowPi Remote Debug`
 
 Nachfolgend wird der Ablauf mit entsprechenden Abbildungen ergänzt. Als Erstes wird die Applikation im Debugmodus gestartet. Dazu muss die
-Konfiguration `crowpi-examples [debug]` angewählt werden. Gestartet wird die Konfiguration mit dem **Play Button**.
+Konfiguration `CrowPi Debug` angewählt werden. Gestartet wird die Konfiguration mit dem **Play Button**.
 {{< img alt="Debugmodus wählen und starten" src="basics/intellij-select-and-start-debug.JPG" >}}
 
 Als Zweites wird nun gewartet, bis die korrekte Ausgabe im Konsolenfenster erscheint:
 {{< img alt="App wartet auf Debugger" src="basics/intellij-waiting-for-debugger.JPG" height="500px" >}}
 
-Zum Starten des Remote Debugger die entsprechende Run Konfiguration `Remote Debug` auswählen und mit einem
+Zum Starten des Remote Debugger die entsprechende Run Konfiguration `CrowPi Remote Debug` auswählen und mit einem
 Klick auf das Käfer-Icon (Debug) starten. Das Debugfenster meldet nun, ob eine Verbindung hergestellt wurde.
 {{< img alt="Remote Debug starten" src="basics/intellij-start-remote-debug.JPG" >}}
 {{< img alt="Remote Debug verbunden" src="basics/intellij-debug-connected.JPG" >}}
@@ -58,9 +58,9 @@ platzieren. So kann die Ausgangslage gut analysiert werden.
 Wie vorgängig erklärt, wird zuerst der Breakpoint platziert, die Applikation im Debugmodus gestartet und der
 Debugger angehängt. Es werden also diese 3 Schritte durchgeführt:
 
-1. Start von `crowpi-examples [debug]` **ohne** Verwendung vom Debug-Knopf
+1. Start von `CrowPi Debug` **ohne** Verwendung vom Debug-Knopf
 2. Warten bis die Konsolenausgabe meldet `Listening for transport dt_socket at address: 5005 (Attach debugger)`
-3. Starten von `Remote Debug`
+3. Starten von `CrowPi Remote Debug`
 
 Da ein Fehler im 7-Segment Beispiel gesucht werden soll, wird das entsprechende Beispielprogramm nach Programmstart angewählt. Die Applikation
 läuft sofort, bis der Debugger am Breakpoint die Ausführung der Anwendung unterbricht.

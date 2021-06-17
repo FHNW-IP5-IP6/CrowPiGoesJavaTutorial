@@ -58,46 +58,55 @@ fehlt nur noch die Startkonfiguration des Projekts welche in der nächsten Sekti
 ---
 
 ### 3. Einstellung der Run Konfiguration
-Das Projekt CrowPi der FHNW benutzt 3 Run Konfigurationen. In diesen ist definiert welche Teile des Codes auf welche Art und Weise 
-ausgeführt werden. Es besteht jedoch kein Grund zur Sorge, denn der grösste Teil davon ist bereits vordefiniert und es ist nur noch die IP-Adresse des Raspberry Pi einzutragen. 
-Verwendet werden die Konfigurationen: 
-- crowpi-examples [install]
-- crowpi-examples [debug]
-- Remote Debug 
+Das Projekt CrowPi der FHNW benutzt vier Run Konfigurationen. In diesen ist definiert welche Teile des Codes auf welche Art und Weise 
+ausgeführt werden. Es besteht jedoch kein Grund zur Sorge, denn der grösste Teil davon ist bereits vordefiniert und es ist nur noch die
+IP-Adresse des Raspberry Pi einzutragen. Verwendet werden die Konfigurationen: 
+- `CrowPi Run`
+- `CrowPi Run (Demo Mode)`
+- `CrowPi Debug`
+- `CrowPi Remote Debug`
 
-Dabei kopiert `crowpi-examples [install]` den aktuellen Code auf den Raspberry Pi. Dies funktioniert über eine Kombination aus `SSH/SCP`.
-Anschliessend wird der kopierte Code auf dem Raspberry Pi gestartet. `crowpi-examples [debug]` macht im Prinzip nichts anderes. Jedoch 
-werden andere Optionen bei der Verbindung ausgewählt und vor der eigentlichen Ausführung der Applikation wird auf eine Verbindung von einem Debugger gewartet. `Remote Debug` 
-stellt genau diesen Debugger zur Verfügung. Dieser verbindet sich mit dem Raspberry Pi und die Fehlersuche kann beginnen. Näheres wie 
-dies findet man hier: [Starten und Debuggen auf dem CrowPi](TODO)
+Dabei kopiert `CrowPi Run` den aktuellen Code auf den Raspberry Pi. Dies funktioniert über eine Kombination aus `SSH/SCP`. Anschliessend
+wird der kopierte Code auf dem Raspberry Pi gestartet. `CrowPi Debug` macht im Prinzip nichts anderes. Jedoch werden andere Optionen bei
+der Verbindung ausgewählt und vor der eigentlichen Ausführung der Applikation wird auf eine Verbindung von einem Debugger gewartet.
+`CrowPi Remote Debug` stellt genau diesen Debugger zur Verfügung. Dieser verbindet sich mit dem Raspberry Pi und die Fehlersuche kann beginnen.
+Näheres wie dies findet man hier: [Starten und Debuggen auf dem CrowPi]({{< ref "basics/debugging" >}})
+
+Zusätzlich existiert auch noch eine Konfiguration `CrowPi Run (Demo Mode)`, welche genau gleich wie `CrowPi Run` funktioniert und zusätzlich
+den Parameter `--demo` übergibt. Dies bewirkt, dass der Launcher sich nach Ausführung einer Applikation nicht mehr selber beendet sondern
+mehrere Beispiele nacheinander ausgeführt werden können. Wie der Name schon sagt, ist dies besonders für Demozwecke praktisch.
 
 Damit dies alles reibungslos funktioniert muss nun aber zunächst wie erwähnt die IP-Adresse des Raspberry Pi eingestellt werden. Dazu 
 hier klicken und `Edit Configurations` wählen. Die IP-Adresse des Raspberry Pi wird, wie zuvor erklärt, auf dem Hintergrundbild des 
 CrowPi angezeigt.
 {{< img alt="Konfigurationsmenu auswählen" src="setup/intellij-select-configuration.JPG" height="500px" >}}
 
-Nun öffnet sich der Dialog zum Einstellen der Konfigurationen. EIn kleiner Hinweis: Überall wo die IP-Adresse des Raspberry Pi hingehört 
+Nun öffnet sich der Dialog zum Einstellen der Konfigurationen. Ein kleiner Hinweis: Überall wo die IP-Adresse des Raspberry Pi hingehört 
 steht bereits als Platzhalter `Add CrowPi IP here`. 
-{{< img alt="Die drei Konfigurationen" src="setup/intellj-three-configs.JPG" height="500px" >}}
+{{< img alt="Die vier Konfigurationen" src="setup/intellij-run-configs.png" height="500px" >}}
 
-Als Erstes wird `crowpi-examples [debug]` konfiguriert. Dazu wie auf dem Bild den Tab `Runner` öffnen und dann auf `Add CrowPi IP here` 
+Als Erstes wird `CrowPi Run` konfiguriert. Dazu wie auf dem Bild den Tab `Runner` öffnen und dann auf `Add CrowPi IP here` 
 doppelklicken. Danach öffnet sich das Dialogfenster für das Eintippen der IP-Adresse. Kurz mit `OK` bestätigen und mit `Apply` speichern. 
-{{< img alt="Einstellungen Debug" src="setup/intellij-setup-debugconfig.JPG" height="500px" >}}
+{{< img alt="Einstellungen für CrowPi Run" src="setup/intellij-setup-runconfig.png" height="500px" >}}
 
-Als Zweites folgt die `crowpi-examples [install]` Konfiguration. Diese funktioniert genau gleich wie eben die `crowpi-examples [debug]` 
+Als Zweites folgt die `CrowPi Debug` Konfiguration. Diese funktioniert genau gleich wie eben die `CrowPi Run` 
 Konfiguration. Genau die gleiche Einstellung ist nötig. Wiederum mit `Apply` speichern.
-{{< img alt="Einstellungen Install" src="setup/intellij-setup-runconfig.JPG" height="500px" >}}
+{{< img alt="Einstellungen für CrowPi Debug" src="setup/intellij-setup-debugconfig.png" height="500px" >}}
 
-Nun folgt auch schon die letzte Konfiguration `Remote Debug`. Hier stellt sich das Menü etwas anders dar. Jedoch ist es noch einfacher 
+Als Drittes kann optional auch `CrowPi Run (Demo Mode)` konfiguriert werden. Dies funktioniert ebenfalls gleich wie `CrowPi Run`, da auch
+hier die gleiche Einstellung nötig ist. Die andere Option mit `--demo` darf hier nicht angefasst werden. Wiederum mit `Apply` speichern.
+{{< img alt="Einstellungen für CrowPi Run (Demo Mode)" src="setup/intellij-setup-democonfig.png" height="500px" >}}
+
+Nun folgt auch schon die letzte Konfiguration `CrowPi Remote Debug`. Hier stellt sich das Menü etwas anders dar. Jedoch ist es noch einfacher 
 zu bedienen als die vorherigen. Kurz im Feld `Host` die IP-Adresse des Raspberry Pi eintragen. Mit `OK` beenden wird die Einstellung 
 beendet.
-{{< img alt="Einstellungen Remote Debug" src="setup/intellij-remotedebug-config.JPG" height="500px" >}}
+{{< img alt="Einstellungen für CrowPi Remote Debug" src="setup/intellij-setup-remotedebug.png" height="500px" >}}
 
 ---
 
 ### 4. Erster Testlauf
 Schon ist es geschafft. Alles ist eingerichtet, um ein erstes Mal das CrowPi Projekt direkt aus der Entwicklungsumgebung zu starten. 
-Dazu die Run Konfiguration `crowpi-examples [install]` auswählen. Danach durch Drücken von dem grünen Play Button die Applikation starten.
+Dazu die Run Konfiguration `CrowPi Run` auswählen. Danach durch Drücken von dem grünen Play Button die Applikation starten.
 {{< img alt="Start der Applikation" src="setup/intellij-start-firstapplication.JPG" height="500px" >}}
 
 Es öffnet sich sofort das `Run Fenster` von IntelliJ. Es dauert einen Moment und einiges an Text wird auf der Kommandozeile ausgegeben. 

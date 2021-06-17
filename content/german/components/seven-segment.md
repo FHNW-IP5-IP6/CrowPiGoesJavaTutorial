@@ -71,9 +71,9 @@ jeweils von links nach rechts bewegt. Hierfür wird eine verschachtelte `for`-Sc
 insgesamt fünfmal wiederholt wird, während die innere Schleife über alle möglichen Animationszustände iteriert und diese nacheinander mit
 einer Verzögerung von 50 Millisekunden ausgibt.
 
-Nachdem diese Ladeanimation abgespielt wurde, geht die Applikation in eine Endlosschleife und stellt jeweils die aktuelle Uhrzeit dar. Die
-API-Methode `print(LocalTime time)` übernimmt hierbei den Grossteil der Arbeit und blinkt sogar automatisch wenn die Sekundenzahl zurzeit
-ungerade ist. Durch das Abbrechen vom Maven-Prozess lässt sich diese Applikation anschliessend wieder beenden.
+Nachdem diese Ladeanimation abgespielt wurde, geht die Applikation in eine Schleife für 15 Sekunden und stellt jeweils die aktuelle Uhrzeit
+dar. Die API-Methode `print(LocalTime time)` übernimmt hierbei den Grossteil der Arbeit und blinkt sogar automatisch wenn die Sekundenzahl
+zurzeit ungerade ist. Nach 15 Sekunden schaltet sich die Anzeige aus und die Applikation endet.
 
 {{< code file="src/main/java/com/pi4j/crowpi/applications/SevenSegmentApp.java" language="java" >}}
 
