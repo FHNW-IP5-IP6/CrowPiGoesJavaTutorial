@@ -6,23 +6,23 @@
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>I²C :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623918734 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623918734 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623918734></script>
+<title>Troubleshooting :: CrowPi goes Java</title>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623918733 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623918733 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623918733></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
-<body data-url=/CrowPiGoesJavaTutorial/de/hardware/i2c/>
+<body data-url=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623918734></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623918734></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623918733></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623918733></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623918734></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623918733></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -76,7 +76,8 @@ IntelliJ IDEA Setup
 </li>
 </ul>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class="dd-item
+parent">
 <a href=/CrowPiGoesJavaTutorial/de/basics/>
 <b>2. </b>Grundlagen
 <i class="fas fa-check read-icon"></i>
@@ -112,7 +113,7 @@ Entwicklungsprozess
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ title=Troubleshooting class=dd-item>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ title=Troubleshooting class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/>
 Troubleshooting
 <i class="fas fa-check read-icon"></i>
@@ -242,14 +243,13 @@ Vibrationsmotor
 </li>
 </ul>
 </li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class="dd-item
-parent">
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/>
 <b>4. </b>Hardware
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/i2c/ title=I²C class="dd-item active">
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/i2c/ title=I²C class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>
 I²C
 <i class="fas fa-check read-icon"></i>
@@ -294,7 +294,7 @@ Serial Peripheral Interface (SPI)
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/hardware/i2c/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div>
 </a>
 </li>
@@ -312,7 +312,7 @@ Serial Peripheral Interface (SPI)
 <div>
 <div id=top-bar>
 <div id=top-github-link>
-<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/hardware/i2c.md target=blank>
+<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/basics/troubleshooting.md target=blank>
 <i class="fas fa-code-branch"></i>
 <span id=top-github-link-text>Bearbeite diese Seite</span>
 </a>
@@ -325,18 +325,15 @@ Serial Peripheral Interface (SPI)
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/hardware/>Hardware</a> > I²C
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/basics/>Grundlagen</a> > Troubleshooting
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#das-wichtigste-in-kürze>Das Wichtigste in Kürze</a></li>
-<li><a href=#verwendungen>Verwendungen</a></li>
-<li><a href=#adressierung>Adressierung</a></li>
-<li><a href=#übertragungsraten>Übertragungsraten</a></li>
-<li><a href=#weitere-informationen>Weitere Informationen</a></li>
+<li><a href=#fehlerhafte-pigpio-initialisierung>Fehlerhafte PiGPIO Initialisierung</a></li>
+<li><a href=#überprüfung-von-ic-bus>Überprüfung von I²C Bus</a></li>
 </ul>
 </nav>
 </div>
@@ -344,96 +341,57 @@ Serial Peripheral Interface (SPI)
 </div>
 </div>
 <div id=head-tags>
-<div class=tags>
-<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/i2c>i2c</a>
-</div>
 </div>
 <div id=body-inner>
 <h1>
-I²C
+Troubleshooting
 </h1>
-<h2 id=das-wichtigste-in-kürze>Das Wichtigste in Kürze</h2>
-<p>I²C (gesprochen Englisch als I-Squared-C) ist ein ursprünglich von Philips erfundener Bus. Er ist als klassischer Master-Slave-Bus konzipiert. Hierbei wird
-eine Datenübertragung immer durch einen Master initiiert. Auch ein Aufbau in einem Multi-Master System ist möglich.
-Angeschlossen wird I²C über zwei Signalleitungen (Datenleitung und Taktleitung).
-Die Übertragungsrate des Buses kann je nach Taktrate zwischen 0.1 Mbit/s bis zu 3.4 Mbit/s liegen. Sofern nur eine unidirektionale Verbindung nötig ist,
-wäre sogar 5.0 Mbit/s möglich. Zu beachten ist dabei: Je höher die Taktrate, desto störungsanfälliger wird das Gesamtsystem. Die niedrige Betriebsspannung
-von nur 3.3V trägt ebenfalls nicht zur Störresistenz bei.</p>
-<h2 id=verwendungen>Verwendungen</h2>
-<p>I²C wird vor allem zur Kommunikation zwischen Mikrocontrollern eingesetzt. Der Vorteil, dass dabei über nur 2 Leitungen eine ganze Reihe von Mikrocontrollern
-gesteuert werden kann, ist natürlich sehr interessant für das Platinenlayout. Die Vorteile von I²C liegen vor allem in der Einfachheit. Es gibt sehr wohl
-neuere Bussysteme mit besseren Übertragungsraten. Kaum ein Bussystem ist jedoch so einfach zu benutzen wie I²C. Sogar ein &ldquo;Hot-Plugging&rdquo; also ein ein- und
-ausstecken der Geräte während dem Betrieb ist mit I²C möglich.</p>
-<h2 id=adressierung>Adressierung</h2>
-<p>I²C nutzt einen Adressraum von 7 Bit. Das erlaubt bis zu 112 Knoten auf einem Bus. Die restlichen 16 Adressen sind für spezielle Anwendungen reserviert.
-Normalerweise wird die Adresse eines Geräts direkt vom Hersteller definiert. Sie kann also in den entsprechenden Datenblättern gefunden werden. Zusätzlich
-gibt es aufgrund der Adressknappheit eine Variante mit 10 Bit Adressraum. So sind bis zu 1136 Knoten möglich und das Protokoll ist kompatibel mit dem kleineren
-7 Bit Adressraum.</p>
-<h2 id=übertragungsraten>Übertragungsraten</h2>
-<table>
-<thead>
-<tr>
-<th>Modus</th>
-<th>Max. Übertragungsrate</th>
-<th>Richtung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Standard Mode</td>
-<td>0.1 Mbit/s</td>
-<td>bidirektional</td>
-</tr>
-<tr>
-<td>Fast Mode</td>
-<td>0.4 Mbit/s</td>
-<td>bidirektional</td>
-</tr>
-<tr>
-<td>Fast Mode Plus</td>
-<td>1.0 Mbit/s</td>
-<td>bidirektional</td>
-</tr>
-<tr>
-<td>High Speed Mode</td>
-<td>3.4 Mbit/s</td>
-<td>bidirektional</td>
-</tr>
-<tr>
-<td>Ultra Fast-mode</td>
-<td>5.0 Mbit/s</td>
-<td>unidirektional</td>
-</tr>
-</tbody>
-</table>
-<h2 id=weitere-informationen>Weitere Informationen</h2>
-<ul>
-<li><a href=https://de.wikipedia.org/wiki/I%C2%B2C>Wikipedia I²C</a></li>
-<li><a href=https://i2c-bus.org>I²C Bus</a></li>
-</ul>
+<h2 id=fehlerhafte-pigpio-initialisierung>Fehlerhafte PiGPIO Initialisierung</h2>
+<p>Sollte beim Ausführen einer Applikation via Launcher eine Fehlermeldung erscheinen, dass PiGPIO nicht initialisiert werden kann, so sind
+entweder nicht ausreichend Rechte vorhanden oder es läuft bereits eine andere Java-Applikation welche PiGPIO blockiert. Da mit dem CrowPi
+Image und den beigelegten Run Konfigurationen die Rechte automatisch korrekt vergeben werden, handelt es sich im Normalfall um das zweite
+Problem. Die Fehlerausgabe auf der Konsole sieht in etwa so aus:</p>
+<pre><code>[main] WARN com.pi4j.library.pigpio.impl.PiGpioNativeImpl - PIGPIO ERROR: PI_INIT_FAILED; pigpio initialisation failed
+java.lang.reflect.UndeclaredThrowableException
+	at jdk.proxy2/com.sun.proxy.jdk.proxy2.$Proxy6.create(Unknown Source)
+	at com.pi4j@2.0-SNAPSHOT/com.pi4j.context.Context.create(Context.java:325)
+	at com.pi4j@2.0-SNAPSHOT/com.pi4j.internal.IOCreator.create(IOCreator.java:58)
+    ...
+</code></pre><p>Neben einem Geräteneustart, welcher das Problem in jedem Fall beseitigen wird, lässt sich auch über das Terminal der nachfolgende Befehl
+ausführen, welcher alle Java-Prozesse auf dem System beendet: <code>sudo killall -9 java</code></p>
+<img src="/CrowPiGoesJavaTutorial/images/troubleshooting/terminal-killall.png?height=500px" alt="Beenden aller Java-Prozesse per Terminal">
+<p>Anschliessend sollte es wieder möglich sein, Applikationen auf dem CrowPi zu starten. Sollte diese Alternative nicht zum Erfolg führen und
+weiterhin ein Fehler auftreten, so ist das Gerät stattdessen aus- und wieder einzuschalten. Hierbei ist zu beachten, dass das Gerät komplett
+stromlos gemacht werden sollte, da ein normaler Reboot nicht alle Komponenten zurücksetzt.</p>
+<h2 id=überprüfung-von-ic-bus>Überprüfung von I²C Bus</h2>
+<p>Um schnell zu überprüfen, ob der I²C Bus ordnungsgemäss initialisiert wurde und alle Geräte zur Verfügung stehen, lässt sich am einfachsten
+der Befehl <code>i2cdetect -y 1</code> via Terminal ausführen:</p>
+<img src="/CrowPiGoesJavaTutorial/images/troubleshooting/terminal-i2cdetect.png?height=500px" alt="Auflisten von I²C Bus">
+<p>Die Ausgabe des Befehls sollte bei Ausführung auf einem CrowPi 1 die drei Adressen <code>21</code>, <code>5c</code> und <code>70</code> auflisten. Auf anderen Gerätetypen
+oder einer neuen Hardwarerevision des CrowPi kann die Ausgabe entsprechend abweichen.</p>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623918734></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623918734></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623918734></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623918734></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623918734></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623918734></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623918733></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623918733></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623918733></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623918733></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623918733></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623918733></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623918734></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623918734></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623918734></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623918734></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623918733></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623918733></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623918733></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623918733></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
