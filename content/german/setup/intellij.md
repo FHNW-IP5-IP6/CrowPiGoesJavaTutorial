@@ -115,5 +115,5 @@ Nach einigen Sekunden stoppt die Ausgabe und es sieht wie folgt aus:
 
 Hier kann nun eine Zahl entsprechend der Anweisung eingetippt werden und mit `Enter` bestätigt werden. Die entsprechende 
 Beispielapplikation wird dann ausgeführt. Sollten dabei jetzt noch Fehlermeldungen in der Kommandozeile auftreten lohnt es sich nochmals 
-die Netzwerkverbindung des Computers und des Raspberry Pi zu überprüfen. Auch in der Troubleshooting Sektion dieses Tutorials sind noch 
-einige Tipps und Tricks zur Fehlerbehebung zu finden.
+die Netzwerkverbindung des Computers und des Raspberry Pi zu überprüfen. Auch in der [Troubleshooting Sektion]({{< ref "basics/troubleshooting" >}})
+dieses Tutorials sind noch einige Tipps und Tricks zur Fehlerbehebung zu finden.
