@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>Starten der Applikation :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623674497 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623674497></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623918547 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623918547></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/basics/running/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623674497></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623674497></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623918547></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623918547></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623674497></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623918547></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -350,7 +350,7 @@ in einem separaten Kapitel zu finden.</p>
 <h2 id=starten-des-application-framework>Starten des Application Framework</h2>
 <p>Grundsätzlich wurde ein erster Start bereits zum Test am Ende des Setups ausgeführt. Benötigt wurden folgende 3 Schritte:</p>
 <ol>
-<li>Anwählen der Run Config <code>crowpi-examples [install]</code></li>
+<li>Anwählen der Run Config <code>CrowPi Run</code></li>
 <li>Starten mit Run Button</li>
 <li>Wählen der Applikation auf der Kommandozeile (falls keine Argumente verwendet werden)</li>
 </ol>
@@ -374,13 +374,12 @@ E[Start Application]
 <hr>
 <h2 id=start-mit-argument>Start mit Argument</h2>
 <p>Der Start mit einem Argument soll es ermöglichen direkt eine der Applikationen auszuwählen, ohne die Nummer in der Kommandozeile eintippen
-zu müssen. Dazu muss die <code>Run Konfiguration</code> angepasst werden. Dies funktioniert sowohl für <code>crowpi-examples [install]</code> als auch für
-<code>crowpi-examples [debug]</code> genau gleich.</p>
+zu müssen. Dazu muss die <code>Run Konfiguration</code> angepasst werden. Dies funktioniert sowohl für <code>CrowPi Run</code> als auch für <code>CrowPi Debug</code> genau gleich.</p>
 <ul>
 <li>Das Kontextmenü bei der Run Konfiguration <code>Edit Configurations ...</code> öffnen.</li>
 <li>Nun bei der gewünschten Konfiguration den Tab <code>Runner</code> öffnen und mit dem <code>+</code> ein neues Argument hinzufügen. Gewählt werden muss das <code>crowpi. laucher.args</code> und als Wert wird der exakte Name einer Applikation wie zum Beispiel <code>BuzzerApp</code> eingetragen.</li>
 <li>Normales Starten der Applikation mit dem Play Button
-<img src="/CrowPiGoesJavaTutorial/images/basics/intellij-runconfig-args.JPG?height=500px" alt="Start mit Argument">
+<img src="/CrowPiGoesJavaTutorial/images/basics/intellij-runconfig-args.png?height=500px" alt="Start mit Argument">
 </li>
 </ul>
 <p>Jetzt startet der übliche Ablauf. Anstelle der Auswahl einer ExampleApp wird jedoch direkt die angegebene Applikation gestartet, also in diesem Fall die BuzzerApp.</p>
@@ -396,17 +395,17 @@ zu müssen. Dazu muss die <code>Run Konfiguration</code> angepasst werden. Dies 
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623674497></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623918547></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623674497></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623918547></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

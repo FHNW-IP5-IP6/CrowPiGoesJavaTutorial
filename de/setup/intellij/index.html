@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>IntelliJ IDEA Setup :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623674497 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623674497></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623918548 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623918548 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623918548></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/setup/intellij/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623674497></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623674497></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623918548></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623918548></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623674497></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623918548></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -375,45 +375,53 @@ fehlt nur noch die Startkonfiguration des Projekts welche in der nächsten Sekti
 </p>
 <hr>
 <h3 id=3-einstellung-der-run-konfiguration>3. Einstellung der Run Konfiguration</h3>
-<p>Das Projekt CrowPi der FHNW benutzt 3 Run Konfigurationen. In diesen ist definiert welche Teile des Codes auf welche Art und Weise
-ausgeführt werden. Es besteht jedoch kein Grund zur Sorge, denn der grösste Teil davon ist bereits vordefiniert und es ist nur noch die IP-Adresse des Raspberry Pi einzutragen.
-Verwendet werden die Konfigurationen:</p>
+<p>Das Projekt CrowPi der FHNW benutzt vier Run Konfigurationen. In diesen ist definiert welche Teile des Codes auf welche Art und Weise
+ausgeführt werden. Es besteht jedoch kein Grund zur Sorge, denn der grösste Teil davon ist bereits vordefiniert und es ist nur noch die
+IP-Adresse des Raspberry Pi einzutragen. Verwendet werden die Konfigurationen:</p>
 <ul>
-<li>crowpi-examples [install]</li>
-<li>crowpi-examples [debug]</li>
-<li>Remote Debug</li>
+<li><code>CrowPi Run</code></li>
+<li><code>CrowPi Run (Demo Mode)</code></li>
+<li><code>CrowPi Debug</code></li>
+<li><code>CrowPi Remote Debug</code></li>
 </ul>
-<p>Dabei kopiert <code>crowpi-examples [install]</code> den aktuellen Code auf den Raspberry Pi. Dies funktioniert über eine Kombination aus <code>SSH/SCP</code>.
-Anschliessend wird der kopierte Code auf dem Raspberry Pi gestartet. <code>crowpi-examples [debug]</code> macht im Prinzip nichts anderes. Jedoch
-werden andere Optionen bei der Verbindung ausgewählt und vor der eigentlichen Ausführung der Applikation wird auf eine Verbindung von einem Debugger gewartet. <code>Remote Debug</code>
-stellt genau diesen Debugger zur Verfügung. Dieser verbindet sich mit dem Raspberry Pi und die Fehlersuche kann beginnen. Näheres wie
-dies findet man hier: <a href=TODO>Starten und Debuggen auf dem CrowPi</a></p>
+<p>Dabei kopiert <code>CrowPi Run</code> den aktuellen Code auf den Raspberry Pi. Dies funktioniert über eine Kombination aus <code>SSH/SCP</code>. Anschliessend
+wird der kopierte Code auf dem Raspberry Pi gestartet. <code>CrowPi Debug</code> macht im Prinzip nichts anderes. Jedoch werden andere Optionen bei
+der Verbindung ausgewählt und vor der eigentlichen Ausführung der Applikation wird auf eine Verbindung von einem Debugger gewartet.
+<code>CrowPi Remote Debug</code> stellt genau diesen Debugger zur Verfügung. Dieser verbindet sich mit dem Raspberry Pi und die Fehlersuche kann beginnen.
+Näheres wie dies findet man hier: <a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>Starten und Debuggen auf dem CrowPi</a></p>
+<p>Zusätzlich existiert auch noch eine Konfiguration <code>CrowPi Run (Demo Mode)</code>, welche genau gleich wie <code>CrowPi Run</code> funktioniert und zusätzlich
+den Parameter <code>--demo</code> übergibt. Dies bewirkt, dass der Launcher sich nach Ausführung einer Applikation nicht mehr selber beendet sondern
+mehrere Beispiele nacheinander ausgeführt werden können. Wie der Name schon sagt, ist dies besonders für Demozwecke praktisch.</p>
 <p>Damit dies alles reibungslos funktioniert muss nun aber zunächst wie erwähnt die IP-Adresse des Raspberry Pi eingestellt werden. Dazu
 hier klicken und <code>Edit Configurations</code> wählen. Die IP-Adresse des Raspberry Pi wird, wie zuvor erklärt, auf dem Hintergrundbild des
 CrowPi angezeigt.
 <img src="/CrowPiGoesJavaTutorial/images/setup/intellij-select-configuration.JPG?height=500px" alt="Konfigurationsmenu auswählen">
 </p>
-<p>Nun öffnet sich der Dialog zum Einstellen der Konfigurationen. EIn kleiner Hinweis: Überall wo die IP-Adresse des Raspberry Pi hingehört
+<p>Nun öffnet sich der Dialog zum Einstellen der Konfigurationen. Ein kleiner Hinweis: Überall wo die IP-Adresse des Raspberry Pi hingehört
 steht bereits als Platzhalter <code>Add CrowPi IP here</code>.
-<img src="/CrowPiGoesJavaTutorial/images/setup/intellj-three-configs.JPG?height=500px" alt="Die drei Konfigurationen">
+<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-run-configs.png?height=500px" alt="Die vier Konfigurationen">
 </p>
-<p>Als Erstes wird <code>crowpi-examples [debug]</code> konfiguriert. Dazu wie auf dem Bild den Tab <code>Runner</code> öffnen und dann auf <code>Add CrowPi IP here</code>
+<p>Als Erstes wird <code>CrowPi Run</code> konfiguriert. Dazu wie auf dem Bild den Tab <code>Runner</code> öffnen und dann auf <code>Add CrowPi IP here</code>
 doppelklicken. Danach öffnet sich das Dialogfenster für das Eintippen der IP-Adresse. Kurz mit <code>OK</code> bestätigen und mit <code>Apply</code> speichern.
-<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-setup-debugconfig.JPG?height=500px" alt="Einstellungen Debug">
+<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-setup-runconfig.png?height=500px" alt="Einstellungen für CrowPi Run">
 </p>
-<p>Als Zweites folgt die <code>crowpi-examples [install]</code> Konfiguration. Diese funktioniert genau gleich wie eben die <code>crowpi-examples [debug]</code>
+<p>Als Zweites folgt die <code>CrowPi Debug</code> Konfiguration. Diese funktioniert genau gleich wie eben die <code>CrowPi Run</code>
 Konfiguration. Genau die gleiche Einstellung ist nötig. Wiederum mit <code>Apply</code> speichern.
-<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-setup-runconfig.JPG?height=500px" alt="Einstellungen Install">
+<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-setup-debugconfig.png?height=500px" alt="Einstellungen für CrowPi Debug">
 </p>
-<p>Nun folgt auch schon die letzte Konfiguration <code>Remote Debug</code>. Hier stellt sich das Menü etwas anders dar. Jedoch ist es noch einfacher
+<p>Als Drittes kann optional auch <code>CrowPi Run (Demo Mode)</code> konfiguriert werden. Dies funktioniert ebenfalls gleich wie <code>CrowPi Run</code>, da auch
+hier die gleiche Einstellung nötig ist. Die andere Option mit <code>--demo</code> darf hier nicht angefasst werden. Wiederum mit <code>Apply</code> speichern.
+<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-setup-democonfig.png?height=500px" alt="Einstellungen für CrowPi Run (Demo Mode)">
+</p>
+<p>Nun folgt auch schon die letzte Konfiguration <code>CrowPi Remote Debug</code>. Hier stellt sich das Menü etwas anders dar. Jedoch ist es noch einfacher
 zu bedienen als die vorherigen. Kurz im Feld <code>Host</code> die IP-Adresse des Raspberry Pi eintragen. Mit <code>OK</code> beenden wird die Einstellung
 beendet.
-<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-remotedebug-config.JPG?height=500px" alt="Einstellungen Remote Debug">
+<img src="/CrowPiGoesJavaTutorial/images/setup/intellij-setup-remotedebug.png?height=500px" alt="Einstellungen für CrowPi Remote Debug">
 </p>
 <hr>
 <h3 id=4-erster-testlauf>4. Erster Testlauf</h3>
 <p>Schon ist es geschafft. Alles ist eingerichtet, um ein erstes Mal das CrowPi Projekt direkt aus der Entwicklungsumgebung zu starten.
-Dazu die Run Konfiguration <code>crowpi-examples [install]</code> auswählen. Danach durch Drücken von dem grünen Play Button die Applikation starten.
+Dazu die Run Konfiguration <code>CrowPi Run</code> auswählen. Danach durch Drücken von dem grünen Play Button die Applikation starten.
 <img src="/CrowPiGoesJavaTutorial/images/setup/intellij-start-firstapplication.JPG?height=500px" alt="Start der Applikation">
 </p>
 <p>Es öffnet sich sofort das <code>Run Fenster</code> von IntelliJ. Es dauert einen Moment und einiges an Text wird auf der Kommandozeile ausgegeben.
@@ -436,17 +444,17 @@ einige Tipps und Tricks zur Fehlerbehebung zu finden.</p>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623674497></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623918548></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623918548></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623918548></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623918548></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623918548></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623918548></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623674497></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623918548></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623918548></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623918548></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623918548></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

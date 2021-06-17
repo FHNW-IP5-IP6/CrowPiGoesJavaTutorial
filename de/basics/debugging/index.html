@@ -7,19 +7,19 @@
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
 <title>Debugging der Applikation :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623674497 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623674497 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623674497></script>
+<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1623918547 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1623918547 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1623918547></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/CrowPiGoesJavaTutorial/de/basics/debugging/>
@@ -36,10 +36,10 @@
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623674497></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623674497></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1623918547></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1623918547></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623674497></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1623918547></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -349,22 +349,22 @@ Debugging der Applikation
 Schritt für Schritt erklärt, wie man den Debugger starten und verwenden kann.</p>
 <hr>
 <h3 id=applikation-mit-debugger-starten>Applikation mit Debugger starten</h3>
-<p>Zum Starten der Applikation mit Debugger werden die beiden Run Konfigurationen <code>crowpi-examples [debug]</code> und <code>Remote Debug</code> benötigt.
+<p>Zum Starten der Applikation mit Debugger werden die beiden Run Konfigurationen <code>CrowPi Debug</code> und <code>CrowPi Remote Debug</code> benötigt.
 Diese sind nach dem Setup bereits korrekt eingestellt und können verwendet werden. Wichtig dabei ist die Reihenfolge, mit der die
 Konfigurationen gestartet werden. Dieses Vorgehen ist:</p>
 <ol>
-<li>Start von <code>crowpi-examples [debug]</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
+<li>Start von <code>CrowPi Debug</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
 <li>Warten bis die Konsolenausgabe meldet <code>Listening for transport dt_socket at address: 5005 (Attach debugger)</code></li>
-<li>Starten von <code>Remote Debug</code></li>
+<li>Starten von <code>CrowPi Remote Debug</code></li>
 </ol>
 <p>Nachfolgend wird der Ablauf mit entsprechenden Abbildungen ergänzt. Als Erstes wird die Applikation im Debugmodus gestartet. Dazu muss die
-Konfiguration <code>crowpi-examples [debug]</code> angewählt werden. Gestartet wird die Konfiguration mit dem <strong>Play Button</strong>.
+Konfiguration <code>CrowPi Debug</code> angewählt werden. Gestartet wird die Konfiguration mit dem <strong>Play Button</strong>.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-select-and-start-debug.JPG? alt="Debugmodus wählen und starten">
 </p>
 <p>Als Zweites wird nun gewartet, bis die korrekte Ausgabe im Konsolenfenster erscheint:
 <img src="/CrowPiGoesJavaTutorial/images/basics/intellij-waiting-for-debugger.JPG?height=500px" alt="App wartet auf Debugger">
 </p>
-<p>Zum Starten des Remote Debugger die entsprechende Run Konfiguration <code>Remote Debug</code> auswählen und mit einem
+<p>Zum Starten des Remote Debugger die entsprechende Run Konfiguration <code>CrowPi Remote Debug</code> auswählen und mit einem
 Klick auf das Käfer-Icon (Debug) starten. Das Debugfenster meldet nun, ob eine Verbindung hergestellt wurde.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-start-remote-debug.JPG? alt="Remote Debug starten">
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-debug-connected.JPG? alt="Remote Debug verbunden">
@@ -391,9 +391,9 @@ platzieren. So kann die Ausgangslage gut analysiert werden.
 <p>Wie vorgängig erklärt, wird zuerst der Breakpoint platziert, die Applikation im Debugmodus gestartet und der
 Debugger angehängt. Es werden also diese 3 Schritte durchgeführt:</p>
 <ol>
-<li>Start von <code>crowpi-examples [debug]</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
+<li>Start von <code>CrowPi Debug</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
 <li>Warten bis die Konsolenausgabe meldet <code>Listening for transport dt_socket at address: 5005 (Attach debugger)</code></li>
-<li>Starten von <code>Remote Debug</code></li>
+<li>Starten von <code>CrowPi Remote Debug</code></li>
 </ol>
 <p>Da ein Fehler im 7-Segment Beispiel gesucht werden soll, wird das entsprechende Beispielprogramm nach Programmstart angewählt. Die Applikation
 läuft sofort, bis der Debugger am Breakpoint die Ausführung der Anwendung unterbricht.
@@ -451,17 +451,17 @@ auf ihren Zustand geprüft und somit bei Fehlentscheiden die Logik angepasst wer
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623674497></script>
+<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1623918547></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623674497></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623674497></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1623918547></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1623918547></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
