@@ -17,7 +17,7 @@ Anleitungen zur Installation sind ebenfalls auf der genannten Homepage verfügba
 
 ### 2. Herunterladen des FHNW CrowPi Image
 
-Das Image für den CrowPi, welches das Betriebssystem für den Raspberry PI beinhaltet, kann direkt aus dem [Github
+Das Image für den CrowPi, welches das Betriebssystem für den Raspberry Pi beinhaltet, kann direkt aus dem [Github
 Repository des Pi4J Projekts](https://github.com/Pi4J/pi4j-os) bezogen werden, das auch noch weitere spezialisierte Images bereitstellt.
 
 Das neueste Release des Betriebssystems für den CrowPi findet ihr unter diesem Link: [Download CrowPi Image](https://pi4j-download.com/latest.php?flavor=crowpi)
