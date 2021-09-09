@@ -20,7 +20,7 @@ Anleitungen zur Installation sind ebenfalls auf der genannten Homepage verfügba
 Das Image für den CrowPi, welches das Betriebssystem für den Raspberry PI beinhaltet, kann direkt aus dem [Github
 Repository des Pi4J Projekts](https://github.com/Pi4J/pi4j-os) bezogen werden, das auch noch weitere spezialisierte Images bereitstellt.
 
-Das neueste Release des Betriebssystems für den CrowPi findet ihr unter diesem Link: [Download CrowPi Image](https://pi4j-download.com/main-crowpi.img.zip)
+Das neueste Release des Betriebssystems für den CrowPi findet ihr unter diesem Link: [Download CrowPi Image](https://pi4j-download.com/latest.php?flavor=crowpi)
 
 Nach dem Download das .zip Archiv entpacken. Schon ist alles bereit für den nächsten Schritt.
 
