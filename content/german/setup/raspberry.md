@@ -110,7 +110,7 @@ Auf dem CrowPi-Image ist eine WLAN-Verbindung voreingestellt.
 - ssid: ``Pi4J-Spot``
 - password: ``MayTheCodeBeWithYou!``
 
-Sobald ein dementsprechender Hotspot, zum Beispiel auf einem Smartphone, angelegt wird, verbindet sich der CrowPi mit diesem Hotspot und die aktuelle IP-Nummer des CrowPi wird als Hintergrundbild angezeigt. 
+Sobald ein dementsprechender Hotspot, zum Beispiel auf einem Smartphone, angelegt wird, verbindet sich der CrowPi mit diesem Hotspot und die aktuelle IP-Adresse des CrowPi wird als Hintergrundbild angezeigt. 
 
 Dann noch den Laptop ebenfalls mit ``Pi4J-Spot`` verbinden.
 
