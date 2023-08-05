@@ -85,7 +85,7 @@ Funktion `setEnabled` aktiviert und eine mittlere Helligkeit mit `setBrightness`
 Das erste Beispiel zeigt nun die Verwendung von `draw(Consumer<Graphics2D>)` mit einer anonymen Lambda-Funktion. Dies klingt zuerst
 kompliziert, jedoch ist dies nichts anderes als die Möglichkeit eine eigene Funktion zu übergeben, um darin beliebige Zeichenoperationen
 durchzuführen. Der Parameter `graphics` entspricht dabei der Standard-Klasse `java.awt.Graphics2D`, wofür sich
-[im Internet](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/Graphics2D.html) weitere Dokumentation finden lässt.
+[im Internet](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/Graphics2D.html) weitere Dokumentation finden lassen.
 Hier wird nun ein Kreuz gezeichnet (zuerst eine Linie von oben-links nach unten-rechts, dann von oben-rechts nach unten-links) und
 anschliessend ein Kreis darüber. Das Resultat wird dann auf der LED Matrix dargestellt.
 
@@ -95,7 +95,7 @@ vordefinierten Symbole. In der Enumeration `LedMatrixComponent.Symbol` lassen si
 Konkret wird mit der `for`-Schleife über das Array von Symbolen iteriert und jedes wird nacheinander mit `print` sofort angezeigt.
 
 Das dritte Beispiel zeigt ebenfalls vier verschiedene Symbole, dieses Mal jedoch unter Verwendung der `transition` Methode. Diese ersetzt
-den Inhalt der LED Matrix nicht sofort, sondern schiebt das neue Symbol in die Anzeige rein mit der gewünschten Richtung. Wird also zum
+den Inhalt der LED Matrix nicht sofort, sondern schiebt das neue Symbol mit der gewünschten Richtung in die Anzeige rein. Wird also zum
 Beispiel `Direction.UP` gewählt, so wird das neue Symbol von unten nach oben in die Anzeige reingeschoben.
 
 Das vierte Beispiel gibt schliesslich einen längeren Text aus. Die Methode `print` stellt diesen automatisch so dar, dass nacheinander alle
@@ -109,12 +109,9 @@ Bevor die Applikation endet, wird die LED Matrix ordnungsgemäss mit `setEnabled
 
 ## Weitere Möglichkeiten
 
-- Statt nur einmal eine eigene Grafik mit `draw(Consumer<Graphics2D>)` zu zeichnen, könnten in einer Schleife verschiedene Grafiken
-  gezeichnet werden, um eine kleine Animation zu realisieren.
+- In Kombination mit dem Button könnten kleine Spiele wie Snake oder Pong gespielt werden. 
 
 - Das Beispiel könnte so verändert werden, dass auf der Standardeingabe ein Text entgegengenommen wird, welcher anschliessend mit
   `print(String)` auf der Anzeige ausgegeben wird.
 
-- In Kombination mit einem nicht-binären Sensor wie der Distanzanzeige könnte auf der Anzeige ein Graph dargestellt werden. Hierfür könnte
-  eine Kombination aus `rotate` und `setPixel` verwendet werden, um nacheinander den alten Messwert auf die Seite zu schieben und den neuen
-  Messwert einzuzeichnen.
+

@@ -105,6 +105,8 @@ auszuprobieren. Nach Ablauf der Zeit wird der Event Handler wieder sauber entfer
 
 - Das Beispiel zu einer Art Zutrittskontrolle ausbauen und beispielsweise nur Personen mit einem bestimmten Attribut zulassen.
 
+- Bei der Erkennung von Personen könnte auf dem LCD Display ein kleiner Begrüssungstext angezeigt werden. 
+
 - Statt dem Speichern von Personen könnten auch andere Daten auf einer Karte abgelegt werden, zum Beispiel eine (nicht sehr sichere)
   Implementation einer Bank wo auf jeder Karte der Inhaber sowie der aktuelle Kontostand gespeichert wird. Hierfür wäre die Methode
   `waitForAnyCard` praktisch, um eine bereits aufgelegte Karte erneut zu beschreiben.

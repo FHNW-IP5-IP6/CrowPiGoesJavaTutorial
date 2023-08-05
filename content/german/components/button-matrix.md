@@ -92,8 +92,8 @@ Ist `hasFailed` nach der Schleife nun gesetzt, so wird der Spieler über seinen 
 mit `continue` der nächste Spielzug forciert. War hingegen alles richtig, so kann der Spieler nun einen neuen Knopf wählen und der Zug des
 nächsten Spielers beginnt.
 
-Wenn irgendwann nur noch ein aktiver Spieler verbleibt, so wird eine Gewinnmeldung ausgegeben und die totale Punktzahl, welche der Anzahl
-an wiederholten Elementen entspricht. Bevor die Applikation endet, wird noch der Poller gestoppt um die Button Matrix nicht länger
+Wenn irgendwann nur noch ein aktiver Spieler verbleibt, so wird eine Gewinnmeldung und die totale Punktzahl, welche der Anzahl
+an wiederholten Elementen entspricht, ausgegeben. Bevor die Applikation endet, wird noch der Poller gestoppt um die Button Matrix nicht länger
 abzufragen und somit Ressourcen freizugeben.
 
 {{< code file="src/main/java/com/pi4j/crowpi/applications/ButtonMatrixApp.java" language="java" >}}
@@ -103,6 +103,4 @@ abzufragen und somit Ressourcen freizugeben.
 - Das bestehende Spiel um LCD Display und/oder Buzzer erweitern, um gewisse Ausgaben direkt auf dem CrowPi zu erzeugen und je nach Knopfdruck
   einen anderen Ton / eine andere Frequenz abzuspielen.
 
-- Ein eigenes Spiel ausdenken, welches sich in Kombination mit anderen Komponenten vom CrowPi aufbauen lässt.
 
-- Nutzung als hexadezimale Eingabe, so könnte die 4x4 Matrix ein Ziffernblock für 0-9 und A-F sein.

@@ -10,11 +10,11 @@ normalen Elektromotor unterscheidet, ist die Existenz eines Regelkreises. Dieser
 Drehgeschwindigkeit, Beschleunigung und Winkelposition des Motors. Im Gegensatz zum Schrittmotor sorgt nicht der physikalische Aufbau
 für diese Kontrollmöglichkeiten, sondern eine Regelung. Die Regelung im Falle des beim CrowPi beiliegenden Servomotors wird durch ein
 simples Potentiometer erreicht. Bei industriellen, hochwertigen Servomotoren werden für die Positionsrückmeldung spezielle Encoder
-verwendet. Diese erlauben viel höhere Genauigkeiten als die Bauform mit Potentiometer. Verwendet wird diese vereinfachte Form häufig im
+verwendet. Diese erlauben deutlich höhere Genauigkeiten als die Bauform mit Potentiometer. Verwendet wird diese vereinfachte Form häufig im
 Modellbau für die Einstellung von Stellwinkeln bei Modellflugzeugen.
 
 Der Anschluss der Servomotors erfolgt so: {{< img alt="Anschluss für Schrittmotor" src="components/servo-motor.jpg" height="500px" >}}
-
+Zum entfernen muss ein kleiner Hebel am Stecker gedrückt werden 
 ## Voraussetzungen
 
 ### DIP Switches
@@ -62,4 +62,4 @@ umgewandelt.
 
 ## Weitere Möglichkeiten
 
-- Anzeige von Messerwerten mittels eines an der Achse montierten Zeigers.
+- Anzeige von Messerwerten mittels eines an der Achse montierten Zeigers. Zum Beispiel ein Thermometer

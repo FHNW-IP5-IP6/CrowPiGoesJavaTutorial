@@ -89,7 +89,7 @@ String eingefügt. Dies erzeugt dann sofort einen Zeilenumbruch.
 ## Weitere Möglichkeiten
 
 - Das Display mit anderen Komponenten kombinieren. Dabei bieten sich unzählige Möglichkeiten. Es könnten beispielsweise die aktuelle Temperatur oder
-  Helligkeit angezeigt werden.
-- Eine Karaoke Maschine. Mittels des Buzzers einen Song abspielen und auf dem Display jeweils den aktuellen Text anzeigen. Viel Spass beim
-  Singen und Programmieren!
+  Helligkeit angezeigt werden. 
+
+- Eine Karaoke Maschine. Mittels des Buzzers einen Song abspielen und auf dem Display jeweils den aktuellen Text anzeigen.
 

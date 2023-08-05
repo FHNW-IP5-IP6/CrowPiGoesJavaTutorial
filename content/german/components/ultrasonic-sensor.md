@@ -17,7 +17,7 @@ Wenn nun mit einem Programm die Zeit zwischen Aussenden des Tons (Trigger) und d
 mithilfe der Schallgeschwindigkeit die Distanz zum Objekt berechnet werden. Diese Funktion wird von der `UltrasonicDistanceSensorComponent`
 übernommen. Sie liefert direkt einen Messwert in Zentimetern.
 
-Mit dem `HC-SR04` können Distanzen zwischen von 2 bis 3000 Zentimetern gemessen werden. Dabei ist mit einer Toleranz von etwa 3 Millimetern
+Mit dem `HC-SR04` können Distanzen zwischen 2 bis 3000 Zentimetern gemessen werden. Dabei ist mit einer Toleranz von etwa 3 Millimetern
 zu rechnen. Je nach Messdistanz variiert dieser Wert etwas. Genaueres dazu findet sich im
 [Datenblatt](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf) des Sensors. Wichtig ist auch zu wissen, dass mehrere
 Ultraschallsensoren sich gegenseitig stören können. Weiter ist die Schallgeschwindigkeit von der Umgebungstemperatur abhängig. Die Messwerte
@@ -66,4 +66,6 @@ einmal die Hand über den Sensor zu halten.
 ## Weitere Möglichkeiten
 
 - Das Beispiel um einen Temperatursensor erweitern, um immer korrekte Messwerte zu erhalten.
+
+- Je näher etwas dem Sensor kommt, könnte der Buzzer schneller Piepen, ähnlich wie bei einer Einparkhilfe. 
 

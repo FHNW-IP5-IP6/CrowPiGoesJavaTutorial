@@ -50,6 +50,5 @@ eingeschlafen ist. Sobald der Benutzer das Aufwachen mit `YES` bestätigt wird d
 
 ## Weitere Möglichkeiten
 
-- Einen benutzerdefinierten Vibrationsalarm einrichten unter Verwendung eines spezifischen Pulsates.
 - In Kombination mit Knöpfen und Sensoren kann der Vibrationsmotor verwendet werden, um den Benutzer auf etwas aufmerksam zu machen.
 

@@ -69,3 +69,5 @@ dazugehörige Länge benötigt.
 - Statt dem Abspielen einer Melodie könnte auch eine Sirene mit einer `for`-Schleife implementiert werden. Hierfür muss die Frequenz 
   manuell als Zahl angegeben werden statt der Verwendung der `Note` Klasse, welche sich beispielsweise mit dem Einsatz von 
   `for`-Schleifen hoch- und runterzählen lässt.
+
+- Belegt man jeden Kopf der Button-Matrix mit einem eigenen Ton / Frequenz könnte man daraus seine eigene Melodie komponieren.  
