@@ -4,13 +4,12 @@ weight: 40
 ---
 
 ## Grundlagen
-Um ein möglichst einfaches Arbeiten mit diesem Projekt zu gewährleisten, wurde ein einfaches Application Framework definiert. Dieses 
-besteht aus einem regulären Java Interface und somit kann schon mit wenigen Zeilen Code eine neue Applikation mit eigenem Code gebaut werden. 
+Um ein möglichst einfaches Arbeiten mit diesem Projekt zu gewährleisten, wurde ein einfaches Application Framework definiert. Dieses besteht aus einem regulären Java Interface und somit kann schon mit wenigen Zeilen Code eine neue Applikation mit eigenem Code gebaut werden. 
+
 An jede Applikation wird hierbei jeweils der Pi4J `Context` übergeben, mit welchem alle Komponenten des CrowPi angesteuert werden können.
 
 ## Starten einer Applikation
-Der integrierte Launcher kann zu jeder Zeit mit Maven gestartet werden. Falls der Code direkt auf dem Raspberry Pi zur Verfügung steht, 
-kann zum Beispiel mit folgenden Befehlen eine Applikation gestartet werden:
+Der integrierte Launcher kann zu jeder Zeit mit Maven gestartet werden. Falls der Code direkt auf dem Raspberry Pi zur Verfügung steht, kann zum Beispiel mit folgenden Befehlen eine Applikation gestartet werden:
 
 ```shell
 # Führt den Launcher ohne Angabe einer Applikation aus, worauf ein Auswahlmenü erscheint.
@@ -23,16 +22,13 @@ mvn install -Dcrowpi.launcher.args=BuzzerApp
 ```
 
 ## Neue Applikation anlegen
-Um eine neue Applikation anzulegen, welche anschliessend über den integrierten Launcher gestartet werden kann, sind nur wenige  
-Schritte erforderlich. Die nachfolgende Anleitung führt Schritt für Schritt zur ersten eigenen Applikation.
+Um eine neue Applikation anzulegen, welche anschliessend über den integrierten Launcher gestartet werden kann, sind nur wenige Schritte erforderlich. Die nachfolgende Anleitung führt Schritt für Schritt zur ersten eigenen Applikation.
 
-Zuerst muss eine Java-Klasse unterhalb von `src/main/java/com/pi4j/crowpi/applications` erstellt werden mit einem beliebigen Namen,
-welche das Interface `Application` implementiert. Zum Beispiel könnte diese Klasse `ExampleApp` heissen und folgenden Code enthalten:
+Zuerst muss eine Java-Klasse unterhalb von `src/main/java/com/pi4j/crowpi/applications` erstellt werden mit einem beliebigen Namen, welche das Interface `Application` implementiert. Zum Beispiel könnte diese Klasse `ExampleApp` heissen und folgenden Code enthalten:
 
 {{< code file="src/main/java/com/pi4j/crowpi/applications/ExampleApp.java" language="java" >}}
 
-Anschliessend muss die Applikation nur noch in der Klasse `com.pi4j.crowpi.Launcher` zur Liste `APPLICATIONS` hinzugefügt werden. Die
-Datei ist unter `src/main/java/com/pi4j/crowpi/Launcher.java` aufzufinden und muss an dieser Stelle erweitert werden:
+Anschliessend muss die Applikation nur noch in der Klasse `com.pi4j.crowpi.Launcher` zur Liste `APPLICATIONS` hinzugefügt werden. Die Datei ist unter `src/main/java/com/pi4j/crowpi/Launcher.java` aufzufinden und muss an dieser Stelle erweitert werden:
 
 ```java
 public final class Launcher implements Runnable {
@@ -45,13 +41,9 @@ public final class Launcher implements Runnable {
 }
 ```
 
-Nun kann diese neue Applikation beliebig erweitert werden, indem weitere Codes innerhalb der `execute()` Methode hinzugefügt werden. Die 
-Applikation kann jederzeit durch Starten des Launchers getestet werden und erscheint bei fehlender Angabe der gewünschten Applikation 
-nun dort auch automatisch in der Auswahlliste.
+Nun kann diese neue Applikation beliebig erweitert werden, indem weitere Codes innerhalb der `execute()` Methode hinzugefügt werden. Die Applikation kann jederzeit durch Starten des Launchers getestet werden und erscheint automatisch in der Auswahlliste.
 
-Optional ist es auch möglich, den Namen oder die Beschreibung der Applikation selber anzupassen. Es ist hierbei wichtig, dass der Name 
-unter allen eingehängten Applikationen jeweils eindeutig ist. Um diese Änderungen durchzuführen, können diese Methoden in der eigenen 
-Applikationsklasse verwendet werden:
+Optional ist es auch möglich, den Namen oder die Beschreibung der Applikation selber anzupassen. Es ist hierbei wichtig, dass der Name unter allen eingehängten Applikationen jeweils eindeutig ist. Um diese Änderungen durchzuführen, können diese Methoden in der eigenen Applikationsklasse verwendet werden:
 
 ```java
 public class ExampleApp implements Application {
@@ -69,11 +61,9 @@ public class ExampleApp implements Application {
 }
 ```
 
-Der Name entspricht hierbei auch dem Parameter, der an den Launcher übergeben werden muss, um die Applikation direkt zu starten. Im 
-Normalfall ist es aber aufgrund potenzieller Namenskonflikte nicht empfohlen, diesen zu überschreiben.
+Der Name entspricht hierbei auch dem Parameter, der an den Launcher übergeben werden muss, um die Applikation direkt zu starten. Im Normalfall ist es aber aufgrund potenzieller Namenskonflikte nicht empfohlen, diesen zu überschreiben.
 
 ## Das Interface
-Zur Vollständigkeit ist hier noch das komplette `Application` Interface eingebunden. Dieses besteht aus exakt drei Methoden, wobei 
-hiervon nur `execute()` implementiert werden muss, da die anderen Methoden bereits über eine Standardimplementation verfügen.
+Zur Vollständigkeit ist hier noch das komplette `Application` Interface eingebunden. Dieses besteht aus exakt drei Methoden, wobei hiervon nur `execute()` implementiert werden muss, da die anderen Methoden bereits über eine Standardimplementation verfügen.
 
 {{< code file="/src/main/java/com/pi4j/crowpi/Application.java" language="java" >}}

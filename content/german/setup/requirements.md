@@ -8,7 +8,7 @@ disableToc: true
  - CrowPi (Advanced Kit)
  - Raspberry PI 3 Model B+ oder Raspberry PI 4 
  - SD-Karte mit minimum 8 GB Speicherplatz
- - Entwicklungsumgebung IntelliJ IDEA Version 2020.3 oder neuer
+ - Entwicklungsumgebung IntelliJ IDEA Version 2023.2 oder neuer
  - Raspberry Pi Imager
  - Netzwerk (Ethernet oder WLAN)
 

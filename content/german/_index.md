@@ -7,5 +7,4 @@ chapter: true
 
 # CrowPi goes Java
 
-Herzlich willkommen auf der Startseite vom Tutorial "CrowPi goes Java", welches die Nutzung von CrowPi als einsteigerfreundliche 
-Lernplattform für die Programmierung von Hardwarekomponenten mit Java erläutert.
+Herzlich willkommen auf der Startseite vom Tutorial "CrowPi goes Java", welches die Nutzung von CrowPi als einsteigerfreundliche Lernplattform für die Programmierung von Hardwarekomponenten mit Java erläutert.
