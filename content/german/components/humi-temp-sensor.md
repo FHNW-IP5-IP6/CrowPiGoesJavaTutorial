@@ -52,11 +52,10 @@ Nachfolgend wird die Verwendung der Klasse {{< javadoc class="com.pi4j.crowpi.co
 
 Die sehr simple Beispielapplikation misst mithilfe eines `for-loops` einige Male die Temperatur und Luftfeuchtigkeit und gibt diese auf der
 Konsole aus. Verwendet werden dazu die Methoden `getHumidity()` und `getTemperature()` welche jeweils den aktuellen Messwert als `double`
-retournieren. Dieser Messwert könnte nun in weiteren Schritte wie gewünscht verarbeitet werden.
+retournieren. Dieser Messwert könnte nun in weiteren Schritten wie gewünscht verarbeitet werden.
 
 {{< code file="src/main/java/com/pi4j/crowpi/applications/HumiTempApp.java" language="java">}}
 
 ## Weitere Möglichkeiten
 
-- Anzeige der Messwerte auf einem Display
-- Schaltung des Relais abhängig von gemessenen Temperaturen.
+- Die gemessenen Werte könnten auf dem LCD Display angezeigt werden. 

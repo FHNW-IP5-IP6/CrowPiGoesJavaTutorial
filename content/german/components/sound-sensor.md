@@ -12,8 +12,7 @@ ein digitaler Ausgang geschaltet. Es wurde Lärm oder ein Geräusch erkannt.
 
 Am CrowPi kann dieser Schwellwert mittels eines Potentiometers eingestellt werden. Am einfachsten geht das, wenn man auf das entsprechende
 LED bei den Status LEDS achtet und den entsprechenden Lärm verursacht welcher erkannt werden soll. Wird das Potentiometer nach rechts
-gedreht, muss das entsprechende akustische Signal lauter sein, um vom Sensor erkannt zu werden. Auf die linke Seite gedreht am Potentiometer
-macht den Sensor viel empfindlicher gegenüber leisen Geräuschen. Zu finden ist das Potentiometer wie auf diesem Bild gezeigt: {{< img
+gedreht, muss das entsprechende akustische Signal lauter sein, um vom Sensor erkannt zu werden. Auf die linke Seite gedreht wird der Sensor viel empfindlicher gegenüber leisen Geräuschen. Für den ersten Test am besten ganz nach rechts drehen. Zu finden ist das Potentiometer wie auf diesem Bild gezeigt: {{< img
 alt="Potentiometer des Sound Sensor" src="components/sound-sensor-potentiometer.jpg" >}}
 
 ## Voraussetzungen

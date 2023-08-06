@@ -51,8 +51,6 @@ kann eine zu kurze Taktrate zu ungültigen Messergebnissen führen. Weniger als 
 
 ## Weitere Möglichkeiten
 
-- Das Beispiel könnte um einen Eingang erweitert werden, mit dem die Schaltpunkte während des Betriebs verändert werden können. Dazu müsste nur die Deklaration des `DELAY` 
-angepasst werden und eine Logik für einen Eingang ergänzt werden. 
 
-- Statt die Zeitdauer über `DELAY` und `NUMBER_OF_LOOPS` zu regulieren könnte eine Benutzeraktion zum Beenden des Programms verwendet werden. Denkbar wäre dabei ein Knopf oder auch eine
-Eingabe des Benutzers in der Konsole der Entwicklungsumgebung.
+
+

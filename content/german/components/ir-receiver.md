@@ -7,12 +7,12 @@ tags: ["gpio"]
 
 Mithilfe von Infrarot können über einige Meter Distanz digitale Informationen übertragen werden, was beispielsweise oft für die Fernbedienung
 eines Fernsehers genutzt wird. Die Übertragungsart gleicht hierbei dem Prinzip des Morsens, da die Infrarot-LED im Sendegerät eine
-Abfolge von Bits durch unterschiedlich lange Pausen zu dem Empfängergerät überträgt. Da jedoch auch viele andere Dinge in der Natur wie
-beispielsweise unsere Sonne ein Infrarot-Licht emittieren, wird für die elektronische Verwendung nur eine Frequenz von 38kHz verwendet.
+Abfolge von Bits durch unterschiedlich lange Pausen zu dem Empfängergerät überträgt. Da jedoch auch viele andere Dinge in der Natur, wie
+beispielsweise unsere Sonne, ein Infrarot-Licht emittieren, wird für die elektronische Verwendung nur eine Frequenz von 38kHz verwendet.
 
 Um zu vermeiden, dass eine Fernbedienung über eine oder gar mehrere Sekunden komplett still gehalten werden muss, werden die einzelnen Bits
 in sehr kurzen zeitlichen Abständen übertragen. Dies klingt im ersten Moment natürlich praktisch, bedeutet jedoch auch, dass das empfangende
-Gerät sehr präzise zeitliche Messungen durchführen können muss. Genau dies war jedoch beim CrowPi mit der Verwendung von Java in Kombination
+Gerät in der Lage sein muss sehr präzise zeitliche Messungen durchführen zu können. Genau dies war jedoch beim CrowPi mit der Verwendung von Java in Kombination
 mit Pi4J nicht möglich, da eine Genauigkeit von rund 60 Mikrosekunden (0.00006 Sekunden) benötigt wird, was sich mit dem Design der Java
 Virtual Machine nicht umsetzen lässt.
 
@@ -31,6 +31,7 @@ Für die Verwendung dieser Komponente muss die beigelegte Infrarot-Diode auf dem
 nicht direkt auf dem CrowPi befindet. Auf dem nachfolgenden Foto ist angegeben, wo die Infrarot-Photodiode einzustecken ist:
 
 {{< img alt="Anschluss für Infrarot-Diode" src="components/ir-receiver.jpg" height="500px" >}}
+{{< img alt="ir-Sensor" src="components/ir-Sensor.jpg" height="100px" >}}
 
 ## Voraussetzungen
 
@@ -75,6 +76,7 @@ vornimmt. Anschliessend wird 30 Sekunden gewartet, bevor der Event Handler wiede
 ## Weitere Möglichkeiten
 
 - Mit der beigelegten Fernbedienung lassen sich einwandfrei numerische Eingaben tätigen, z.B. um einen einfachen Taschenrechner mit Addition
-  und Subtraktion zu bauen, wofür sich die Zahlentasten sowie Plus und Minus nutzen lassen würden.
+  und Subtraktion zu bauen, wofür sich die Zahlentasten sowie Plus und Minus nutzen lassen würden. Dieser liesse sich auch mit dem LCD-Display kombinieren. 
+
 - Die Steuerungstasten für Previous, Next sowie Play/Pause könnten genutzt werden, um den Buzzer zu steuern und verschiedene Melodien damit
   abzuspielen.

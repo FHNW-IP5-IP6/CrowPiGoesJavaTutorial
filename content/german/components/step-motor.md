@@ -62,4 +62,5 @@ nun die `turnDegrees` Methode verwendet.
 ## Weitere Möglichkeiten
 
 - Ein 3D-Drucker könnte aus der Kombination von mehreren Schrittmotoren gebaut werden.
+
 - Automatisches Heizventil in Kombination mit einem Temperatursensor.

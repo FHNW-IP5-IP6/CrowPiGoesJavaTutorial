@@ -60,5 +60,5 @@ Software.
 - Eine eigene Komponente wie einen kleinen PC Lüfter oder ähnliches korrekt an das Relais verkabeln und dann eine Steuerung davon
   programmieren.
 - Eine LED korrekt verkabeln und mit dem
-  [Lichtsensor]({{< ref "components/light-sensor" >}}) kombinieren.
+  [Lichtsensor]({{< ref "components/light-sensor" >}}) kombinieren, damit diese sich bei Dunkelheit automatisch einschaltet. 
 

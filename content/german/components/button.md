@@ -61,7 +61,6 @@ verschiedenen Knöpfe zu ermöglichen.
 ## Weitere Möglichkeiten
 
 - Mit den vier Knöpfen lassen sich leicht diverse Spiele realisieren, da jeder Knopf in eine bestimmte Richtung zeigt, was sich als Steuerung
-  für einen Spieler beispielsweise verwenden lässt.
+  für einen Spieler verwenden lässt. Ein einfaches Bespiel hierfür wäre das Spiel Snake.
 
-- Mit den vier Knöpfen lässt sich der Cursor auf dem LCD Display steuerbar machen, um an eine beliebige Stelle zu navigieren.
 

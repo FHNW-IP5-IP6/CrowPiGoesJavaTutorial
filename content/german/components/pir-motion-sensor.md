@@ -67,6 +67,4 @@ registrieren. Nach 30 Sekunden wird die Anwendung automatisch beendet.
 
 - Das Beispiel mit dem Buzzer kombinieren, um einen Alarmton abzuspielen, wenn der Zustand von `STILLSTAND` auf `MOVEMENT` ändert.
 
-- Implementation von einfachem Spiel wo die Hand über den PIR Motion Sensor gehalten werden und nicht bewegt werden darf für eine möglichst
-  lange Zeit. Hier könnte sogar ein einfaches Highscore-System eingebaut werden.
 
