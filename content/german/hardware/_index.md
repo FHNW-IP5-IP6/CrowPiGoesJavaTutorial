@@ -9,5 +9,4 @@ chapter: true
 
 # Hardware
 
-Die verschiedenen Komponenten des CrowPi werden über eine Vielzahl von Schnittstellen angebunden. In diesem Kapitel wird auf die 
-technischen Details eingegangen, sodass ein tieferes Verständnis der dahinterliegenden Technik erworben werden kann.
+Die verschiedenen Komponenten des CrowPi werden über eine Vielzahl von Schnittstellen angebunden. In diesem Kapitel wird auf die technischen Details eingegangen, sodass ein tieferes Verständnis der dahinterliegenden Technik erworben werden kann.
