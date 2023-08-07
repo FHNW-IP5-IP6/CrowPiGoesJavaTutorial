@@ -5,7 +5,6 @@ tags: ["spi"]
 
 Schrittmotoren bestehen aus mehreren Spulen, welche um die in ihrer Mitte liegenden Welle angeordnet sind. Die Welle wird von einem Zylinder umschlossen, welcher abwechselnd mit positiven und negativen Polen versehen ist. Sobald durch eine Spule Strom fliesst, erzeugt diese ein Magnetfeld, nach welchem sich die Pole im Zylinder der Welle ausrichten. Somit kann die Welle gedreht werden. Siehe auch [Stepper Motor Control with the Raspberry Pi](https://www.youtube.com/watch?v=Dc16mKFA7Fo).
 
-
 ![Stepper Motor unter Single Stepping](https://upload.wikimedia.org/wikipedia/commons/6/67/StepperMotor.gif)
 Stepper Motor unter Single Stepping
 
