@@ -13,6 +13,8 @@ home = ["HTML", "RSS", "JSON"]
 weight = 1
 contentDir = "content/german"
 languageName = "German"
+
+[languages.de.params]
 landingPageName = "<i class='fas fa-fw fa-home'></i> Startseite"
 landingPageURL = "/CrowPiGoesJavaTutorial/de"
 
@@ -20,6 +22,9 @@ landingPageURL = "/CrowPiGoesJavaTutorial/de"
 weight = 2
 contentDir = "content/english"
 languageName = "English"
+
+[languages.en.params]
+landingPageName = "<i class='fas fa-fw fa-home'></i> Home"
 landingPageURL = "/CrowPiGoesJavaTutorial/en"
 
 [[menu.shortcuts]]
