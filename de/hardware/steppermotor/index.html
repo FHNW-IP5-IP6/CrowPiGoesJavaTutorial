@@ -6,7 +6,7 @@
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>Categories :: CrowPi goes Java</title><link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1691425819 rel=stylesheet>
+<title>Stepper Motor :: CrowPi goes Java</title><link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1691425819 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1691425819 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1691425819 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1691425819 rel=stylesheet>
@@ -19,7 +19,7 @@
 <link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1691425819 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/custom.css?1691425819 rel=stylesheet>
 <script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1691425819></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/CrowPiGoesJavaTutorial/de/categories/>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -203,7 +203,8 @@ Ultraschall Distanzsensor
 Vibrationsmotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class="dd-item
+parent">
 <a href=/CrowPiGoesJavaTutorial/de/hardware/>
 <b>4. </b>Hardware
 <i class="fas fa-check read-icon"></i>
@@ -224,7 +225,7 @@ Pulse Width Modulation (PWM)
 Serial Peripheral Interface (SPI)
 <i class="fas fa-check read-icon"></i>
 </a>
-</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/ title="Stepper Motor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/ title="Stepper Motor" class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/>
 Stepper Motor
 <i class="fas fa-check read-icon"></i>
@@ -246,14 +247,19 @@ Stepper Motor
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/categories/ selected>German</option><option id=en value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/en/categories/>English</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/hardware/steppermotor/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div></a>
 </li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li></ul></section><section id=footer>
 <p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body>
 <div id=overlay></div><div class="padding highlightable">
 <div>
 <div id=top-bar>
-<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<div id=top-github-link>
+<a class=github-link title='Bearbeite diese Seite' href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/hardware/StepperMotor.md target=blank>
+<i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Bearbeite diese Seite</span>
+</a>
+</div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
 <span id=sidebar-toggle-span>
 <a href=# id=sidebar-toggle data-sidebar-toggle>
 <i class="fas fa-bars"></i>
@@ -261,19 +267,25 @@ Stepper Motor
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > Categories
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/hardware/>Hardware</a> > Stepper Motor
 </span>
 </div><div class=progress>
 <div class=wrapper>
-</div></div></div></div><div id=head-tags>
-</div><div id=body-inner>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#single-stepping>Single Stepping</a></li><li><a href=#double-stepping>Double Stepping</a></li><li><a href=#half-stepping>Half Stepping</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags>
+<div class=tags>
+<a class=tag-link href=/de/tags/spi>spi</a>
+</div></div><div id=body-inner>
 <h1>
-category ::
-Categories
-</h1><ul>
-</ul><footer class=footline>
+Stepper Motor
+</h1><p>Schrittmotoren bestehen aus mehreren Spulen, welche um die in ihrer Mitte liegenden Welle angeordnet sind. Die Welle wird von einem Zylinder umschlossen, welcher abwechselnd mit positiven und negativen Polen versehen ist. Sobald durch eine Spule Strom fliesst, erzeugt diese ein Magnetfeld, nach welchem sich die Pole im Zylinder der Welle ausrichten. Somit kann die Welle gedreht werden. Siehe auch <a href="https://www.youtube.com/watch?v=Dc16mKFA7Fo">Stepper Motor Control with the Raspberry Pi</a>.</p><p><img src=https://upload.wikimedia.org/wikipedia/commons/6/67/StepperMotor.gif alt="Stepper Motor unter Single Stepping">
+Stepper Motor unter Single Stepping</p><p>Bei den meisten Schrittmotoren kommt zusätzlich zur Welle noch ein Getriebe zum Einsatz, welches durch seine Übersetzung den Drehwinkel pro Schritt weiter verkleinert. Beim weit verbreiteten Stepper Motor 28BYJ-48 ist zum Beispiel ein 1/64 Getriebe verbaut. Jeder Schritt der Welle resultiert bei diesem Motor um eine um 64 verkleinerte Drehung.</p><p>Siehe: <a href=https://www.rs-online.com/designspark/stepper-motors-and-drives-what-is-full-step-half-step-and-microstepping>DesignSpark: Stepper motors and drives, what is full step, half step and microstepping</a></p><h3 id=single-stepping>Single Stepping</h3><p>Beim Single Stepping wird jeweils nur eine Spule im Gehäuse des Motors unter Strom gesetzt. Die Welle des Motors richtet sich also immer genau nach der momentan aktiven Spule aus.</p><h3 id=double-stepping>Double Stepping</h3><p>Unter Verwendung des Double Stepping werden immer zwei Spulen simultan unter Strom gesetzt. Dies führt dazu, dass sich die Welle gemäss dem entstehenden Magnetfeld zwischen den zwei Spulen ausrichtet. Die sich überschneidenden Magnetfelder sind stärker als ein einzelnes Magnetfeld, weshalb der Schrittmotor unter diesem Modus mit grösserer Kraft arbeitet. Da allerdings zwei Spulen gleichzeitig mit Strom beliefert werden müssen, verdoppelt sich der Stromverbrauch im Vergleich zum Single Stepping.</p><h3 id=half-stepping>Half Stepping</h3><p>Im Gegensatz zu den anderen Modi agiert Half Stepping in acht Schritten. Somit kann die Position des Motors genauer bestimmt werden als in den anderen Modi. Half Stepping kombiniert Single Stepping und Double Stepping. Dies führt dazu, dass der Motor nicht immer gleich viel Kraft hat. Bei jedem zweiten Schritt ist jeweils nur eine Spule aktiv.</p><footer class=footline>
 </footer></div></div><div id=navigation>
-<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/hardware/i2c/ title=I²C style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1691425819></script>
 <script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1691425819></script>

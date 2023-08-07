@@ -2,53 +2,43 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.117.0">
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>Lichtsensor :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1634989005 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1634989005></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
-</head>
-<body data-url=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
+<title>Lichtsensor :: CrowPi goes Java</title><link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1691425819 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1691425819></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
 <a id=logo href=/CrowPiGoesJavaTutorial/de>
-<img src=/CrowPiGoesJavaTutorial/images/fhnw-logo.svg style=width:40%;height:40%>
-<h3 style=margin:0;color:#fff>CrowPi goes Java</h3>
-</a>
-</div>
-<div class=searchbox>
+<img src=/images/fhnw-logo.svg style=width:40%;height:40%>
+<h3 style=margin:0;color:#fff>CrowPi goes Java</h3></a>
+</div><div class=searchbox>
 <label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
-</div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1634989005></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1634989005></script>
+</div><script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1691425819></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1691425819></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1634989005></script>
-</div>
-<section id=homelinks>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1691425819></script>
+</div><section id=homelinks>
 <ul>
 <li>
-<a class=padding href=/CrowPiGoesJavaTutorial/de><i class="fas fa-fw fa-home"></i> Startseite</a>
-</li>
-</ul>
-</section>
-<div class=highlightable>
+<a class=padding href=/CrowPiGoesJavaTutorial/de><i class='fas fa-fw fa-home'></i> Startseite</a>
+</li></ul></section><div class=highlightable>
 <ul class=topics>
 <li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/>
@@ -61,22 +51,22 @@
 Anforderungen
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/raspberry/>
 Raspberry PI Setup
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/jdk/ title="JDK Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/jdk/>
+JDK Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/intellij/>
 IntelliJ IDEA Setup
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/>
 <b>2. </b>Grundlagen
 <i class="fas fa-check read-icon"></i>
@@ -87,40 +77,32 @@ IntelliJ IDEA Setup
 Die CrowPi Plattform
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/running/>
 Starten der Applikation
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>
 Debugging der Applikation
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/framework/>
 Application Framework
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/dev-process/>
 Entwicklungsprozess
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ title=Troubleshooting class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ title=Troubleshooting class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/>
 Troubleshooting
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class="dd-item
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class="dd-item
 parent">
 <a href=/CrowPiGoesJavaTutorial/de/components/>
 <b>3. </b>Komponenten
@@ -132,118 +114,97 @@ parent">
 7-Segment Anzeige
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/button/>
 Button
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
 Button Matrix
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/buzzer/>
 Buzzer
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ir-receiver/ title="Infrarot Empfänger" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ir-receiver/ title="Infrarot Empfänger" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/ir-receiver/>
 Infrarot Empfänger
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
 LCD Display
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
 LED Matrix
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class="dd-item active">
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
 Lichtsensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
 PIR Motion Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/relay/>
 Relais
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/rfid/>
 RFID
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/step-motor/ title=Schrittmotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/step-motor/ title=Schrittmotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/step-motor/>
 Schrittmotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/servo-motor/ title=Servomotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/servo-motor/ title=Servomotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/servo-motor/>
 Servomotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/sound-sensor/>
 Sound Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/ title="Temperatur- / Luftfeuchtigkeitssensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/ title="Temperatur- / Luftfeuchtigkeitssensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/>
 Temperatur- / Luftfeuchtigkeitssensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/>
 Tilt Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/touch-sensor/>
 Touch Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/>
 Ultraschall Distanzsensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/vibration-motor/>
 Vibrationsmotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/>
 <b>4. </b>Hardware
 <i class="fas fa-check read-icon"></i>
@@ -254,40 +215,32 @@ Vibrationsmotor
 I²C
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/pwm/>
 Pulse Width Modulation (PWM)
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>
 Serial Peripheral Interface (SPI)
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-</ul>
-<section id=shortcuts>
-<h3>Mehr</h3>
-<ul>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/ title="Stepper Motor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/>
+Stepper Motor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li></ul></li></ul><section id=shortcuts>
+<h3>Mehr</h3><ul>
 <li>
-<a class=padding href=https://github.com/Pi4J/pi4j-example-crowpi><i class="fab fa-fw fa-github"></i> GitHub Repository (Code)</a>
-</li>
-<li>
-<a class=padding href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial><i class="fab fa-fw fa-github"></i> GitHub Repository (Doku)</a>
-</li>
-<li>
-<a class=padding href=https://www.pi4j.com/><i class="fas fa-fw fa-cogs"></i> Pi4J Website</a>
-</li>
-<li>
-<a class=padding href=https://www.fhnw.ch/en/><i class="fas fa-fw fa-university"></i> FHNW Website</a>
-</li>
-</ul>
-</section>
-<section id=prefooter>
+<a class=padding href=https://github.com/Pi4J/pi4j-example-crowpi><i class='fab fa-fw fa-github'></i> GitHub Repository (Code)</a>
+</li><li>
+<a class=padding href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial><i class='fab fa-fw fa-github'></i> GitHub Repository (Doku)</a>
+</li><li>
+<a class=padding href=https://www.pi4j.com/><i class='fas fa-fw fa-cogs'></i> Pi4J Website</a>
+</li><li>
+<a class=padding href=https://www.fhnw.ch/en/><i class='fas fa-fw fa-university'></i> FHNW Website</a>
+</li></ul></section><section id=prefooter>
 <hr>
 <ul>
 <li>
@@ -295,29 +248,18 @@ Serial Peripheral Interface (SPI)
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
 <select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/light-sensor/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
-</div>
-</a>
-</li>
-<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li>
-</ul>
-</section>
-<section id=footer>
-<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
-</section>
-</div>
-</nav>
-<section id=body>
-<div id=overlay></div>
-<div class="padding highlightable">
+</div></a>
+</li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li></ul></section><section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body>
+<div id=overlay></div><div class="padding highlightable">
 <div>
 <div id=top-bar>
 <div id=top-github-link>
-<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/light-sensor.md target=blank>
+<a class=github-link title='Bearbeite diese Seite' href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/light-sensor.md target=blank>
 <i class="fas fa-code-branch"></i>
 <span id=top-github-link-text>Bearbeite diese Seite</span>
 </a>
-</div>
-<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+</div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
 <span id=sidebar-toggle-span>
 <a href=# id=sidebar-toggle data-sidebar-toggle>
 <i class="fas fa-bars"></i>
@@ -327,99 +269,44 @@ Serial Peripheral Interface (SPI)
 <span class=links>
 <a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > Lichtsensor
 </span>
-</div>
-<div class=progress>
+</div><div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#funktionsweise>Funktionsweise</a></li>
-<li><a href=#voraussetzungen>Voraussetzungen</a>
+<li><a href=#funktionsweise>Funktionsweise</a></li><li><a href=#voraussetzungen>Voraussetzungen</a>
 <ul>
-<li><a href=#dip-switches>DIP Switches</a></li>
-</ul>
-</li>
-<li><a href=#verwendung>Verwendung</a>
+<li><a href=#dip-switches>DIP Switches</a></li></ul></li><li><a href=#verwendung>Verwendung</a>
 <ul>
-<li><a href=#konstruktoren>Konstruktoren</a></li>
-<li><a href=#methoden>Methoden</a></li>
-</ul>
-</li>
-<li><a href=#beispielapplikation>Beispielapplikation</a></li>
-<li><a href=#weitere-möglichkeiten>Weitere Möglichkeiten</a></li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-</div>
-<div id=head-tags>
+<li><a href=#konstruktoren>Konstruktoren</a></li><li><a href=#methoden>Methoden</a></li></ul></li><li><a href=#beispielapplikation>Beispielapplikation</a></li><li><a href=#weitere-möglichkeiten>Weitere Möglichkeiten</a></li></ul></nav></div></div></div></div><div id=head-tags>
 <div class=tags>
-<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/i2c>i2c</a>
-</div>
-</div>
-<div id=body-inner>
+<a class=tag-link href=/de/tags/i2c>i2c</a>
+</div></div><div id=body-inner>
 <h1>
 Lichtsensor
-</h1>
-<h2 id=funktionsweise>Funktionsweise</h2>
-<p>Der Lichtsensor nutzt photoelektronische Effekte, um Lichteinstrahlung in ein elektrisches Signal zu wandeln. Dieses Signal kann mittels Elektronik so skaliert werden, dass ein Messwert
+</h1><h2 id=funktionsweise>Funktionsweise</h2><p>Der Lichtsensor nutzt photoelektronische Effekte, um Lichteinstrahlung in ein elektrisches Signal zu wandeln. Dieses Signal kann mittels Elektronik so skaliert werden, dass ein Messwert
 in der Einheit Lux entsteht. Beim CrowPi wird dazu der Umgebungslichtsensor BH1750 verwendet. Dieser arbeitet mit einer Photodiode. Zusätzlich erlaubt der verwendete Sensor eine Konfiguration
 der Messgenauigkeit. Er kann mit 3 verschiedenen Auflösungen betrieben werden. Diese sind: 0.5 Lux, 1 Lux oder 4 Lux. Die Zeit, die für eine Messung benötigt wird, schwankt dabei massiv. Bei einer Auflösung von 4 Lux werden
 typischerweise 16 Millisekunden benötigt. Bei einer Auflösung 0.5 Lux hingegen bereits 120 Millisekunden. Diese Zeit ist natürlich auch bei der Programmierung des Sensors zu beachten. Zu schnelle
-Lesevorgänge können zu ungültigen Messwerten führen.</p>
-<p>Angesteuert wird der Lichtsensor BH1750 mittels des Bus I2C. Näheres zu diesem Bus kann unter <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>Hardware I2C</a> nachgeschlagen werden. Obwohl der Sensor nur wenige
-Einstellmöglichkeiten bietet, sind die Kombinationsmöglichkeiten eines Lichtsensors beinahe unendlich. Es gibt viele mögliche Szenarien, wie der Sensor eingesetzt werden kann.</p>
-<h2 id=voraussetzungen>Voraussetzungen</h2>
-<h3 id=dip-switches>DIP Switches</h3>
-<p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
-<h2 id=verwendung>Verwendung</h2>
-<p>Nachfolgend wird die Verwendung der Klasse
+Lesevorgänge können zu ungültigen Messwerten führen.</p><p>Angesteuert wird der Lichtsensor BH1750 mittels des Bus I2C. Näheres zu diesem Bus kann unter <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>Hardware I2C</a> nachgeschlagen werden. Obwohl der Sensor nur wenige
+Einstellmöglichkeiten bietet, sind die Kombinationsmöglichkeiten eines Lichtsensors beinahe unendlich. Es gibt viele mögliche Szenarien, wie der Sensor eingesetzt werden kann.</p><h2 id=voraussetzungen>Voraussetzungen</h2><h3 id=dip-switches>DIP Switches</h3><p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><h2 id=verwendung>Verwendung</h2><p>Nachfolgend wird die Verwendung der Klasse
 <code>com.pi4j.crowpi.components.LightSensorComponent</code>
 <a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/LightSensorComponent.html target=_blank class="btn btn-default btn-small">
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
-beschrieben.</p>
-<h3 id=konstruktoren>Konstruktoren</h3>
-<table>
+beschrieben.</p><h3 id=konstruktoren>Konstruktoren</h3><table>
 <thead>
 <tr>
-<th>Konstruktor</th>
-<th>Bemerkung</th>
-</tr>
-</thead>
-<tbody>
+<th>Konstruktor</th><th>Bemerkung</th></tr></thead><tbody>
 <tr>
-<td><code>LightSensorComponent(com.pi4j.context.Context pi4j)</code></td>
-<td>Initialisiert einen Lichtsensor mit der Standard Bus- und Geräteadresse.</td>
-</tr>
-<tr>
-<td><code>LightSensorComponent(com.pi4j.context.Context pi4j, int address)</code></td>
-<td>Initialisiert einen Lichtsensor mit einer benutzerdefinierten Bus- und Geräteadresse.</td>
-</tr>
-</tbody>
-</table>
-<h3 id=methoden>Methoden</h3>
-<table>
+<td><code>LightSensorComponent(com.pi4j.context.Context pi4j)</code></td><td>Initialisiert einen Lichtsensor mit der Standard Bus- und Geräteadresse.</td></tr><tr>
+<td><code>LightSensorComponent(com.pi4j.context.Context pi4j, int address)</code></td><td>Initialisiert einen Lichtsensor mit einer benutzerdefinierten Bus- und Geräteadresse.</td></tr></tbody></table><h3 id=methoden>Methoden</h3><table>
 <thead>
 <tr>
-<th>Methode</th>
-<th>Bemerkung</th>
-</tr>
-</thead>
-<tbody>
+<th>Methode</th><th>Bemerkung</th></tr></thead><tbody>
 <tr>
-<td><code>double readLight()</code></td>
-<td>Liest einmalig die Helligkeit aus dem Lichtsensor. Es wird die Standardauflösung von 1 Lux genutzt.</td>
-</tr>
-<tr>
-<td><code>double readLight(int resolution)</code></td>
-<td>Liest einmalig die Helligkeit aus dem Lichtsensor. Es können 3 verschiedene Auflösungen benutzt werden. Die gewünschte Auflösung wird als Integer gemäss folgender Definition übergeben: 0 = 4 Lux / 1 = 1 Lux / 2 = 0.5 Lux.</td>
-</tr>
-</tbody>
-</table>
-<h2 id=beispielapplikation>Beispielapplikation</h2>
-<p>Die nachfolgende Beispielapplikation liest mit einem definierten Takt (<code>DELAY</code>) in Millisekunden den aktuellen Messwert des Lichtsensors aus. Die Anzahl
+<td><code>double readLight()</code></td><td>Liest einmalig die Helligkeit aus dem Lichtsensor. Es wird die Standardauflösung von 1 Lux genutzt.</td></tr><tr>
+<td><code>double readLight(int resolution)</code></td><td>Liest einmalig die Helligkeit aus dem Lichtsensor. Es können 3 verschiedene Auflösungen benutzt werden. Die gewünschte Auflösung wird als Integer gemäss folgender Definition übergeben: 0 = 4 Lux / 1 = 1 Lux / 2 = 0.5 Lux.</td></tr></tbody></table><h2 id=beispielapplikation>Beispielapplikation</h2><p>Die nachfolgende Beispielapplikation liest mit einem definierten Takt (<code>DELAY</code>) in Millisekunden den aktuellen Messwert des Lichtsensors aus. Die Anzahl
 gelesener Werte und somit die Ausführungsdauer des Programms kann mit <code>NUMBER_OF_LOOPS</code> definiert werden. Die Applikation läuft also genau
 <code>DELAY</code> mal <code>NUMBER_OF_LOOPS</code> Millisekunden. Mit den voreingestellten Werten wären das entsprechend exakt 20 Sekunden.
 Nachdem der Messwert eingelesen ist, wird er mit einer einfachen Logik zu Textausgaben verarbeitet. Nach diesem Prinzip könnte zum Beispiel eine Lampe
@@ -430,104 +317,80 @@ kann eine zu kurze Taktrate zu ungültigen Messergebnissen führen. Weniger als 
 <div>
 <strong>Pfad zum Codebeispiel: </strong>
 <code>src/main/java/com/pi4j/crowpi/applications/LightSensorApp.java</code>
-</div>
-<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/LightSensorApp.java target=_blank class="btn btn-default">
+</div><a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/LightSensorApp.java target=_blank class="btn btn-default">
 <i class="fab fa-github"></i>
 Auf GitHub ansehen
 </a>
-</div>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#f92672>package</span> com.pi4j.crowpi.applications<span style=color:#f92672>;</span>
-
-<span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.components.LightSensorComponent<span style=color:#f92672>;</span>
-
-<span style=color:#75715e>/**
-</span><span style=color:#75715e> * Measures the current illuminance with the CrowPi Light sensor and prints some outputs to the user.
-</span><span style=color:#75715e> */</span>
-<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>LightSensorApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
-
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * Define a measurement interval in millis (to short interval can&#39;t be handled by the sensor)
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> DELAY <span style=color:#f92672>=</span> 1000<span style=color:#f92672>;</span>
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * Define a number of loops until the App shuts down
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> NUMBER_OF_LOOPS <span style=color:#f92672>=</span> 20<span style=color:#f92672>;</span>
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * Define lower light limit to work with
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> DARK_VALUE <span style=color:#f92672>=</span> 150<span style=color:#f92672>;</span>
-    <span style=color:#75715e>/**
-</span><span style=color:#75715e>     * Define upper light limit to work with
-</span><span style=color:#75715e>     */</span>
-    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> BRIGHT_VALUE <span style=color:#f92672>=</span> 3000<span style=color:#f92672>;</span>
-
-    <span style=color:#a6e22e>@Override</span>
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#75715e>// Initialize a new Light Sensor
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var sensor <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> LightSensorComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
-
-        <span style=color:#75715e>// Start the measurements:
-</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Starting new measurements ...&#34;</span><span style=color:#f92672>);</span>
-
-        <span style=color:#75715e>// Loop until number of loops is reached
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> NUMBER_OF_LOOPS<span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-            <span style=color:#75715e>// Read the current illumination from sensor
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>double</span> value <span style=color:#f92672>=</span> sensor<span style=color:#f92672>.</span><span style=color:#a6e22e>readLight</span><span style=color:#f92672>(</span>2<span style=color:#f92672>);</span>
-
-            <span style=color:#75715e>// Analyze measured value and react accordingly
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&lt;</span> DARK_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Whoo that&#39;s dark... You should turn on light&#34;</span><span style=color:#f92672>);</span>
-            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&gt;=</span> DARK_VALUE <span style=color:#f92672>&amp;&amp;</span> value <span style=color:#f92672>&lt;</span> BRIGHT_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;I feel good. Very nice light in here!&#34;</span><span style=color:#f92672>);</span>
-            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&gt;=</span> BRIGHT_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Oh no .. it&#39;s so bright ... please ... please turn off the light&#34;</span><span style=color:#f92672>);</span>
-            <span style=color:#f92672>}</span>
-
-            <span style=color:#75715e>// Sleep before continuing with next measurement
-</span><span style=color:#75715e></span>            sleep<span style=color:#f92672>(</span>DELAY<span style=color:#f92672>);</span>
-        <span style=color:#f92672>}</span>
-    <span style=color:#f92672>}</span>
-<span style=color:#f92672>}</span>
-
-</code></pre></div>
-</p>
-<h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
-<ul>
-<li>
-<p>Das Beispiel könnte um einen Eingang erweitert werden, mit dem die Schaltpunkte während des Betriebs verändert werden können. Dazu müsste nur die Deklaration des <code>DELAY</code>
-angepasst werden und eine Logik für einen Eingang ergänzt werden.</p>
-</li>
-<li>
-<p>Statt die Zeitdauer über <code>DELAY</code> und <code>NUMBER_OF_LOOPS</code> zu regulieren könnte eine Benutzeraktion zum Beenden des Programms verwendet werden. Denkbar wäre dabei ein Knopf oder auch eine
-Eingabe des Benutzers in der Konsole der Entwicklungsumgebung.</p>
-</li>
-</ul>
-<footer class=footline>
-</footer>
-</div>
-</div>
-<div id=navigation>
+</div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>package</span> com.pi4j.crowpi.applications<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.pi4j.crowpi.components.LightSensorComponent<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * Measures the current illuminance with the CrowPi Light sensor and prints some outputs to the user.
+</span></span></span><span style=display:flex><span><span style=color:#75715e> */</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>LightSensorApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * Define a measurement interval in millis (to short interval can&#39;t be handled by the sensor)
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     */</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> DELAY <span style=color:#f92672>=</span> 1000<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * Define a number of loops until the App shuts down
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     */</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> NUMBER_OF_LOOPS <span style=color:#f92672>=</span> 20<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * Define lower light limit to work with
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     */</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> DARK_VALUE <span style=color:#f92672>=</span> 150<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * Define upper light limit to work with
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     */</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>double</span> BRIGHT_VALUE <span style=color:#f92672>=</span> 3000<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Initialize a new Light Sensor
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var sensor <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> LightSensorComponent<span style=color:#f92672>(</span>pi4j<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Start the measurements:
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Starting new measurements ...&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Loop until number of loops is reached
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> NUMBER_OF_LOOPS<span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#75715e>// Read the current illumination from sensor
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#66d9ef>double</span> value <span style=color:#f92672>=</span> sensor<span style=color:#f92672>.</span><span style=color:#a6e22e>readLight</span><span style=color:#f92672>(</span>2<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#75715e>// Analyze measured value and react accordingly
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&lt;</span> DARK_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Whoo that&#39;s dark... You should turn on light&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&gt;=</span> DARK_VALUE <span style=color:#f92672>&amp;&amp;</span> value <span style=color:#f92672>&lt;</span> BRIGHT_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;I feel good. Very nice light in here!&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>value <span style=color:#f92672>&gt;=</span> BRIGHT_VALUE<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Oh no .. it&#39;s so bright ... please ... please turn off the light&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#75715e>// Sleep before continuing with next measurement
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            sleep<span style=color:#f92672>(</span>DELAY<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span></code></pre></div></p><h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2><footer class=footline>
+</footer></div></div><div id=navigation>
 <a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix"> <i class="fa fa-chevron-left"></i></a>
 <a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
-</div>
-</section>
-<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
-<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
-</div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1634989005></script>
+</div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1691425819></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1634989005></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1691425819></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
-</body>
-</html>
+</body></html>

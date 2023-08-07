@@ -2,53 +2,43 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.117.0">
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>Infrarot Empfänger :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1634989005 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1634989005></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
-</head>
-<body data-url=/CrowPiGoesJavaTutorial/de/components/ir-receiver/>
+<title>Infrarot Empfänger :: CrowPi goes Java</title><link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1691425819 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1691425819></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/CrowPiGoesJavaTutorial/de/components/ir-receiver/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
 <a id=logo href=/CrowPiGoesJavaTutorial/de>
-<img src=/CrowPiGoesJavaTutorial/images/fhnw-logo.svg style=width:40%;height:40%>
-<h3 style=margin:0;color:#fff>CrowPi goes Java</h3>
-</a>
-</div>
-<div class=searchbox>
+<img src=/images/fhnw-logo.svg style=width:40%;height:40%>
+<h3 style=margin:0;color:#fff>CrowPi goes Java</h3></a>
+</div><div class=searchbox>
 <label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
-</div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1634989005></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1634989005></script>
+</div><script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1691425819></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1691425819></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1634989005></script>
-</div>
-<section id=homelinks>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1691425819></script>
+</div><section id=homelinks>
 <ul>
 <li>
-<a class=padding href=/CrowPiGoesJavaTutorial/de><i class="fas fa-fw fa-home"></i> Startseite</a>
-</li>
-</ul>
-</section>
-<div class=highlightable>
+<a class=padding href=/CrowPiGoesJavaTutorial/de><i class='fas fa-fw fa-home'></i> Startseite</a>
+</li></ul></section><div class=highlightable>
 <ul class=topics>
 <li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/>
@@ -61,22 +51,22 @@
 Anforderungen
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/raspberry/>
 Raspberry PI Setup
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/jdk/ title="JDK Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/jdk/>
+JDK Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/intellij/>
 IntelliJ IDEA Setup
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/>
 <b>2. </b>Grundlagen
 <i class="fas fa-check read-icon"></i>
@@ -87,40 +77,32 @@ IntelliJ IDEA Setup
 Die CrowPi Plattform
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/running/>
 Starten der Applikation
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>
 Debugging der Applikation
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/framework/>
 Application Framework
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/dev-process/>
 Entwicklungsprozess
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ title=Troubleshooting class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ title=Troubleshooting class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/>
 Troubleshooting
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class="dd-item
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class="dd-item
 parent">
 <a href=/CrowPiGoesJavaTutorial/de/components/>
 <b>3. </b>Komponenten
@@ -132,118 +114,97 @@ parent">
 7-Segment Anzeige
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/button/>
 Button
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
 Button Matrix
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/buzzer/>
 Buzzer
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ir-receiver/ title="Infrarot Empfänger" class="dd-item active">
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ir-receiver/ title="Infrarot Empfänger" class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/components/ir-receiver/>
 Infrarot Empfänger
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
 LCD Display
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
 LED Matrix
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
 Lichtsensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
 PIR Motion Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/relay/>
 Relais
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/rfid/>
 RFID
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/step-motor/ title=Schrittmotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/step-motor/ title=Schrittmotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/step-motor/>
 Schrittmotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/servo-motor/ title=Servomotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/servo-motor/ title=Servomotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/servo-motor/>
 Servomotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/sound-sensor/>
 Sound Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/ title="Temperatur- / Luftfeuchtigkeitssensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/ title="Temperatur- / Luftfeuchtigkeitssensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/>
 Temperatur- / Luftfeuchtigkeitssensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/>
 Tilt Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/touch-sensor/>
 Touch Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/>
 Ultraschall Distanzsensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/vibration-motor/>
 Vibrationsmotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/>
 <b>4. </b>Hardware
 <i class="fas fa-check read-icon"></i>
@@ -254,40 +215,32 @@ Vibrationsmotor
 I²C
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/pwm/>
 Pulse Width Modulation (PWM)
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>
 Serial Peripheral Interface (SPI)
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-</ul>
-<section id=shortcuts>
-<h3>Mehr</h3>
-<ul>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/ title="Stepper Motor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/>
+Stepper Motor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li></ul></li></ul><section id=shortcuts>
+<h3>Mehr</h3><ul>
 <li>
-<a class=padding href=https://github.com/Pi4J/pi4j-example-crowpi><i class="fab fa-fw fa-github"></i> GitHub Repository (Code)</a>
-</li>
-<li>
-<a class=padding href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial><i class="fab fa-fw fa-github"></i> GitHub Repository (Doku)</a>
-</li>
-<li>
-<a class=padding href=https://www.pi4j.com/><i class="fas fa-fw fa-cogs"></i> Pi4J Website</a>
-</li>
-<li>
-<a class=padding href=https://www.fhnw.ch/en/><i class="fas fa-fw fa-university"></i> FHNW Website</a>
-</li>
-</ul>
-</section>
-<section id=prefooter>
+<a class=padding href=https://github.com/Pi4J/pi4j-example-crowpi><i class='fab fa-fw fa-github'></i> GitHub Repository (Code)</a>
+</li><li>
+<a class=padding href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial><i class='fab fa-fw fa-github'></i> GitHub Repository (Doku)</a>
+</li><li>
+<a class=padding href=https://www.pi4j.com/><i class='fas fa-fw fa-cogs'></i> Pi4J Website</a>
+</li><li>
+<a class=padding href=https://www.fhnw.ch/en/><i class='fas fa-fw fa-university'></i> FHNW Website</a>
+</li></ul></section><section id=prefooter>
 <hr>
 <ul>
 <li>
@@ -295,29 +248,18 @@ Serial Peripheral Interface (SPI)
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
 <select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/components/ir-receiver/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
-</div>
-</a>
-</li>
-<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li>
-</ul>
-</section>
-<section id=footer>
-<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
-</section>
-</div>
-</nav>
-<section id=body>
-<div id=overlay></div>
-<div class="padding highlightable">
+</div></a>
+</li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li></ul></section><section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body>
+<div id=overlay></div><div class="padding highlightable">
 <div>
 <div id=top-bar>
 <div id=top-github-link>
-<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/ir-receiver.md target=blank>
+<a class=github-link title='Bearbeite diese Seite' href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/components/ir-receiver.md target=blank>
 <i class="fas fa-code-branch"></i>
 <span id=top-github-link-text>Bearbeite diese Seite</span>
 </a>
-</div>
-<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+</div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
 <span id=sidebar-toggle-span>
 <a href=# id=sidebar-toggle data-sidebar-toggle>
 <i class="fas fa-bars"></i>
@@ -327,111 +269,55 @@ Serial Peripheral Interface (SPI)
 <span class=links>
 <a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/components/>Komponenten</a> > Infrarot Empfänger
 </span>
-</div>
-<div class=progress>
+</div><div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#funktionsweise>Funktionsweise</a></li>
-<li><a href=#voraussetzungen>Voraussetzungen</a>
+<li><a href=#funktionsweise>Funktionsweise</a></li><li><a href=#voraussetzungen>Voraussetzungen</a>
 <ul>
-<li><a href=#dip-switches>DIP Switches</a></li>
-</ul>
-</li>
-<li><a href=#verwendung>Verwendung</a>
+<li><a href=#dip-switches>DIP Switches</a></li></ul></li><li><a href=#verwendung>Verwendung</a>
 <ul>
-<li><a href=#konstruktoren>Konstruktoren</a></li>
-<li><a href=#methoden>Methoden</a></li>
-<li><a href=#enumerationen>Enumerationen</a></li>
-</ul>
-</li>
-<li><a href=#beispielapplikation>Beispielapplikation</a></li>
-<li><a href=#weitere-möglichkeiten>Weitere Möglichkeiten</a></li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-</div>
-<div id=head-tags>
+<li><a href=#konstruktoren>Konstruktoren</a></li><li><a href=#methoden>Methoden</a></li><li><a href=#enumerationen>Enumerationen</a></li></ul></li><li><a href=#beispielapplikation>Beispielapplikation</a></li><li><a href=#weitere-möglichkeiten>Weitere Möglichkeiten</a></li></ul></nav></div></div></div></div><div id=head-tags>
 <div class=tags>
-<a class=tag-link href=/CrowPiGoesJavaTutorial/de/tags/gpio>gpio</a>
-</div>
-</div>
-<div id=body-inner>
+<a class=tag-link href=/de/tags/gpio>gpio</a>
+</div></div><div id=body-inner>
 <h1>
 Infrarot Empfänger
-</h1>
-<h2 id=funktionsweise>Funktionsweise</h2>
-<p>Mithilfe von Infrarot können über einige Meter Distanz digitale Informationen übertragen werden, was beispielsweise oft für die Fernbedienung
+</h1><h2 id=funktionsweise>Funktionsweise</h2><p>Mithilfe von Infrarot können über einige Meter Distanz digitale Informationen übertragen werden, was beispielsweise oft für die Fernbedienung
 eines Fernsehers genutzt wird. Die Übertragungsart gleicht hierbei dem Prinzip des Morsens, da die Infrarot-LED im Sendegerät eine
-Abfolge von Bits durch unterschiedlich lange Pausen zu dem Empfängergerät überträgt. Da jedoch auch viele andere Dinge in der Natur wie
-beispielsweise unsere Sonne ein Infrarot-Licht emittieren, wird für die elektronische Verwendung nur eine Frequenz von 38kHz verwendet.</p>
-<p>Um zu vermeiden, dass eine Fernbedienung über eine oder gar mehrere Sekunden komplett still gehalten werden muss, werden die einzelnen Bits
+Abfolge von Bits durch unterschiedlich lange Pausen zu dem Empfängergerät überträgt. Da jedoch auch viele andere Dinge in der Natur, wie
+beispielsweise unsere Sonne, ein Infrarot-Licht emittieren, wird für die elektronische Verwendung nur eine Frequenz von 38kHz verwendet.</p><p>Um zu vermeiden, dass eine Fernbedienung über eine oder gar mehrere Sekunden komplett still gehalten werden muss, werden die einzelnen Bits
 in sehr kurzen zeitlichen Abständen übertragen. Dies klingt im ersten Moment natürlich praktisch, bedeutet jedoch auch, dass das empfangende
-Gerät sehr präzise zeitliche Messungen durchführen können muss. Genau dies war jedoch beim CrowPi mit der Verwendung von Java in Kombination
+Gerät in der Lage sein muss sehr präzise zeitliche Messungen durchführen zu können. Genau dies war jedoch beim CrowPi mit der Verwendung von Java in Kombination
 mit Pi4J nicht möglich, da eine Genauigkeit von rund 60 Mikrosekunden (0.00006 Sekunden) benötigt wird, was sich mit dem Design der Java
-Virtual Machine nicht umsetzen lässt.</p>
-<p>Um diese Komponente jedoch trotzdem zur Verfügung zu stellen, nutzt diese Implementation eine vorinstallierte Applikation namens <code>mode2</code>
+Virtual Machine nicht umsetzen lässt.</p><p>Um diese Komponente jedoch trotzdem zur Verfügung zu stellen, nutzt diese Implementation eine vorinstallierte Applikation namens <code>mode2</code>
 welche in C geschrieben wurde. Diese gibt die entsprechend erkannten Signale über die Konsole aus, welche dann automatisch in Java
 ausgewertet, geprüft und weitergegeben werden. Ein grosser Teil der Logik ist somit weiterhin innerhalb dieser Komponenten-Klasse
 aufzufinden, das Erkennen der Signale findet jedoch nicht mit Pi4J statt. Sollten sich hier in Zukunft neue Möglichkeiten ergeben, so würde
-sich die Komponente regulär via GPIO auslesen lassen.</p>
-<p>Eine saubere Alternative, die sich weiterhin mit Pi4J umsetzen lässt, wäre einen dedizierten Mikrocontroller für das Empfangen der
+sich die Komponente regulär via GPIO auslesen lassen.</p><p>Eine saubere Alternative, die sich weiterhin mit Pi4J umsetzen lässt, wäre einen dedizierten Mikrocontroller für das Empfangen der
 Infrarot-Signale zu verwenden, welcher dann über einen anderen Bus wie beispielsweise <a href=/CrowPiGoesJavaTutorial/de/hardware/i2c/>I²C</a> oder <a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>SPI</a> die Signale an den Raspberry Pi sendet. Auf dem CrowPi ist dies jedoch nicht vorhanden, sodass diese Möglichkeit nicht
-besteht.</p>
-<p>Für die Verwendung dieser Komponente muss die beigelegte Infrarot-Diode auf dem CrowPi in die 3 Pin-Header eingesteckt werden, da sich diese
-nicht direkt auf dem CrowPi befindet. Auf dem nachfolgenden Foto ist angegeben, wo die Infrarot-Photodiode einzustecken ist:</p>
+besteht.</p><p>Für die Verwendung dieser Komponente muss die beigelegte Infrarot-Diode auf dem CrowPi in die 3 Pin-Header eingesteckt werden, da sich diese
+nicht direkt auf dem CrowPi befindet. Auf dem nachfolgenden Foto ist angegeben, wo die Infrarot-Photodiode einzustecken ist:</p><p>
 <img src="/CrowPiGoesJavaTutorial/images/components/ir-receiver.jpg?height=500px" alt="Anschluss für Infrarot-Diode">
-<h2 id=voraussetzungen>Voraussetzungen</h2>
-<h3 id=dip-switches>DIP Switches</h3>
-<p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg>
-<h2 id=verwendung>Verwendung</h2>
-<p>Nachfolgend wird die Verwendung der Klasse
+<img src="/CrowPiGoesJavaTutorial/images/components/ir-Sensor.jpg?height=100px" alt=ir-Sensor>
+</p><h2 id=voraussetzungen>Voraussetzungen</h2><h3 id=dip-switches>DIP Switches</h3><p>Für diese Komponente werden keine spezifischen DIP-Switches benötigt, sodass diese in der Standardkonfiguration belassen werden können:</p><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(links)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><svg width="164" height="64" viewBox="0 0 51.329 20.034" xmlns="http://www.w3.org/2000/svg"><g><rect width="51.329" height="20.034" fill="#333" stroke-width=".6835"/><text x="1.0455865" y="4.9884982" fill="#fff" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>ON</tspan></text><text x="50.2834135" y="4.9884982" fill="#fff" text-anchor="end" font-family="sans-serif" font-size="4.9389" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><tspan>(rechts)</tspan></text><g fill="#fff" stroke="#646464" stroke-width=".52084"><rect x="1.3229" y="6.35" width="4.2333" height="8.4667"/><rect x="7.6729" y="6.35" width="4.2333" height="8.4667"/><rect x="14.023" y="6.35" width="4.2333" height="8.4667"/><rect x="20.373" y="6.35" width="4.2333" height="8.4667"/><rect x="26.723" y="6.35" width="4.2333" height="8.4667"/><rect x="33.073" y="6.35" width="4.2333" height="8.4667"/><rect x="39.423" y="6.35" width="4.2333" height="8.4667"/><rect x="45.773" y="6.35" width="4.2333" height="8.4667"/></g><g fill="#646464" stroke-width=".36829"><rect x="1.3229" y="6.35" width="4.2333" height="4.2333"/><rect x="7.6729" y="6.35" width="4.2333" height="4.2333"/><rect x="14.023" y="6.35" width="4.2333" height="4.2333"/><rect x="20.373" y="6.35" width="4.2333" height="4.2333"/><rect x="26.723" y="6.35" width="4.2333" height="4.2333"/><rect x="33.073" y="6.35" width="4.2333" height="4.2333"/><rect x="39.423" y="6.35" width="4.2333" height="4.2333"/><rect x="45.773" y="6.35" width="4.2333" height="4.2333"/></g><g fill="#fff" font-family="sans-serif" font-size="3.5278" font-weight="bold" stroke-width=".26458" style="line-height:1.25"><text x="2.2863367" y="18.711349"><tspan>1</tspan></text><text x="8.6363363" y="18.711349"><tspan>2</tspan></text><text x="14.986337" y="18.711349"><tspan>3</tspan></text><text x="21.336336" y="18.711349"><tspan>4</tspan></text><text x="27.686337" y="18.711349"><tspan>5</tspan></text><text x="34.036335" y="18.711349"><tspan>6</tspan></text><text x="40.386333" y="18.711349"><tspan>7</tspan></text><text x="46.736332" y="18.711349"><tspan>8</tspan></text></g></g></svg><h2 id=verwendung>Verwendung</h2><p>Nachfolgend wird die Verwendung der Klasse
 <code>com.pi4j.crowpi.components.IrReceiverComponent</code>
 <a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/IrReceiverComponent.html target=_blank class="btn btn-default btn-small">
 <i class="fas fa-external-link-alt"></i>
 Javadoc
 </a>
-beschrieben.</p>
-<h3 id=konstruktoren>Konstruktoren</h3>
-<table>
+beschrieben.</p><h3 id=konstruktoren>Konstruktoren</h3><table>
 <thead>
 <tr>
-<th style=text-align:left>Konstruktor</th>
-<th style=text-align:left>Bemerkung</th>
-</tr>
-</thead>
-<tbody>
+<th style=text-align:left>Konstruktor</th><th style=text-align:left>Bemerkung</th></tr></thead><tbody>
 <tr>
-<td style=text-align:left><code>IrReceiverComponent()</code></td>
-<td style=text-align:left>Initialisiert einen Infrarot-Empfänger mit Standardeinstellungen für den CrowPi.</td>
-</tr>
-<tr>
-<td style=text-align:left><code>IrReceiverComponent(String mode2Binary, String devicePath)</code></td>
-<td style=text-align:left>Initialisiert einen Infrarot-Empfänger mit benutzerdefiniertem Pfad zur <code>mode2</code> Applikation sowie einem Gerätepfad.</td>
-</tr>
-</tbody>
-</table>
-<h3 id=methoden>Methoden</h3>
-<table>
+<td style=text-align:left><code>IrReceiverComponent()</code></td><td style=text-align:left>Initialisiert einen Infrarot-Empfänger mit Standardeinstellungen für den CrowPi.</td></tr><tr>
+<td style=text-align:left><code>IrReceiverComponent(String mode2Binary, String devicePath)</code></td><td style=text-align:left>Initialisiert einen Infrarot-Empfänger mit benutzerdefiniertem Pfad zur <code>mode2</code> Applikation sowie einem Gerätepfad.</td></tr></tbody></table><h3 id=methoden>Methoden</h3><table>
 <thead>
 <tr>
-<th style=text-align:left></th>
-<th style=text-align:left>Methode</th>
-<th style=text-align:left>Bemerkung</th>
-</tr>
-</thead>
-<tbody>
+<th style=text-align:left></th><th style=text-align:left>Methode</th><th style=text-align:left>Bemerkung</th></tr></thead><tbody>
 <tr>
-<td style=text-align:left><code>void onKeyPressed(EventHandler&lt;Key> handler)</code></td>
-<td style=text-align:left>Setzt den Event Handler, welcher gedrückte Tasten auf der Infrarot-Fernbedienung als ersten Parameter erhält. Durch die Angabe von <code>null</code> kann das Empfangen von Infrarot-Signalen deaktiviert werden.</td>
-<td style=text-align:left></td>
-</tr>
-</tbody>
-</table>
-<h3 id=enumerationen>Enumerationen</h3>
-<ul>
+<td style=text-align:left><code>void onKeyPressed(EventHandler&lt;Key> handler)</code></td><td style=text-align:left>Setzt den Event Handler, welcher gedrückte Tasten auf der Infrarot-Fernbedienung als ersten Parameter erhält. Durch die Angabe von <code>null</code> kann das Empfangen von Infrarot-Signalen deaktiviert werden.</td><td style=text-align:left></td></tr></tbody></table><h3 id=enumerationen>Enumerationen</h3><ul>
 <li>
 <code>com.pi4j.crowpi.components.IrReceiverComponent</code>
 <a href=https://pi4j.com/pi4j-example-crowpi/com.pi4j.crowpi/com/pi4j/crowpi/components/IrReceiverComponent.Key.html target=_blank class="btn btn-default btn-small">
@@ -440,98 +326,80 @@ Javadoc
 </a>
 enthält alle unterstützten Tasten, welche sich auf
 der beigelegten Infrarot-Fernbedienung des CrowPi befinden. Diese Enumeration kann genutzt werden, um innerhalb eines Events die erhaltene
-Taste zu vergleichen und unterschiedliche Aktionen durchzuführen.</li>
-</ul>
-<h2 id=beispielapplikation>Beispielapplikation</h2>
-<p>Die Beispielapplikation initialisiert zuerst den Infrarot-Empfänger, wobei hier nicht einmal der übliche Pi4J-Kontext übergeben werden muss,
+Taste zu vergleichen und unterschiedliche Aktionen durchzuführen.</li></ul><h2 id=beispielapplikation>Beispielapplikation</h2><p>Die Beispielapplikation initialisiert zuerst den Infrarot-Empfänger, wobei hier nicht einmal der übliche Pi4J-Kontext übergeben werden muss,
 da wie bereits weiter oben beschrieben, von dieser Komponente die Pi4J-Library nicht genutzt wird. Nach erfolgter Initialisierung wird ein
 Event Handler registriert, der jeden Tastendruck auf der Konsole ausgibt sowie beim Drücken der &ldquo;CH&rdquo; Taste eine zusätzliche Ausgabe
-vornimmt. Anschliessend wird 30 Sekunden gewartet, bevor der Event Handler wieder deaktiviert wird und die Applikation sich beendet.</p>
-<div class=cpi-code-header>
+vornimmt. Anschliessend wird 30 Sekunden gewartet, bevor der Event Handler wieder deaktiviert wird und die Applikation sich beendet.</p><div class=cpi-code-header>
 <div>
 <strong>Pfad zum Codebeispiel: </strong>
 <code>src/main/java/com/pi4j/crowpi/applications/IrReceiverApp.java</code>
-</div>
-<a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/IrReceiverApp.java target=_blank class="btn btn-default">
+</div><a href=https://github.com/Pi4J/pi4j-example-crowpi/blob/main/src/main/java/com/pi4j/crowpi/applications/IrReceiverApp.java target=_blank class="btn btn-default">
 <i class="fab fa-github"></i>
 Auf GitHub ansehen
 </a>
-</div>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#f92672>package</span> com.pi4j.crowpi.applications<span style=color:#f92672>;</span>
-
-<span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
-<span style=color:#f92672>import</span> com.pi4j.crowpi.components.IrReceiverComponent<span style=color:#f92672>;</span>
-
-<span style=color:#75715e>/**
-</span><span style=color:#75715e> * This example demonstrates the infrared receiver component on the CrowPi. Please note that the receiver LED must first be plugged into the
-</span><span style=color:#75715e> * three small pinholes labelled as &#34;IR&#34; for this example to work. As Java does not allow for precise enough timings itself, this component
-</span><span style=color:#75715e> * does not use Pi4J to retrieve the pulses of the GPIO pin for the IR sensor and instead relies on mode2, an executable provided as part of
-</span><span style=color:#75715e> * LIRC for reading from an IR input.
-</span><span style=color:#75715e> * &lt;p&gt;
-</span><span style=color:#75715e> * A clean alternative would be using a separate microcontroller which handles the super precise timing-based communication itself and
-</span><span style=color:#75715e> * interacts with the Raspberry Pi using I²C, SPI or any other bus. This would offload the work and guarantee even more accurate results. As
-</span><span style=color:#75715e> * the CrowPi does not have such a dedicated microcontroller though, using `mode2` was the best available approach.
-</span><span style=color:#75715e> */</span>
-<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>IrReceiverApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
-    <span style=color:#a6e22e>@Override</span>
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#75715e>// Initialize the IR receiver component
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// We do not use Pi4J here at all, so there is no need to pass the context...
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var ir <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> IrReceiverComponent<span style=color:#f92672>();</span>
-
-        <span style=color:#75715e>// Register an event listener for key presses
-</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Welcome to the IR demo! An event listener for key presses will now be registered...&#34;</span><span style=color:#f92672>);</span>
-        ir<span style=color:#f92672>.</span><span style=color:#a6e22e>onKeyPressed</span><span style=color:#f92672>(</span>key <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
-            <span style=color:#75715e>// Print the key which just has been pressed
-</span><span style=color:#75715e></span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Key on IR remote has been pressed: &#34;</span> <span style=color:#f92672>+</span> key<span style=color:#f92672>);</span>
-
-            <span style=color:#75715e>// It is also possible to check if a specific key was pressed
-</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>key <span style=color:#f92672>==</span> IrReceiverComponent<span style=color:#f92672>.</span><span style=color:#a6e22e>Key</span><span style=color:#f92672>.</span><span style=color:#a6e22e>CH</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;You pressed the super special CH key! (it is actually not special, sorry to disappoint)&#34;</span><span style=color:#f92672>);</span>
-            <span style=color:#f92672>}</span>
-        <span style=color:#f92672>});</span>
-
-        <span style=color:#75715e>// Give the user some time to press buttons
-</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Done! You now have 30 seconds to try out pressing various keys on the IR remote...&#34;</span><span style=color:#f92672>);</span>
-        sleep<span style=color:#f92672>(</span>30000<span style=color:#f92672>);</span>
-
-        <span style=color:#75715e>// Cleanup the event listener
-</span><span style=color:#75715e></span>        ir<span style=color:#f92672>.</span><span style=color:#a6e22e>onKeyPressed</span><span style=color:#f92672>(</span><span style=color:#66d9ef>null</span><span style=color:#f92672>);</span>
-    <span style=color:#f92672>}</span>
-<span style=color:#f92672>}</span>
-
-</code></pre></div>
-<h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2>
-<ul>
-<li>Mit der beigelegten Fernbedienung lassen sich einwandfrei numerische Eingaben tätigen, z.B. um einen einfachen Taschenrechner mit Addition
-und Subtraktion zu bauen, wofür sich die Zahlentasten sowie Plus und Minus nutzen lassen würden.</li>
-<li>Die Steuerungstasten für Previous, Next sowie Play/Pause könnten genutzt werden, um den Buzzer zu steuern und verschiedene Melodien damit
-abzuspielen.</li>
-</ul>
-<footer class=footline>
-</footer>
-</div>
-</div>
-<div id=navigation>
+</div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>package</span> com.pi4j.crowpi.applications<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.pi4j.context.Context<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.pi4j.crowpi.Application<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.pi4j.crowpi.components.IrReceiverComponent<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * This example demonstrates the infrared receiver component on the CrowPi. Please note that the receiver LED must first be plugged into the
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * three small pinholes labelled as &#34;IR&#34; for this example to work. As Java does not allow for precise enough timings itself, this component
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * does not use Pi4J to retrieve the pulses of the GPIO pin for the IR sensor and instead relies on mode2, an executable provided as part of
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * LIRC for reading from an IR input.
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * &lt;p&gt;
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * A clean alternative would be using a separate microcontroller which handles the super precise timing-based communication itself and
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * interacts with the Raspberry Pi using I²C, SPI or any other bus. This would offload the work and guarantee even more accurate results. As
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * the CrowPi does not have such a dedicated microcontroller though, using `mode2` was the best available approach.
+</span></span></span><span style=display:flex><span><span style=color:#75715e> */</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>IrReceiverApp</span> <span style=color:#66d9ef>implements</span> Application <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>Context pi4j<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Initialize the IR receiver component
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>// We do not use Pi4J here at all, so there is no need to pass the context...
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>final</span> var ir <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> IrReceiverComponent<span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Register an event listener for key presses
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Welcome to the IR demo! An event listener for key presses will now be registered...&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        ir<span style=color:#f92672>.</span><span style=color:#a6e22e>onKeyPressed</span><span style=color:#f92672>(</span>key <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#75715e>// Print the key which just has been pressed
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Key on IR remote has been pressed: &#34;</span> <span style=color:#f92672>+</span> key<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#75715e>// It is also possible to check if a specific key was pressed
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>key <span style=color:#f92672>==</span> IrReceiverComponent<span style=color:#f92672>.</span><span style=color:#a6e22e>Key</span><span style=color:#f92672>.</span><span style=color:#a6e22e>CH</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;You pressed the super special CH key! (it is actually not special, sorry to disappoint)&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>});</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Give the user some time to press buttons
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Done! You now have 30 seconds to try out pressing various keys on the IR remote...&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        sleep<span style=color:#f92672>(</span>30000<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Cleanup the event listener
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        ir<span style=color:#f92672>.</span><span style=color:#a6e22e>onKeyPressed</span><span style=color:#f92672>(</span><span style=color:#66d9ef>null</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span></code></pre></div><h2 id=weitere-möglichkeiten>Weitere Möglichkeiten</h2><ul>
+<li>
+<p>Mit der beigelegten Fernbedienung lassen sich einwandfrei numerische Eingaben tätigen, z.B. um einen einfachen Taschenrechner mit Addition
+und Subtraktion zu bauen, wofür sich die Zahlentasten sowie Plus und Minus nutzen lassen würden. Dieser liesse sich auch mit dem LCD-Display kombinieren.</p></li><li>
+<p>Die Steuerungstasten für Previous, Next sowie Play/Pause könnten genutzt werden, um den Buzzer zu steuern und verschiedene Melodien damit
+abzuspielen.</p></li></ul><footer class=footline>
+</footer></div></div><div id=navigation>
 <a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer> <i class="fa fa-chevron-left"></i></a>
 <a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
-</div>
-</section>
-<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
-<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
-</div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1634989005></script>
+</div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1691425819></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1634989005></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1691425819></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
-</body>
-</html>
+</body></html>

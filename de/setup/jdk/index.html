@@ -6,7 +6,7 @@
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>Categories :: CrowPi goes Java</title><link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1691425819 rel=stylesheet>
+<title>JDK Setup :: CrowPi goes Java</title><link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1691425819 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1691425819 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1691425819 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1691425819 rel=stylesheet>
@@ -19,7 +19,7 @@
 <link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1691425819 rel=stylesheet>
 <link href=/CrowPiGoesJavaTutorial/css/custom.css?1691425819 rel=stylesheet>
 <script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1691425819></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/CrowPiGoesJavaTutorial/de/categories/>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/CrowPiGoesJavaTutorial/de/setup/jdk/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -40,7 +40,8 @@
 <a class=padding href=/CrowPiGoesJavaTutorial/de><i class='fas fa-fw fa-home'></i> Startseite</a>
 </li></ul></section><div class=highlightable>
 <ul class=topics>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
+<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class="dd-item
+parent">
 <a href=/CrowPiGoesJavaTutorial/de/setup/>
 <b>1. </b>Vorbereitungen
 <i class="fas fa-check read-icon"></i>
@@ -56,7 +57,7 @@ Anforderungen
 Raspberry PI Setup
 <i class="fas fa-check read-icon"></i>
 </a>
-</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/jdk/ title="JDK Setup" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/jdk/ title="JDK Setup" class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/setup/jdk/>
 JDK Setup
 <i class="fas fa-check read-icon"></i>
@@ -246,34 +247,44 @@ Stepper Motor
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/categories/ selected>German</option><option id=en value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/en/categories/>English</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/setup/jdk/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div></a>
 </li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li></ul></section><section id=footer>
 <p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body>
 <div id=overlay></div><div class="padding highlightable">
 <div>
 <div id=top-bar>
-<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<div id=top-github-link>
+<a class=github-link title='Bearbeite diese Seite' href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/setup/jdk.md target=blank>
+<i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Bearbeite diese Seite</span>
+</a>
+</div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
 <span id=sidebar-toggle-span>
 <a href=# id=sidebar-toggle data-sidebar-toggle>
 <i class="fas fa-bars"></i>
 </a>
 </span>
-<span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > Categories
+<a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/setup/>Vorbereitungen</a> > JDK Setup
 </span>
-</div><div class=progress>
-<div class=wrapper>
-</div></div></div></div><div id=head-tags>
+</div></div></div><div id=head-tags>
 </div><div id=body-inner>
 <h1>
-category ::
-Categories
-</h1><ul>
-</ul><footer class=footline>
+JDK Setup
+</h1><h2 id=installation-auf-dem-entwickler-laptop>Installation auf dem Entwickler-Laptop</h2><p>Im Pi4J-CrowPi-OS Image ist Java in der Version 17 (das sogenannte JDK) bereits vorinstalliert. Daher verwenden wir diesen JDK auch auf dem Laptop. Download: <a href="https://adoptium.net/?variant=openjdk17&amp;jvmVariant=hotspot">Java 17</a></p><p>Hinweis für Mac-Benutzer: Die Verwendung von SDKMAN (s.u.) für die Installation und die Verwaltung von JDKs ist sehr empfehlenswert.</p><h3 id=empfehlung-zur-installation-des-jdk-für-macos-und-linux>Empfehlung zur Installation des JDK für MacOS (und Linux)</h3><p>Für MacOs und Linux gibt es ein sehr empfehlenswertes Tool zur Verwaltung unterschiedlicher Software Development Kits: <a href=https://sdkman.io>SDKMAN</a></p><p>Insbesondere wenn, wie üblich, mehrere Java JDKs verwendet werden, hilft SDKMAN.</p><h4 id=installation-von-sdkman>Installation von SDKMAN</h4><p>Folgenden Befehl in einem Terminal eingeben:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>export SDKMAN_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span>$HOME<span style=color:#e6db74>/sdkman&#34;</span> <span style=color:#f92672>&amp;&amp;</span> curl -s <span style=color:#e6db74>&#34;https://get.sdkman.io&#34;</span> | bash
+</span></span></code></pre></div><p>Falls Sie SDKMAN bereits früher installiert haben, müssen Sie SDKMAN auf den neuesten Stand bringen:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sdk update
+</span></span></code></pre></div><h4 id=installation-des-jdk>Installation des JDK</h4><p>In einem neuen Terminal-Window diesen Befehl eingeben:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sdk install java 17.0.8-tem
+</span></span></code></pre></div><p>Danach liegt der JDK in ihrer Home-Directory im Folder <code>sdkman/candidates/java</code>. Von dort können Sie es dann in IntelliJ als neues SDK anlegen und im Projekt verwenden.</p><p>Mit:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sdk ls java
+</span></span></code></pre></div><p>kann man sich auflisten lassen, welche anderen JDKs zur Installation zur Verfügung stehen.</p><h3 id=java-version-überprüfen>Java Version überprüfen</h3><p>In einem Terminal-Window eingeben</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -version
+</span></span></code></pre></div><p>Das sollte diese Ausgabe erzeugen</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>openjdk version <span style=color:#e6db74>&#34;17.0.8&#34;</span> 2023-07-18
+</span></span><span style=display:flex><span>OpenJDK Runtime Environment Temurin-17.0.8+7 <span style=color:#f92672>(</span>build 17.0.8+7<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>OpenJDK 64-Bit Server VM Temurin-17.0.8+7 <span style=color:#f92672>(</span>build 17.0.8+7, mixed mode<span style=color:#f92672>)</span>
+</span></span></code></pre></div><p>Falls das nicht der Fall ist, muss der Default-JDK umgestellt werden. Mit SDKMAN geht das einfach:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sdk default java 17.0.8-tem
+</span></span></code></pre></div><footer class=footline>
 </footer></div></div><div id=navigation>
-<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1691425819></script>
 <script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1691425819></script>

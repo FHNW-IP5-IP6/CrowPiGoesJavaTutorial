@@ -2,53 +2,43 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.117.0">
 <meta name=description content="CrowPi goes Java: An easy introduction to electronics programming">
 <meta name=author content="Pascal Mathis, Tobias Siegrist">
 <link rel=icon href=/CrowPiGoesJavaTutorial/images/favicon.png type=image/png>
-<title>Debugging der Applikation :: CrowPi goes Java</title>
-<link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1634989005 rel=stylesheet>
-<link href=/CrowPiGoesJavaTutorial/css/custom.css?1634989005 rel=stylesheet>
-<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1634989005></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
-</head>
-<body data-url=/CrowPiGoesJavaTutorial/de/basics/debugging/>
+<title>Debugging der Applikation :: CrowPi goes Java</title><link href=/CrowPiGoesJavaTutorial/css/nucleus.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/fontawesome-all.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hybrid.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/featherlight.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/perfect-scrollbar.min.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/auto-complete.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/atom-one-dark-reasonable.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/tabs.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/hugo-theme.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/theme-crowpi.css?1691425819 rel=stylesheet>
+<link href=/CrowPiGoesJavaTutorial/css/custom.css?1691425819 rel=stylesheet>
+<script src=/CrowPiGoesJavaTutorial/js/jquery-3.3.1.min.js?1691425819></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/CrowPiGoesJavaTutorial/de/basics/debugging/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
 <a id=logo href=/CrowPiGoesJavaTutorial/de>
-<img src=/CrowPiGoesJavaTutorial/images/fhnw-logo.svg style=width:40%;height:40%>
-<h3 style=margin:0;color:#fff>CrowPi goes Java</h3>
-</a>
-</div>
-<div class=searchbox>
+<img src=/images/fhnw-logo.svg style=width:40%;height:40%>
+<h3 style=margin:0;color:#fff>CrowPi goes Java</h3></a>
+</div><div class=searchbox>
 <label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Suchen...>
 <span data-search-clear><i class="fas fa-times"></i></span>
-</div>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1634989005></script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1634989005></script>
+</div><script type=text/javascript src=/CrowPiGoesJavaTutorial/js/lunr.min.js?1691425819></script>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/auto-complete.js?1691425819></script>
 <script type=text/javascript>var baseurl="https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de"</script>
-<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1634989005></script>
-</div>
-<section id=homelinks>
+<script type=text/javascript src=/CrowPiGoesJavaTutorial/js/search.js?1691425819></script>
+</div><section id=homelinks>
 <ul>
 <li>
-<a class=padding href=/CrowPiGoesJavaTutorial/de><i class="fas fa-fw fa-home"></i> Startseite</a>
-</li>
-</ul>
-</section>
-<div class=highlightable>
+<a class=padding href=/CrowPiGoesJavaTutorial/de><i class='fas fa-fw fa-home'></i> Startseite</a>
+</li></ul></section><div class=highlightable>
 <ul class=topics>
 <li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/ title=Vorbereitungen class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/>
@@ -61,22 +51,22 @@
 Anforderungen
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/raspberry/ title="Raspberry PI Setup" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/raspberry/>
 Raspberry PI Setup
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/jdk/ title="JDK Setup" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/setup/jdk/>
+JDK Setup
+<i class="fas fa-check read-icon"></i>
+</a>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/setup/intellij/ title="IntelliJ IDEA Setup" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/setup/intellij/>
 IntelliJ IDEA Setup
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class="dd-item
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/ title=Grundlagen class="dd-item
 parent">
 <a href=/CrowPiGoesJavaTutorial/de/basics/>
 <b>2. </b>Grundlagen
@@ -88,40 +78,32 @@ parent">
 Die CrowPi Plattform
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/running/>
 Starten der Applikation
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class="dd-item active">
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/debugging/ title="Debugging der Applikation" class="dd-item active">
 <a href=/CrowPiGoesJavaTutorial/de/basics/debugging/>
 Debugging der Applikation
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/framework/>
 Application Framework
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/dev-process/ title=Entwicklungsprozess class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/dev-process/>
 Entwicklungsprozess
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ title=Troubleshooting class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/ title=Troubleshooting class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/basics/troubleshooting/>
 Troubleshooting
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class=dd-item>
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ title=Komponenten class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/>
 <b>3. </b>Komponenten
 <i class="fas fa-check read-icon"></i>
@@ -132,118 +114,97 @@ Troubleshooting
 7-Segment Anzeige
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button/ title=Button class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/button/>
 Button
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/button-matrix/ title="Button Matrix" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/button-matrix/>
 Button Matrix
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/buzzer/ title=Buzzer class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/buzzer/>
 Buzzer
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ir-receiver/ title="Infrarot Empfänger" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ir-receiver/ title="Infrarot Empfänger" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/ir-receiver/>
 Infrarot Empfänger
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/lcd-display/ title="LCD Display" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/lcd-display/>
 LCD Display
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/led-matrix/ title="LED Matrix" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/led-matrix/>
 LED Matrix
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/light-sensor/ title=Lichtsensor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/light-sensor/>
 Lichtsensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/ title="PIR Motion Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/pir-motion-sensor/>
 PIR Motion Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/relay/ title=Relais class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/relay/>
 Relais
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/rfid/ title=RFID class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/rfid/>
 RFID
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/step-motor/ title=Schrittmotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/step-motor/ title=Schrittmotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/step-motor/>
 Schrittmotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/servo-motor/ title=Servomotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/servo-motor/ title=Servomotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/servo-motor/>
 Servomotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/sound-sensor/ title="Sound Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/sound-sensor/>
 Sound Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/ title="Temperatur- / Luftfeuchtigkeitssensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/ title="Temperatur- / Luftfeuchtigkeitssensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/humi-temp-sensor/>
 Temperatur- / Luftfeuchtigkeitssensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/ title="Tilt Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/tilt-sensor/>
 Tilt Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/touch-sensor/ title="Touch Sensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/touch-sensor/>
 Touch Sensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/ title="Ultraschall Distanzsensor" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/ultrasonic-sensor/>
 Ultraschall Distanzsensor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/components/vibration-motor/ title=Vibrationsmotor class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/components/vibration-motor/>
 Vibrationsmotor
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
+</li></ul></li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/ title=Hardware class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/>
 <b>4. </b>Hardware
 <i class="fas fa-check read-icon"></i>
@@ -254,40 +215,32 @@ Vibrationsmotor
 I²C
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/pwm/>
 Pulse Width Modulation (PWM)
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-<li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item>
 <a href=/CrowPiGoesJavaTutorial/de/hardware/spi/>
 Serial Peripheral Interface (SPI)
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
-</li>
-</ul>
-<section id=shortcuts>
-<h3>Mehr</h3>
-<ul>
+</li><li data-nav-id=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/ title="Stepper Motor" class=dd-item>
+<a href=/CrowPiGoesJavaTutorial/de/hardware/steppermotor/>
+Stepper Motor
+<i class="fas fa-check read-icon"></i>
+</a>
+</li></ul></li></ul><section id=shortcuts>
+<h3>Mehr</h3><ul>
 <li>
-<a class=padding href=https://github.com/Pi4J/pi4j-example-crowpi><i class="fab fa-fw fa-github"></i> GitHub Repository (Code)</a>
-</li>
-<li>
-<a class=padding href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial><i class="fab fa-fw fa-github"></i> GitHub Repository (Doku)</a>
-</li>
-<li>
-<a class=padding href=https://www.pi4j.com/><i class="fas fa-fw fa-cogs"></i> Pi4J Website</a>
-</li>
-<li>
-<a class=padding href=https://www.fhnw.ch/en/><i class="fas fa-fw fa-university"></i> FHNW Website</a>
-</li>
-</ul>
-</section>
-<section id=prefooter>
+<a class=padding href=https://github.com/Pi4J/pi4j-example-crowpi><i class='fab fa-fw fa-github'></i> GitHub Repository (Code)</a>
+</li><li>
+<a class=padding href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial><i class='fab fa-fw fa-github'></i> GitHub Repository (Doku)</a>
+</li><li>
+<a class=padding href=https://www.pi4j.com/><i class='fas fa-fw fa-cogs'></i> Pi4J Website</a>
+</li><li>
+<a class=padding href=https://www.fhnw.ch/en/><i class='fas fa-fw fa-university'></i> FHNW Website</a>
+</li></ul></section><section id=prefooter>
 <hr>
 <ul>
 <li>
@@ -295,29 +248,18 @@ Serial Peripheral Interface (SPI)
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
 <select id=select-language onchange="location=this.value"><option id=de value=https://fhnw-ip5-ip6.github.io/CrowPiGoesJavaTutorial/de/basics/debugging/ selected>German</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
-</div>
-</a>
-</li>
-<li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li>
-</ul>
-</section>
-<section id=footer>
-<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
-</section>
-</div>
-</nav>
-<section id=body>
-<div id=overlay></div>
-<div class="padding highlightable">
+</div></a>
+</li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li></ul></section><section id=footer>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body>
+<div id=overlay></div><div class="padding highlightable">
 <div>
 <div id=top-bar>
 <div id=top-github-link>
-<a class=github-link title="Bearbeite diese Seite" href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/basics/debugging.md target=blank>
+<a class=github-link title='Bearbeite diese Seite' href=https://github.com/FHNW-IP5-IP6/CrowPiGoesJavaTutorial/edit/main/content/german/basics/debugging.md target=blank>
 <i class="fas fa-code-branch"></i>
 <span id=top-github-link-text>Bearbeite diese Seite</span>
 </a>
-</div>
-<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+</div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
 <span id=sidebar-toggle-span>
 <a href=# id=sidebar-toggle data-sidebar-toggle>
 <i class="fas fa-bars"></i>
@@ -327,147 +269,68 @@ Serial Peripheral Interface (SPI)
 <span class=links>
 <a href=/CrowPiGoesJavaTutorial/de/>CrowPi goes Java</a> > <a href=/CrowPiGoesJavaTutorial/de/basics/>Grundlagen</a> > Debugging der Applikation
 </span>
-</div>
-<div class=progress>
+</div><div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
 <li>
 <ul>
-<li><a href=#applikation-mit-debugger-starten>Applikation mit Debugger starten</a></li>
-<li><a href=#einsatz-von-breakpoints>Einsatz von Breakpoints</a></li>
-<li><a href=#analyse-von-variablen>Analyse von Variablen</a></li>
-</ul>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-</div>
-<div id=head-tags>
-</div>
-<div id=body-inner>
+<li><a href=#applikation-mit-debugger-starten>Applikation mit Debugger starten</a></li><li><a href=#einsatz-von-breakpoints>Einsatz von Breakpoints</a></li><li><a href=#analyse-von-variablen>Analyse von Variablen</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags>
+</div><div id=body-inner>
 <h1>
 Debugging der Applikation
-</h1>
-<p>Auf dieser Seite werden die Grundlagen der Fehlersuche mit dem Setup aus <a href=/CrowPiGoesJavaTutorial/de/setup/>dem ersten Kapitel</a> beschrieben. Dazu wird
-Schritt für Schritt erklärt, wie man den Debugger starten und verwenden kann.</p>
-<hr>
-<h3 id=applikation-mit-debugger-starten>Applikation mit Debugger starten</h3>
-<p>Zum Starten der Applikation mit Debugger werden die beiden Run Konfigurationen <code>CrowPi Debug</code> und <code>CrowPi Remote Debug</code> benötigt.
-Diese sind nach dem Setup bereits korrekt eingestellt und können verwendet werden. Wichtig dabei ist die Reihenfolge, mit der die
-Konfigurationen gestartet werden. Dieses Vorgehen ist:</p>
-<ol>
-<li>Start von <code>CrowPi Debug</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
-<li>Warten bis die Konsolenausgabe meldet <code>Listening for transport dt_socket at address: 5005 (Attach debugger)</code></li>
-<li>Starten von <code>CrowPi Remote Debug</code></li>
-</ol>
-<p>Nachfolgend wird der Ablauf mit entsprechenden Abbildungen ergänzt. Als Erstes wird die Applikation im Debugmodus gestartet. Dazu muss die
-Konfiguration <code>CrowPi Debug</code> angewählt werden. Gestartet wird die Konfiguration mit dem <strong>Play Button</strong>.
+</h1><p>Auf dieser Seite werden die Grundlagen der Fehlersuche mit dem Setup aus <a href=/CrowPiGoesJavaTutorial/de/setup/>dem ersten Kapitel</a> beschrieben. Dazu wird Schritt für Schritt erklärt, wie man den Debugger starten und verwenden kann.</p><hr>
+<h3 id=applikation-mit-debugger-starten>Applikation mit Debugger starten</h3><p>Zum Starten der Applikation mit Debugger werden die beiden Run Konfigurationen <code>Debug on CrowPi</code> und <code>Attach to CrowPi Debugger</code> benötigt.</p><p>Diese sind nach dem Setup bereits korrekt eingestellt und können verwendet werden. Wichtig dabei ist die Reihenfolge, mit der die Konfigurationen gestartet werden. Dieses Vorgehen ist:</p><ol>
+<li>Start von <code>Debug on CrowPi</code> mit dem <em>Run</em>-Knopf (<em>nicht</em> mit dem Debug-Knopf)</li><li>Warten bis die Konsolenausgabe meldet <code>Listening for transport dt_socket at address: 5005 (Attach debugger)</code></li><li>Starten von <code>Attach to CrowPi Debugger</code></li></ol><p>Nachfolgend wird der Ablauf mit entsprechenden Abbildungen ergänzt. Als Erstes wird die Applikation im Debugmodus gestartet. Dazu muss die Konfiguration <code>Debug on CrowPi</code> angewählt werden. Gestartet wird die Konfiguration mit dem <strong>Play Button</strong>.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-select-and-start-debug.JPG? alt="Debugmodus wählen und starten">
-</p>
-<p>Als Zweites wird nun gewartet, bis die korrekte Ausgabe im Konsolenfenster erscheint:
+</p><p>Als Zweites wird nun gewartet, bis die korrekte Ausgabe im Konsolenfenster erscheint:
 <img src="/CrowPiGoesJavaTutorial/images/basics/intellij-waiting-for-debugger.JPG?height=500px" alt="App wartet auf Debugger">
-</p>
-<p>Zum Starten des Remote Debugger die entsprechende Run Konfiguration <code>CrowPi Remote Debug</code> auswählen und mit einem
-Klick auf das Käfer-Icon (Debug) starten. Das Debugfenster meldet nun, ob eine Verbindung hergestellt wurde.
+</p><p>Zum Starten des Remote Debugger die entsprechende Run Konfiguration <code>Attach to CrowPi Debugger</code> auswählen und mit einem Klick auf das Käfer-Icon (Debug) starten. Das Debugfenster meldet nun, ob eine Verbindung hergestellt wurde.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-start-remote-debug.JPG? alt="Remote Debug starten">
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-debug-connected.JPG? alt="Remote Debug verbunden">
-</p>
-<p>Nun kann zwischen den beiden Tabs <code>Run</code> und <code>Debug</code> hin und her gewechselt werden. Im Tab <code>Run</code> wird zum Beispiel die Ausgabe der
-Applikation angezeigt. Bei <code>Debug</code> finden sich Knöpfe und Informationen zu Breakpoints und Variablen. Wenn nun ein Beispiel ausgeführt wird,
-startet dies ganz normal und läuft, bis das Programm beendet wird. Solange keine Breakpoints oder ähnliches im Programmablauf vorkommen, hat
-der Debugger keinen weiteren Einfluss auf die Applikation.</p>
-<hr>
-<h3 id=einsatz-von-breakpoints>Einsatz von Breakpoints</h3>
-<p>Wenn nun ein Problem auftritt, wird oft an der entsprechenden Codestelle ein Breakpoint gesetzt. Dieser Breakpoint weist den Debugger an, die
-laufende Applikation zu unterbrechen und den aktuellen Programmstatus auf dieser Zeile im Code auszugeben. An der
-Beispielapplikation <a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>7-Segment Anzeige</a> wird demonstriert, wie ein Breakpoint verwendet werden kann.
-Untersucht soll die Anzeige der <code>- - - -</code> werden. Wie im Beispielcode ersichtlich passiert dies mit einem <code>for-loop</code>. Dieser wird nun genauer
-betrachtet.</p>
-<h4 id=setzen-des-breakpoints-an-codestelle>Setzen des Breakpoints an Codestelle</h4>
-<p>Ein Breakpoint kann in IntelliJ sehr einfach durch Klicken neben die Zeilennummer in einem Programm eingefügt werden. Platziert wird der
-Breakpoint hier bewusst vor den zu untersuchenden <code>for-loop</code>. So kann sichergestellt werden, dass nichts verpasst wird. Wenn nicht
-genau bekannt ist, wo ein Problem verursacht wird, lohnt es sich fast immer den Breakpoint ein paar Zeilen über der kritischen Stelle zu
+</p><p>Nun kann zwischen den beiden Tabs <code>Run</code> und <code>Debug</code> hin und her gewechselt werden.</p><ul>
+<li>Im Tab <code>Run</code> wird die Ausgabe der Applikation angezeigt.</li><li>Bei <code>Debug</code> finden sich Knöpfe und Informationen zu Breakpoints und Variablen.</li></ul><p>Wenn nun ein Beispiel ausgeführt wird, startet dies ganz normal und läuft, bis das Programm beendet wird. Solange keine Breakpoints oder ähnliches im Programmablauf vorkommen, hat der Debugger keinen weiteren Einfluss auf die Applikation.</p><hr>
+<h3 id=einsatz-von-breakpoints>Einsatz von Breakpoints</h3><p>Wenn nun ein Problem auftritt, wird oft an der entsprechenden Codestelle ein Breakpoint gesetzt. Dieser Breakpoint weist den Debugger an, die laufende Applikation zu unterbrechen und den aktuellen Programmstatus auf dieser Zeile im Code auszugeben. An der
+Beispielapplikation <a href=/CrowPiGoesJavaTutorial/de/components/seven-segment/>7-Segment Anzeige</a> wird demonstriert, wie ein Breakpoint verwendet werden kann. Untersucht soll die Anzeige der <code>- - - -</code> werden. Wie im Beispielcode ersichtlich passiert dies mit einem <code>for-loop</code>.</p><h4 id=setzen-des-breakpoints-an-codestelle>Setzen des Breakpoints an Codestelle</h4><p>Ein Breakpoint kann in IntelliJ sehr einfach durch Klicken neben die Zeilennummer in einem Programm eingefügt werden. Platziert wird der Breakpoint hier bewusst vor den zu untersuchenden <code>for-loop</code>. So kann sichergestellt werden, dass nichts verpasst wird. Wenn nicht genau bekannt ist, wo ein Problem verursacht wird, lohnt es sich fast immer den Breakpoint ein paar Zeilen über der kritischen Stelle zu
 platzieren. So kann die Ausgangslage gut analysiert werden.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-setbreakpoint-before-loop.JPG? alt="Breakpoint vor Loop gesetzt">
-</p>
-<h4 id=starten-der-applikation-mit-debugger>Starten der Applikation mit Debugger</h4>
-<p>Wie vorgängig erklärt, wird zuerst der Breakpoint platziert, die Applikation im Debugmodus gestartet und der
-Debugger angehängt. Es werden also diese 3 Schritte durchgeführt:</p>
-<ol>
-<li>Start von <code>CrowPi Debug</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li>
-<li>Warten bis die Konsolenausgabe meldet <code>Listening for transport dt_socket at address: 5005 (Attach debugger)</code></li>
-<li>Starten von <code>CrowPi Remote Debug</code></li>
-</ol>
-<p>Da ein Fehler im 7-Segment Beispiel gesucht werden soll, wird das entsprechende Beispielprogramm nach Programmstart angewählt. Die Applikation
-läuft sofort, bis der Debugger am Breakpoint die Ausführung der Anwendung unterbricht.
+</p><h4 id=starten-der-applikation-mit-debugger>Starten der Applikation mit Debugger</h4><p>Wie vorgängig erklärt, wird zuerst der Breakpoint platziert, die Applikation im Debugmodus gestartet und der Debugger angehängt. Es werden also diese 3 Schritte durchgeführt:</p><ol>
+<li>Start von <code>Debug on CrowPi</code> <strong>ohne</strong> Verwendung vom Debug-Knopf</li><li>Warten bis die Konsolenausgabe meldet <code>Listening for transport dt_socket at address: 5005 (Attach debugger)</code></li><li>Starten von <code>Attach to CrowPi Debugger</code></li></ol><p>Da ein Fehler im 7-Segment Beispiel gesucht werden soll, wird das entsprechende Beispielprogramm nach Programmstart angewählt. Die Applikation wird ausgeführt, bis der Debugger am Breakpoint die Ausführung der Anwendung unterbricht.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-start-sevensegment.JPG? alt="Start von 7-Segment Beispiel">
-Nachfolgend die Ansicht in IntelliJ, wenn der Debugger das Programm unterbrochen hat. IntelliJ markiert die
-entsprechende aktuelle Zeile im Programm. Im Debug-Tab werden zudem die aktuellen Variablen mit Werten der Applikation ausgegeben.
+</p><p>Nachfolgend die Ansicht in IntelliJ, wenn der Debugger das Programm unterbrochen hat. IntelliJ markiert die entsprechende aktuelle Zeile im Programm. Im Debug-Tab werden zudem die aktuellen Variablen mit Werten der Applikation ausgegeben.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-debugger-stopped-at-breakpoint.JPG? alt="Example stoppt an Breakpoint">
-</p>
-<h4 id=navigation-am-breakpoint>Navigation am Breakpoint</h4>
-<p>Um nun die Programmausführung schrittweise fortzusetzen, verfügt die Entwicklungsumgebung über verschiedene Funktionen. Diese beinhalten
-Grundfunktionen wie das Fortsetzen der Applikation oder das komplette Stoppen der Applikation. Die wichtigsten kurz erklärt:</p>
-<ul>
-<li><code>Resume Program</code> setzt das Programm fort bis zum nächsten Breakpoint oder Applikationsende</li>
-<li><code>Stop Remote Debug</code> stoppt den Debugger. Da in diesem Setup jedoch die Applikation und der Debugger getrennt laufen, hat die Option
-keinen sinnvollen Effekt. Zum Stoppen des Programms sollte immer <code>Stop All</code> verwendet werden. Dies wird auf dem zweiten Bild gezeigt.</li>
-<li><code>Mute Breakpoints / Disable all Breakpoints</code> der Debugger deaktiviert alle Breakpoints. So wird das Programm bei weiterer Ausführung nicht
+</p><h4 id=navigation-am-breakpoint>Navigation am Breakpoint</h4><p>Um nun die Programmausführung schrittweise fortzusetzen, verfügt die Entwicklungsumgebung über verschiedene Funktionen. Diese beinhalten Grundfunktionen wie das Fortsetzen der Applikation oder das komplette Stoppen der Applikation. Die wichtigsten kurz erklärt:</p><ul>
+<li><code>Resume Program</code> setzt das Programm fort bis zum nächsten Breakpoint oder Applikationsende</li><li><code>Stop Remote Debug</code> stoppt den Debugger. Da in diesem Setup jedoch die Applikation und der Debugger getrennt laufen, hat die Option
+keinen sinnvollen Effekt. Zum Stoppen des Programms sollte immer <code>Stop All</code> verwendet werden. Dies wird auf dem zweiten Bild gezeigt.</li><li><code>Mute Breakpoints / Disable all Breakpoints</code> der Debugger deaktiviert alle Breakpoints. So wird das Programm bei weiterer Ausführung nicht
 mehr unterbrochen.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-application-controls.JPG? alt="Steuerung der Applikation">
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-stop-program.JPG? alt="Stopp der Applikation">
-</li>
-</ul>
-<p>Für die schrittweise Ausführung des Programms stellt der Debugger noch weitere Tasten zur Verfügung:</p>
-<ul>
+</li></ul><p>Für die schrittweise Ausführung des Programms stellt der Debugger noch weitere Tasten zur Verfügung:</p><ul>
 <li><code>Step Over</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf wird der Rückgabewert ermittelt, ohne die Methode zu
-betreten.</li>
-<li><code>Step Into</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf wird der Code der Methode geöffnet und das Debugging
-geht in der Methode weiter.</li>
-<li><code>Force Step Into</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf, welcher normalerweise bei Step Into ignoriert, wird
-das Eintauchen in die Methode erzwungen.</li>
-<li><code>Step Out</code> die aktuelle Methode wird ausgeführt, bis der Code wieder am aufrufenden Ort angekommen ist. Wird zum vorzeitigen Rückkehren
+betreten.</li><li><code>Step Into</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf wird der Code der Methode geöffnet und das Debugging
+geht in der Methode weiter.</li><li><code>Force Step Into</code> die nächste Anweisung im Code wird ausgeführt. Bei einem Methodenaufruf, welcher normalerweise bei Step Into ignoriert, wird
+das Eintauchen in die Methode erzwungen.</li><li><code>Step Out</code> die aktuelle Methode wird ausgeführt, bis der Code wieder am aufrufenden Ort angekommen ist. Wird zum vorzeitigen Rückkehren
 aus <code>Step Into</code> verwendet.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-debug-navigations.JPG? alt="Navigation mit Debugger">
-</li>
-</ul>
-<p>Noch genauere Erklärungen zu den einzelnen Funktionen können auch direkt
-der <a href=https://www.jetbrains.com/help/idea/stepping-through-the-program.html>IntelliJ Anleitung</a> entnommen werden.</p>
-<hr>
-<h3 id=analyse-von-variablen>Analyse von Variablen</h3>
-<p>Inzwischen wurden einige Steps an der Codestelle des <code>for-loops</code> ausgeführt. Nun nochmals ein Blick auf die Variablenliste des Debuggers.
-Im auf dem Bild kann erkannt werden, wie der Debugger dem Benutzer anzeigt welche Variablen nun welche Werte haben. Aktuell ist es
-also: <code>i=2</code> und <code>state="- "</code>
-Da der <code>for-loop</code> erst bei <code>i > 5</code> stoppt, könnte nun mit dem Debugger jede weitere Iteration nachvollzogen werden.
+</li></ul><p>Noch genauere Erklärungen zu den einzelnen Funktionen können auch direkt
+der <a href=https://www.jetbrains.com/help/idea/stepping-through-the-program.html>IntelliJ Anleitung</a> entnommen werden.</p><hr>
+<h3 id=analyse-von-variablen>Analyse von Variablen</h3><p>Inzwischen wurden einige Steps an der Codestelle des <code>for-loops</code> ausgeführt. Nun nochmals ein Blick auf die Variablenliste des Debuggers.</p><p>Auf dem Bild kann erkannt werden, wie der Debugger dem Benutzer anzeigt welche Variablen nun welche Werte haben. Aktuell ist es also: <code>i=2</code> und <code>state="- "</code></p><p>Da der <code>for-loop</code> erst bei <code>i > 5</code> stoppt, könnte nun mit dem Debugger jede weitere Iteration nachvollzogen werden.
 <img src=/CrowPiGoesJavaTutorial/images/basics/intellij-shows-variables.JPG? alt="Variablen mit Debugger">
-Auf diese Weise lassen sich auch Entscheidungen bei <code>if (this) {then that} else {other things}</code> nachvollziehen. Jede Variable kann
-auf ihren Zustand geprüft und somit bei Fehlentscheiden die Logik angepasst werden.</p>
-<footer class=footline>
-</footer>
-</div>
-</div>
-<div id=navigation>
+</p><p>Auf diese Weise lassen sich auch Entscheidungen bei <code>if (this) {then that} else {other things}</code> nachvollziehen. Jede Variable kann auf ihren Zustand geprüft und somit bei Fehlentscheiden die Logik angepasst werden.</p><footer class=footline>
+</footer></div></div><div id=navigation>
 <a class="nav nav-prev" href=/CrowPiGoesJavaTutorial/de/basics/running/ title="Starten der Applikation"> <i class="fa fa-chevron-left"></i></a>
 <a class="nav nav-next" href=/CrowPiGoesJavaTutorial/de/basics/framework/ title="Application Framework" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
-</div>
-</section>
-<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
-<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
-</div>
-<script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1634989005></script>
+</div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/CrowPiGoesJavaTutorial/js/clipboard.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/perfect-scrollbar.jquery.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/jquery.sticky.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/featherlight.min.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/highlight.pack.js?1691425819></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/learn.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1634989005></script>
-<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1634989005></script>
+<script src=/CrowPiGoesJavaTutorial/js/modernizr.custom-3.6.0.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/learn.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/js/hugo-learn.js?1691425819></script>
+<script src=/CrowPiGoesJavaTutorial/mermaid/mermaid.js?1691425819></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
-</body>
-</html>
+</body></html>
